@@ -1,0 +1,57 @@
+{
+  "slug": "instagram-principal-eng-ic8-on-building",
+  "n": 31,
+  "title": "Instagram Principal Eng (IC8) On Building IG Stories, 1 Promo Per Half, Small Teams",
+  "date": "2026-02-02",
+  "url": "https://www.developing.dev/p/instagram-principal-eng-ic8-on-building",
+  "guest": "Ryan Olson",
+  "guest_role": "Instagram principal engineer (IC8), led iOS for Instagram Stories; co-founder of Retro",
+  "guest_slug": "ryan-olson",
+  "companies": ["instagram", "meta", "snapchat", "flipboard", "retro"],
+  "concepts": ["promotions", "career-growth", "hiring-and-interviews", "big-tech-culture", "startups-and-founding", "corporate-politics", "management", "influence-and-leadership", "small-teams", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:00:31", "title": "Failing his FB interview"},
+    {"t": "00:03:27", "title": "Interning /w future billionaires"},
+    {"t": "00:14:08", "title": "Interview nerves tip"},
+    {"t": "00:16:37", "title": "Early Instagram experiences"},
+    {"t": "00:34:08", "title": "Building Instagram Stories"},
+    {"t": "00:45:03", "title": "1 promo per half to Staff (IC6)"},
+    {"t": "00:49:51", "title": "Senior staff promo project (IC7)"},
+    {"t": "00:57:37", "title": "IG labs & his principal promo (IC8)"},
+    {"t": "01:08:19", "title": "Starting Retro and leaving big tech"},
+    {"t": "01:21:33", "title": "Small teams hypothetical"},
+    {"t": "01:25:17", "title": "Examples of talented individuals"},
+    {"t": "01:31:16", "title": "Advice to his younger self"},
+    {"t": "01:34:45", "title": "Outro"}
+  ],
+  "key_takeaways": [
+    "Olson failed his 2011 Facebook internship interview so badly the interviewer cut it short and said 'you're just not gonna be able to make it at Facebook' — he later reached IC8 there, and for full-time interviews used prescribed beta blockers to break the physical nerves feedback loop.",
+    "At ~50-person Flipboard he interned alongside future billionaires Dylan Field (Figma) and Devin Finzer (OpenSea); what marked them out was determination to found companies and conviction in a technical insight (WebGL) they iterated toward product-market fit.",
+    "His open-source iOS debugging tool FLEX got him the Instagram job — interviewers refused to look at it, but engineer Jonathan Dan saw it, pulled him into the pipeline, and advocated for him after a mixed loop.",
+    "Early Instagram (~10 iOS engineers, rebuilt after AsyncDisplayKit 'warring factions' destroyed each other) offered huge low-hanging fruit: he cut cold start 20% by deferring profile-tab work and crashes 80% with a one-line assertion fix, winning 'the ax,' Instagram's physical weekly impact award.",
+    "On the Whiteout redesign he built behind a feature flag with semantic colors instead of a long-lived branch, which saved the launch when a Facebook exec demanded A/B tests the night before shipping; his lesson is that testing is invaluable for mechanics but product direction needs strong opinions — pure experimentation traps you in 1% incrementalism.",
+    "Instagram Stories was built in about 2-3 months after he cut the team down to a core of two iOS engineers with no dedicated server engineer: 'if you want to go fast, go small.' The existing friend graph was the unfair advantage over Snapchat, and he invented hold-to-pause because his thumb expected it to work.",
+    "His promo strategy: as a mis-leveled IC4 he asked his director for a 4-to-6 double promo knowing HR would refuse, deliberately seeding the idea so it converted into back-to-back promotions (IC5 for Whiteout, IC6 for Stories). Levels and promotions are an incentive system — a dangled carrot — and delays are often pacing, not performance.",
+    "IGTV (his IC7 project with Kevin Systrom) failed despite anticipating vertical video: long-form vertical inventory never appeared and creators were horrified by his patented AI landscape-to-vertical reformatting; the era's confusing strategy calls only made sense years later via the antitrust lawsuit's internal memos about Facebook fearing Instagram cannibalization.",
+    "IG Labs, his IC8 promo, was a deliberately tiny high-talent-density innovation group for projects that didn't slot into the org chart; it produced collaborative posts and became the talent pool that seeded Threads.",
+    "As a rare Tech Lead Director he rejected Facebook's IC/manager separation (preferring Tesla's flexible model, citing Taleb's skin in the game), but paid for it in ratings: 'you're exceeding as an IC but you're meeting as a manager, so you're just meeting.'",
+    "On the Thanos-snap hypothetical he says Instagram would likely be better off with half the people: each marginal engineer adds hidden coordination and codebase cost (he waited 4+ hours a day on builds before leaving), and post-Elon Twitter running profitably after ~80% cuts is partial vindication.",
+    "Retro, founded with Stories PM Nathan Sharp, is friends-only, ad-free (ads plus algorithmic feeds create misaligned, 'a little bit evil' incentives), capped at 250 friends, and subscription-funded; nearly half of daily users post, and it hit #1 on Taiwan's App Store. Founder tradeoffs: satisfaction and learning up, compensation down.",
+    "Talent he admires: Mike Krieger led from the front, coding the Stories neon brush and reviewing diffs at 2 AM with the team; Will Bailey's Stories vision doc proved to be the accurate five-year roadmap and modeled the product-engineer path Facebook culture dismissed; Thomas Dimson, 'the smartest person I've ever met,' built Instagram's ranking and later sold his company to OpenAI.",
+    "Advice to new grads: learn the tools of your time — he stood out because iOS was new and seniors hadn't learned it natively; today's equivalent is AI tooling, where new grads can out-skill senior engineers and secure roles despite shrinking junior demand."
+  ],
+  "notable_quotes": [
+    {"speaker": "Ryan Olson", "quote": "He cut it short and he was just like, look, you're just not gonna be able to make it at Facebook, which was like a knife to the heart.", "t": "00:00:31"},
+    {"speaker": "Ryan Olson", "quote": "I say if you want to go fast, go small. I'm a strong believer in small teams as the best way to operate.", "t": "00:34:08"},
+    {"speaker": "Ryan Olson", "quote": "These levels and promotions are an incentive system. In the long run, there's really an effort to make it fair, but there's also an element of like, it's the carrot that's being dangled in front of you.", "t": "00:45:03"},
+    {"speaker": "Ryan Olson", "quote": "I was spending more than four hours a day waiting for the app to build just because there was so much code. The tooling just had not kept up with the velocity at which people were writing code.", "t": "01:21:33"}
+  ],
+  "related": [
+    {"slug": "instagram-principal-engineer-ic8", "reason": "The podcast's other Instagram IC8 on promotions and tech leading"},
+    {"slug": "instagram-senior-staff-eng-ic7-on", "reason": "Parallel rapid-promo climb through Instagram's IC ladder"},
+    {"slug": "ex-head-of-eng-at-instagram-career", "reason": "Leadership-side view of the same Instagram era and culture"},
+    {"slug": "meta-distinguished-eng-ic9-on-influencing", "reason": "Parallel iOS-infra world at Facebook: framework wars, coding-machine archetype, honest failed-project story"},
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "Another engineer who left big tech to found a startup and is jaded about promo systems"}
+  ],
+  "transcript_complete": true
+}

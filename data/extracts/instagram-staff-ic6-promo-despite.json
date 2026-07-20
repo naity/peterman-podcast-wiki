@@ -1,0 +1,51 @@
+{
+  "slug": "instagram-staff-ic6-promo-despite",
+  "n": 12,
+  "title": "Instagram Staff (IC6) Promo Despite 10 Team Switches in 9 Years (Career Story)",
+  "date": "2025-08-08",
+  "url": "https://www.developing.dev/p/instagram-staff-ic6-promo-despite",
+  "guest": "Sash Zats",
+  "guest_role": "Ex-Meta/Instagram Staff Engineer (IC6), prototyper on Threads and AI teams",
+  "guest_slug": "sash-zats",
+  "companies": ["meta", "instagram"],
+  "concepts": ["career-growth", "promotions", "calibrations-and-ratings", "big-tech-culture", "influence-and-leadership", "startups-and-founding", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:49", "title": "First team: iOS on Newsfeed Delight"},
+    {"t": "05:30", "title": "What makes a good designer partner?"},
+    {"t": "08:30", "title": "Joining a hardware team"},
+    {"t": "12:08", "title": "2 diffs in 6 months"},
+    {"t": "15:03", "title": "Joining the Instagram blockchain team"},
+    {"t": "21:37", "title": "Joining Instagram Threads pre-launch"},
+    {"t": "28:53", "title": "Working with an exceptional engineer (Peter)"},
+    {"t": "33:02", "title": "Working on AI prototyping teams"},
+    {"t": "37:15", "title": "Reflecting on team switching's impact on career growth"},
+    {"t": "44:35", "title": "Why leave Meta"},
+    {"t": "46:15", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Sash switched teams 10 times in 9 years at Meta, choosing teams for 'pure fun' and zero-to-one ambiguity rather than impact, and still grew from IC4 to Staff (IC6) as a byproduct.",
+    "Being comfortable in ambiguous, poorly defined spaces is a differentiating asset in big tech, where many strong engineers need clear specs before they can execute.",
+    "On an experimental hardware team he landed only ~2 diffs in 6 months; the team was explicitly reviewed on de-risking directions, showing how big tech protects risk-takers from performance-review downside without guaranteeing promos.",
+    "He was recruited to Threads pre-launch because of his prototyping reputation, and responded by immediately building a working Instagram-to-Mastodon (ActivityPub) bridge and a stripped-down text-first Instagram iOS app over Christmas break.",
+    "Threads went from first prototype to public launch in about 5-6 months with a small team built on Instagram's primitives, timed against Musk's Twitter acquisition, and became Meta's poster child for lean product building.",
+    "The Instagram blockchain/NFT team taught him that products usually fail on misaligned business incentives rather than technology; the project died with crypto winter.",
+    "Prototypes are the highest-fidelity communication medium: his GPT-3-era RAG demo over Facebook's help FAQ drew about 50 cold reach-outs from across the company, building visibility that documents can't.",
+    "Goodhart's law makes any chosen metric degrade as people game it, and much of what matters isn't measurable, but large companies still need frameworks because nothing else scales.",
+    "His advice to his younger self: don't obsess over fixing weaknesses; keep them out of your way and position yourself where your strengths shine.",
+    "He left Meta for startups because it's a two-way door: financially irrational but a real test of what your ideas are worth, and big tech will hire you back."
+  ],
+  "notable_quotes": [
+    {"speaker": "Sash Zats", "quote": "You can have 500 decks or you can have one prototype that works and people can play with and it just creates excitement and all of a sudden people jump on the project.", "t": "22:00"},
+    {"speaker": "Sash Zats", "quote": "Peter is a copilot, an incredible copilot... But he doesn't hallucinate and that's important!", "t": "30:51"},
+    {"speaker": "Sash Zats", "quote": "I'm just not thinking about impact too well, and that allows me to pick the teams that are completely irrational and high risk and God knows if there are even rewards in there.", "t": "02:00"},
+    {"speaker": "Sash Zats", "quote": "You want to position yourself where you can showcase your strength and where your weaknesses are not getting in your way.", "t": "46:26"}
+  ],
+  "related": [
+    {"slug": "instagram-senior-staff-eng-ic7-on", "reason": "Instagram IC promo story via redefining expectations, contrasting approach"},
+    {"slug": "instagram-principal-eng-ic8-on-building", "reason": "Building flagship Instagram products with small teams"},
+    {"slug": "26-year-old-meta-staff-eng-ic6-on", "reason": "Reaching IC6 at Meta via deliberate promo optimization, opposite strategy"},
+    {"slug": "instagram-principal-engineer-ic8", "reason": "Instagram engineering culture and promotion mechanics"},
+    {"slug": "tech-lead-for-metas-most-used-programming", "reason": "Meta IC promotion story"}
+  ],
+  "transcript_complete": true
+}

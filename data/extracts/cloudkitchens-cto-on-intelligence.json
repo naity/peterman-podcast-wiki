@@ -1,0 +1,53 @@
+{
+  "slug": "cloudkitchens-cto-on-intelligence",
+  "n": 20,
+  "title": "CloudKitchens CTO on Intelligence, Regrets, Steve Jobs and Travis Kalanick Stories",
+  "date": "2025-11-21",
+  "url": "https://www.developing.dev/p/cloudkitchens-cto-on-intelligence",
+  "guest": "Brian Attwell",
+  "guest_role": "CTO of CloudKitchens, ex-Uber Senior Staff, ex-Google, ex-Apple intern",
+  "guest_slug": "brian-attwell",
+  "companies": ["cloudkitchens", "uber", "google", "apple", "amazon"],
+  "concepts": ["career-growth", "hiring-and-interviews", "management", "calibrations-and-ratings", "big-tech-culture", "promotions", "regrets-and-advice", "startups-and-founding", "truth-seeking"],
+  "sections": [
+    {"t": "00:01:26", "title": "Growth to Senior Staff at Uber"},
+    {"t": "00:10:05", "title": "Was it luck?"},
+    {"t": "00:11:45", "title": "Interviewing for IQ"},
+    {"t": "00:18:02", "title": "Intelligence and prioritization"},
+    {"t": "00:22:19", "title": "How his team doubled every 6 months"},
+    {"t": "00:28:30", "title": "Manager promos tied to scope"},
+    {"t": "00:39:13", "title": "Amazon and Google brutal honesty"},
+    {"t": "00:43:39", "title": "CloudKitchens behind the scenes"},
+    {"t": "00:50:24", "title": "Biggest career regret"},
+    {"t": "00:54:17", "title": "Travis Kalanick experiences"},
+    {"t": "00:56:01", "title": "Most impactful advice received"},
+    {"t": "00:56:56", "title": "Most impactful book for career"},
+    {"t": "00:57:53", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Brian reached Senior Staff at Uber by 25 through 90-100 hour weeks: he and a peer prototyped the options their team debated each day after hours, becoming de facto tech leads within months and top-3 committers across Uber mobile; he claims career growth vs hours worked is superlinear because strategic work only goes to the already-proven.",
+    "The cost was real: he once collapsed on a street walking home from Uber, unable to move for 15 minutes; his burnout early-warning signal now is becoming grumpy and impatient, usually flagged by his partner.",
+    "Luck dominates infrequent decisions like choosing a company every few years, but not high-frequency daily actions; picking a meritocratic culture is the biggest controllable-yet-lucky variable.",
+    "He argues IQ correlating with job performance is one of the most well-researched results in applied psychology; good interviews force on-the-spot reasoning (e.g., read a 5-page postmortem in 5 minutes and debate restructuring the team), LeetCode is just a gameable IQ proxy, and he is seriously considering literal IQ screens, starting with PM interviews.",
+    "His prioritization formula: expected value of the work times probability of success with-vs-without you, divided by your time cost; this often means avoiding the company's well-staffed top priority in favor of being the hero on priority #3, and juniors should mine planning spreadsheets' 'why we care' columns to build expected-value intuition.",
+    "He procrastinated on management so badly that a report asked after three months whether Brian was actually his boss; after committing, his org doubled every six months, driven by assuming every inherited org has an order-of-magnitude improvement and truth-seeking with the team (e.g., killing low-value integrations among 1,200 cut pages and improved the product).",
+    "CloudKitchens rebuilt its leveling ladder after Travis Kalanick rejected an Uber-style draft as lazily over-indexed on scope: ~1,000 real performance examples from books and calibration notes were distilled to 250 attributes and PCA-collapsed into 12 skill gradients rewarding truth-seeking (being right when questioning foundational decisions) rather than position-oriented, politics-rewarding competencies like influencing other teams.",
+    "On big tech honesty: Amazon-style companies underpay top performers 'because they can get away with it'; at Google a non-performer was protected for being likable, and several managers told him of an unwritten policy of retaining idle smart people so competitors couldn't hire them; standards fall entropically until a company dies or a trauma (like the DeepMind existential push) resets them.",
+    "CloudKitchens' thesis: in a few decades no one should cook their own food; they have robots cutting restaurant labor costs 50%, logistics cutting meal costs 30-40%, real estate halving cost per meal, and Otter processing 18% of the world's orders, chasing trillions in the $2.5T/year US food market while staying stealth to avoid press distraction and copycat competitors.",
+    "As an Apple intern he accidentally killed his own sunlight-readability project by downplaying it in front of Steve Jobs, who rolled his eyes and walked away; he doesn't regret failures he couldn't avoid, only moments he knew the truth mid-project and stayed silent. Advice to his younger self: be more courageous, less embarrassed, and possibly go to therapy."
+  ],
+  "notable_quotes": [
+    {"speaker": "Brian Attwell", "quote": "But if you want to be senior staff at one of the world's best tech companies by the time you're 25, this is the only way to do it.", "t": "00:09:30"},
+    {"speaker": "Brian Attwell", "quote": "An interview that anyone can pass regardless of IQ if they can practice enough does not build a strong engineering team.", "t": "00:12:30"},
+    {"speaker": "Travis Kalanick (via Brian Attwell)", "quote": "Guys, the core problem here is that this is lazy. You are over-indexing on scope. It's uninsightful, and you could do so much better.", "t": "00:29:30"},
+    {"speaker": "Brian Attwell", "quote": "If you have entropy in a system, standards will naturally fall over time until the company dies.", "t": "00:41:00"}
+  ],
+  "related": [
+    {"slug": "uber-distinguished-eng-on-unfair", "reason": "Same company (Uber); complementary view of its promotion and influence culture"},
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "Contrasting stance on promo systems: coasting/jaded vs outworking and redesigning the ladder"},
+    {"slug": "distinguished-eng-on-stack-ranking", "reason": "Contrasting views on performance systems and big tech incentive design"},
+    {"slug": "meta-hiring-lead-on-behind-the-scenes", "reason": "Complementary perspective on how big tech designs senior hiring vs Brian's IQ-centric critique"},
+    {"slug": "amazon-vp-reveals-everything-hes", "reason": "Corroborates politics- and scope-driven incentive problems his ladder redesign targets"}
+  ],
+  "transcript_complete": true
+}

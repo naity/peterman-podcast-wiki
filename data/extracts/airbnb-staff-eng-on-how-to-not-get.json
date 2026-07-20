@@ -1,0 +1,53 @@
+{
+  "slug": "airbnb-staff-eng-on-how-to-not-get",
+  "n": 27,
+  "title": "Airbnb Staff Eng on How To Not Get Stuck at Senior and Untold Rules of Calibrations",
+  "date": "2026-01-19",
+  "url": "https://www.developing.dev/p/airbnb-staff-eng-on-how-to-not-get",
+  "guest": "Laurent Charignon",
+  "guest_role": "Staff engineer at Stripe, Airbnb, and Instagram; former Airbnb engineering manager; developer productivity specialist",
+  "guest_slug": "laurent-charignon",
+  "companies": ["airbnb", "stripe", "meta", "instagram", "apple"],
+  "concepts": ["calibrations-and-ratings", "promotions", "career-growth", "management", "mentorship-and-sponsorship", "developer-tools", "influence-and-leadership", "corporate-politics", "incident-management", "big-tech-culture", "compensation-and-equity", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:00:44", "title": "Joining Airbnb and transitioning to EM"},
+    {"t": "00:18:29", "title": "Untold rules of calibrations"},
+    {"t": "00:23:50", "title": "How to dispute bureaucracy"},
+    {"t": "00:29:54", "title": "Airbnb culture"},
+    {"t": "00:31:36", "title": "Leaving Airbnb for Meta"},
+    {"t": "00:35:56", "title": "Uber TL at Stripe"},
+    {"t": "00:42:52", "title": "How to scale yourself"},
+    {"t": "00:45:22", "title": "What people get wrong in coaching"},
+    {"t": "00:52:58", "title": "Why people get stuck at Senior eng"},
+    {"t": "00:57:24", "title": "Most career impacting book"},
+    {"t": "00:58:39", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Laurent pitched his own transition into management at Airbnb rather than waiting to be asked; he argues most engineers passively hope for what they want instead of explicitly aligning with their manager on career goals.",
+    "As a manager he tracked a 'surprise factor' metric: before each performance review, he and the report each wrote the expected rating/promotion on paper and revealed simultaneously; any mismatch (including positive surprises) counted as a coaching failure.",
+    "Calibrations have untold, locally-developed rules — e.g. changing roles less than ~2.5 months before cycle end yields an automatic 'meets expectations' — and one such rule cost him a likely staff promotion when he moved into management mid-cycle.",
+    "To dispute bureaucratic rules, don't fight them in the calibration room; go one-on-one, gather evidence, and first learn the story behind the rule — sometimes it convinces you, sometimes it exposes a stale precedent.",
+    "Instead of measuring engineers by lines of code or PR counts, he instrumented the full journey of a code change at Stripe (think, write, CI, review, merge), turning an unfair individual ranking into actionable org-level friction data.",
+    "As uber TL over 35 (eventually 140) engineers at Stripe, he built credibility by embedding in each team for weeks, never justifying decisions with 'it worked at Facebook', and influencing almost entirely by asking questions — he says he never outright rejected a design.",
+    "Situational leadership transformed his coaching: match style (directing, selling, supporting, delegating) to the learner's mastery and motivation; a 'failing' Facebook bootcamp mentee became his strongest after he stopped directing and switched to supporting.",
+    "The senior-to-staff promotion is a bigger mindset shift than staff-to-senior-staff: staff engineers must independently identify problems, pitch them, and solve them end to end, while seniors typically solve problems others chose; higher levels are the same loop at larger scope.",
+    "To find staff-worthy problems, 'channel your inner frustration' — Stripe institutionalized this as friction logs, screenshotting each step of a flow and interrogating every friction point; he could find 50-60 improvements in a single code-change flow.",
+    "Airbnb's designer-led culture hired actual firefighters and crisis-management professionals to run incident management — a practice he considered genius and carried to later jobs.",
+    "Boredom is a career signal that something must change: it drove his manager-to-IC switch once his team ran itself, and the four-year equity cliff drove his exit from Airbnb back to Meta/Instagram.",
+    "Advice to younger self: the industry changes faster than you think — stay on top of it (he reads the weekly top of Hacker News, hn.algolia.com, and has his whole career); most career-impacting book: Radical Candor by Kim Scott."
+  ],
+  "notable_quotes": [
+    {"speaker": "Laurent Charignon", "quote": "If you're a good manager, you don't want people to have surprise at performance review time.", "t": "00:14:41"},
+    {"speaker": "Laurent Charignon", "quote": "As a manager, you represent the interest of the company. You have to put the company first before your report. That's like an untold rule, but that's the way it is.", "t": "00:23:12"},
+    {"speaker": "Laurent Charignon", "quote": "I managed to do all of my work and all the influence and all the change of direction by asking questions, simply asking questions and getting people to change their mind themselves.", "t": "00:38:55"},
+    {"speaker": "Laurent Charignon", "quote": "It's much better to say I don't know than to say something wrong. If you claim with confidence something that is wrong, you're going to lose all the respect from your coworkers.", "t": "00:43:36"}
+  ],
+  "related": [
+    {"slug": "meta-senior-manager-m2-on-manager", "reason": "manager's-eye view of calibrations, ratings, and performance management"},
+    {"slug": "stripe-cto-on-what-grew-his-career", "reason": "shared company (Stripe) and its data-driven engineering culture"},
+    {"slug": "instagram-senior-staff-eng-ic7-on", "reason": "how promotions get decided at Instagram/Meta, complements calibration mechanics"},
+    {"slug": "meta-senior-staff-ic7-engs-honest", "reason": "the ratings/calibration system from the receiving end when it goes badly"},
+    {"slug": "instagram-principal-engineer-ic8", "reason": "Instagram infra/reliability work and tech-lead influence at scale"}
+  ],
+  "transcript_complete": true
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "instagram-principal-engineer-ic8",
+  "n": 6,
+  "title": "Instagram Principal Engineer (IC8) on Promotions, Breaking Prod, Tech Leading | Jake Bolam",
+  "date": "2025-05-31",
+  "url": "https://www.developing.dev/p/instagram-principal-engineer-ic8",
+  "guest": "Jake Bolam",
+  "guest_role": "Principal Engineer (IC8) at Instagram",
+  "guest_slug": "jake-bolam",
+  "companies": ["meta", "instagram"],
+  "concepts": ["promotions", "career-growth", "big-tech-culture"],
+  "sections": [],
+  "key_takeaways": [
+    "On diff review Jake biases toward 'how can I accept this diff' rather than 'how can I reject this diff'; if a diff isn't risky or touching a critical path he prioritizes speed and gives a rudimentary review, pushing the envelope on project speed unless told he's moving too fast.",
+    "His promotion to IC8 came from a migration that grew from multi-team scope into moving all of Instagram's backend to an entirely new backend, affecting hundreds of teams; the blast radius plus success despite the risk earned the promotion.",
+    "His advice to his younger self is 'go where you're valued': he struggled after joining Meta on a team that didn't value his frontend skillset, and his career took off once he moved to an Instagram team that did.",
+    "He works about 40 hours a week even at IC8 thanks to systems built over his career, chiefly blocking out focus time and minimizing meetings far more than the average engineer.",
+    "His note-taking system is a mass of unorganized plain text files in VS Code, navigated by remembered keywords and cross-linked like a personal Wikipedia knowledge base."
+  ],
+  "notable_quotes": [
+    {"speaker": "Ryan Peterman (summarizing Jake Bolam)", "quote": "He talked about biasing towards 'how can I accept this diff' rather than 'how can I reject this diff.'", "t": ""},
+    {"speaker": "Ryan Peterman", "quote": "The blast radius of this work and project success despite the risk earned him a promotion to IC8.", "t": ""}
+  ],
+  "related": [
+    {"slug": "instagram-principal-eng-ic8-on-building", "reason": "Another Instagram IC8's path to Principal"},
+    {"slug": "instagram-senior-staff-eng-ic7-on", "reason": "Instagram promotion mechanics one level down"},
+    {"slug": "instagram-staff-ic6-promo-despite", "reason": "Team switching at Instagram as a career lever"},
+    {"slug": "new-grad-to-principal-engineer-ic8", "reason": "Another route to IC8 at Meta"}
+  ],
+  "transcript_complete": false
+}

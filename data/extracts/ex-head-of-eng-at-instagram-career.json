@@ -1,0 +1,52 @@
+{
+  "slug": "ex-head-of-eng-at-instagram-career",
+  "n": 40,
+  "title": "Ex-Head of Eng at Instagram: Career Regrets and Learnings | James Everingham",
+  "date": "2026-04-06",
+  "url": "https://www.developing.dev/p/ex-head-of-eng-at-instagram-career",
+  "guest": "James Everingham",
+  "guest_role": "Ex-Head of Engineering at Instagram, Netscape veteran, VP Eng at Meta (Novi/dev infra), founder of Guild",
+  "guest_slug": "james-everingham",
+  "companies": ["instagram", "meta", "netscape", "microsoft", "mozilla"],
+  "concepts": ["management", "career-growth", "non-linear-careers", "big-tech-culture", "open-source", "startups-and-founding", "ai-era-engineering", "mentorship-and-sponsorship", "influence-and-leadership", "regrets-and-advice", "security-and-cryptography"],
+  "sections": [
+    {"t": "0:57", "title": "Kicked out of college"},
+    {"t": "5:35", "title": "FBI showed up at his house"},
+    {"t": "7:43", "title": "Pre-IPO Netscape experience"},
+    {"t": "25:19", "title": "Joining Instagram as head of eng"},
+    {"t": "29:12", "title": "Why shrinking teams improves velocity"},
+    {"t": "32:59", "title": "Working with Mike Krieger"},
+    {"t": "37:16", "title": "Leading Cryptocurrency project at Meta"},
+    {"t": "42:30", "title": "What he is working on now"},
+    {"t": "54:29", "title": "Career regrets"},
+    {"t": "56:27", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Kicked out of Penn State at 18 with a 0.0 GPA for skipping classes while the university simultaneously hired him full-time (first staff hire without a degree in 50+ years) because they were already using his shareware; as staff he took ~150 credits of CS classes free.",
+    "As a teenage phone phreaker he wrote Commodore software emulating operator tones (2600 Hz); the FBI traced him — partly because he proudly put his name on the software — and asked him to stop.",
+    "Relationships compound across a career: Borland colleagues took him to Netscape, and three Netscape-era colleagues are still with him at Guild five or six companies later. Mentorship advice: don't ask for a mentor, offer help; 'friends come and go, but enemies collect.'",
+    "Netscape lesson: superior technology loses to distribution — Microsoft bundled IE free and instantly killed Netscape's $35 browser revenue ('It's not a technology war, it's a distribution war'); when joining a company, understand which war it's fighting and treat job choice like an investment portfolio decision.",
+    "Open-sourcing Mozilla (jwz's idea) let dozens of engineers recruit the world against Microsoft's thousands, but required stripping SSL (legally a munition), obfuscating APIs, and hand-censoring profane variable names on printouts with highlighters.",
+    "Instagram Stories succeeded by shrinking the team: a small, talent-dense, founder-led group with clear ownership and no cross-org dependencies shipped it in ~3 months; Mike Krieger's value 'do the simple thing first' governed proving a thesis cheaply before scaling.",
+    "CTO vs VP of Eng: he and Krieger published their job descriptions to the org — CTO owns technology/roadmap/experiments/external brand, VP Eng owns people/hiring/execution; companies asking for 'a new CTO' almost always describe VP-of-Eng problems.",
+    "Instagram's engineers 'IQ'd past' the usual ~100-person communication breakdown until ~150-200 engineers, helped by everyone being a power user; Boomerang was built by an intern in a 3-day hackathon.",
+    "Libra/Novi grew to ~3,500 people and spent years re-architecting for regulators who called it 'the platinum version of stablecoin' yet still blocked it; in retrospect he thinks they should have shipped and asked forgiveness. When he finally worked up courage to resign, David Marcus announced his own departure first, and they co-founded Lightspark.",
+    "Running Meta dev infra (~1,000 engineers), his team's internal agentic platform DevMate — agents driving tools, not just coding — went viral among 40,000+ engineers, inspiring Guild: a deterministic control-plane governance layer for enterprise AI agents (permissions, observability, circuit breakers, token budgets) needed no matter which model company wins.",
+    "Many AI startups are 'building for the future past,' filling gaps LLMs will soon close (Cursor as autocomplete): 'you build a product on a bus stop, not where the end of the line is.'",
+    "Management philosophy: micromanage only briefly to fix broken teams; technology is a creative job, so hire people smarter than you, focus them on outcomes, clear blockers, and get out of the way — micromanaging smart people loses them.",
+    "Regrets/advice: time is the real scarce commodity, so ensure you're having good days; go where the smart people are (he spent 7 years in Pennsylvania — like an actor never trying Hollywood); max out your 401k from day one; speak up more."
+  ],
+  "notable_quotes": [
+    {"speaker": "James Everingham", "quote": "Microsoft's like, watch this. It's not a technology war, it's a distribution war. And we're going to just bundle this and give it away and people will not use your stuff anymore.", "t": "17:08"},
+    {"speaker": "James Everingham", "quote": "If you want to find a mentor, don't go and ask someone, hey, I need a mentor. Go offer them help.", "t": "11:39"},
+    {"speaker": "James Everingham", "quote": "Be sure you're doing what you love and be sure you're having good days, because that's really your scarce commodity.", "t": "55:01"}
+  ],
+  "related": [
+    {"slug": "instagram-principal-eng-ic8-on-building", "reason": "Ryan Olson's IG Stories episode; Everingham explains the same small-team decision from the head-of-eng side"},
+    {"slug": "mozilla-firefox-cto-on-browser-war", "reason": "Mozilla grew from the Netscape open-sourcing Everingham describes"},
+    {"slug": "instagram-principal-engineer-ic8", "reason": "Instagram engineering culture from the IC perspective in the same era"},
+    {"slug": "openai-and-meta-distinguished-engineer", "reason": "Fellow Meta senior leader with career stories spanning tech history"},
+    {"slug": "cloudkitchens-cto-on-intelligence", "reason": "Veteran executive career stories, management philosophy, and regrets"}
+  ],
+  "transcript_complete": true
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "amazon-vp-reveals-everything-hes",
+  "n": 39,
+  "title": "Amazon VP Reveals Everything He's Seen In Corporate Politics | Ethan Evans",
+  "date": "2026-03-30",
+  "url": "https://www.developing.dev/p/amazon-vp-reveals-everything-hes",
+  "guest": "Ethan Evans",
+  "guest_role": "Former Amazon VP, executive career coach",
+  "guest_slug": "ethan-evans",
+  "companies": ["amazon", "google"],
+  "concepts": ["corporate-politics", "promotions", "management", "career-growth", "influence-and-leadership", "calibrations-and-ratings"],
+  "sections": [
+    {"t": "00:02:33", "title": "Empire Building"},
+    {"t": "00:31:54", "title": "Stealing scope"},
+    {"t": "00:44:03", "title": "Managing out via reorgs"},
+    {"t": "00:51:01", "title": "Bad managers and mutiny"},
+    {"t": "01:01:43", "title": "Political messaging"},
+    {"t": "01:11:48", "title": "Handling politically skilled operators"},
+    {"t": "01:20:01", "title": "Orgs trying to steal scope"},
+    {"t": "01:30:26", "title": "Handling difficult people from other orgs"},
+    {"t": "01:36:19", "title": "Handling weak managers"},
+    {"t": "01:46:30", "title": "Backchanneling"},
+    {"t": "01:52:04", "title": "Influence without authority"},
+    {"t": "01:58:04", "title": "Sexual harassment"},
+    {"t": "02:00:49", "title": "Skip overruling firing"},
+    {"t": "02:05:39", "title": "How to fire managers"},
+    {"t": "02:11:31", "title": "Leverage when people are getting fired"},
+    {"t": "02:24:01", "title": "How to grow past senior eng"},
+    {"t": "02:43:01", "title": "How to avoid politics"},
+    {"t": "02:48:15", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Empire building persists because headcount is the only promotion metric nobody can debate; after Evans left Amazon, some orgs required ~80-90 reports for director, effectively a several-hundred-thousand-dollar-a-year bonus for accumulating 90 people, and leaders parked people under candidates to check the box.",
+    "Reorgs are 'hidden chess': the public business narrative coexists with private motives like retaining key people with juicier scope, giving disfavored people less, or platforming someone for promotion; leaders construct defensible storytelling for auditing parties.",
+    "Quiet, dutiful high performers get unconsciously deferred for resources because management assumes they'll accept less; Evans tells coaching clients that being 'a very nice person' is not a compliment in this context — you must state what you want.",
+    "Express career urgency without threats: Evans told his manager 'I need to understand how important my career is to Amazon because my career is very important to me' — the same underlying message as a quit threat but without triggering the extortion defense; delivery, warmth and timing determine how identical words land.",
+    "Demanding high performers are easier to manage than nice ones: refuse them and they self-select out; instead make explicit deals (deliver on my priorities and I'll deliver your promotion) and always follow through — e.g. Evans got a senior manager to director by having him build Amazon's India dev center over three years.",
+    "Large companies run 'forward looking slates' of promotions over 6-24 month windows; modern quota systems (e.g. Google allowing two L8-to-L9 promos per half per org) create literal queues, and million-dollar senior IC positions are not handed out 'like popcorn'.",
+    "Never mutiny alone against a bad manager: a lone complaint is cheaper for the skip to dismiss than to believe (believing creates three problems: managing out, backfilling, absorbing the work); two or three corroborating reports flip the calculus.",
+    "To escape a bad manager, first try a pure business case for the move without mentioning the manager; failing that, keep it blame-free ('maybe it's him, maybe it's me, I need a change'); Evans unlocked his own blocked move overnight by reframing the choice as 'keep me on your team or lose me entirely' backed by a competing SVP offer.",
+    "Defending org scope from raids: bundle unglamorous essential work into the story, respond quickly and thornily to attacks, use strong metrics to delay, and 'be the better storyteller' — attackers underestimate others' complexity (S3 dismissed as 'just a big disk drive') because respect between teams is inversely proportional to distance.",
+    "Influence and politics are the same skill set distinguished only by motive ('Darth Vader had executive presence in spades'); treat cross-functional partners as people with competing pressures rather than APIs, use 'how can you help me' framing, and pre-plan opening moves like chess."
+  ],
+  "notable_quotes": [
+    {"speaker": "Ethan Evans", "quote": "There's like a several hundred thousand dollars a year bonus quite literally for accumulating 90 people.", "t": "00:08:00"},
+    {"speaker": "Ethan Evans", "quote": "I will often tell my clients, you are a very nice person. And when I tell them that, what they don't know is I'm then going to say, and that is not a compliment in this context.", "t": "00:17:30"},
+    {"speaker": "Ethan Evans", "quote": "If you want to hold a mutiny, go together. Right? Even if it's Zelda, it's dangerous to go alone. Take this, take other people.", "t": "00:54:00"},
+    {"speaker": "Ethan Evans", "quote": "Respect between two engineering teams is inversely proportional to their distance.", "t": "01:21:00"}
+  ],
+  "related": [
+    {"slug": "amazon-vp-on-promotions-getting-fired", "reason": "Same guest (Ethan Evans); his first appearance covering his own Amazon career story"},
+    {"slug": "meta-senior-manager-m2-on-manager", "reason": "Manager-side view of promotions, PIPs and Amazon culture"},
+    {"slug": "airbnb-staff-eng-on-how-to-not-get", "reason": "IC-side view of hidden calibration and promotion machinery"},
+    {"slug": "distinguished-eng-on-stack-ranking", "reason": "Contrasting senior-leader take on stack ranking and incentive systems"},
+    {"slug": "amazon-principal-engineer-on-layoffs", "reason": "Amazon career growth and layoff politics from the principal-engineer level"}
+  ],
+  "transcript_complete": false
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "the-creator-of-kubernetes-on-building",
+  "n": 38,
+  "title": "The Creator of Kubernetes On Building Kubernetes",
+  "date": "2026-03-23",
+  "url": "https://www.developing.dev/p/the-creator-of-kubernetes-on-building",
+  "guest": "Brendan Burns",
+  "guest_role": "Co-creator of Kubernetes, Technical Fellow/CVP at Microsoft",
+  "guest_slug": "brendan-burns",
+  "companies": ["google", "microsoft", "openai"],
+  "concepts": ["open-source", "distributed-systems", "systems-design", "career-growth", "influence-and-leadership", "ai-era-engineering", "teaching-and-communication", "regrets-and-advice", "big-tech-culture"],
+  "sections": [
+    {"t": "00:00:37", "title": "How he convinced Google leaders"},
+    {"t": "00:09:26", "title": "Building the MVP"},
+    {"t": "00:11:43", "title": "How he made time for Kubernetes"},
+    {"t": "00:25:28", "title": "Technical details on building Kubernetes"},
+    {"t": "00:38:46", "title": "Rallying the open source community"},
+    {"t": "00:50:01", "title": "Scaling Kubernetes up for AI training workloads"},
+    {"t": "00:55:31", "title": "Reflections on getting a PhD"},
+    {"t": "01:00:22", "title": "The inevitable trajectory of software is death"},
+    {"t": "01:04:16", "title": "Top book recommendations"},
+    {"t": "01:05:22", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "The internal Google pitch used the MapReduce/Hadoop lesson — publishing the paper but not the runnable implementation left Google out of the driver's seat — and framed open-sourcing Kubernetes as creating a new playing field where Google was the thought leader; platform-exclusivity was rejected because most users are not on your platform.",
+    "The Kubernetes MVP took about four to five days to write and already demoed container deployment across machines, load balancing across replicas, health checking, and V1-to-V2 upgrades.",
+    "Burns believes you can hide roughly 10% of your effort from management and should always have a self-directed project you think is important; expect portfolio economics where one hit out of five bets beats grinding for top ratings every cycle.",
+    "The hardest architectural choice was making Kubernetes a loosely coupled system of ~15 cooperating processes: excellent resiliency, but debugging means sifting many logs to reconstruct why an outcome wasn't achieved.",
+    "Leader election was delegated to etcd (Raft-based, provably correct and much easier to implement than Paxos), and forcing every component to access state only through the API server meant everything could restart at any time and just recover — the key to system stability.",
+    "Red Hat and other partners joined because orchestration was undifferentiated heavy lifting they would otherwise each build, and they got a seat at the design table; Google deliberately gave up control by donating Kubernetes to the CNCF and writing a literal governance constitution and steering committee in 2016 so no one company could dominate.",
+    "Early Kubernetes could not handle more than about 100 nodes; scaling toward AI-training workloads (OpenAI ran 7,500-node clusters) meant reducing API noise and fighting etcd, the storage-layer bottleneck — while most users unexpectedly went to hundreds or thousands of small clusters instead of one big one.",
+    "Every order-of-magnitude scale increase makes the old main problem easy and moves the bottleneck somewhere else.",
+    "A PhD probably doesn't matter for career level either way, but writing, argumentation and teaching skills from it directly shaped how Kubernetes was organized to be learnable; his top advice to learners is to care that you're learning, not what you learn.",
+    "'The inevitable trajectory of software is death': his original code has been rewritten many times, and Kubernetes' successor may be natural-language interfaces replacing YAML, or the system simply becoming invisible as attention shifts to AI — which he thinks is already happening.",
+    "Book recommendations: Design Patterns (Gang of Four) early career; Leadership on the Line and The Five Dysfunctions of a Team for leaders. Advice to younger self: keep better notes — the interpersonal history of Kubernetes is undocumented."
+  ],
+  "notable_quotes": [
+    {"speaker": "Brendan Burns", "quote": "You can't win if you make it only on your platform... the majority of people are going to be not on your platform.", "t": "00:05:00"},
+    {"speaker": "Brendan Burns", "quote": "I believe you can hide order 10% of your effort from your management.", "t": "00:12:00"},
+    {"speaker": "Brendan Burns", "quote": "Every time you increase by an order of magnitude what you thought was the main problem is going to become easy and then the problem moves somewhere else.", "t": "00:53:00"},
+    {"speaker": "Brendan Burns", "quote": "It could be that people focus so much on the AI that they forget about the Kubernetes part. And I think that's happening already.", "t": "01:03:00"}
+  ],
+  "related": [
+    {"slug": "aws-distinguished-eng-learnings-from", "reason": "Large-scale cloud infrastructure, reliability, and AI-era engineering"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "Kubernetes relies on Raft-based etcd; Lamport discusses Paxos vs Raft"},
+    {"slug": "dropboxs-former-most-senior-eng-building", "reason": "Building great distributed systems and advice for the AI era"},
+    {"slug": "turing-award-winner-postgres-disagreeing", "reason": "Canonical open-source infrastructure project strategy (Postgres)"},
+    {"slug": "intern-to-microsoft-distinguished", "reason": "Most senior IC levels at Microsoft, where Burns is a Technical Fellow"}
+  ],
+  "transcript_complete": true
+}

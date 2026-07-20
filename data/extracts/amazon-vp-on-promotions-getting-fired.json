@@ -1,0 +1,54 @@
+{
+  "slug": "amazon-vp-on-promotions-getting-fired",
+  "n": 11,
+  "title": "Amazon VP On Promotions, Getting Fired Twice, Working With Bezos | Ethan Evans",
+  "date": "2025-08-04",
+  "url": "https://www.developing.dev/p/amazon-vp-on-promotions-getting-fired",
+  "guest": "Ethan Evans",
+  "guest_role": "Retired Amazon VP (Prime Video, App Store, Twitch, Prime Gaming), executive coach",
+  "guest_slug": "ethan-evans",
+  "companies": ["amazon"],
+  "concepts": ["promotions", "career-growth", "corporate-politics", "calibrations-and-ratings", "layoffs", "management", "influence-and-leadership", "mentorship-and-sponsorship", "big-tech-culture", "regrets-and-advice"],
+  "sections": [
+    {"t": "01:01", "title": "Experience before Amazon"},
+    {"t": "05:03", "title": "Getting fired twice & learnings"},
+    {"t": "14:02", "title": "Joining Amazon"},
+    {"t": "16:02", "title": "What VP promotions look like"},
+    {"t": "26:03", "title": "Promotion failure story"},
+    {"t": "29:14", "title": "Integrating Twitch into Amazon"},
+    {"t": "33:48", "title": "Jeff Bezos vs Andy Jassy stories"},
+    {"t": "36:53", "title": "VP performance reviews"},
+    {"t": "41:10", "title": "Stack ranking & PIPs"},
+    {"t": "46:11", "title": "A manager can fire anyone they want"},
+    {"t": "50:45", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Evans was let go twice around the .com bust for abrasiveness (the second time as a 'layoff of one'), and an interviewer's remark that truly valuable people get kept triggered him to deliberately rebuild his soft skills around questions and listening.",
+    "Be 'strategically annoying' rather than abrasive: push for your opinions, but if people stop disagreeing to your face they organize behind your back, and without allies you dig your own grave.",
+    "His director promotion came from an outsized event: he told his SVP 'unless you order me not to do this, I'm going to do it,' bet on the TiVo partnership, and the promo doc read 'without Ethan, we wouldn't have had TiVo.'",
+    "He pushed for promotion with unassailable wording ('my career is very important to me, and I need to know if it's as important to Amazon'), and admits leaders often promote the polite agitator over the patient team player because retention triage is real.",
+    "His 'magic loop' VP promotion took 2.5-3 years: an explicit partnership where he did everything his manager needed in exchange for the manager staking his credibility on the promotion.",
+    "He once cost a star SDE1 a promotion by not knowing Amazon's twice-yearly promo cycle; the report bears the risk, so reports should verify their manager actually knows the process and its deadlines.",
+    "As Twitch integration liaison he gave up an 800-person org to influence CEO Emmett Shear with zero authority; Twitch's gaps were indifference to profitability while Jassy demanded it, and Shear having to hire over loyal early employees.",
+    "Bezos as founder could gamble the company (telling his CFO 'how much is that? because I might want to spend it') and felt emotionally supportive; Jassy was a classic hired business leader whose probing style felt like waiting for Evans to fail.",
+    "VP reviews reward hitting interim goals rather than the vision: he was rated well every year while Prime Gaming never approached the Tencent-scale vision, and zombie products persist because shutting them down admits failure.",
+    "Amazon's unregretted attrition goal (~4-7%/year) came back after an experiment showed managers stop having hard conversations without it; PIPs are self-fulfilling and everyone he coached through one was fired anyway, so use the PIP time to job hunt.",
+    "A manager can fire any single person they choose: they strike first with the narrative (700 pull requests can be spun as upleveling the team or as nitpicking), and HR will not rescue you.",
+    "Advice to his younger self: always prefer high-growth companies (Amazon grew ~100x under him, an 'escalator' he also climbed) and build reputation and relationships early so companies call you."
+  ],
+  "notable_quotes": [
+    {"speaker": "Ethan Evans", "quote": "People say I'm a loose cannon, but that's only 'cause I'm pointed at them.", "t": "05:30"},
+    {"speaker": "Ethan Evans", "quote": "My career is very important to me, and I need to know if it's as important to Amazon, because if it's not as important to Amazon as it is to me, I have to think about that.", "t": "17:30"},
+    {"speaker": "Ethan Evans", "quote": "And he said, Tom, how much is that, because I might wanna spend it.", "t": "34:30"},
+    {"speaker": "Ethan Evans", "quote": "So what you need to do is spend that time on the PIP looking for your next job, because you're going to be fired.", "t": "44:00"},
+    {"speaker": "Ethan Evans", "quote": "You're bringing a knife to a gunfight. They're the one with the gun, and you're probably gonna lose.", "t": "49:30"}
+  ],
+  "related": [
+    {"slug": "amazon-vp-reveals-everything-hes", "reason": "Same guest, follow-up episode on corporate politics"},
+    {"slug": "amazon-principal-engineer-on-layoffs", "reason": "Amazon IC view of the same stack ranking and layoff culture"},
+    {"slug": "meta-senior-manager-m2-on-manager", "reason": "Manager view of PIPs and performance, compares Amazon vs Meta"},
+    {"slug": "distinguished-eng-on-stack-ranking", "reason": "Contrasting take on stack ranking and competing with Bezos"},
+    {"slug": "frontline-manager-at-meta-to-senior", "reason": "Rapid climb into executive management ranks"}
+  ],
+  "transcript_complete": true
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "meta-hiring-lead-on-behind-the-scenes",
+  "n": 37,
+  "title": "Meta Hiring Lead On Behind The Scenes of Senior+ Eng Hiring",
+  "date": "2026-03-16",
+  "url": "https://www.developing.dev/p/meta-hiring-lead-on-behind-the-scenes",
+  "guest": "Austen McDonald",
+  "guest_role": "Former Meta hiring committee lead for mobile, interview coach",
+  "guest_slug": "austen-mcdonald",
+  "companies": ["meta", "openai", "anthropic", "google"],
+  "concepts": ["hiring-and-interviews", "calibrations-and-ratings", "career-growth", "compensation-and-equity", "mentorship-and-sponsorship", "influence-and-leadership", "ai-era-engineering", "ai-coding-tools"],
+  "sections": [
+    {"t": "00:00:49", "title": "What goes on in hiring committees"},
+    {"t": "00:09:02", "title": "Unethical candidates"},
+    {"t": "00:12:50", "title": "How leveling is determined"},
+    {"t": "00:23:12", "title": "Can you negotiate level mid-process"},
+    {"t": "00:32:30", "title": "How non-tech leads can signal scope"},
+    {"t": "00:39:11", "title": "Referrals and bias"},
+    {"t": "00:45:28", "title": "What the rubric looks like"},
+    {"t": "00:50:00", "title": "OpenAI and Anthropic specific discussion"},
+    {"t": "00:52:22", "title": "Most common mistakes senior candidates make"},
+    {"t": "01:02:31", "title": "How to prep depending on your level"},
+    {"t": "01:08:34", "title": "Subjectivity and bias"}
+  ],
+  "key_takeaways": [
+    "Hiring committees open a senior packet at the behavioral interview first, because scope, influence and insight determine leveling far more than coding performance; the pipeline runs sourcer -> phone screen -> onsite -> committee (hire/no-hire + level) -> director approval.",
+    "Initial leveling is set by years of experience and previous title; FAANG titles map across roughly one-to-one, while non-FAANG titles get downleveled significantly for level inflation (a manager of 50-75 elsewhere may map to managing 8-10 FAANG engineers).",
+    "Fabricating seniority essentially never works: staff+ phone screens include scope-check project walkthroughs, and highly calibrated senior onsite interviewers expose vague or AI-generated stories with follow-ups; McDonald never saw a confirmed successful liar in thousands of interviews.",
+    "Every story should communicate three dimensions — technical depth, organizational depth, business impact ('I organized across 100 engineers on a 12-month performance project requiring multiple staff engineers' vs 'I improved performance in the Facebook app'); a crisp tell-me-about-yourself is the highest-leverage prep because everyone listens for the same signal.",
+    "The recruiter call is an evaluating call: recruiters advocate for you but are incentivized by hires and 'are not your friend' — avoid early compensation anchoring, use CA/NY salary-band disclosure laws, and hold multiple simultaneous offers as the main negotiation lever.",
+    "You can negotiate level mid-process: get the loop run at the target level so the committee collects all signal at once, anchor every interviewer at that level in your opening, and answer the 'question behind the question' with your highest-scope stories — committees both uplevel and downlevel based on demonstrated scope.",
+    "Referrals matter most on the bubble: a VP/director who directly worked with you stakes their reputation (and can advocate inside the committee room), and you should draft the referral content for them; but for engineers no referral overrides unanimous no-hire consensus, though senior manager/director hiring is more about who you know.",
+    "Meta's behavioral rubric, built by industrial-psychology 'selection scientists', has five signals: driving results, embracing ambiguity, resolving conflicts, growing continuously, communicating effectively; get the rubric from the recruiter beforehand and run the decode-select-deliver loop, remixing core stories like movie trailers per question.",
+    "Story selection priority is scope > relevance > recency (2-3 years, scaled by career length) > uniqueness across rounds; top senior mistakes are wrong-scope stories, over-context (30 seconds without an action verb means rethink), stories open to uncharitable interpretation, omitting non-technical work, and unstructured multi-year stories (fix with an upfront table of contents).",
+    "Prep by level: juniors nail technical and show thinking/slope; mid-levels need balance because agentic coding makes end-to-end ownership the key behavioral signal; senior+ should start behavioral prep alongside leetcode since behavioral rounds differentiate while technical rounds become pass/fail checkmarks, and coding flubs are forgiven at staff/principal/manager levels.",
+    "AI-lab values tailoring: OpenAI's 'Feel the AGI' looks for genuine optimism about AI's potential; Anthropic's 'Hold Light and Shade' requires articulating both positive and negative implications and showing you assessed and mitigated risks in past AI projects.",
+    "Likability bias scales exactly with level: structured rubrics suppress subjective vibes for junior candidates, but senior roles are about influencing people, so confidence and 'casual excellence' in the room legitimately affect outcomes."
+  ],
+  "notable_quotes": [
+    {"speaker": "Austen McDonald", "quote": "When I would get a packet in front of the hiring committee... the first thing I would do is go to the behavioral interview. I would want to understand what is the scope that this engineer has operated at in the past.", "t": "00:01:49"},
+    {"speaker": "Austen McDonald", "quote": "Am I foolable? Like, yes, everybody's foolable. If you're a good enough liar... But I think it's actually much harder to lie than most people expect.", "t": "00:11:07"},
+    {"speaker": "Austen McDonald", "quote": "Preparing for behavioral interviews will actually make you a better engineer... being a great engineer is being a great communicator, especially about your impact.", "t": "00:15:48"},
+    {"speaker": "Austen McDonald", "quote": "A calibrated interviewer, someone who is confident in what they're doing, they will be a little rude to you because they are looking to acquire that signal.", "t": "01:01:50"}
+  ],
+  "related": [
+    {"slug": "airbnb-staff-eng-on-how-to-not-get", "reason": "Internal calibration mirror of external hiring-committee leveling"},
+    {"slug": "amazon-vp-reveals-everything-hes", "reason": "Executive-side view of leveling, promotion slates and scope"},
+    {"slug": "amazon-principal-engineer-on-layoffs", "reason": "FAANG interviewing and career growth from the candidate/interviewer side"},
+    {"slug": "google-deepmind-pre-training-lead", "reason": "Getting hired at frontier AI labs, whose values McDonald discusses"},
+    {"slug": "stripe-cto-on-what-grew-his-career", "reason": "Contrasting philosophy: hiring without leetcode vs structured FAANG loops"}
+  ],
+  "transcript_complete": false
+}

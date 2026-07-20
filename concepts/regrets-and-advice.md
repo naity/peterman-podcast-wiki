@@ -1,0 +1,59 @@
+---
+type: concept
+updated: 2026-07-19
+sources: [googlex-chief-scientist-on-imposter.md, ex-head-of-eng-at-instagram-career.md, amazon-vp-on-promotions-getting-fired.md, aws-distinguished-eng-learnings-from.md, msl-eng-director-promo-hacking-industry.md, retired-netflix-engineering-director.md, cloudkitchens-cto-on-intelligence.md, intern-to-microsoft-distinguished.md, turing-award-winner-tpu-vs-gpu-vs.md, turing-award-winner-nsa-public-key.md, co-creator-of-haskell-functional.md, distinguished-engineer-at-shopify.md, meta-senior-staff-ic7-engs-honest.md, quitting-robinhood-and-raising-35m.md, amazon-principal-engineer-on-layoffs.md, uber-distinguished-eng-on-unfair.md, staff-engineer-meta-by-age-25-evan.md, stanford-phd-ai-researcher-and-quant.md, laid-off-from-big-tech-after-25-years.md, meta-senior-manager-m2-on-manager.md, boris-cherny-creator-of-claude-code.md, distinguished-eng-on-stack-ranking.md, turing-award-winner-on-working-with.md, meta-distinguished-eng-ic9-on-influencing.md, harvard-professor-cs50-what-matters.md, instagram-senior-staff-eng-ic7-on.md, turing-award-winner-postgres-disagreeing.md, frontline-manager-at-meta-to-senior.md, tech-lead-for-metas-most-used-programming.md, google-deepmind-pre-training-lead.md]
+---
+
+# Regrets and advice
+
+Nearly every episode ends with "what would you tell your younger self?" — producing the podcast's densest vein of distilled experience, from Turing Award winners to anonymous laid-off architects. Strong patterns emerge, along with a few genuine contradictions.
+
+## What the guests say
+
+### The most common regret: staying too long, moving too late
+
+Carey Nachenberg's biggest regret is that imposter syndrome kept him at Symantec 21+ years after he stopped growing: "stay only as long as you're learning" ([episode](../sources/googlex-chief-scientist-on-imposter.md)). Marc Brooker wishes he'd been bolder about changing teams — 4 org changes when 5–6 would have been optimal ([episode](../sources/aws-distinguished-eng-learnings-from.md)). Steve Huynh regrets not switching teams earlier ([episode](../sources/amazon-principal-engineer-on-layoffs.md)); Jayendra Jog wishes he'd left Robinhood earlier ([episode](../sources/quitting-robinhood-and-raising-35m.md)); David Ronca "wasted" six years at large failing companies ([episode](../sources/retired-netflix-engineering-director.md)); James Everingham spent seven years in Pennsylvania before going where the smart people were ([episode](../sources/ex-head-of-eng-at-instagram-career.md)).
+
+### The most common advice: be bolder, less afraid
+
+John Myles White: people "over convince themselves of the greatness of other people... They're not actually doing that much better than you. They just tried and you didn't try" — his own regret is never once attending his skip-level Javi's (Javier Olivan, now Meta COO) office hours out of fear ([episode](../sources/msl-eng-director-promo-hacking-industry.md)). Brian Attwell regrets only the moments he knew the truth and stayed silent — including accidentally killing his own Apple intern project by downplaying it in front of Steve Jobs ([episode](../sources/cloudkitchens-cto-on-intelligence.md)). David Patterson: "fortune favors the bold," and someone should stand up to weak arguments even from leaders ([episode](../sources/turing-award-winner-tpu-vs-gpu-vs.md)). Martin Hellman argues the best work looks crazy a priori — every colleague told him he was insane to compete with the NSA ([episode](../sources/turing-award-winner-nsa-public-key.md)). Simon Peyton Jones: "all the successful people are making it up as they go along, so it's fine if you are too" — and to be lucky, take risks that put you where lucky accidents happen ([episode](../sources/co-creator-of-haskell-functional.md)). Nachenberg ("don't let fear of failure hold you back", [episode](../sources/googlex-chief-scientist-on-imposter.md)), Jayendra Jog ("think it through, then pull the trigger quickly", [episode](../sources/quitting-robinhood-and-raising-35m.md)), and Joakim Recht ("just try stuff... it's not rocket science, it is just computers", [episode](../sources/uber-distinguished-eng-on-unfair.md)) all converge here. Ilya Grigorik adds a subtle version: don't let the pressure of past success filter what you publish or try ([episode](../sources/distinguished-engineer-at-shopify.md)).
+
+### Relationships compound; enemies accumulate
+
+Ethan Evans wishes he'd woken up sooner to the fact that jobs are with humans — build reputation and relationships early so companies call *you* ([episode](../sources/amazon-vp-on-promotions-getting-fired.md)). James Everingham's phrasing: "friends come and go, but enemies collect" ([episode](../sources/ex-head-of-eng-at-instagram-career.md)) — and David Patterson independently uses nearly the same line, "friends come and go, enemies accumulate" ([episode](../sources/turing-award-winner-tpu-vs-gpu-vs.md)). Stefan Mai's advice to his younger self is to find mentors instead of going it alone ([episode](../sources/meta-senior-manager-m2-on-manager.md)); David Fowler regrets early arrogance — "being right means nothing" without patience and empathy ([episode](../sources/intern-to-microsoft-distinguished.md)); Vlad Feinberg: be the coworker other people want to see succeed — the amicable approach beats cynical game theory ([episode](../sources/google-deepmind-pre-training-lead.md)).
+
+### Health, family, and time
+
+David Ronca's stage-3 colon cancer at a 24/7 startup is the corpus's starkest warning: "don't wait till you get cancer or have a heart attack" to build balance into your DNA ([episode](../sources/retired-netflix-engineering-director.md)). Evan King regrets over-prioritizing work at the cost of friendships and self-reflection ([episode](../sources/staff-engineer-meta-by-age-25-evan.md)); Patterson's first advice is keep family first and optimize happiness over wealth ([episode](../sources/turing-award-winner-tpu-vs-gpu-vs.md)); Everingham reframes the resource: time, not money, becomes the scarce commodity — "be sure you're having good days" ([episode](../sources/ex-head-of-eng-at-instagram-career.md)). Nimit Sohani's meta-regret: the time he spent regretting decisions that didn't matter ([episode](../sources/stanford-phd-ai-researcher-and-quant.md)).
+
+### Money advice from people who learned the hard way
+
+Everingham: max out your 401k from day one ([episode](../sources/ex-head-of-eng-at-instagram-career.md)); Ronca: start financial planning on day one so your 50s are financially independent ([episode](../sources/retired-netflix-engineering-director.md)); Fowler: negotiate your salary and get multiple offers — he didn't know it was possible ([episode](../sources/intern-to-microsoft-distinguished.md)); the anonymous laid-off architect: always take free money (ESPP, 401k match) ([episode](../sources/laid-off-from-big-tech-after-25-years.md)). Hellman's contrarian sequencing: "get famous and rich first, then save the world" — reputation and money at 35 gave him leverage ([episode](../sources/turing-award-winner-nsa-public-key.md)).
+
+### Disagreements worth noticing
+
+- **Chase meaning vs. accept the game.** Bryan Cantrill tells title-goalers to find meaning instead — miserable DEs and miserable rich people exist, and even meaningful shipped goals produce "postpartum in engineering" ([episode](../sources/distinguished-eng-on-stack-ranking.md)). Adam Ernst's only career advice is similar — do what you love, because enthusiasm can't be faked ([episode](../sources/meta-distinguished-eng-ic9-on-influencing.md)) — but John Myles White insists refusing the promo game unilaterally is irrational; you pick your battlefield, not whether there's a war ([episode](../sources/msl-eng-director-promo-hacking-industry.md)).
+- **Intensity vs. chill.** Marius Schulz tells his blog-every-week younger self to "chill a little bit, it's gonna be fine" — while admitting the intensity is what got him recruited ([episode](../sources/instagram-senior-staff-eng-ic7-on.md)). The anonymous architect's mentor taught the opposite emphasis: work hard, never stop learning, stay flexible ([episode](../sources/laid-off-from-big-tech-after-25-years.md)).
+- **Whether to give advice at all.** Leslie Lamport refuses the question entirely: "I shouldn't waste time trying to answer questions that I don't have to answer" ([episode](../sources/turing-award-winner-on-working-with.md)) — a fitting outlier. Boris Cherny's near-minimal answer: "just use common sense — big companies systematically pull you away from it" ([episode](../sources/boris-cherny-creator-of-claude-code.md)).
+
+### Craft-level regrets
+
+Patterson: finish things — "you're remembered for the 5-6 things you complete, not hundreds you start" ([episode](../sources/turing-award-winner-tpu-vs-gpu-vs.md)). Dwayne Reeves: when told to write code, ask how they knew it was the right code to write — aim to be in the rooms deciding what to build ([episode](../sources/tech-lead-for-metas-most-used-programming.md)). Igor: ask whether your company really benefits from what you're building; if not, switch projects ([episode](../sources/meta-senior-staff-ic7-engs-honest.md)). David Malan regrets never exploring enough — and never working in industry until a GitHub sabbatical decades in ([episode](../sources/harvard-professor-cs50-what-matters.md)). Fowler regrets passing on a friend's 2008 Bitcoin venture ([episode](../sources/intern-to-microsoft-distinguished.md)).
+
+## Practical takeaways
+
+- Audit whether you're still learning at least yearly; the single most repeated regret is overstaying ([Nachenberg](../sources/googlex-chief-scientist-on-imposter.md), [Brooker](../sources/aws-distinguished-eng-learnings-from.md), [Huynh](../sources/amazon-principal-engineer-on-layoffs.md)).
+- When a leader invites you to talk, show up — fear-driven avoidance hurts both sides ([White](../sources/msl-eng-director-promo-hacking-industry.md)).
+- Speak the truth you're sitting on; the regretted failures are silences, not mistakes ([Attwell](../sources/cloudkitchens-cto-on-intelligence.md), [Patterson](../sources/turing-award-winner-tpu-vs-gpu-vs.md)).
+- Invest in relationships and reputation before you need them; avoid making enemies — they outlast friendships ([Evans](../sources/amazon-vp-on-promotions-getting-fired.md), [Everingham](../sources/ex-head-of-eng-at-instagram-career.md)).
+- Set up the financial basics (401k, ESPP, negotiation, planning) on day one ([Everingham](../sources/ex-head-of-eng-at-instagram-career.md), [Ronca](../sources/retired-netflix-engineering-director.md), [Fowler](../sources/intern-to-microsoft-distinguished.md)).
+- Make crunch the exception; nobody on this podcast regretted working less at the expense of health ([Ronca](../sources/retired-netflix-engineering-director.md), [Evan King](../sources/staff-engineer-meta-by-age-25-evan.md)).
+
+## Related
+
+- [career-growth](career-growth.md) — the forward-looking version of these lessons
+- [non-linear-careers](non-linear-careers.md) — paths shaped by acting on (or ignoring) this advice
+- [imposter-syndrome](imposter-syndrome.md) — the fear behind many of these regrets
+- [mentorship-and-sponsorship](mentorship-and-sponsorship.md) — "find mentors" as recurring advice
+- Key people: [Carey Nachenberg](../entities/carey-nachenberg.md), [James Everingham](../entities/james-everingham.md), [David Patterson](../entities/david-patterson.md), [John Myles White](../entities/john-myles-white.md), [David Ronca](../entities/david-ronca.md)
+- Most relevant episodes: [GoogleX Chief Scientist on imposter syndrome](../sources/googlex-chief-scientist-on-imposter.md), [Ex-Head of Eng at Instagram: career regrets](../sources/ex-head-of-eng-at-instagram-career.md), [Retired Netflix director on regrets](../sources/retired-netflix-engineering-director.md)

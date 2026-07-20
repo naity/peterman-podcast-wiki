@@ -1,0 +1,49 @@
+{
+  "slug": "turing-award-winner-tpu-vs-gpu-vs",
+  "n": 54,
+  "title": "Turing Award Winner: TPUs vs GPUs vs CPUs, Computer Architecture, RISC vs CISC | David Patterson",
+  "date": "2026-07-13",
+  "url": "https://www.developing.dev/p/turing-award-winner-tpu-vs-gpu-vs",
+  "guest": "David Patterson",
+  "guest_role": "Turing Award winner, UC Berkeley professor, RISC pioneer, Google distinguished engineer",
+  "guest_slug": "david-patterson",
+  "companies": ["uc-berkeley", "google", "nvidia", "intel", "apple", "ibm"],
+  "concepts": ["computer-architecture", "ai-era-engineering", "regrets-and-advice", "influence-and-leadership", "career-growth", "teaching-and-communication", "imposter-syndrome"],
+  "sections": [
+    {"t": "00:42", "title": "RISC vs CISC"},
+    {"t": "12:51", "title": "Compilers"},
+    {"t": "17:38", "title": "GPUs"},
+    {"t": "23:07", "title": "GPU vs TPU vs CPU"},
+    {"t": "32:12", "title": "Is Moores law dead?"},
+    {"t": "38:04", "title": "GPU benchmarks"},
+    {"t": "41:40", "title": "How to have a bad career"},
+    {"t": "49:59", "title": "Courage and optimism"},
+    {"t": "55:56", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "The 1980s RISC vs CISC debate was ferocious partly because architecture lacked quantitative methods; once measured, RISC needed ~30-40% more instructions but ran them 4-5x faster, a net 3-4x potential speedup.",
+    "RISC effectively won: ARM (originally Acorn RISC Machine, renamed when Apple used it in the Newton) has shipped ~350 billion processors and ~99% of processors today are RISC; x86 survived by translating its instructions into RISC micro-ops in hardware, worth the overhead because of the PC binary software base.",
+    "Compilers were central to the RISC argument: as register allocation improved, simple instructions plus 32 registers beat sophisticated CISC instructions that compiler writers refused to use, making the microcode interpreter pure overhead.",
+    "Dennard scaling ended around 2005 (chips could no longer stay at tens of watts), forcing multicore; then Moore's Law slowed in the 2010s, forcing the ~2015 turn to domain-specific architectures just as machine learning burst on the scene as the obvious target domain.",
+    "AlexNet's 2012 win — by a Toronto student who had taken a CUDA course — flipped the whole field to neural networks on GPUs within a few years.",
+    "Google's 2016 TPU was the watershed: clean-slate design around a giant matrix-multiply unit, software-managed memory instead of caches, and bfloat16 (first format with exponent bigger than fraction), achieving ~30x GPU and ~80x CPU inference performance and forcing Intel and NVIDIA to respond.",
+    "NVIDIA's moat is the libraries as much as CUDA: armies of engineers re-tailor libraries for each architecture, which is also why startups struggle on MLPerf and the benchmark is less universally run.",
+    "Moore's Law is genuinely over (SRAM barely improves; DRAM density gains slowed from 4x/3yr to ~10yr per factor); progress now comes from chiplet/reticle packaging, 8-bit and 4-bit floating point, and bigger matrix units — and denial is partly emotional since careers were built on sustaining Moore's Law.",
+    "Career advice: keep family first, optimize happiness over wealth, protect time for important non-urgent work (Covey quadrant), and finish things — you're remembered for the 5-6 things you complete, not hundreds you start.",
+    "Courage is career-critical — fortune favors the bold, and someone should stand up to weak arguments even from leaders — but 'friends come and go, enemies accumulate.' His one regret: not knowing about harassment at SIGARCH conferences he chaired, which he would have stopped."
+  ],
+  "notable_quotes": [
+    {"speaker": "David Patterson", "quote": "It turned out you needed maybe 30%, 40% more simple instructions to execute in a program. But you could run them 4 or 5 times faster. So the net was 3 or 4x speedup was the potential for RISC over CISC.", "t": "03:43"},
+    {"speaker": "David Patterson", "quote": "Nobody on their deathbed says, you know, I wish I spent more time in the office.", "t": "43:17"},
+    {"speaker": "David Patterson", "quote": "It's not how many things you start, it's how many things you finish.", "t": "45:49"},
+    {"speaker": "David Patterson", "quote": "We boiled it down to nine magic words... I was wrong, you were right. I love you.", "t": "55:13"}
+  ],
+  "related": [
+    {"slug": "turing-award-winner-nsa-public-key", "reason": "Fellow Turing Award winner; shared themes of courage and standing up to institutions"},
+    {"slug": "turing-award-winner-p-vs-np-zero", "reason": "Turing Award series on foundational CS"},
+    {"slug": "turing-award-winner-postgres-disagreeing", "reason": "Fellow Berkeley Turing Award winner who bet against prevailing wisdom"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "Turing Award series; contrasting approaches to settling technical debates"},
+    {"slug": "creator-of-c-bell-labs-negative-overhead", "reason": "Compiler/low-level language history overlaps (C register hints, abstraction cost); host references the Bjarne shoot in intro"}
+  ],
+  "transcript_complete": true
+}

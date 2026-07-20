@@ -1,0 +1,57 @@
+{
+  "slug": "intern-to-microsoft-distinguished",
+  "n": 16,
+  "title": "Intern to Microsoft Distinguished Engineer in 11 Promotions (Career Story)",
+  "date": "2025-09-05",
+  "url": "https://www.developing.dev/p/intern-to-microsoft-distinguished",
+  "guest": "David Fowler",
+  "guest_role": "Distinguished Engineer at Microsoft; co-creator of NuGet and SignalR, .NET Core architect",
+  "guest_slug": "david-fowler",
+  "companies": ["microsoft"],
+  "concepts": ["promotions", "career-growth", "calibrations-and-ratings", "hiring-and-interviews", "mentorship-and-sponsorship", "big-tech-culture", "influence-and-leadership", "management", "open-source", "non-linear-careers", "corporate-politics", "compensation-and-equity", "regrets-and-advice", "incident-management", "teaching-and-communication"],
+  "sections": [
+    {"t": "00:53", "title": "Microsoft's leveling system"},
+    {"t": "03:17", "title": "Joining Microsoft"},
+    {"t": "10:18", "title": "First successful project"},
+    {"t": "16:22", "title": "Bootstrapping his own project"},
+    {"t": "25:44", "title": "His principal promotion"},
+    {"t": "37:10", "title": "His distinguished promotion"},
+    {"t": "49:51", "title": "Engineers he looks up to"},
+    {"t": "53:40", "title": "Expanding on his top tweets"},
+    {"t": "1:05:20", "title": "Big company tip on reorgs"},
+    {"t": "1:08:25", "title": "What keeps him at Microsoft"},
+    {"t": "1:17:22", "title": "Microsoft culture after Satya"},
+    {"t": "1:23:04", "title": "Career regrets and work life balance"},
+    {"t": "1:29:51", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Microsoft levels run 59-70+ with two levels per title band and three principal levels; you can't tell someone's exact level from their title, and Distinguished Engineer (70) is the final partner level, below only Technical Fellow.",
+    "He differentiated at the college career fair by demoing a self-built game on a laptop, landing a Microsoft internship in 2006 when interviews were puzzles (Die Hard 3 water jugs, counting gas stations in Florida) rather than LeetCode.",
+    "His early-career engine was 'code is currency': troll forums for customer problems, build the prototype first, then show PMs and architects — first promotion came 8 months in, and a director told people 'David has energy, go talk to him'.",
+    "SignalR began as his own nights-and-weekends project (inspired by Google Docs co-editing, pre-WebSockets) that Microsoft later made official with a team of ~8 — proof that 'you can just do things'; a good track record then earns you more leeway to fail and try things.",
+    "He deliberately attached himself to an architect whose career he wanted (David Ebbo), coding his ideas and mimicking his behaviors until he became one himself, and later requested a Technical Fellow mentor (Jeffrey Snover, PowerShell inventor) once he decided he wanted DE.",
+    "The senior-to-principal leap is doing more through others: as senior-level co-architect of .NET Core with ~30 engineers, trying to co-review every change burned him out within a year, forcing him to learn delegation, trust, and letting people fail.",
+    "Distinguished promotion is peer-reviewed by technical fellows against a decade-long body of work; his package leaned on ~7 years of deferred .NET Core impact. Guido van Rossum shares his level, and Technical Fellows (Anders Hejlsberg, Dave Cutler) require industry-wide impact — 'everyone's a unicorn'.",
+    "Best mentor advice he got: go directly to the promotion deciders and ask where you stand, and amplify strengths to superhuman rather than fixing weaknesses — 'no one gets promoted to these roles for being average'.",
+    "To escape the partner-level meeting trap, he blocks a minimum of 8 hours a week to think and build ('decline, decline, decline') and still sends pull requests daily, refusing to be an architect who doesn't know the code.",
+    "Interviews test writing new code but the higher-leverage skill is debugging — he'd hand candidates a crash dump; universities should teach making surgical fixes in huge existing codebases, since CS is not software engineering.",
+    "Big-company tips: before changing roles ask when the last reorg was (reorgs reveal where the org is heading), and evaluate a job move by what you'd hate, not what you'd love.",
+    "He turned down better pre-IPO Twitter and GitHub offers to stay (accumulated network, autonomy, a new project every two years), was depressed for a week when Twitter IPO'd, yet would tell a mentee today to take the hot outside offer; 10 years on .NET Core taught him every punted small issue eventually becomes a big one.",
+    "The Ballmer-to-Satya culture change was from competing teams and shouting matches to incentivized collaboration — reviews dinged you for cloning another team's work and leaders modeled pulling quiet people into conversations.",
+    "Regrets and advice: early arrogance ('being right means nothing' without patience and empathy), passing on a friend's 2008 Bitcoin venture, and — for his younger self — negotiate your salary and get multiple offers."
+  ],
+  "notable_quotes": [
+    {"speaker": "David Fowler", "quote": "I'm a code-first, ask questions later kind of person. My whole thing is code is currency. I can show you a working sample. It's not PowerPoint, it's not a document.", "t": "14:12"},
+    {"speaker": "David Fowler", "quote": "The funny thing is you get a chance to be more permissionless the better your track record is. The more success you have, the more leeway you get to fail, which gives you space to try more things.", "t": "24:55"},
+    {"speaker": "David Fowler", "quote": "You could work on the things you're not good at and be average at those, or you can work on things that you're really good at and be superhuman at those things.", "t": "47:55"},
+    {"speaker": "David Fowler", "quote": "My GitHub is a graveyard of projects... Everything you build will teach you a new skill that you don't even know you have until later on.", "t": "28:57"}
+  ],
+  "related": [
+    {"slug": "mozilla-firefox-cto-on-browser-war", "reason": "Parallel intern-to-Distinguished arc; impact over promo-chasing, staying hands-on"},
+    {"slug": "distinguished-engineer-at-shopify", "reason": "Contrasting DE philosophies: amplify one superpower vs be-the-only generalist"},
+    {"slug": "openai-and-meta-distinguished-engineer", "reason": "Microsoft-rooted Distinguished Engineer career story"},
+    {"slug": "meta-senior-staff-eng-ic7-on-zuck", "reason": "The super-coder/code-machine archetype Fowler describes"},
+    {"slug": "boris-cherny-creator-of-claude-code", "reason": "Career growth through building a breakout developer tool"}
+  ],
+  "transcript_complete": true
+}

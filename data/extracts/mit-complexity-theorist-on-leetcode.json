@@ -1,0 +1,51 @@
+{
+  "slug": "mit-complexity-theorist-on-leetcode",
+  "n": 52,
+  "title": "MIT Complexity Theorist: Why You Can Do Better Than 'Optimal' On Leetcode & SAT | Ryan Williams",
+  "date": "2026-06-29",
+  "url": "https://www.developing.dev/p/mit-complexity-theorist-on-leetcode",
+  "guest": "Ryan Williams",
+  "guest_role": "MIT professor, complexity theorist, Gödel Prize winner",
+  "guest_slug": "ryan-williams",
+  "companies": ["mit", "stanford"],
+  "concepts": ["complexity-theory", "hiring-and-interviews", "regrets-and-advice", "teaching-and-communication", "security-and-cryptography"],
+  "sections": [
+    {"t": "00:41", "title": "Asking him a popular Leetcode question"},
+    {"t": "03:54", "title": "Doing better than the popular optimal solution"},
+    {"t": "08:26", "title": "Fine grained complexity"},
+    {"t": "17:00", "title": "A severe strengthening of P vs NP"},
+    {"t": "24:38", "title": "SAT problems and solvers"},
+    {"t": "34:51", "title": "Hot takes on famous open questions"},
+    {"t": "46:57", "title": "Simulating space with time"},
+    {"t": "01:01:02", "title": "Why he solves hard problems"},
+    {"t": "01:02:35", "title": "How to pick good research direction"},
+    {"t": "01:07:14", "title": "Technical book recommendations"},
+    {"t": "01:08:31", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "The 'optimal' n^2 3SUM solution (sort plus two-finger search) can actually be beaten: group the sorted list into tiny blocks, preprocess a lookup structure via the linear decision tree model, and get roughly n^2 divided by polylog factors.",
+    "Fine-grained complexity asks whether canonical algorithms are optimal in exact exponent, using reductions where a small improvement to one problem yields a small improvement to another — even relating NP-complete problems to P problems, impossible in classical reduction theory.",
+    "Subset Sum's 2^n brute force reduces via meet-in-the-middle to a giant 2SUM instance, giving sqrt(2^n) time — 'preserving the magic' of sorting/binary search across a reduction; the technique is standard in cryptanalysis.",
+    "SETH says CNF-SAT can't be solved in 1.999...^n time for any string of nines; Williams is on record disbelieving it but says its truth value is 'almost irrelevant' — operating as if it's false forces novel algorithmic thinking, and his failed refutations kept producing other results.",
+    "Believing SETH is convenient because SAT reduces to edit distance and pattern matching, so it certifies many textbook polynomial algorithms as optimal in one stroke.",
+    "His contrarian probabilities: 80% on P != NP (raised from 75% after Scott Aaronson objected) because algorithms constantly surprise while lower bounds rarely do; 45% on NEXP != EXP because super-compressible instances may be easy (possibly why SAT solvers work on structured real-world inputs); 80% on NEXP = coNEXP via a counting 'little birdie' argument he suspects is constructible in NEXP.",
+    "His breakthrough improved the 1975 Hopcroft-Paul-Valiant T/log T space simulation of time T to about sqrt(T) space (at exponential time cost), building on Cook-Mertz tree evaluation: XOR computation into existing memory instead of writing into erased space, and split computation into sqrt(T) intervals of sqrt(T) steps.",
+    "He spent months assuming his own result was buggy, rewrote it repeatedly, asked two colleagues to find the mistake (one wouldn't read past the abstract), and submitted to STOC still unsure — later expanding the one footnote that convinced a colleague into a 'warmup' section.",
+    "Research strategy: find win-win hypotheses where either truth value yields progress — his orthogonal vectors program would break SETH if true and proves new circuit lower bounds if false; his Stanford-job-winning circuit lower bounds came from pivoting a failed SAT algorithm.",
+    "Book recommendations: Wigderson's book, Fortnow's The Golden Ticket, Mertens and Moore's The Nature of Computation, and Sipser's Introduction to the Theory of Computation.",
+    "Advice: you don't need permission to work on hard open problems — they level the playing field; and schedule 'interrupts' to reflect on whether coasting in your current direction leads somewhere you want, since grad school and research have no external metric beyond comparing your present self to your past self."
+  ],
+  "notable_quotes": [
+    {"speaker": "Ryan Williams", "quote": "The truth value of SETH to me is almost irrelevant because if I believe that it's false, then I get good ideas.", "t": "21:47"},
+    {"speaker": "Ryan Williams", "quote": "There are surprises, like all the time, in the power of algorithms. There are very few surprises in terms of lower bounds.", "t": "35:32"},
+    {"speaker": "Ryan Williams", "quote": "I was just exhausted from thinking about it for so long and just thought, maybe someone else will find the mistake for me.", "t": "59:23"},
+    {"speaker": "Ryan Williams", "quote": "You don't need permission to think about these problems... this knowledge is open to the world and it's open to you.", "t": "01:09:15"}
+  ],
+  "related": [
+    {"slug": "turing-award-winner-p-vs-np-zero", "reason": "Same field; Williams recommends 'Avi's book' and gives contrarian takes on Wigderson's core questions"},
+    {"slug": "turing-award-winner-nsa-public-key", "reason": "Cryptography rests on the hardness assumptions and one-way functions complexity theory studies"},
+    {"slug": "co-creator-of-haskell-functional", "reason": "Academic researchers on long research programs and enjoying the grind"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "Shared theme of writing/rewriting as the tool for verifying and believing hard results"}
+  ],
+  "transcript_complete": true
+}

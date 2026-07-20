@@ -1,0 +1,58 @@
+{
+  "slug": "co-creator-of-haskell-functional",
+  "n": 49,
+  "title": "Co-Creator of Haskell: Functional Programming, Thinking in Types, Useless Languages | Simon Peyton Jones",
+  "date": "2026-06-08",
+  "url": "https://www.developing.dev/p/co-creator-of-haskell-functional",
+  "guest": "Simon Peyton Jones",
+  "guest_role": "Co-creator of Haskell, GHC lead; now designing Verse at Epic Games",
+  "guest_slug": "simon-peyton-jones",
+  "companies": ["microsoft", "epic-games"],
+  "concepts": ["functional-programming", "programming-languages", "security-and-cryptography", "ai-era-engineering", "teaching-and-communication", "open-source", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:39", "title": "What functional programming is"},
+    {"t": "09:18", "title": "Downsides of functional programming"},
+    {"t": "10:53", "title": "Specialized hardware for functional programming"},
+    {"t": "21:47", "title": "Haskell is useless"},
+    {"t": "25:59", "title": "Rust vs C"},
+    {"t": "28:26", "title": "Haskell vs OCaml"},
+    {"t": "35:26", "title": "Side effects in Haskell"},
+    {"t": "44:26", "title": "Type systems"},
+    {"t": "57:30", "title": "How the Haskell compiler works"},
+    {"t": "01:04:35", "title": "Why Haskell is talked about more than used"},
+    {"t": "01:09:07", "title": "Avoiding success at all costs"},
+    {"t": "01:11:12", "title": "LLMs and programming languages"},
+    {"t": "01:13:57", "title": "New programming language design"},
+    {"t": "01:15:59", "title": "Should students continue to learn programming"},
+    {"t": "01:22:33", "title": "Why Excel is his 2nd favorite programming language"},
+    {"t": "01:25:04", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Functional programming is 'programming with values instead of mutation' — mathematics made executable; Church's lambda calculus and Turing's machine are provably equivalent in power, and Simon's research life has been one experiment: what happens if you exclude side effects by default?",
+    "FP has been the mainstream's idea laboratory: garbage collection, lambdas, language-integrated query, parametric polymorphism, and static typing all grew up in functional languages before being adopted by imperative ones.",
+    "Building hardware for functional languages (Lisp machines, MIT's Monsoon dataflow machine, the SKIM SK-combinator machine) was an 'inspiring mistake': it built interpreters in hardware, doing at runtime what a compiler does better at compile time, and could never compete with Intel's investment in x86 — even redesigning the ISA for FP would add almost nothing.",
+    "C's unchecked mutation makes the Internet 'a boat built out of paperclips': writing infrastructure in Haskell or ML would remove roughly 99% of exploits (buffer overruns, pointer bugs) by construction, though no language prevents high-level flaws like deadlock; Rust keeps C's usefulness while moving far toward safety.",
+    "Haskell started very safe but useless (version 1 had no I/O — a program was just a string-to-string function) and climbed toward usefulness without abandoning purity; laziness forced Haskell to stay pure and led to monads, while OCaml's strict evaluation order allowed impure I/O for free — he calls the two languages siblings that learn from each other.",
+    "Laziness is modularity glue (John Hughes's 'Why Functional Programming Matters'): you can generate an infinite chess game tree in one module and prune/explore it in a completely separate one, where strictness forces you to fuse them; monads then make effects first-class typed values, with purity preserved because dirtiness is declared in types like IO Int, refined further by effect systems such as Tom Ellis's Bluefin.",
+    "The biggest benefit of static types is maintainability and design: GHC is a 35-year-old Haskell codebase he refactors fearlessly by changing a type and following the wave of compile errors; weak type systems are strictly worse than strong ones, and dynamic typing should be an explicit escape hatch for the rare programs static types reject.",
+    "GHC's architecture: parse, rename, typecheck, then desugar the ~50-node-type Haskell AST into Core — a tiny System F lambda calculus with about eight constructors that has barely changed in 35 years — then core-to-core optimization passes, C-- portable assembly, and native or LLVM backends; Core is fully type-checkable, which he claims no other production compiler's intermediate language is, catching optimizer bugs that would otherwise be distant segfaults.",
+    "'Avoid success at all costs' is a deliberate double parse: don't seek success by compromising the core no-unrestricted-side-effects principle, and don't get so successful you can't change anything — though today he spends weeks on backward-compatibility work GHC never used to promise.",
+    "LLMs 'may be the best thing that's happened to statically typed languages for a long time' because the compiler prunes the generation space in a tight iteration loop; but copilots need pilots — he won't merge unreviewed AI-generated code into GHC, students should still learn to program, and every child should know 'it's all just bits': ChatGPT is a trillion floating-point numbers plus arithmetic.",
+    "His day job at Epic Games is Verse, a functional logic language exploring a region of design space as far beyond functional languages as FP was beyond imperative in 1980 — the same weird-but-worth-it bet, now with a games company's resources; and Excel is the world's most widely used programming language by three orders of magnitude, whose pure formula language became Turing complete when his 20-year push added LAMBDA.",
+    "Advice to his younger self: all the successful people are making it up as they go along, so it's fine if you are too — and if you want to be lucky, put yourself in positions where lucky accidents can happen, which means taking risks."
+  ],
+  "notable_quotes": [
+    {"speaker": "Simon Peyton Jones", "quote": "When the limestone of imperative programming has worn away, the granite of functional programming will be revealed underneath.", "t": "06:00"},
+    {"speaker": "Simon Peyton Jones", "quote": "It's like we've built a boat out of paperclips and we're surprised that it's leaky... we wrote our computational infrastructure for the world in an insecure language.", "t": "21:47"},
+    {"speaker": "Simon Peyton Jones", "quote": "I think it may be the best thing that's happened to statically typed languages for a long time... with a static type system, you cut down the space of programs that the LLM can generate.", "t": "01:11:12"},
+    {"speaker": "Simon Peyton Jones", "quote": "If you want to be lucky, you need to put yourself in positions where lucky things could happen. And that means taking some kind of risk.", "t": "01:25:04"}
+  ],
+  "related": [
+    {"slug": "creator-of-c-bell-labs-negative-overhead", "reason": "Fellow language creator; C++ is the 'useful but dangerous' counterpoint on Simon's safety graph"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "Hardware-architecture view of why specialized machines win or lose, echoing the Lisp-machine/FP-hardware lesson"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "Mathematical thinking and formal reasoning about programs"},
+    {"slug": "turing-award-winner-data-abstraction", "reason": "Type systems, abstraction, and language design from another PL pioneer"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "Practitioner view of type checkers and the review burden of LLM-generated code"}
+  ],
+  "transcript_complete": true
+}

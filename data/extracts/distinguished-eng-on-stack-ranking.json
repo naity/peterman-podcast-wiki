@@ -1,0 +1,53 @@
+{
+  "slug": "distinguished-eng-on-stack-ranking",
+  "n": 35,
+  "title": "Distinguished Eng On Stack Ranking, Competing with Bezos, Regrets | Bryan Cantrill",
+  "date": "2026-03-02",
+  "url": "https://www.developing.dev/p/distinguished-eng-on-stack-ranking",
+  "guest": "Bryan Cantrill",
+  "guest_role": "Co-founder/CTO of Oxide Computer, ex-Sun Distinguished Engineer, ex-Joyent CTO",
+  "guest_slug": "bryan-cantrill",
+  "companies": ["sun-microsystems", "oracle", "joyent", "oxide-computer", "amazon", "aws", "microsoft", "nvidia"],
+  "concepts": ["calibrations-and-ratings", "layoffs", "promotions", "career-growth", "startups-and-founding", "regrets-and-advice", "big-tech-culture", "compensation-and-equity", "corporate-politics", "ai-era-engineering"],
+  "sections": [
+    {"t": "00:00:42", "title": "Working at Sun Microsystems"},
+    {"t": "00:10:17", "title": "His growth to distinguished eng"},
+    {"t": "00:19:14", "title": "Why goaling on promotion is bad"},
+    {"t": "00:29:34", "title": "Stack ranking and layoffs"},
+    {"t": "00:36:00", "title": "Why he hated the Oracle acquisition"},
+    {"t": "00:44:19", "title": "Why Bezos is the apex predator of capitalism"},
+    {"t": "00:48:04", "title": "Differences between CTO and VP"},
+    {"t": "00:49:58", "title": "Starting his own company"},
+    {"t": "01:02:37", "title": "Grilling him on his past"},
+    {"t": "01:11:57", "title": "AI boom and bust advice"},
+    {"t": "01:14:41", "title": "When he was happiest in his career"},
+    {"t": "01:17:22", "title": "Top career regret"},
+    {"t": "01:19:21", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Cantrill never goaled on rank: 'I would much rather be under promoted than over promoted.' Promotions happened as a byproduct of doing the most important work, and his career highlights were hard bugs and 'impossible' projects, never the promos themselves.",
+    "Sun's rating system forced a promotion whenever a 'superlative' grade was given, so managers apologetically withheld the top grade because promos were rationed to every 18 months; formalized annual performance review 'never resulted in me having higher performance.'",
+    "Stack ranking ('rank and yank') is 'organizational cancer': firing a bottom percentage incentivizes managers to keep dead weight as sacrificial fodder — which he saw at Sun — and it teaches you that your team are adversaries when it's teams that do extraordinary things. Oxide has no ranks at all because 'ranks are corrosive.'",
+    "Sun's Distinguished Engineer promotion was a political 'country club' vote by existing DEs, with a side door for acqui-hired CTOs; Cantrill only escaped the politics because Sun's CTO Greg Papadopoulos personally presented his case and it passed unanimously.",
+    "To engineers goaling on titles or financial independence he prescribes finding meaning instead: he can introduce you to miserable Distinguished Engineers and miserable wealthy people, dot-com winners who cashed out often floundered for a decade, and even meaningful shipped goals produce 'postpartum in engineering.'",
+    "After the dot-com bust Sun lost 98% of its value (trading below cash), ran roughly 35 rounds of layoffs over eight years, and engineers scripted the employee directory into a daily 'obits' report to see who was gone; McNealy's delay in starting layoffs was a mistake.",
+    "He quit Oracle about 45 days after the acquisition closed because he was ashamed to work there: Sun had its customers' trust and Oracle — 'an octopus that knows how to feed itself' — does not; meanwhile other Sun engineers lobbied to get on the layoff list for the rich severance.",
+    "Bezos is 'the apex predator of capitalism': Amazon hid AWS's great margins by refusing to break out revenue and relentlessly cut prices at every re:Invent from 2010-2015, convincing the world the cloud was a bad business so nobody would enter — while Joyent, competing directly, knew the margins were excellent.",
+    "Oxide's founding lesson: a famous VC who had emailed 'I will fund literally anything you put in front of me' refused the computer-company pitch in 45 seconds, but when a VC asks 'how can I help?' you should have a concrete answer — Cantrill asked for an intro to a failed similar startup's founder and learned it died from a tiny real market plus premature go-to-market scaling. Oxide's MVP was a full rack that took 3+ years; they deliberately neither compete nor partner with Nvidia, focusing on general-purpose compute.",
+    "Boom/bust advice for the AI era: cycles are endemic to software, so be your own judge — people said operating systems were done in 1996 and that you couldn't start a computer company in 2019, and he's glad he ignored them; don't pick a space just because it's hot."
+  ],
+  "notable_quotes": [
+    {"speaker": "Bryan Cantrill", "quote": "Stack ranking is organizational cancer... fundamentally, stack ranking teaches you that your team are adversaries.", "t": "00:30:00"},
+    {"speaker": "Bryan Cantrill", "quote": "I would much rather be under promoted than over promoted... I am not interested in doing work performatively.", "t": "00:10:30"},
+    {"speaker": "Bryan Cantrill", "quote": "For Sun, I was embarrassed from time to time, but never ashamed. And with Oracle, I was ashamed.", "t": "00:42:00"},
+    {"speaker": "Bryan Cantrill", "quote": "He is not merely a predator, he is an apex predator in capitalism... I'm gonna do it honestly, the right way — by giving a great product at a reasonable price.", "t": "00:47:00"}
+  ],
+  "related": [
+    {"slug": "amazon-vp-on-promotions-getting-fired", "reason": "Bezos from inside Amazon vs Cantrill competing against him"},
+    {"slug": "aws-distinguished-eng-learnings-from", "reason": "Distinguished Engineer at the AWS Joyent competed with"},
+    {"slug": "turing-award-winner-postgres-disagreeing", "reason": "systems legend building companies in Oracle's shadow, contrarian conviction"},
+    {"slug": "distinguished-engineer-at-shopify", "reason": "Distinguished-level career path and regrets"},
+    {"slug": "laid-off-from-big-tech-after-25-years", "reason": "employee-side view of repeated big-company layoff cycles"}
+  ],
+  "transcript_complete": false
+}

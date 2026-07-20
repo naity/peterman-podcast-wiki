@@ -1,0 +1,53 @@
+{
+  "slug": "uber-distinguished-eng-on-unfair",
+  "n": 19,
+  "title": "Uber Distinguished Eng On Unfair Promos, Influence, Engineering Regrets (Career Story)",
+  "date": "2025-11-11",
+  "url": "https://www.developing.dev/p/uber-distinguished-eng-on-unfair",
+  "guest": "Joakim Recht",
+  "guest_role": "Former Distinguished Engineer at Uber, now AI startup engineer",
+  "guest_slug": "joakim-recht",
+  "companies": ["uber"],
+  "concepts": ["promotions", "career-growth", "influence-and-leadership", "calibrations-and-ratings", "management", "corporate-politics", "mentorship-and-sponsorship", "distributed-systems", "big-tech-culture", "imposter-syndrome", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:00:56", "title": "Distinguished promo project"},
+    {"t": "00:19:07", "title": "How to grow your influence"},
+    {"t": "00:22:38", "title": "Unfair promo story"},
+    {"t": "00:33:09", "title": "On delegation"},
+    {"t": "00:39:05", "title": "Why engs don't trust management"},
+    {"t": "00:47:58", "title": "Politics as he grew"},
+    {"t": "00:57:00", "title": "How to pick mentees"},
+    {"t": "01:03:22", "title": "Why he left Uber"},
+    {"t": "01:15:16", "title": "Biggest Uber eng mistake"},
+    {"t": "01:20:15", "title": "Uber scandals"},
+    {"t": "01:24:35", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Joakim's Distinguished-level project (Odin) began as his Denmark team running MySQL shards in Docker with declarative intent-based management when Kubernetes was barely in alpha, and grew into the platform for all of Uber's stateful workloads: ~120,000 physical servers and ~500,000 databases operated by a team of about 20.",
+    "Platform adoption strategy: build it and prove it on your own team first, expand through friendly orgs to skeptics rather than forcing it; but a final top-down mandate ('you will not be allowed to have your own service any longer') was still necessary, because full alignment never happens bottom-up alone.",
+    "His model of promotions: level tracks how many people are affected by your work, so a project with natural scope expansion drags promotions along automatically for you and the whole team; his Senior-to-Principal-to-Distinguished steps each followed a stage of Odin's growth, helped by the luck of one long-running project.",
+    "Promo committees are structurally unfair: his first one reviewed hundreds of engineers in a single day with no prep or materials, decided by how well each manager pitched; even structured processes can't handle dependencies that ghost you, canceled projects, or isolated teams who were never told what good looks like.",
+    "His core promo advice: software engineers must write code at every level, ideally every day; craftsmanship is learned by watching others; 'running code beats perfect code any day'; and instead of hunting promotion-worthy scope, focus on providing value and the promotion will follow.",
+    "Contrarian delegation take: staying hands-on preserves system knowledge and trust; delegate the hard interesting work down to people who can barely manage it so they grow fast, and keep the boring 'shoveling shit' work yourself since you have nothing left to prove.",
+    "Engineers don't trust management because authority without demonstrated understanding earns polite nods and silent non-compliance; his best influence outcome is overhearing someone champion, as their own conviction, an idea they once rejected from him.",
+    "Mentorship: pick mentees outside your own org to learn about other parts of the company and plant seeds of culture change in distant teams; keep mentoring informal with no programs or schedules, and don't disqualify mentees for asking the wrong questions.",
+    "Senior-level politics was the scary discovery that 'nobody's in control, there's an illusion of control'; he coped by saying no a lot, avoiding dead-end projects, and using the Denmark timezone as a shield that limited exposure to SF meetings to a couple of evening hours.",
+    "He left Uber when new management imposed top-down decisions engineers couldn't stand behind, notably a cloud migration justified on cost that no engineer believed and that only worked after a 50% cost cut that would have been cheaper on-prem; refusing to 'stick around and take the money,' he joined an AI enterprise automation startup rather than follow ex-colleagues to Databricks.",
+    "Biggest Uber engineering mistakes: chronic inability to effect global change (a tracing mandate re-emailed for ~3 years never got done) and a software networking stack built in Node that took years to untangle; the early 'let builders build' freedom became deadly at scale and Uber never handled the freedom-to-structure transition well.",
+    "Advice to his younger self after feeling imposter syndrome joining from small tech: just try stuff, the big-tech people were not much better after all, 'it's not rocket science, it is just computers'; let curiosity lead and keep re-checking whether there's something better to work on."
+  ],
+  "notable_quotes": [
+    {"speaker": "Joakim Recht", "quote": "The more people who are affected by what you do well, the higher you get in the level... a number of promotions will happen automatically. And not just for you, but the entire team.", "t": "00:16:39"},
+    {"speaker": "Joakim Recht", "quote": "A software engineer needs to write code. If you're not writing code, you're not a software engineer.", "t": "00:29:30"},
+    {"speaker": "Joakim Recht", "quote": "Running code beats perfect code any day.", "t": "00:31:58"},
+    {"speaker": "Joakim Recht", "quote": "Then you realize at some point nobody's in control. There's an illusion of control, but there's just people randomly getting ideas and pushing them out.", "t": "00:49:02"}
+  ],
+  "related": [
+    {"slug": "cloudkitchens-cto-on-intelligence", "reason": "Fellow Uber alum; both critique scope-driven promo incentives from opposite angles"},
+    {"slug": "distinguished-engineer-at-shopify", "reason": "Another Distinguished-level career story about staff+ scope and influence"},
+    {"slug": "meta-distinguished-eng-ic9-on-influencing", "reason": "Directly overlapping theme of influencing engineers without authority at top IC levels"},
+    {"slug": "airbnb-staff-eng-on-how-to-not-get", "reason": "Complementary insider view of calibration/promo committee mechanics and unfairness"},
+    {"slug": "amazon-vp-reveals-everything-hes", "reason": "Echoes the 'illusion of control' view of senior-level corporate politics"}
+  ],
+  "transcript_complete": true
+}

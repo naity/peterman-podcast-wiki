@@ -1,0 +1,52 @@
+{
+  "slug": "aws-distinguished-eng-learnings-from",
+  "n": 41,
+  "title": "AWS Distinguished Eng: Learnings From 3000 Incidents And How Engineering Is Changing | Marc Brooker",
+  "date": "2026-04-13",
+  "url": "https://www.developing.dev/p/aws-distinguished-eng-learnings-from",
+  "guest": "Marc Brooker",
+  "guest_role": "Distinguished Engineer at AWS (databases/serverless), new grad to DE at Amazon",
+  "guest_slug": "marc-brooker",
+  "companies": ["aws", "amazon"],
+  "concepts": ["incident-management", "distributed-systems", "ai-era-engineering", "ai-coding-tools", "systems-design", "career-growth", "teaching-and-communication", "influence-and-leadership", "regrets-and-advice", "databases"],
+  "sections": [
+    {"t": "1:27", "title": "Finding problems that matter"},
+    {"t": "11:42", "title": "Learnings from 3000 postmortems"},
+    {"t": "23:58", "title": "Why caches are bad"},
+    {"t": "29:37", "title": "How AI will change software engineering"},
+    {"t": "36:49", "title": "Advice for junior engineers given AI"},
+    {"t": "44:02", "title": "Thoughts for senior engineers"},
+    {"t": "49:59", "title": "Why engineers should write"},
+    {"t": "57:51", "title": "Visibility and apparent expertise"},
+    {"t": "1:04:23", "title": "AWS engineers he admires"},
+    {"t": "1:06:53", "title": "Technical book recommendations"},
+    {"t": "1:09:06", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Finding problems that matter means going super broad: intersect customer pain, bottom-up hardware trends, and macro industry shifts — Aurora Serverless and DSQL both came from colliding a customer signal (serverless devs stuck with serverful databases) with a technical trend (object storage as durability layer).",
+    "He stayed on call for 15 years because most of his practical distributed-systems knowledge came from on-call and postmortems; rote ticket-closing should be automated so deep experts spend on-call time on genuinely unexpected behavior.",
+    "AWS's weekly company-wide COE/postmortem review meeting is, in his view, 'a core, almost causal factor behind AWS's success' because it forces top engineers and leaders to deeply understand how systems actually operate.",
+    "A great postmortem digs through multiple levels of why (code bug, testing gap, organizational cause) with concrete fixes at each level, and cross-postmortem patterns should become services or whole-class fixes — DSQL was designed against common relational outage patterns using MVCC plus optimistic commit checks so readers and writers never block each other (MVCC storage overhead typically under ~10%).",
+    "Bad postmortem culture has two failure modes: insufficient focus on outcomes, and normalization of operational heroics — heroic on-calls feel like strong ownership from the inside but are an expensive break-fix cycle.",
+    "Caches create dangerous modality: a warm-cache fast mode and a cold-cache mode where the un-scaled backend collapses into a metastable failure that is stable while down; rare per-system yet an underlying cause of a majority of the industry's biggest outages — prefer complete materialized views, local copies of slow-moving data, or scalable backends.",
+    "Software has been supply-constrained for its ~60-year history and remains so; the mainstream will move to agentic/AI-powered/specification-driven development, while hand-coding persists as craft (like hand joinery) and legacy niches stay economically real but shrinking.",
+    "For junior engineers: customer, business, and economic context is moving to the earliest career stages; the pure 8-hours-in-the-IDE career is shrinking, but deep technical or scientific expertise is more leveraged than ever because asking the right questions matters more.",
+    "For senior engineers: 'if you aren't doing it hands on, your opinion about it is very likely to be completely wrong' — influence-role leaders must get back to hands-on building with agentic tools, which takes humility for people with fancy titles.",
+    "Writing scales expertise across space and time and forces mental clarity; he writes docs he never shares just to sharpen thinking, and documenting which design decisions were carefully reasoned versus arbitrary is almost as important as the decisions themselves.",
+    "From his doing-vs-discussing 2x2: 100% at either pole is a failure mode; his sweet spot is ~75/25 practitioner-to-communicator, and long-term it is better to be underrated than overrated.",
+    "Advice to his younger self: be bolder about changing teams — he changed organizations 4 times and 5-6 would have been optimal; keep asking what you're learning and who you're learning from, and follow curiosity."
+  ],
+  "notable_quotes": [
+    {"speaker": "Marc Brooker", "quote": "The majority of my in practice knowledge about how to build distributed systems has come from being on call and analyzing and deeply understanding these post mortems and COEs.", "t": "5:59"},
+    {"speaker": "Marc Brooker", "quote": "We are in this minute that if you aren't doing it hands on, your opinion about it is very likely to be completely wrong. And that takes a level of humility to admit.", "t": "47:31"},
+    {"speaker": "Marc Brooker", "quote": "Writing lets you scale out the impact of your expertise in space and time in a way that's really hard to do in other media.", "t": "51:21"}
+  ],
+  "related": [
+    {"slug": "turing-award-winner-postgres-disagreeing", "reason": "Stonebraker critiques the AWS database portfolio Brooker works on; opposite academia-vs-industry paths"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "Brooker cites Lamport's episode on writing/formal thinking and debated Paxos edge cases"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "Recommends Hennessy & Patterson; hardware trends drive his problem-finding"},
+    {"slug": "dropboxs-former-most-senior-eng-building", "reason": "Large-scale systems craft plus advice for the AI era"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "How AI tooling is reshaping software engineering practice"}
+  ],
+  "transcript_complete": true
+}

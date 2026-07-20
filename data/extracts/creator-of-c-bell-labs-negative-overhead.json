@@ -1,0 +1,57 @@
+{
+  "slug": "creator-of-c-bell-labs-negative-overhead",
+  "n": 46,
+  "title": "Creator of C++: Bell Labs, Negative Overhead Abstraction, Mistakes | Bjarne Stroustrup",
+  "date": "2026-05-18",
+  "url": "https://www.developing.dev/p/creator-of-c-bell-labs-negative-overhead",
+  "guest": "Bjarne Stroustrup",
+  "guest_role": "Creator of C++, former Bell Labs researcher",
+  "guest_slug": "bjarne-stroustrup",
+  "companies": ["bell-labs", "ibm", "intel"],
+  "concepts": ["programming-languages", "working-with-legends", "ai-era-engineering", "teaching-and-communication", "imposter-syndrome", "regrets-and-advice"],
+  "sections": [
+    {"t": "0:50", "title": "The origin of C++"},
+    {"t": "8:46", "title": "What Bell Labs was like"},
+    {"t": "17:24", "title": "Dennis Ritchie"},
+    {"t": "24:00", "title": "When to build a programming language"},
+    {"t": "31:59", "title": "Bootstrapping a language"},
+    {"t": "33:58", "title": "C++ is not object-oriented"},
+    {"t": "37:32", "title": "Discussing type systems"},
+    {"t": "46:20", "title": "Memory safety"},
+    {"t": "49:26", "title": "Standards committee anecdotes"},
+    {"t": "1:09:40", "title": "Adding automatic garbage collection to C++"},
+    {"t": "1:18:25", "title": "Template instantiation is Turing complete"},
+    {"t": "1:21:57", "title": "Abstraction and performance"},
+    {"t": "1:28:51", "title": "AI writing code"},
+    {"t": "1:35:54", "title": "His motivation"},
+    {"t": "1:39:18", "title": "Famous quotes"},
+    {"t": "1:46:48", "title": "Reflecting on building C++"},
+    {"t": "1:49:12", "title": "Top C++ book recommendation"},
+    {"t": "1:50:59", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "C++ was born from a failed attempt to build a distributed Unix at Bell Labs: no language combined low-level hardware access (C) with high-level structure (Simula classes), so Stroustrup merged them — after his Cambridge PhD ordeal of rewriting a Simula simulator in BCPL (~50x faster, cost 'half his hair') convinced him never to use inadequate tools again.",
+    "Bell Labs research culture was 'hire the best people and don't tell them what to do': his job description was 'do something interesting in a year's time' reported on one sheet of paper; there was no formal interview — he flew over on his own tab, chatted with Dennis Ritchie and got a job offer by phone a week later.",
+    "Dennis Ritchie helped design const and endorsed C++ as C's successor; the C vs C++ language wars were 'ridiculous.' Ritchie's fat pointers (pointer + size), rejected by the C committee, essentially became C++'s span decades later.",
+    "On building languages: 'what do I need to build a language' is the wrong question — first identify a problem no existing language solves. C++ used C as its portable assembler to avoid touching 25 different linkers and dozens of optimizers: 'we can have Dennis Ritchie's mistakes, which we know, so we'll take Dennis's.'",
+    "C++ was never object-oriented — it is type/class-oriented and deliberately supports non-OO styles; static typing was chosen because ~99% of computers are memory-constrained embedded systems that cannot drop into a debugger.",
+    "On memory safety: over 90% of exploited C++ safety bugs (per Herb Sutter's data) come from C-style raw-pointer code; C++26 standardizes a hardened library option and his profiles work (proposed for C++29) aims to make safety guarantees enforceable by default.",
+    "Standardization was forced on him in 1989 by IBM and HP representatives who could not depend on a corporate-owned language; C++ had a $5,000 total marketing budget versus Sun's Java campaign, yet C++ developers grew 10-12x since Java promised to kill it. The 527-member committee runs on judged consensus (~80-90%), not simple majorities, to prevent dialects.",
+    "The Vasa battleship story he told the standards committee: adding a second gun deck to a half-built ship plus skipped stability tests sank it in 1624 — improve the foundation before adding features, never compromise testing, and sometimes the professional thing is to tell the bosses no.",
+    "Performance: C++ can beat C ('negative overhead abstraction') because richer type information feeds the optimizer; 1990s-style clever hand optimization is often a pessimization on modern hardware — his first optimization step is deleting the clever code, guided by Knuth's 2-3% rule.",
+    "On AI writing code: usable for boilerplate and documentation, but in safety/performance-critical domains LLM code brings more bugs, bloat, and an unsolvable validation burden (prompt changes perturb whole codebases, regulators require validated changes); eliminating junior programmers raises 'where do you get the senior programmers from?' and, echoing Dijkstra, natural language is too ambiguous to be a programming language."
+  ],
+  "notable_quotes": [
+    {"speaker": "Bjarne Stroustrup", "quote": "We can have Dennis Ritchie's mistakes, which we know, and we can have my mistakes, which we don't know yet, so we'll take Dennis's.", "t": "31:21"},
+    {"speaker": "Bjarne Stroustrup", "quote": "This is why I talk about zero overhead abstraction... that's understating the ability of the C++ compiler. We can do negative overhead abstraction.", "t": "1:23:12"},
+    {"speaker": "Bjarne Stroustrup", "quote": "There are people who say you should only standardize what is common in industry, but when the bugs are common in industry, you should do something else.", "t": "48:53"},
+    {"speaker": "Bjarne Stroustrup", "quote": "I'm always told by AI proponents that either the problem has already been solved or it'll be solved in the next release... The idea that the next version will solve the problem is always a dangerous assumption.", "t": "1:34:10"}
+  ],
+  "related": [
+    {"slug": "co-creator-of-haskell-functional", "reason": "Fellow language creator; Stroustrup recommends learning ML/Haskell; deep type-system discussion in both"},
+    {"slug": "turing-award-winner-data-abstraction", "reason": "Abstraction and language design foundations; both invoke Dijkstra"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "Hardware-software boundary: memory models and caches meet computer architecture"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "Contrasting optimistic view of AI-era developer tooling vs Stroustrup's skepticism"}
+  ],
+  "transcript_complete": false
+}

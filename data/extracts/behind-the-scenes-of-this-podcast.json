@@ -1,0 +1,41 @@
+{
+  "slug": "behind-the-scenes-of-this-podcast",
+  "n": 14,
+  "title": "Behind the Scenes of this Podcast So Far",
+  "date": "2025-08-22",
+  "url": "https://www.developing.dev/p/behind-the-scenes-of-this-podcast",
+  "guest": "Ryan Peterman",
+  "guest_role": "Host of The Peterman Post; Meta engineer and author of The Developing Dev newsletter (interviewed by Brandon)",
+  "guest_slug": "ryan-peterman",
+  "companies": ["meta"],
+  "concepts": ["teaching-and-communication", "career-growth"],
+  "sections": [
+    {"t": "00:58", "title": "Story behind the podcast"},
+    {"t": "05:30", "title": "Behind the scenes of the top episodes"},
+    {"t": "10:06", "title": "Dream guest list"},
+    {"t": "12:03", "title": "Learnings from podcasting"},
+    {"t": "13:10", "title": "Balancing content with a full time job"}
+  ],
+  "key_takeaways": [
+    "Ryan started the podcast as deliberate practice for speaking: publishing forces him to pore over every word in editing, a far stronger feedback loop than Toastmasters, and he set a deliberately lax goal of one episode per month.",
+    "The format is inspired by internal Facebook career-story posts written by very senior ICs, 50-minute reads Ryan devoured early in his career, hence having super-senior engineers tell their career stories on the show.",
+    "The Philip Su episode was the first breakout: 'the graphs were all going vertical' within a day or two, which Ryan read as product-market fit for hidden senior-IC career stories.",
+    "The Ethan Evans episode confirmed the pattern; Ryan calls Evans one of the best speakers he's seen in tech, and its aggressive trailer worked so well he plans tasteful trailers on YouTube but minimal or no trailers on Spotify/Apple for recurring listeners.",
+    "His dream guest list targets hidden super-senior engineers famous only inside their orgs; since LinkedIn and Google can't surface them, he sources through his big-tech network and by asking the audience which senior IC in their org impresses them, which has produced upcoming Apple/Google/Microsoft guests.",
+    "The hardest podcasting-specific habit change: suppressing verbal backchannel (uh-huh, right, yeah) while guests speak and nodding vigorously instead, because acknowledgment noises ruin the audio.",
+    "Balancing content with a full-time Meta job is brutal: for about two years he stayed up until 4:00 AM every Thursday writing the newsletter, and Gergely Orosz's warning about 'burning the candle at both ends' proved right."
+  ],
+  "notable_quotes": [
+    {"speaker": "Ryan Peterman", "quote": "I pour over every word in the editing because I know that people are going to listen to it. That is a very powerful commitment mechanism and a very powerful feedback loop.", "t": "01:07"},
+    {"speaker": "Ryan Peterman", "quote": "After I posted it, just in a day or two, the graphs were all going vertical... This can be kind of product market fit for the podcast.", "t": "05:39"},
+    {"speaker": "Ryan Peterman", "quote": "I want to find these hidden super senior engineers who no one knows at all... But you've probably never heard of them.", "t": "10:12"},
+    {"speaker": "Ryan Peterman", "quote": "For me, every Thursday for about two years, I was staying up till 4:00 AM writing a newsletter.", "t": "13:16"}
+  ],
+  "related": [
+    {"slug": "openai-and-meta-distinguished-engineer", "reason": "the Philip Su episode is discussed as the podcast's first breakout and proof of product-market fit"},
+    {"slug": "amazon-vp-on-promotions-getting-fired", "reason": "the Ethan Evans episode and its aggressive trailer are dissected in detail"},
+    {"slug": "meta-senior-manager-m2-on-manager", "reason": "adjacent episode exemplifying the senior-leader career-story format described here"},
+    {"slug": "stripe-cto-on-what-grew-his-career", "reason": "released the following week; the exact kind of super-senior under-the-radar guest Ryan describes targeting"}
+  ],
+  "transcript_complete": true
+}

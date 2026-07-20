@@ -1,0 +1,53 @@
+{
+  "slug": "frontline-manager-at-meta-to-senior",
+  "n": 24,
+  "title": "Frontline Manager at Meta to Senior Director at Snapchat in 3 years (Career Story)",
+  "date": "2025-12-22",
+  "url": "https://www.developing.dev/p/frontline-manager-at-meta-to-senior",
+  "guest": "Rong Yan",
+  "guest_role": "HeyGen CTO; ex-Senior Director at Snapchat, ex-Director at Square, ex-Meta manager",
+  "guest_slug": "rong-yan",
+  "companies": ["meta", "snapchat", "square", "ibm", "heygen"],
+  "concepts": ["management", "career-growth", "non-linear-careers", "promotions", "big-tech-culture", "hiring-and-interviews", "startups-and-founding", "regrets-and-advice", "mentorship-and-sponsorship"],
+  "sections": [
+    {"t": "00:46", "title": "Joining Facebook"},
+    {"t": "03:06", "title": "Job hopping to Director"},
+    {"t": "05:09", "title": "Director skill gaps"},
+    {"t": "15:31", "title": "Domain knowledge & management"},
+    {"t": "18:45", "title": "LA vs SF cultures"},
+    {"t": "20:48", "title": "Senior Director growth at Snapchat"},
+    {"t": "22:43", "title": "Evan Spiegel stories"},
+    {"t": "24:59", "title": "Recruitment at higher levels"},
+    {"t": "32:05", "title": "Career planning in hindsight"},
+    {"t": "34:08", "title": "Biggest career regret"},
+    {"t": "35:33", "title": "How much of growth is luck?"},
+    {"t": "38:19", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Rong joined Square directly on a director offer — smaller companies will let you perform a level above — and grew the team from ~25 to 50+ engineers in about a year.",
+    "The core frontline-manager-to-director gap is that directing is not managing: directors add value through strategy, cross-department resource gathering, and solving the org's hardest problems, not by knowing the most details; he underperformed his first six months until he made this shift.",
+    "When hired above people who wanted your role, build trust first (he recommends The Five Dysfunctions of a Team): show reports you are a promoter of their career and unblock things they cannot unblock themselves.",
+    "He anchored every career decision to a North Star (become CTO of an AI company), deliberately choosing Snapchat's camera org over the comfortable data org and learning iOS programming from scratch in two months to close product-side gaps.",
+    "Facebook's six-week bootcamp — where a VP-level hire sat next to him fixing bugs for six weeks — taught him everyone in engineering must stay technical; as CTO he still writes and reviews code weekly.",
+    "He scales himself by picking the top three priorities each week; the best leaders win on time allocation, not hours worked.",
+    "Snapchat grew from ~100 employees (he was about the 100th) to ~3,000 in two years and his org to ~250 engineers; every doubling of a team is 'almost like building a new company' and old cultural assumptions must be dropped.",
+    "Evan Spiegel gave pixel-level demo feedback reminiscent of Steve Jobs, promised never to fire Snapchat's first 15 engineers, and bought back the original Blue House in 2017 to host board meetings.",
+    "Senior-level recruiting is nearly all inbound via personal networks; he has never proactively job-searched and prioritizes working with trusted people who will stay through a company's down cycles.",
+    "Don't make promotions the objective: manager growth is heavily constrained by org structure and luck, titles belong to the company not to you, so control impact in your current role and treat everything else as lagging indicators.",
+    "At HeyGen he tells candidates upfront there is only a ~1% chance of huge success, deliberately filtering for people who will stay through hard cycles."
+  ],
+  "notable_quotes": [
+    {"speaker": "Rong Yan", "quote": "Director is about directing instead of managing. It really opened my mind about the right way to manage managers instead of managing individual contributors.", "t": "03:06"},
+    {"speaker": "Rong Yan", "quote": "The one thing I gradually realized is that levels and titles are things the company gives you; they are not yours.", "t": "24:59"},
+    {"speaker": "Rong Yan", "quote": "Don't make promotions the objective of your work. ... control the things you can control, which is making an impact in your current position. Everything else will be lagging indicators.", "t": "35:33"},
+    {"speaker": "Rong Yan", "quote": "Every single time you double your team, it's almost like you're building a new company.", "t": "20:48"}
+  ],
+  "related": [
+    {"slug": "anthropic-eng-leader-and-ex-senior", "reason": "senior eng-management career story spanning Meta and beyond"},
+    {"slug": "meta-senior-manager-m2-on-manager", "reason": "manager-track career growth at Meta, one level below Rong's story"},
+    {"slug": "cloudkitchens-cto-on-intelligence", "reason": "CTO career story with famous-founder anecdotes (Jobs/Kalanick vs Spiegel)"},
+    {"slug": "ex-head-of-eng-at-instagram-career", "reason": "senior engineering-leadership regrets at a social-media company"},
+    {"slug": "amazon-vp-on-promotions-getting-fired", "reason": "contrasting executive growth path and views on promotions and luck"}
+  ],
+  "transcript_complete": true
+}

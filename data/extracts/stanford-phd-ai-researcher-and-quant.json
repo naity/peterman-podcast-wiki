@@ -1,0 +1,58 @@
+{
+  "slug": "stanford-phd-ai-researcher-and-quant",
+  "n": 29,
+  "title": "Stanford PhD, AI Researcher and Ex-Citadel Quant Shares His Experience",
+  "date": "2026-01-26",
+  "url": "https://www.developing.dev/p/stanford-phd-ai-researcher-and-quant",
+  "guest": "Nimit Sohani",
+  "guest_role": "Stanford PhD, AI researcher at Cartesia, ex-Citadel Securities quantitative researcher",
+  "guest_slug": "nimit-sohani",
+  "companies": ["citadel", "stanford"],
+  "concepts": ["ai-era-engineering", "hiring-and-interviews", "compensation-and-equity", "startups-and-founding", "career-growth", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:00:45", "title": "Do you need a PhD?"},
+    {"t": "00:06:25", "title": "Research taste and finding problems"},
+    {"t": "00:09:04", "title": "Why become a quant"},
+    {"t": "00:12:01", "title": "What quants do"},
+    {"t": "00:14:53", "title": "How quants and SWEs collaborate"},
+    {"t": "00:16:29", "title": "Quant vs tech culture"},
+    {"t": "00:26:39", "title": "Quant firm tier list"},
+    {"t": "00:27:56", "title": "Quant insider trading and perf culture"},
+    {"t": "00:30:53", "title": "Going back to AI research"},
+    {"t": "00:35:08", "title": "Who the top competitors are in voice AI"},
+    {"t": "00:39:22", "title": "AI startups vs big labs"},
+    {"t": "00:42:08", "title": "State space models vs transformers"},
+    {"t": "00:49:33", "title": "AI labs: research or product?"},
+    {"t": "00:52:38", "title": "Advice for SWEs who want to try AI research"},
+    {"t": "00:56:48", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "A PhD is rarely strictly required outside academia but opens doors in AI research and quant finance and shapes the role: infra/data engineering work doesn't need one, while exploratory architecture-design research benefits; its core skill is that 90% of research is finding the right, tractably-scoped problem.",
+    "Research taste comes from constantly skimming the literature (his main feed is a curated X/Twitter follow list grown from Stanford contacts) and maturing gradually from small extensions of existing work to wholly new ideas — skipping that maturation is inadvisable.",
+    "Contrary to reputation, he had great work-life balance as a Citadel quant because trader schedules anchored to US market hours shape the whole culture; he believes quant now has better work-life balance than hyper-competitive AI research where people gain edge by outworking rivals.",
+    "Quant comp has no standardized levels like tech; it's opaque, driven by firm/team/strategy performance and seniority, heavily bonus-weighted on the alpha side, with paid garden-leave non-competes of typically six months to two years decided by the company at departure.",
+    "Finance is far more secretive than tech: pods within one firm may unknowingly work on the same strategies because sharing is forbidden (partly to keep returns uncorrelated); returning to tech he was jarred that people 'just tell you that for free.'",
+    "Quant job security is U-shaped: senior quants become expensive relative to market rate and can stop being worth it even when good; the culture is up-or-out with regular trimming, easiest where P&L makes performance unambiguous. Insider-trading workarounds get people fired, sued, and jailed.",
+    "His quant firm tier list: Rentech is the mythical gold standard; Jane Street, Citadel, Jump Trading, Hudson River are the strong big names; TGS, XTX, and Radix are elite smaller secretive shops.",
+    "He left Citadel for Cartesia — founded by fellow Chris Ré lab members including Mamba creator Albert Gu — deliberately taking startup risk after establishing stability; Cartesia builds voice AI and competes with ElevenLabs (an ~18-month head start) on latency, cost, and voice cloning while pushing toward end-to-end speech models replacing the lossy STT-LLM-TTS pipeline.",
+    "Big labs have compute but suffer groupthink and risk-aversion toward out-of-the-box ideas; startups can challenge orthodoxy — e.g., Mamba disproving that transformer scaling had solved sequence modeling, and Cartesia's H-Nets learning tokenization from raw characters.",
+    "SSMs compress context into a fixed-size state (like a brain) while transformers' KV cache grows linearly (like a database); hybrids interleaving both are the text cutting edge, but for redundant modalities like audio SSM compression is 'almost a free lunch,' improving quality and inference cost simultaneously.",
+    "He's skeptical of research-only startups (all-or-nothing vs resource-rich big labs) and product-only wrapper companies (no moat once base models improve); the durable position is the product-research intersection where the product drives research and model control protects the product.",
+    "Advice for SWEs wanting AI research: build fundamentals (coding, math, reading papers) until opportunities come to you; big companies silo you, so a master's credential or a flexible startup helps — Cartesia has converted SWEs to researchers internally, but you need evidence of the skill set.",
+    "His biggest regret is the time he spent regretting decisions that didn't matter; advice to his younger self is to focus on deep technical skills and not spread thin — 'a simple recipe that's very hard to follow.'"
+  ],
+  "notable_quotes": [
+    {"speaker": "Nimit Sohani", "quote": "I would say 90% of the battle in research is actually finding the right problems.", "t": "00:05"},
+    {"speaker": "Nimit Sohani", "quote": "Even the firms that have a reputation for being more open are actually quite secretive versus in tech... It was like, wow, you're just going to tell me that for free.", "t": "00:22"},
+    {"speaker": "Nimit Sohani", "quote": "SSMs are kind of like a brain... whereas transformers are more like a database where you can kind of recall anything in the context.", "t": "00:44"},
+    {"speaker": "Nimit Sohani", "quote": "If your fundamentals are good enough, at some point the opportunities will just come to you rather than the other way around.", "t": "00:53"}
+  ],
+  "related": [
+    {"slug": "google-deepmind-pre-training-lead", "reason": "Directly complementary advice on getting into AI research and frontier labs"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "Another engineer at the AI startup vs big lab boundary on how the field is shifting"},
+    {"slug": "openai-codex-tech-lead-on-how-his", "reason": "Big-lab counterpart perspective on AI product-plus-research work"},
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "Shared theme of leaving a lucrative stable track for startup risk"},
+    {"slug": "mit-complexity-theorist-on-leetcode", "reason": "Shared thread of deep math fundamentals and research problem selection"}
+  ],
+  "transcript_complete": true
+}

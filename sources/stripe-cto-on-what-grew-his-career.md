@@ -1,0 +1,41 @@
+---
+type: source
+updated: 2026-07-19
+raw: ../raw/stripe-cto-on-what-grew-his-career.md
+guest: "David Singleton"
+guest_role: "Former Stripe CTO (7 years), ex-Google VP of Engineering, founder of /dev/agents"
+date: 2025-08-29
+url: https://www.developing.dev/p/stripe-cto-on-what-grew-his-career
+---
+
+# Stripe CTO on What Grew His Career, Hiring Without Leetcode, Coding as a Leader (Career Story)
+
+David Singleton was CTO of [Stripe](../entities/stripe.md) for 7 years and, before that, grew from a junior engineer to VP of Engineering over nearly 12 years at [Google](../entities/google.md), where he ran the London engineering site and led Android Wear. Now founding the AI startup /dev/agents, he walks Ryan through his whole career arc — Symbian in 2001, six different jobs at Google, the EM-vs-IC fork, managing managers, becoming a VP, and being recruited into Stripe's leadership by Patrick Collison — with unusually concrete tooling for engineering leadership: "engineer-acations," ops reviews, document culture, and deliberately designed operating principles. (Note: the fetched transcript covers roughly the first 86 of 125 minutes; the later sections on hiring without Leetcode, leaving Stripe, and career reflections are missing.)
+
+## Key takeaways
+
+- Singleton's [career-growth](../concepts/career-growth.md) engine at Google was agency plus curiosity: as a junior engineer he noticed every mobile visit to google.com paid a ~2.5-second redirect to google.com/m, ignored "it's too hard" pushback, learned the front-end infrastructure, and merged a fix into the main Google web server — saving roughly 70 years of user time per year. He stayed nearly 12 years because every 18–24 months he looked up and realized he was still learning, not out of complacency.
+- On the EM-vs-IC decision ([management](../concepts/management.md)): being a manager and being an IC are different jobs — if you try management, do it full time rather than bolted onto IC work, ideally at a company that allows a trial-and-return. He often first tries to talk people out of management; the job only fits if you genuinely draw energy from getting more out of other people.
+- No matter how senior, leaders should experience the team's work at "the one foot level." His tool: the "engineer-acation" — roughly quarterly, take ~3 days as if on vacation, join a team, ship a small real project, and write a detailed friction log. As CTO it gave him visceral input for developer-productivity investment and sharper questions in operational reviews. He likens it to manufacturing leaders working a day a year on the factory floor.
+- His biggest lesson moving to managing managers: early on he optimized for team happiness and even won Google's team-voted Great Manager Award, but "perfectly happy teams are rarely performing at their very best potential." He now aims for "type two fun" — periods that feel hard in the moment but that people look back on as the best of their careers — and insists low performers must be managed for a team to be genuinely happy.
+- The VP-vs-senior-EM difference for him was leading functions beyond engineering (design, product, partnerships) — losing the visceral "I could do any seat in this org" confidence and learning that non-engineering functions aren't there to "feed the engineers" but are what make impact possible.
+- [Communication](../concepts/teaching-and-communication.md) advice: speaking improves only with deliberate reps (his manager sent him to keynote 1000-person customer events); senior leaders are "always on stage," so hallway body language transmits confidence; keep dynamic range — if everything is always awesome, nobody believes you; and for writing, circulate drafts to reviewers (a habit learned at Stripe) and condense — a good document is the most leveraged way to communicate at scale.
+- Scaling yourself as a senior leader ([influence-and-leadership](../concepts/influence-and-leadership.md)) means designing organizational systems — he thinks of the org "as an operating system." At Stripe he built nested weekly ops reviews, modeled directly on [Amazon](../entities/amazon.md)'s (Charlie Bell personally walked him through Amazon's version), and a program-management group. A process is only legitimate while it's clearly net positive for the people operating inside it.
+- Remote/distributed sites ([big-tech-culture](../concepts/big-tech-culture.md)): far-timezone sites need complete missions and autonomy so the small daily overlap is used for as little as possible; splitting one team half in Mountain View, half in London is the worst setup. Site leads should spend heavy time at HQ building relationships and bringing context home. Sites benefit from their own clan identity (Google London t-shirts and logos) — but rooted in the company culture. Philip Su (then Facebook London site lead, his fierce talent-war rival) sought his advice on this; they later nearly co-founded a gig-economy startup for fractional professional work.
+- He joined [Stripe](../entities/stripe.md) after asking them for advice on that startup idea — "anytime you want money, ask for advice, and anytime you want advice, ask for money" — and Patrick Collison turned the advice conversation into recruiting. His CTO title came later and mattered mainly for external signaling; he says senior hires almost always start as advice conversations with people already happy elsewhere.
+- On culture ([big-tech-culture](../concepts/big-tech-culture.md)): Stripe's operating principles (users first, meticulous in your craft) are concrete, distilled from the behaviors of the most effective employees, and periodically revised. Culture is enforced by authentically exemplifying it and by systems — hiring, performance evaluation, blameless incident review — because "if you don't invest in culture, you almost by definition will not have a culture." Stripe's famously helpful API error messages ("not found, but an object with that ID exists in the other mode") won customer CTOs' loyalty.
+
+## Notable quotes
+
+- "That ultimately ended up saving something like 70 years of user time every year... You get a real bug for those things, like being able to just follow your nose to learn and take agency to do stuff that matters." — David Singleton (~00:10:51)
+- "What I learned later, especially as I started managing managers, was that those teams that are perfectly happy are rarely performing at their very best potential." — David Singleton (~00:31:38)
+- "When you're a leader, you have to continually step onto the balcony. You're on the dance floor doing stuff in the org, but you have to prompt yourself to step onto the balcony and look down at how everything is working." — David Singleton, quoting coach Jeff Lawrence (~00:17:28)
+- "Someone once told me, anytime you want money, ask for advice, and anytime you want advice, ask for money." — David Singleton, on how joining Stripe began (~01:11:23)
+
+## Connections
+
+- [OpenAI & Meta Distinguished Engineer (IC9) On Working With Zuck, Carmack & Career Growth | Philip Su](openai-and-meta-distinguished-engineer.md) — Philip Su appears throughout this episode: Singleton's Facebook London site-lead counterpart, near co-founder, and the person who named Singleton as the best advisor on building a new engineering site.
+- [Amazon VP On Promotions, Getting Fired Twice, Working With Bezos | Ethan Evans](amazon-vp-on-promotions-getting-fired.md) — complementary senior-leadership view; Singleton explicitly models Stripe's ops review and org design on Amazon's deliberate operating culture.
+- [Ex-Head of Eng at Instagram: Career Regrets and Learnings](ex-head-of-eng-at-instagram-career.md) — another senior engineering-leader career retrospective covering the IC-to-executive path and management lessons.
+- [Frontline Manager at Meta to Senior Director at Snapchat in 3 years (Career Story)](frontline-manager-at-meta-to-senior.md) — parallel discussion of the frontline-manager → manager-of-managers → executive skill jumps.
+- [Meta Senior Manager (M2) on Manager Career Growth, PIPs, Amazon vs Meta | Stefan Mai](meta-senior-manager-m2-on-manager.md) — same core themes (EM career growth, managing managers, Amazon's culture as reference point) from a Meta/Amazon perspective.

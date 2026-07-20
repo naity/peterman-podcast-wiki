@@ -1,0 +1,52 @@
+{
+  "slug": "laid-off-from-big-tech-after-25-years",
+  "n": 30,
+  "title": "Honest Big Tech Layoff Story After 25 Years",
+  "date": "2026-01-30",
+  "url": "https://www.developing.dev/p/laid-off-from-big-tech-after-25-years",
+  "guest": "Asian Dad Energy (anonymous)",
+  "guest_role": "Anonymous big tech chief architect laid off after 25 years; ex-consulting group technical director; YouTuber",
+  "guest_slug": "asian-dad-energy",
+  "companies": [],
+  "concepts": ["layoffs", "ai-era-engineering", "compensation-and-equity", "mentorship-and-sponsorship", "corporate-politics", "teaching-and-communication", "career-growth", "non-linear-careers", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:00:41", "title": "His layoff story"},
+    {"t": "00:07:02", "title": "Why he expects more layoffs"},
+    {"t": "00:09:42", "title": "Tech consulting before big tech"},
+    {"t": "00:19:25", "title": "Consultants shipping bad code?"},
+    {"t": "00:26:57", "title": "Why do people dislike consultants?"},
+    {"t": "00:30:55", "title": "Big tech compensation"},
+    {"t": "00:40:27", "title": "When age impacted his flexibility"},
+    {"t": "00:42:04", "title": "Why YouTube"},
+    {"t": "00:46:46", "title": "Speaking advice for engineers"},
+    {"t": "00:49:09", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "He learned through his network that he was on the layoff list and did a 'switcheroo' to put himself at the top in place of more junior engineers slated to be cut, buying them a few months.",
+    "He expects more tech layoffs: companies are under pressure to show returns on heavy AI investment, and cutting headcount keeps revenue flat while dropping costs and earning 'AI efficiency' PR that pumps stock prices.",
+    "His layoff package was structured and generous: garden leave, months of severance, PTO payout, and education/equipment stipends; severance is technically negotiable but he wasn't in the mental state to try.",
+    "His consulting career path ran junior SWE to senior enterprise architect to group technical director over ~18 years; the senior SWE to senior enterprise architect stretch was his best growth period, driven by strong mentors, while director-level C-suite selling burned him out.",
+    "Consulting delivery splits into fly-by-night 'get in, build, get out' projects (often sold just to keep the pipeline full) and multi-year retainers where institutional knowledge enables real quality and maintenance.",
+    "Quality holds up despite non-technical clients because of engineering integrity, personal pride in the craft, and firm reputation — deliver a 'steaming pile of turds' once and there is no next customer; it is the consultant's obligation to tell a client their $20M investment is bad.",
+    "Hostility toward consultants mostly stems from management consulting, whose headcount-cut recommendations make employees associate arriving consultants with layoffs; technical consulting deals with tools, not people cuts.",
+    "Moving from consulting to big tech nearly tripled his compensation via higher base, bonuses, RSUs vesting over 3-4 years, and a ~15% ESPP discount; holding shares through the COVID digital boom multiplied their value. His rule: always take free money (ESPP, 401k match), though with spare cash he'd buy index funds.",
+    "After age 40 he found learning new frameworks took weeks instead of days (his Olympic gymnast analogy for aging in tech) and now uses AI tools to polish his code.",
+    "The viral layoff vlog began as therapy — easier than journaling — and he is now exploring semi-early retirement, YouTube, and small coding projects after big tech applications went nowhere in a cold job market.",
+    "Speaking advice: relax, don't fuse your identity with your subject, and explain like the audience is five — illustrated by a brilliant engineer who couldn't communicate a Drupal memory-cache optimization to non-technical audiences.",
+    "Advice to his younger self: work hard, never stop learning, stay flexible — a mentor's lesson that 'if you can stay flexible, you'll survive.'"
+  ],
+  "notable_quotes": [
+    {"speaker": "ADE", "quote": "What I essentially did was I was able to do a little switcheroo where I put myself to the top of the list and got cut. And that's how I got laid off.", "t": "00:02"},
+    {"speaker": "ADE", "quote": "Companies are looking to decrease headcount, reduce their cost, keep the revenue consistent, and then get some PR points for saying how innovative they are in terms of the AI revolution.", "t": "00:05"},
+    {"speaker": "ADE", "quote": "If it is a steaming pile of turds, it's your obligation to tell your client that, hey, hey, man, like the $20 million that you've invested is a steaming pile of turds.", "t": "00:21"},
+    {"speaker": "ADE", "quote": "I can learn this framework in my 20s in, like, a few days and be effective with it. In my 40s, it's taking me weeks to learn it.", "t": "00:41"}
+  ],
+  "related": [
+    {"slug": "amazon-principal-engineer-on-layoffs", "reason": "The show's other first-person big tech layoff story from a 20+ year veteran turned YouTuber"},
+    {"slug": "meta-senior-staff-ic7-engs-honest", "reason": "Companion honest career-setback story from the same early-2026 anonymous-guest run"},
+    {"slug": "retired-netflix-engineering-director", "reason": "Another late-career/retirement reflection after a long big tech tenure"},
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "Shared theme of stepping off the big tech treadmill and non-linear careers"},
+    {"slug": "aws-distinguished-eng-learnings-from", "reason": "Contrasting perspective on how AI is changing engineering work and headcount"}
+  ],
+  "transcript_complete": true
+}

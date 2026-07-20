@@ -1,0 +1,41 @@
+{
+  "slug": "21x-hackathon-winner-turned-college",
+  "n": 3,
+  "title": "21x Hackathon Winner Turned College Dropout | Jia Chen Interview",
+  "date": "2025-04-13",
+  "url": "https://www.developing.dev/p/21x-hackathon-winner-turned-college",
+  "guest": "Jia Chen",
+  "guest_role": "21x hackathon winner, college dropout, co-founder of Sprint.dev, content creator",
+  "guest_slug": "jia-chen",
+  "companies": [],
+  "concepts": ["startups-and-founding", "career-growth", "hiring-and-interviews", "regrets-and-advice", "non-linear-careers"],
+  "sections": [
+    {"t": "", "title": "Getting Into Hackathons, Strategy, Benefits"},
+    {"t": "", "title": "Standing Out From a Non-Target School"},
+    {"t": "", "title": "Dropping Out, Building a Startup"}
+  ],
+  "key_takeaways": [
+    "Winning hackathons comes down to team dynamics, judge interaction, and smart project execution, not stacking credentials or showing off a complicated tech stack.",
+    "Pick hackathon teammates on skills and drive rather than credentials: past projects, GitHub activity, and ambition beat resumes; Jia has won with determined community-college students.",
+    "Keep hackathon presentations short and let judges interact with the project; teams that spend the time talking about their tech stack often lose.",
+    "Splitting into separate frontend and backend teams and merging late usually fails at hackathons; connect both early and iterate together.",
+    "Hackathons double as recruiting pipelines: recruiters at larger hackathons scout future interns and fast-track candidates for internship applications.",
+    "From a non-target school, make yourself the outlier: take leadership roles, spearhead big projects, and build a personal brand.",
+    "Develop 'agency' - the ability to take action and think on your feet - plus a 'get it done and move on' time-efficiency mindset.",
+    "College provides structure if you don't know what to learn but isn't necessary; for Jia it eventually dulled her creativity and passion for learning.",
+    "Don't drop out on a whim: set preconditions first by building projects, testing the idea, and evaluating your technical skills and investor network.",
+    "As a founder, move fast and continuously ship while avoiding burnout, and stay open to connections and learning opportunities that don't seem immediately useful."
+  ],
+  "notable_quotes": [
+    {"speaker": "Jia Chen", "quote": "Agency - the ability to take action and think on your feet.", "t": ""},
+    {"speaker": "Jia Chen", "quote": "Get it done and move on.", "t": ""}
+  ],
+  "related": [
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "leaving the conventional path to found a startup; non-linear careers"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "engineer-turned-founder building dev tools"},
+    {"slug": "harvard-professor-cs50-what-matters", "reason": "contrasting perspective on the value of college and CS education"},
+    {"slug": "industry-secrets-we-wish-we-knew", "reason": "early-career advice for students on standing out"},
+    {"slug": "cloudkitchens-cto-on-intelligence", "reason": "founder/startup leadership perspective"}
+  ],
+  "transcript_complete": false
+}

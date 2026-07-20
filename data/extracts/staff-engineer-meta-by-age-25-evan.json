@@ -1,0 +1,42 @@
+{
+  "slug": "staff-engineer-meta-by-age-25-evan",
+  "n": 1,
+  "title": "Staff Engineer @ Meta by Age 25 | Evan King",
+  "date": "2025-01-17",
+  "url": "https://www.developing.dev/p/staff-engineer-meta-by-age-25-evan",
+  "guest": "Evan King",
+  "guest_role": "Ex-Meta Staff Engineer (IC6 by age 25), later startup founder",
+  "guest_slug": "evan-king",
+  "companies": ["meta"],
+  "concepts": ["promotions", "career-growth", "influence-and-leadership", "startups-and-founding", "big-tech-culture", "incident-management", "regrets-and-advice", "mentorship-and-sponsorship"],
+  "sections": [
+    {"t": "", "title": "Cornell to Junior Engineer"},
+    {"t": "", "title": "Junior to Mid-Level"},
+    {"t": "", "title": "Mid-Level to Senior"},
+    {"t": "", "title": "Senior to Staff"},
+    {"t": "", "title": "Transition to Startups"},
+    {"t": "", "title": "Personal Reflections"}
+  ],
+  "key_takeaways": [
+    "Evan went from Junior (IC3) to Staff (IC6) at Meta in three years, reaching Staff by age 25.",
+    "Both Evan and host Ryan identify as 'code machines' - high-output engineers rather than natural prodigies; Evan started programming late in high school.",
+    "His manager handed him borderline engineering-management responsibilities to scale a growing team, and soft skills from founding Cornell's Hacking Club proved instrumental.",
+    "Impact trumps technical complexity: his Staff promotion came from a simple project with extraordinary results, not technical sophistication.",
+    "He was promoted in his first half by pursuing projects outside his core scope, showing agency in seeking opportunities.",
+    "His Senior-to-Staff case came from leading the creation of Meta's real-time integrity team after the Christchurch incident, combining visibility and impact.",
+    "He argues startups promote faster technical growth than big tech: big tech offers depth, startups provide breadth.",
+    "An after-hours crypto side project gained 10k+ users and eventually led him to leave big tech for entrepreneurship.",
+    "He regrets over-prioritizing work early on at the cost of friendships and self-reflection, and taking promotion shortcuts that sacrificed deep technical understanding he later needed."
+  ],
+  "notable_quotes": [
+    {"speaker": "Evan King", "quote": "Startups promote faster technical growth than big tech does.", "t": ""}
+  ],
+  "related": [
+    {"slug": "26-year-old-meta-staff-eng-ic6-on", "reason": "another very young Meta IC6 with rapid promotions"},
+    {"slug": "meta-senior-staff-eng-ic7-on-zuck", "reason": "the 'code machine' archetype and rapid Meta career growth"},
+    {"slug": "new-grad-to-principal-engineer-ic8", "reason": "same Meta IC ladder taken further to IC8"},
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "leaving big tech for startups after climbing the ladder"},
+    {"slug": "instagram-senior-staff-eng-ic7-on", "reason": "repeated Meta promotions through outsized impact"}
+  ],
+  "transcript_complete": false
+}

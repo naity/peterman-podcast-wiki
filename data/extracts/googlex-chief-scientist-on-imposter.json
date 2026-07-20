@@ -1,0 +1,55 @@
+{
+  "slug": "googlex-chief-scientist-on-imposter",
+  "n": 9,
+  "title": "GoogleX Chief Scientist On Imposter Syndrome, Career Growth, Project Taste | Carey Nachenberg",
+  "date": "2025-07-18",
+  "url": "https://www.developing.dev/p/googlex-chief-scientist-on-imposter",
+  "guest": "Carey Nachenberg",
+  "guest_role": "GoogleX Chief Scientist, Symantec Fellow (IC10/VP-equivalent), UCLA professor",
+  "guest_slug": "carey-nachenberg",
+  "companies": ["symantec", "google", "lyft", "ucla"],
+  "concepts": ["imposter-syndrome", "career-growth", "promotions", "hiring-and-interviews", "security-and-cryptography", "influence-and-leadership", "teaching-and-communication", "ai-era-engineering", "corporate-politics", "regrets-and-advice", "big-tech-culture"],
+  "sections": [
+    {"t": "00:54", "title": "Growth to Fellow at Symantec"},
+    {"t": "13:13", "title": "The most complex malware"},
+    {"t": "16:13", "title": "Why C was faster than assembly"},
+    {"t": "17:17", "title": "Imposter syndrome"},
+    {"t": "21:28", "title": "What matters more than intelligence"},
+    {"t": "28:03", "title": "Experience at GoogleX"},
+    {"t": "34:24", "title": "Leaving GoogleX"},
+    {"t": "37:43", "title": "Experience at Lyft"},
+    {"t": "43:40", "title": "Getting credit on collaborative projects"},
+    {"t": "46:53", "title": "Becoming a professor at UCLA"},
+    {"t": "49:13", "title": "How to speak well"},
+    {"t": "53:23", "title": "How AI affected his students"},
+    {"t": "1:03:53", "title": "Career regrets"},
+    {"t": "1:07:16", "title": "Finding work you enjoy"},
+    {"t": "1:09:03", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Nachenberg rose from Symantec's first intern (1992, Peter Norton Group) to its senior-most engineer (Fellow, IC10/VP-equivalent) by repeatedly finding gaps: impactful projects the business needed that nobody was doing, like detecting polymorphic self-mutating viruses. Symantec never assigned him work; he picked all his own projects.",
+    "Symantec promoted to Distinguished Engineer and Fellow via a company-wide committee of technologists led by the CTO that reviewed portfolios quarterly for cross-division consistency; Nachenberg was made Fellow without even applying after the Veritas merger forced a level-set.",
+    "Top-level IC hiring is network-driven: Symantec's ex-COO pulled him into GoogleX with no application; the loop was ~8 interviews with no coding questions, mostly leadership discussion and sales pitches. Still, Google leveled him down from a Symantec L10-equivalent to L8 because 'we can't just hire fellows.'",
+    "Imposter syndrome kept him at Symantec 21+ years even after he stopped growing and being happy; only an external pull ('we want to interview you') got him to leave. His biggest regret is not leaving earlier — stay only as long as you're learning.",
+    "Intelligence matters less than communication, collaboration, and outcome focus: he knew a 200-IQ engineer stuck at L4 at Google due to poor communication and no business impact. Focusing on the company's/customer's outcomes and their metrics beats being smart.",
+    "At GoogleX/Chronicle he worked on Backstory, which ingested and indexed petabytes of enterprise security telemetry so threat-hunting queries that previously took 30 minutes ran in about two seconds.",
+    "At Lyft he drove the shift from hand-coded, hand-parametrized robotics driving algorithms to an end-to-end neural-network driver wrapped in a deterministic safety layer, achieved purely through influence with skeptical roboticists — then lost credit because he let others tell the story; document your accomplishments and claim specific, unembellished credit.",
+    "On speaking: design for the 30th-50th percentile listener, practice via optional lunchroom talks, and know people equate communication skill with intelligence — a single internal Stuxnet talk at X had colleagues calling him one of the smartest people they'd met.",
+    "He regrets letting students use LLMs on projects (project scores diverged sharply from exam understanding) and is banning them for projects while allowing them for learning; if AI reaches 'AGI-good' coding, the valuable engineering skills become outcome analysis, customer understanding, and communicating requirements — being a genuinely competent product manager.",
+    "Advice to younger self: don't let fear of failure hold you back, focus on outcomes and speak to your audience's needs rather than the technology, and find a manager who trusts you and gives you rope — a manager can make or break your career and happiness."
+  ],
+  "notable_quotes": [
+    {"speaker": "Carey Nachenberg", "quote": "If I have to be perfectly honest, I would say imposter syndrome... I stayed because it was comfortable and I complained. I complained all the time.", "t": "17:30"},
+    {"speaker": "Carey Nachenberg", "quote": "Just because you have intelligence doesn't mean you're gonna be successful.", "t": "22:30"},
+    {"speaker": "Carey Nachenberg", "quote": "People will think you're intelligent and they'll give you more credit and they'll introduce you to other opportunities based on your ability to communicate, because people associate that with intelligence.", "t": "52:00"},
+    {"speaker": "Carey Nachenberg", "quote": "Don't let fear of failure hold you back. You probably can do more than you think you can do.", "t": "1:09:30"}
+  ],
+  "related": [
+    {"slug": "harvard-professor-cs50-what-matters", "reason": "Fellow legendary CS lecturer on lecturing well and what matters beyond CS"},
+    {"slug": "meta-senior-staff-ic7-engs-honest", "reason": "Ryan references this guest's demotion request when asking Carey about high-level expectations"},
+    {"slug": "intern-to-microsoft-distinguished", "reason": "Parallel intern-to-most-senior-IC arc over decades at one company"},
+    {"slug": "industry-secrets-we-wish-we-knew", "reason": "UCLA connection (Carey lectures there) and overlapping early-career advice"},
+    {"slug": "openai-and-meta-distinguished-engineer", "reason": "Another top-level IC candid about self-doubt and risk-taking"}
+  ],
+  "transcript_complete": true
+}

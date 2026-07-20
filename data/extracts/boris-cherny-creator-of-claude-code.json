@@ -1,0 +1,59 @@
+{
+  "slug": "boris-cherny-creator-of-claude-code",
+  "n": 23,
+  "title": "Boris Cherny (Creator of Claude Code) On How His Career Grew",
+  "date": "2025-12-15",
+  "url": "https://www.developing.dev/p/boris-cherny-creator-of-claude-code",
+  "guest": "Boris Cherny",
+  "guest_role": "Creator of Claude Code at Anthropic; ex-Meta/Instagram Principal Engineer (IC8)",
+  "guest_slug": "boris-cherny",
+  "companies": ["meta", "instagram", "anthropic"],
+  "concepts": ["career-growth", "promotions", "ai-coding-tools", "ai-era-engineering", "developer-tools", "programming-languages", "functional-programming", "influence-and-leadership", "imposter-syndrome", "big-tech-culture", "startups-and-founding", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:59", "title": "Starting at FB"},
+    {"t": "09:43", "title": "Early side projects and book rec"},
+    {"t": "17:05", "title": "Being under leveled"},
+    {"t": "18:55", "title": "Staff (IC6) promo story"},
+    {"t": "25:19", "title": "Proximity to leadership learnings"},
+    {"t": "29:36", "title": "Scoping out work for 100s of engs"},
+    {"t": "35:31", "title": "Senior Staff (IC7) promo story"},
+    {"t": "44:39", "title": "How to find side projects"},
+    {"t": "50:45", "title": "Principal (IC8) promo story"},
+    {"t": "54:20", "title": "Building credibility in a new org"},
+    {"t": "1:04:23", "title": "Joining Anthropic"},
+    {"t": "1:10:05", "title": "Why Claude Code succeeded"},
+    {"t": "1:15:56", "title": "Claude Code use outside of code"},
+    {"t": "1:17:22", "title": "What he thinks of competition"},
+    {"t": "1:22:57", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Coming into Meta under-leveled was lucky: it gave space to build cool things without promo box-checking, and exceeding expectations built compounding reputation; he advises against pushing for level+1 when switching companies.",
+    "Side quests drove his growth: Undux became Facebook's most popular state-management framework after he scraped internal support posts, tallied complaints by team, and gave 20-40 per-team tech talks; he also wrote a TypeScript book and ran SF's biggest TypeScript meetup.",
+    "The one book he recommends every engineer: Functional Programming in Scala — 'thinking in types' changed how he codes; he got into terse functional languages after a motorcycle accident broke both his arms.",
+    "His Staff (IC6) promo came from volunteering Facebook Groups as the guinea pig for the Comet rewrite without asking permission — product teams that help build infra get to shape its abstractions rather than just consume them.",
+    "His IC7 promo came from the public-groups project (a 'one-line change' with gnarly data-model, spam, and moderation implications) and from earning senior engineer Bob's trust by disagreeing-and-committing to Bob's migration, then pushing to reverse it when the evidence was in.",
+    "Scoping advice: time-box to ~30 minutes, give experts a straw man instead of an open question; for a hard org-wide data-model merge he ran a 3-hour two-team architecture design competition that produced designs 80% identical, creating instant consensus.",
+    "On imposter syndrome while directing same-level engineers: levels don't matter at all, and if you never feel imposter syndrome you aren't pushing yourself hard enough.",
+    "Automation as free leverage: he tallied every repeated code-review comment in a spreadsheet and wrote a lint rule after a few repeats, eventually automating most of his code reviews; if you hit a problem 2-3 times, others have it too.",
+    "He moved to rural Japan for his wife's dream job, joined Instagram Tokyo never having used the app, and turned zero-timezone-overlap into a superpower — no meetings meant far more coding than peers, seeding the Python-to-Hack migration by first befriending its strongest skeptics; he later delegated it to Jake Bolam, following Andy Grove's rule to delegate what you like and know so you can monitor it.",
+    "His IC8 promo was a non-event driven by his manager; levels exist for company reasons not engineering reasons, so he optimized for interesting problems and delightful products instead.",
+    "Claude Code succeeded because Ben Mann pushed him to 'build for the model six months from now'; it stayed mediocre until Sonnet/Opus 4 landed, after which ~80-90% of Claude Code was written with Claude Code and Anthropic's per-engineer productivity grew ~70% while headcount tripled.",
+    "On AI slop: hold model-written code to exactly the same bar as human code; vibe coding only for prototypes and throwaway code, plan-mode pairing as the default, and he still hand-writes the core query loop. Claude Code spread beyond engineers to data scientists and half of Anthropic's sales team.",
+    "On competitors like Codex: he doesn't use them and tells his team not to get sidetracked — more competitors signals success; stay focused on users' problems.",
+    "Advice to his younger self: just use common sense — big companies systematically pull you away from it."
+  ],
+  "notable_quotes": [
+    {"speaker": "Boris Cherny", "quote": "He actually pushed me really hard to be like, don't build for the model of today, build for the model six months from now.", "t": "1:11:27"},
+    {"speaker": "Boris Cherny", "quote": "At every level, it doesn't matter what level you're at, you should always feel a little bit of imposter syndrome because if you don't, then you're not pushing yourself hard enough.", "t": "42:29"},
+    {"speaker": "Boris Cherny", "quote": "You never delegate the thing you don't want to do. That's the most important rule. You always delegate the thing you do want to do and that you know well because then you can monitor the progress and make sure it's going well.", "t": "1:00:49"},
+    {"speaker": "Boris Cherny", "quote": "Even though Anthropic has tripled since the start of the year, productivity per engineer has grown almost 70% per engineer because of Claude Code.", "t": "1:12:09"}
+  ],
+  "related": [
+    {"slug": "anthropic-eng-leader-and-ex-senior", "reason": "Boris references 'Fiona' being interviewed next; same Anthropic/Meta path"},
+    {"slug": "instagram-principal-engineer-ic8", "reason": "Jake Bolam is named as the engineer Boris delegated the Instagram Python-to-Hack migration to"},
+    {"slug": "openai-codex-tech-lead-on-how-his", "reason": "mirror episode: tech lead of Claude Code's main competitor"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "developer tools and how AI is changing software engineering"},
+    {"slug": "new-grad-to-principal-engineer-ic8", "reason": "parallel IC8-at-Meta career progression story"}
+  ],
+  "transcript_complete": true
+}

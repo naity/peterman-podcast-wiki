@@ -1,0 +1,49 @@
+{
+  "slug": "distinguished-engineer-at-shopify",
+  "n": 18,
+  "title": "Shopify Distinguished Eng (L10) on Principal+ Engineering, Career Story, Regrets | Ilya Grigorik",
+  "date": "2025-10-24",
+  "url": "https://www.developing.dev/p/distinguished-engineer-at-shopify",
+  "guest": "Ilya Grigorik",
+  "guest_role": "Distinguished Engineer (L10) at Shopify, ex-Google Director, PostRank founder",
+  "guest_slug": "ilya-grigorik",
+  "companies": ["shopify", "google"],
+  "concepts": ["career-growth", "startups-and-founding", "non-linear-careers", "management", "influence-and-leadership", "mentorship-and-sponsorship", "regrets-and-advice", "hiring-and-interviews", "systems-design", "teaching-and-communication"],
+  "sections": [
+    {"t": "00:00:45", "title": "Thoughts on Waterloo"},
+    {"t": "00:04:36", "title": "Starting his own company"},
+    {"t": "00:08:40", "title": "Google acquisition story"},
+    {"t": "00:14:04", "title": "Joining Google"},
+    {"t": "00:20:28", "title": "Switching back to IC"},
+    {"t": "00:26:42", "title": "Principal+ Engineering at Shopify"},
+    {"t": "00:40:09", "title": "Career regrets"},
+    {"t": "00:44:53", "title": "Top career-impacting book"},
+    {"t": "00:46:59", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Waterloo's co-op rotation gives students about six stigma-free internships to test industries and company sizes before committing, which Ilya calls the school's underappreciated superpower.",
+    "Ilya deferred and never finished grad school to found PostRank, a 'better PageRank' ranking posts by social engagement signals, after realizing live investor conversations taught more than entrepreneurship coursework.",
+    "Google acquired PostRank during its race against Facebook on social; it was close to an acquihire — Google wanted the team and experience, and the product was rebuilt from scratch inside Google Analytics at exabyte scale.",
+    "Even in an acquisition, the whole PostRank team including founder/CTO Ilya went through Google's full interview panel to determine leveling; team, IP, and customers are negotiated as separate threads.",
+    "Though told he was on track for director in Google Analytics, Ilya took a lateral, likely down-leveled IC role in the 'Make the Web Fast' group to gain self-direction and work on a domain he loved — the right call in retrospect.",
+    "He treats IC vs. manager as 'tours of duty' chosen per problem: his W3C/IETF browser performance metrics work created an adoption problem that couldn't scale with one person, so he became Director of Developer Relations to compress 3-5 years of ecosystem adoption into 1-2.",
+    "His success test as a principal engineer is disappearing 'Homer Simpson into the bushes' — if the team keeps executing well without him, he did his job of upleveling them.",
+    "Anyone who asks for a principal engineer checklist isn't ready for the level: you get parachuted into ambiguous terrain and must map problems, build alliances with directors/VPs, and find where your skillset applies within about a week.",
+    "Distinguished Engineer is a VP-equivalent role defined by dynamic range — technically from bare metal to business requirements, and in execution style from fog-of-war rapid iteration to slow, careful platform API design with years-long consequences.",
+    "'Don't be the best, be the only': build a portfolio of 80-90% competencies (design, sales, marketing, writing, management) whose intersection makes you uniquely capable and antifragile — 'literally probability math' — and LLMs now make acquiring the first 80% faster than ever.",
+    "Career regret: don't let the pressure of past success filter what you publish or try — early embarrassing writing and code were the feedback loop that drove his growth."
+  ],
+  "notable_quotes": [
+    {"speaker": "Ilya Grigorik", "quote": "I have this belief that a better way, a more resilient way to build your career is to optimize for being the only person as opposed to the best person.", "t": "31:24"},
+    {"speaker": "Ilya Grigorik", "quote": "People that have to ask that question by definition are not principal engineers, right? Because the problems become ambiguous enough at that level where you kind of have to figure it out yourself.", "t": "27:04"},
+    {"speaker": "Ilya Grigorik", "quote": "Don't let the pressure of your success stop you from trying.", "t": "40:17"}
+  ],
+  "related": [
+    {"slug": "mozilla-firefox-cto-on-browser-war", "reason": "Web platform/browser work and the path to Distinguished Engineer"},
+    {"slug": "intern-to-microsoft-distinguished", "reason": "Contrasting career route to Distinguished Engineer"},
+    {"slug": "uber-distinguished-eng-on-unfair", "reason": "Distinguished-level influence, promos, and regrets"},
+    {"slug": "meta-distinguished-eng-ic9-on-influencing", "reason": "Operating at VP-equivalent IC scope through influence"},
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "Founder path and non-linear careers over promotion tracks"}
+  ],
+  "transcript_complete": true
+}

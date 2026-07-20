@@ -1,0 +1,52 @@
+{
+  "slug": "new-grad-to-principal-engineer-ic8",
+  "n": 26,
+  "title": "New Grad to Principal Engineer (IC8) at Meta (Career Story)",
+  "date": "2026-01-12",
+  "url": "https://www.developing.dev/p/new-grad-to-principal-engineer-ic8",
+  "guest": "Adrien Friggeri",
+  "guest_role": "Principal engineer (IC8) at Meta, original tech lead of Bento",
+  "guest_slug": "adrien-friggeri",
+  "companies": ["meta", "instagram", "clubhouse"],
+  "concepts": ["promotions", "career-growth", "developer-tools", "influence-and-leadership", "calibrations-and-ratings", "startups-and-founding", "mentorship-and-sponsorship", "non-linear-careers", "big-tech-culture", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:43", "title": "First team at FB"},
+    {"t": "07:24", "title": "Senior promo /w IG"},
+    {"t": "16:30", "title": "Story behind Bento (Senior staff promo)"},
+    {"t": "25:33", "title": "Taking on perf risk to start the project"},
+    {"t": "29:03", "title": "Learnings from leaving big tech"},
+    {"t": "32:46", "title": "Joining Clubhouse"},
+    {"t": "35:08", "title": "Return to Meta (again)"},
+    {"t": "40:51", "title": "Principal promo (IC8) and tips"},
+    {"t": "51:37", "title": "Maximizing your luck /w people"},
+    {"t": "54:26", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "His first manager corrected his PhD pretension on day one — 'software engineers have power at this company, don't pigeonhole yourself' — and Adrien has identified as a software engineer rather than a data scientist ever since.",
+    "His early rumor-spread research found false rumors spread faster than true ones (more egregious means more viral) and that debunking barely limits spread; the work fed into down-weighting reshares in News Feed.",
+    "His IC5 promo came from building Instagram's first A/B testing system as a naive IC4 after leadership told him 'don't bug us' during the AWS migration — he hacked exposure logging through an allow-listed Facebook API endpoint and recruited a PM for air cover, not even knowing promotions existed.",
+    "His biggest self-described career mistake was never officially joining early Instagram while embedded there — peers from that ~30-person team reached IC7-IC10 far faster.",
+    "Bento started as personal helper scripts to kill data-pipeline boilerplate (300 lines to 20); he negotiated 2-3 months of explicit perf risk with his manager and skip, and it grew into Meta's company-wide notebook platform used by ~60% of data practitioners, earning his IC7/TLM2 promo.",
+    "Internal tool adoption strategy: capture newcomers at onboarding (bootcamp/DataCamp) in a fast-growing company so network effects convert the stragglers, and support the legacy systems to build trust before migrating their users.",
+    "On perf risk: consequences of underperforming are harsher today than a decade ago, but the playbook is unchanged — make the exploration an explicitly agreed expectation with manager and skip, over-communicate, and be ready to hear no.",
+    "Leaving Meta in 2018 to found a startup taught him he wasn't an entrepreneur — founders must delegate the interesting hard problems and scale through others; 'I left the company to do a startup, and I ended up taking a sabbatical instead.'",
+    "He has never applied for a job through a website: every career move, including both Meta boomerangs (via former managers James Pearce and Vincent Hardy) and Clubhouse, came through relationships of trust.",
+    "The IC8 promo was deliberately engineered: co-writing the packet with a manager who had never done one, socializing with VPs a cycle early, and asking a critical D2 for monthly mentoring six months ahead so there was 'no debate in the room' at calibration.",
+    "He carved out the 'TL for experiences' role on a smart-glasses program by taking coordination load (dozens of teams, ~35 PMs) off the existing uber TL with his blessing — scope is taken off someone's plate through over-communication, not stolen; the title came post hoc after a year of doing the work.",
+    "Advice to younger self: be a good person, don't be credit-driven, be patient (pushing for IC7 before he was ready cost him cycles), stay curious, and maximize your surface area for luck by taking more shots."
+  ],
+  "notable_quotes": [
+    {"speaker": "Adrien Friggeri", "quote": "I often joke that I left the company to do a startup, and I ended up taking a sabbatical instead.", "t": "29:03"},
+    {"speaker": "Adrien Friggeri", "quote": "I don't want to make it sound like getting promoted is just a social game. You need to have the underlying work too... It is also way easier to build the consensus ahead of time so that when you go to a performance calibration session, you don't have a debate in the room.", "t": "43:00"},
+    {"speaker": "Adrien Friggeri", "quote": "Taking something off someone's plate doesn't mean that you're stealing from them — or it is, if you're not talking to them about it.", "t": "46:00"},
+    {"speaker": "Adrien Friggeri", "quote": "I learned very quickly that we're all in this to succeed, and the best way to succeed is to help others succeed.", "t": "52:00"}
+  ],
+  "related": [
+    {"slug": "instagram-principal-eng-ic8-on-building", "reason": "same level (IC8) reached at Instagram/Meta via a contrasting product-led path"},
+    {"slug": "instagram-principal-engineer-ic8", "reason": "another IC8 promotion story and tech-lead craft at Instagram"},
+    {"slug": "tech-lead-for-metas-most-used-programming", "reason": "building internal developer tooling at Meta as a promotion vehicle"},
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "contrasting outcome of leaving big tech to found a startup"},
+    {"slug": "airbnb-staff-eng-on-how-to-not-get", "reason": "developer-productivity careers and calibration mechanics behind promos"}
+  ],
+  "transcript_complete": true
+}

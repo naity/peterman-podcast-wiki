@@ -1,0 +1,52 @@
+{
+  "slug": "turing-award-winner-on-working-with",
+  "n": 34,
+  "title": "Turing Award Winner On Thinking Clearly, Paxos vs Raft, Working with Dijkstra | Leslie Lamport",
+  "date": "2026-02-23",
+  "url": "https://www.developing.dev/p/turing-award-winner-on-working-with",
+  "guest": "Leslie Lamport",
+  "guest_role": "Turing Award winner, inventor of Paxos, LaTeX, and logical clocks",
+  "guest_slug": "leslie-lamport",
+  "companies": ["sri-international", "dec"],
+  "concepts": ["distributed-systems", "working-with-legends", "teaching-and-communication", "security-and-cryptography", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:01:25", "title": "The Bakery Algorithm"},
+    {"t": "00:08:28", "title": "Experiences with Dijkstra"},
+    {"t": "00:14:44", "title": "His most cited paper"},
+    {"t": "00:23:26", "title": "The \"Byzantine Generals\" problem"},
+    {"t": "00:38:05", "title": "The Paxos Algorithm"},
+    {"t": "00:46:57", "title": "Paxos vs Raft Algorithm"},
+    {"t": "00:51:26", "title": "Building LaTeX"},
+    {"t": "00:54:45", "title": "Why writing improves your thinking"},
+    {"t": "01:00:21", "title": "Why he wasn't an academic"},
+    {"t": "01:02:08", "title": "Grand theory of concurrency"},
+    {"t": "01:07:25", "title": "Why he doesn't think he's smart"},
+    {"t": "01:09:07", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "The Bakery algorithm was born of spite: Lamport's first submitted mutual-exclusion algorithm came back from the CACM editor with a bug, teaching him that concurrent programs need correctness proofs; the resulting algorithm remarkably requires no lower-level atomicity — a read overlapping a write can return any value and it still works.",
+    "His one collaboration with Dijkstra (simplifying the first concurrent garbage-collection algorithm) earned unexpected co-authorship; Dijkstra later said Lamport had a remarkable ability at abstraction, which Lamport now credits — rather than raw intelligence — for his Turing Award.",
+    "The 'Time, Clocks' happens-before definition is special relativity transposed to distributed systems (messages instead of light), but the paper's second, more practically important idea — building any distributed system as a replicated state machine — was completely ignored for years.",
+    "Understand concurrent systems via invariants, not behavioral reasoning over sequences: behaviors explode exponentially while invariance proofs grow roughly quadratically in the number of processes; invariants are 'the method that works, that you can be sure will work.'",
+    "He wrote the first digital signature algorithm on a napkin in a coffee house for his friend Whit Diffie before Diffie-Hellman was published; signatures explain why Byzantine agreement needs 4 processes for 1 arbitrary fault without them but only 3 with them.",
+    "He invented the 'Byzantine Generals' story as deliberate marketing after seeing Dijkstra's Dining Philosophers become famous for its cute story; he almost called it 'Albanian generals.' The result mattered because fly-by-wire aircraft were coming and engineers wrongly assumed 3 computers tolerate one arbitrary fault — a Boeing engineer's reaction was 'Oh, shit, we need four computers.'",
+    "Paxos began as an attempted impossibility proof of DEC SRC's distributed storage consistency code that inverted mid-proof into the algorithm itself; the paper sat 8 years unpublished because referees called it 'not terribly important' — only Butler Lampson grasped it and proselytized state-machine replication.",
+    "On Raft, he told the authors 'send it back to me when you have a proof'; the version of Raft that user studies found 'more understandable' than Paxos contained a later-discovered bug, showing that for most people understanding means 'a warm fuzzy feeling' while for him it means being able to write a proof.",
+    "'If you're thinking without writing, you only think you're thinking': writing instruction manuals before programs and hierarchically structured proofs exposes unstated 'obvious' steps where errors hide; mathematicians reacted to his proof style with anger he attributes to fear of being made honest.",
+    "He built LaTeX in 6-9 months of 'spare time' as macros for his own book; he spent his whole career in industry (SRI, DEC) rather than academia; he never found the hoped-for 'Turing machine of concurrency' but now considers math-described state machines to be it; his advice to his younger self is none: 'I shouldn't waste time trying to answer questions that I don't have to answer.'"
+  ],
+  "notable_quotes": [
+    {"speaker": "Leslie Lamport", "quote": "For me, understanding means you can write a proof of it. But what understanding means for most people is a warm fuzzy feeling.", "t": "00:50:36"},
+    {"speaker": "Leslie Lamport", "quote": "The gift that I have is not in some sense raw intelligence. It's abstraction. And it's only recently, last 10 or so years, that I realized how much better I am at that than other people.", "t": "01:08:48"},
+    {"speaker": "Leslie Lamport", "quote": "If you think you know something but don't write it down, you only think you know it... it really makes you honest.", "t": "00:59:58"},
+    {"speaker": "Leslie Lamport", "quote": "I shouldn't waste time trying to answer questions that I don't have to answer. I don't think about what I should have done.", "t": "01:09:24"}
+  ],
+  "related": [
+    {"slug": "turing-award-winner-nsa-public-key", "reason": "Lamport wrote the first digital signature scheme for Whit Diffie, Hellman's co-author"},
+    {"slug": "turing-award-winner-data-abstraction", "reason": "fellow Turing laureate on Dijkstra, distributed systems, and abstraction"},
+    {"slug": "aws-distinguished-eng-learnings-from", "reason": "Paxos-style consensus and state-machine replication at industrial scale"},
+    {"slug": "turing-award-winner-p-vs-np-zero", "reason": "theory-side Turing laureate on computation's foundational abstractions"},
+    {"slug": "dropboxs-former-most-senior-eng-building", "reason": "building correct large-scale systems in practice"}
+  ],
+  "transcript_complete": true
+}

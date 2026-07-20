@@ -1,0 +1,49 @@
+{
+  "slug": "msl-eng-director-promo-hacking-industry",
+  "n": 44,
+  "title": "PyTorch Eng Director: Promo Hacking, Industry Shifts, Regrets | John Myles White",
+  "date": "2026-05-04",
+  "url": "https://www.developing.dev/p/msl-eng-director-promo-hacking-industry",
+  "guest": "John Myles White",
+  "guest_role": "Ex-Director of Engineering at Meta Superintelligence Labs (PyTorch), Julia core contributor",
+  "guest_slug": "john-myles-white",
+  "companies": ["meta"],
+  "concepts": ["promotions", "big-tech-culture", "calibrations-and-ratings", "career-growth", "layoffs", "programming-languages", "compensation-and-equity", "regrets-and-advice", "mentorship-and-sponsorship", "management"],
+  "sections": [
+    {"t": "0:54", "title": "Is he bullish on MSL"},
+    {"t": "5:23", "title": "Running promotions at Meta"},
+    {"t": "15:15", "title": "Growing at Meta"},
+    {"t": "22:22", "title": "Julia core language contributor"},
+    {"t": "29:24", "title": "Academics failing into industry"},
+    {"t": "31:48", "title": "Stats book recommendations"},
+    {"t": "38:02", "title": "Biggest career regret"},
+    {"t": "41:05", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "White is bullish on Meta as a stockholder but bearish on being an employee: the engineer labor market flipped from undersupply to perceived oversupply (except frontier-lab AI researchers), so all of Silicon Valley makes fewer retention sacrifices in comp, perks, and employee voice; layoff fear now dominates employee stress and makes perk cuts tolerable.",
+    "In Meta's AI Infra, literally everyone's first goal was promotion (unlike early Facebook, where it wasn't a thing); Monetization hired people with detailed promo-plan documents. Promo culture made teams ship projects everyone believed were bad and build maximally coupled systems to hit scope bars, decoupling promotion from skills that actually compound.",
+    "You can't unilaterally disarm in a promo-driven org ('it's totally irrational not to play the game'), but you can choose teams: PyTorch selected for love of the craft and held such a high leveling bar that its IC8s beat other teams' IC10s, which ironically made its promo cases more credible externally. White took ~20% less compensation to work somewhere he was proud of.",
+    "Career-growth story: joined Core Data Science as IC4 just as the 'emotional contagion' PNAS paper became Meta's worst PR disaster of the year (company-wide apology Q&A, regular meetings with the head of legal); later, all senior engineers on the experimentation team left within six months and he jumped from random IC5 to de facto TL of Deltoid 3, Meta's A/B testing framework — sudden-vacuum opportunities are underrated.",
+    "Statsig is essentially Meta's Deltoid, and Airflow literally is Meta's DataSwarm (its author quit and open-sourced it a week later) — internal big-tech infra is a repeatable startup playbook; White regrets not building a Deltoid startup years earlier.",
+    "Julia was built by MIT math people to destroy MATLAB; the case for it: naive R translations of plain C loops run 1,000-10,000x slower because dynamic languages pay for what users MIGHT do — R lets users redefine the brace operator, its lazy promise arguments are unneeded ~70-90% of the time (Vitek et al.), Python's inspect module can rewrite the symbol table. Fast languages have invariants; slow languages have runtime checks.",
+    "Academics who treat industry as a safe fallback interview visibly unwilling and assume competing with 'the dumb people' is trivial; he interviewed a CS professor who passed values between functions by reading REPL output and retyping it into other code.",
+    "Statistics book recommendations: anything by Larry Wasserman (hyper-intense honesty about assumptions and claims) and Peter Aronow's agnostic statistics book; statistics is 'the craziest field' — pure math sold as practical.",
+    "Statistical illiteracy plus goal culture is dangerous: a partner org blocked the Deltoid 3 launch because it flipped their barely-significant holdout win to non-significant, and a team he managed planned to ship a goal-hitting change on July 1 and delete it July 2 because 'we can't miss our goals' — he used his manager authority over ratings to stop it.",
+    "Biggest regret: never attending skip-level office hours held by Javi (Javier Olivan, now Meta COO) despite weekly prompting — fear-driven avoidance that hurt both sides, since directors+ are starved for ground truth. If a leader asks you to show up and talk, go.",
+    "Advice to younger self: be more ambitious — people over-rate others and under-rate themselves; successful people 'are not actually doing that much better than you. They just tried and you didn't try.'"
+  ],
+  "notable_quotes": [
+    {"speaker": "John Myles White", "quote": "I am very bullish on Meta as a company that I am now a stockholder of, but not an employee.", "t": "0:54"},
+    {"speaker": "John Myles White", "quote": "Everyone agreed the thing we were working on was bad. No one thought it would succeed, but people were like, oh, but I have to ship it because that's my promo bar.", "t": "7:42"},
+    {"speaker": "John Myles White", "quote": "Fundamentally, any code that's slow is slow because it's doing stuff it doesn't need to do.", "t": "26:22"},
+    {"speaker": "John Myles White", "quote": "They're not actually doing that much better than you. They just tried and you didn't try.", "t": "42:04"}
+  ],
+  "related": [
+    {"slug": "airbnb-staff-eng-on-how-to-not-get", "reason": "Calibration and promo machinery seen from the IC side"},
+    {"slug": "instagram-principal-eng-ic8-on-building", "reason": "Contrasting fast-promo Meta story vs PyTorch's high leveling bar"},
+    {"slug": "laid-off-from-big-tech-after-25-years", "reason": "Employee side of the labor-leverage shift White describes"},
+    {"slug": "co-creator-of-haskell-functional", "reason": "Fellow programming language contributor on language design tradeoffs"},
+    {"slug": "google-deepmind-pre-training-lead", "reason": "Frontier-lab AI researcher market, the exception to employer leverage"}
+  ],
+  "transcript_complete": true
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "instagram-senior-staff-eng-ic7-on",
+  "n": 22,
+  "title": "Instagram Senior Staff Eng (IC7) On 3 Promos Through Redefining Expectations (Career Story)",
+  "date": "2025-12-08",
+  "url": "https://www.developing.dev/p/instagram-senior-staff-eng-ic7-on",
+  "guest": "Marius Schulz",
+  "guest_role": "Instagram/Threads Senior Staff Engineer (IC7), first engineer on Threads Web",
+  "guest_slug": "marius-schulz",
+  "companies": ["meta", "instagram"],
+  "concepts": ["promotions", "career-growth", "calibrations-and-ratings", "influence-and-leadership", "big-tech-culture", "mentorship-and-sponsorship", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:55", "title": "Choosing his specialty"},
+    {"t": "02:29", "title": "Greatly exceeding expectations with no promo"},
+    {"t": "08:04", "title": "Senior promo"},
+    {"t": "15:30", "title": "Staff promo"},
+    {"t": "24:43", "title": "Leverage and IC4/5/6 way of solving problems"},
+    {"t": "29:51", "title": "Senior staff promo"},
+    {"t": "44:29", "title": "Career planning past IC7"},
+    {"t": "47:32", "title": "Did IC7+ expectations scare him"},
+    {"t": "49:49", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Ratings measure delivered impact while promotions (lagging) measure sustained next-level behaviors: Marius greatly exceeded expectations as an IC4 but was blocked by one behaviors miss (too pushy in cross-functional collaboration), then blocked again by Meta's company-wide COVID promo freeze.",
+    "His response to blocked promos: keep doing next-level work anyway — you can't be defeatist and regress to your current level's behaviors, because promotions require sustained demonstration.",
+    "His IC5 promo came from leading a clearly-classified IC6 project (10+ engineers plus PMs/designers) as an IC4; doing next-next-level work is what separates 'redefines expectations' from 'greatly exceeds', articulated in calibration via 'laddering'.",
+    "The opportunity arose from a paternity-leave domino where everyone took n+1 work, but he argues you can increase your 'luck surface area' by positioning yourself as the go-to domain expert (in his case, web platform).",
+    "His IC6 promo came from a hard-deadline web project where he flexed into the product-hybrid archetype amid 'fog of war' ambiguity with only part-time PM support; his rule is to cut scope before cutting quality.",
+    "There is an IC4, IC5, and IC6 way to solve almost any problem: IC4 adds one React error boundary, IC5 audits and hardens the whole site, IC6 writes the direction-setting note and lint rules so the entire company applies the fix without him — that is leverage.",
+    "He deliberately switched to Jake Bolam's IG Web team when web stopped being a priority in his org, aligning his specialty with business priorities, and rewrote Instagram web's aging notifications panel.",
+    "On Threads Web he was the sole engineer for the first 6-8 weeks — creating the code-name folder in the monorepo himself — then hired and TL'd the team through launch of logged-out and logged-in clients; the IC7 promo self-review was his easiest ever because attribution was unambiguous.",
+    "Ownership means recursive accountability: delegating pieces to senior engineers never absolves the overall DRI; his mentorship model is a driving instructor with a second steering wheel who gradually backs off as trust builds.",
+    "He landed nearly 2,000 diffs in the Threads launch year (~10 per working day) while cautioning that diff counts are only directionally interesting and gameable.",
+    "IC7+ promotions require a business need — 'an IC7-shaped hole that can only be plugged by an IC7-shaped puzzle piece' — so delivery alone is not enough without the right opportunity.",
+    "Every level scared him before he reached it (he once swore he'd never consider IC7); his advice to his younger self, who wrote a blog post every week for years, is 'chill a little bit, it's gonna be fine' — though that public writing is what first got him recruited."
+  ],
+  "notable_quotes": [
+    {"speaker": "Marius Schulz", "quote": "You get promoted once you have for a sufficient period of time demonstrated next level behaviors, next level impact.", "t": "08:00"},
+    {"speaker": "Marius Schulz", "quote": "There's a bit of luck involved in getting matched with the right opportunity, but I firmly believe that you can increase your luck surface area by doing the right things.", "t": "14:30"},
+    {"speaker": "Marius Schulz", "quote": "Usually there's an IC4, IC5, and IC6 and maybe even higher way to go about almost any problem.", "t": "27:00"},
+    {"speaker": "Marius Schulz", "quote": "If there's no business need, basically like an IC7 shaped hole that can only be plugged by an IC7 shaped puzzle piece, you're going to have a harder time making a case for a successful IC7 promotion.", "t": "46:00"}
+  ],
+  "related": [
+    {"slug": "instagram-principal-engineer-ic8", "reason": "Jake Bolam hired Marius onto IG Web and leads his current team; referenced twice in episode"},
+    {"slug": "26-year-old-meta-staff-eng-ic6-on", "reason": "the other episode centered on 'redefines expectations' ratings at Meta"},
+    {"slug": "meta-senior-staff-eng-ic7-on-zuck", "reason": "same IC7 level at Meta and the same coding-machine archetype"},
+    {"slug": "airbnb-staff-eng-on-how-to-not-get", "reason": "complementary insider view of calibration rooms and promo decisions"},
+    {"slug": "instagram-staff-ic6-promo-despite", "reason": "contrasting Instagram promo path where team switches slowed growth"}
+  ],
+  "transcript_complete": true
+}

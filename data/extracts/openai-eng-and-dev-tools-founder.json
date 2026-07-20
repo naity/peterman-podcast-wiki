@@ -1,0 +1,50 @@
+{
+  "slug": "openai-eng-and-dev-tools-founder",
+  "n": 51,
+  "title": "OpenAI Eng & Dev Tools Founder: How Software Engineering Is Changing | Charlie Marsh",
+  "date": "2026-06-22",
+  "url": "https://www.developing.dev/p/openai-eng-and-dev-tools-founder",
+  "guest": "Charlie Marsh",
+  "guest_role": "Founder of Astral (Ruff, uv, Ty), acquired by OpenAI",
+  "guest_slug": "charlie-marsh",
+  "companies": ["astral", "openai"],
+  "concepts": ["developer-tools", "startups-and-founding", "ai-era-engineering", "ai-coding-tools", "open-source", "programming-languages", "career-growth", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:40", "title": "Origin story"},
+    {"t": "06:04", "title": "The front page of Hacker News"},
+    {"t": "14:35", "title": "Why he chose Rust"},
+    {"t": "20:10", "title": "Full codebase migration from Zig to Rust"},
+    {"t": "28:40", "title": "LLM generated code and open source"},
+    {"t": "35:34", "title": "Performance optimizations"},
+    {"t": "44:54", "title": "Optimization with AI and combating slop"},
+    {"t": "01:02:08", "title": "Learnings as an eng starting a company"},
+    {"t": "01:17:55", "title": "Top technical talk recommendation"},
+    {"t": "01:18:56", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Astral's origin was comparative perspective: Charlie had worked across Python, Go, and Rust at a computational-biology startup and saw JavaScript embracing native tooling (esbuild, SWC, Bun, Deno) while Python tools were still written in Python; Ruff began as a hypothesis test, with the prototype shipping nine days after his 'type checking at scale' blog post.",
+    "He started with a linter rather than a type checker or package manager because a linter is useful immediately with a small core plus incremental rules, while a 75%-done type checker is useless — pick a first form factor that proves value fast and lets you iterate.",
+    "After hitting Hacker News he capitalized by acknowledging, fixing, and releasing issue reports within one day and courting figures like Sebastián Ramírez (FastAPI); he argues developer marketing is underrated — you get about 10 seconds to convey why a project matters, and Ruff's benchmark graph was 'priceless' for attention.",
+    "He chose Rust 'largely because of hype' but now calls it the best possible decision, crediting Cargo's opinionated tooling with making systems programming accessible; he would not start a net-new project in C or C++ today.",
+    "Rust sets the performance floor, not the ceiling: uv's speed comes heavily from architecture — a cache design making repeat installs near-instant, and BurntSushi's optimization representing over 90% of version objects in a single u64; Ty does lazy, incremental type checking on the Salsa query framework used by rust-analyzer.",
+    "On Bun's agent-driven Zig-to-Rust rewrite (largely unreviewed by humans): he is glad someone is pushing the envelope but would block a similar rewrite at Astral — by Hyrum's Law an automated rewrite trades known issues for unknown ones that get pushed onto users, and uv is relied on by millions.",
+    "Astral's open-source AI policy requires contributors to understand what they submit, because the cost of a plausible PR has gone to zero while review cost stays high — a two-minute agent PR to Ty can take maintainers an hour to vet, and the compounding mentorship loop between maintainers and contributors is breaking down.",
+    "Anti-slop tactics: heavy automated verification (Valgrind/CodSpeed time and memory benchmarks plus ecosystem-wide diagnostic diff tests on every PR), an assumption that everyone runs Codex Review before pushing, encoding recurring review feedback into AGENTS.md and shared skills, and reviewing your own PR in the GitHub UI as if you were the reviewer.",
+    "A teammate told him they used to review his PRs minimally on trust but now must review closely because an agent writes them — a wake-up call about accepting work below your former standard; he stays 'slightly concerned' about the garbage he'd produce without engineering experience and thinks being an early-career engineer now would be very hard, since the strongest engineers are also the best agent users.",
+    "Founding lessons: investors preemptively initiated all three raises (seed plus never-announced Series A and B); an investor's 'you can give the money back in six months' framing lowered the pressure to start; monetization was the Pyx private registry funneled from free open source; and most startup advice is survivorship bias — pick principles (remote, solo founder, minimal fundraising time) and stick to them."
+  ],
+  "notable_quotes": [
+    {"speaker": "Charlie Marsh", "quote": "The cost of putting up a plausible PR has gone to zero, while the cost to review and vet a plausible PR has remained the same and is very high.", "t": "32:19"},
+    {"speaker": "Charlie Marsh (quoting a teammate)", "quote": "It used to be the case that whenever you put up a PR, I could review it pretty minimally because I had a lot of confidence in your work. And now it's like, when you put up a PR, I actually have to review it really closely because you're not writing anymore.", "t": "48:14"},
+    {"speaker": "Charlie Marsh", "quote": "Being a great software engineer is more useful than ever... the people on our team who have the strongest engineering skills are the most effective, even at using agents.", "t": "59:24"},
+    {"speaker": "Charlie Marsh", "quote": "I largely chose Rust for that project because of hype... In hindsight, I think it was an amazing decision, and I absolutely would not do it differently.", "t": "14:57"}
+  ],
+  "related": [
+    {"slug": "openai-codex-tech-lead-on-how-his", "reason": "Both at OpenAI; Charlie's workflow is built on Codex, which Bolin tech-leads"},
+    {"slug": "boris-cherny-creator-of-claude-code", "reason": "Fellow AI coding-tool builder; Anthropic-side counterpart on agentic engineering"},
+    {"slug": "dropboxs-former-most-senior-eng-building", "reason": "Shared theme of engineering rigor and advice for the AI era"},
+    {"slug": "aws-distinguished-eng-learnings-from", "reason": "Another senior engineer on how engineering practice is changing with AI"},
+    {"slug": "quitting-robinhood-and-raising-35m", "reason": "Engineer-turned-founder path, fundraising and startup learnings"}
+  ],
+  "transcript_complete": true
+}

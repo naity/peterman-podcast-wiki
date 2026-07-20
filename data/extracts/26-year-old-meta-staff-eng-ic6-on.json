@@ -1,0 +1,35 @@
+{
+  "slug": "26-year-old-meta-staff-eng-ic6-on",
+  "n": 7,
+  "title": "26 Year Old Meta Staff Eng (IC6) On Promotions, Redefining Expectations, Secret Equity Bonuses",
+  "date": "2025-07-07",
+  "url": "https://www.developing.dev/p/26-year-old-meta-staff-eng-ic6-on",
+  "guest": "Simon Kindström",
+  "guest_role": "Meta Staff Engineer (IC6) at age 26; New Grad (IC3) to Staff in 3 years",
+  "guest_slug": "simon-kindstrom",
+  "companies": ["meta"],
+  "concepts": ["promotions", "career-growth", "calibrations-and-ratings", "compensation-and-equity", "mentorship-and-sponsorship", "teaching-and-communication", "management"],
+  "sections": [],
+  "key_takeaways": [
+    "Simon Kindström went from New Grad (IC3) to Staff (IC6) at Meta in 3 years by age 26, earned the top 'Redefines Expectations' rating twice, and received discretionary equity ('secret bonuses').",
+    "His redefines-expectations work came from persistence through experimental failure: when experiments produced unexpected bad results he investigated root causes, modified, and reran them until he understood the failure or improved the results.",
+    "Writing well was a major career lever: write about your accomplishments and put the impactful, interesting parts at the top — engineers commonly bury the lede in technical details their audience finds irrelevant.",
+    "His manager recruited him by explaining the business impact of the work and how it would lead to career growth; the work then drove multiple significant revenue wins for Meta, which converted directly into top ratings and accelerated promotions.",
+    "His manager was central: coaching him closely throughout, with deep organizational knowledge and personal experience of rapid advancement before moving into management.",
+    "The critical Staff-level skill was scaling himself; his delegation failure mode was abdicating ownership of others' outcomes and scrambling at review time — the fix was 'delegate, don't abdicate': keep accountability while empowering others to execute.",
+    "He tried management as a deliberate experiment, found it pulled him away from the technical work he loved amid organizational thrash, and transparently switched back to the IC track."
+  ],
+  "notable_quotes": [
+    {"speaker": "Ryan Peterman (show notes)", "quote": "He didn't give up on those experiments until he understood why.", "t": ""},
+    {"speaker": "Simon Kindström (via show notes)", "quote": "It's important to put the impactful, interesting parts of the writing at the top.", "t": ""},
+    {"speaker": "Simon Kindström (via show notes)", "quote": "Delegate, don't abdicate.", "t": ""}
+  ],
+  "related": [
+    {"slug": "meta-senior-staff-eng-ic7-on-zuck", "reason": "Adjacent episode; another exceptionally young Meta staff-level engineer with rapid growth"},
+    {"slug": "staff-engineer-meta-by-age-25-evan", "reason": "Near-identical arc: staff at Meta at a very young age"},
+    {"slug": "instagram-senior-staff-eng-ic7-on", "reason": "Same 'Redefines Expectations' rating theme driving promotions"},
+    {"slug": "airbnb-staff-eng-on-how-to-not-get", "reason": "Senior-to-staff transition and calibration mechanics at another company"},
+    {"slug": "frontline-manager-at-meta-to-senior", "reason": "Contrasting take on the IC-vs-management fork Simon tried and reversed"}
+  ],
+  "transcript_complete": false
+}

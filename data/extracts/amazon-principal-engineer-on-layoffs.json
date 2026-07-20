@@ -1,0 +1,42 @@
+{
+  "slug": "amazon-principal-engineer-on-layoffs",
+  "n": 2,
+  "title": "Amazon Principal Engineer On Layoffs, Interviewing & Career Growth | Steve Huynh",
+  "date": "2025-03-01",
+  "url": "https://www.developing.dev/p/amazon-principal-engineer-on-layoffs",
+  "guest": "Steve Huynh",
+  "guest_role": "Ex-Amazon Principal Engineer (~19 years), creator of the A Life Engineered YouTube channel",
+  "guest_slug": "steve-huynh",
+  "companies": ["amazon"],
+  "concepts": ["layoffs", "hiring-and-interviews", "promotions", "career-growth", "big-tech-culture", "regrets-and-advice", "management"],
+  "sections": [
+    {"t": "", "title": "Interview Preparation Reality"},
+    {"t": "", "title": "Market Dynamics for Engineers"},
+    {"t": "", "title": "Amazon's Performance Culture"},
+    {"t": "", "title": "Reaching Principal Engineer"},
+    {"t": "", "title": "Avoiding Layoffs"},
+    {"t": "", "title": "Career Insights"}
+  ],
+  "key_takeaways": [
+    "Coding and system design tests just get you in the door; behavioral interviews determine leveling and cultural fit, so articulate your experience to match the target level.",
+    "Junior engineering roles face limited demand while Senior+ roles see extraordinary demand, and competition concentrates in pre-screening rather than the interviews themselves.",
+    "Amazon has an explicit up-and-out policy for SDE1s - promotion within a timeframe or termination - which relaxes at higher levels.",
+    "In Huynh's observation, Amazon layoffs typically hit people lacking cultural fit rather than poor performers.",
+    "The Principal Engineer promotion requires nearly two levels' worth of contribution simultaneously, with conflicting feedback along the way, so start preparing early.",
+    "Huynh's promotion project was overhauling Prime Video's outdated catalog infrastructure, a high-leverage system relied on by hundreds of dependent engineers.",
+    "To avoid layoffs, communicate directly with your manager about expectations; early transparent feedback prevents surprises.",
+    "Job-hop frequently early in your career for rapid advancement, but favor stability once you reach Senior+ where growth requires sustained tenure.",
+    "Huynh regrets not switching teams earlier and focusing too much on people-pleasing and external expectations."
+  ],
+  "notable_quotes": [
+    {"speaker": "Steve Huynh", "quote": "These tests just get you in the door.", "t": ""}
+  ],
+  "related": [
+    {"slug": "laid-off-from-big-tech-after-25-years", "reason": "layoffs from the perspective of someone who was cut"},
+    {"slug": "amazon-vp-on-promotions-getting-fired", "reason": "Amazon career growth and performance culture from a VP"},
+    {"slug": "meta-senior-manager-m2-on-manager", "reason": "Amazon vs Meta performance-culture comparison, PIPs"},
+    {"slug": "meta-hiring-lead-on-behind-the-scenes", "reason": "Senior+ hiring and leveling from the hiring side"},
+    {"slug": "new-grad-to-principal-engineer-ic8", "reason": "path to Principal-equivalent level at Meta"}
+  ],
+  "transcript_complete": false
+}

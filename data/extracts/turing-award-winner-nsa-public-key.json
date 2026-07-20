@@ -1,0 +1,50 @@
+{
+  "slug": "turing-award-winner-nsa-public-key",
+  "n": 53,
+  "title": "Turing Award Winner: NSA, Public Key Cryptography, Crypto Wars | Martin Hellman",
+  "date": "2026-07-06",
+  "url": "https://www.developing.dev/p/turing-award-winner-nsa-public-key",
+  "guest": "Martin Hellman",
+  "guest_role": "Turing Award winner, Stanford professor emeritus, co-inventor of public-key cryptography",
+  "guest_slug": "martin-hellman",
+  "companies": ["stanford", "ibm", "mit", "apple", "uc-berkeley"],
+  "concepts": ["security-and-cryptography", "complexity-theory", "regrets-and-advice", "influence-and-leadership", "working-with-legends", "non-linear-careers"],
+  "sections": [
+    {"t": "00:34", "title": "Why his work broke the law"},
+    {"t": "08:39", "title": "How people did encryption before"},
+    {"t": "18:51", "title": "The crypto wars"},
+    {"t": "26:22", "title": "The story behind Diffie Hellman key exchange"},
+    {"t": "36:48", "title": "Signatures vs key exchange"},
+    {"t": "43:05", "title": "RSA patent wars"},
+    {"t": "48:08", "title": "Why inventions happen at similar times"},
+    {"t": "50:29", "title": "What he worked on after cryptography"},
+    {"t": "57:31", "title": "His thoughts on death"},
+    {"t": "59:40", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "The NSA claimed Hellman's published papers violated ITAR (anything cryptographic was an 'implement of war'); after a 1977 NSA letter to the IEEE, Stanford's counsel deemed the interpretation unconstitutional and Hellman presented his students' papers at Cornell himself so Stanford could defend him rather than them.",
+    "The first crypto war was over freedom to publish and DES's 56-bit key: Hellman and Diffie estimated a $20M machine could break DES for ~$10,000 per solution with 1975 technology, and NSA wanted the small key because only they had the budget and problem volume to exploit it — a crude trapdoor via superior computing resources.",
+    "The second (Clipper Chip key escrow) and third (San Bernardino iPhone) crypto wars recycled the same idea; his 1995 CRISIS committee concluded key escrow was unsolvable and that classified briefings 'filled in details but did not change our fundamental conclusions.'",
+    "Strong encryption cannot be given only to good guys — his analogy: if cars had been invented in the classified world, government would oppose civilian cars despite ambulances and commuting.",
+    "Every colleague told him he was crazy to compete with the NSA's budget and head start; he argues the best work looks crazy a priori (GPS, multiple Nobel stories) and credits a contrarian identity forged by childhood bullying.",
+    "Diffie-Hellman key exchange is the double-locked strongbox: both parties add and remove their own locks, requiring a commutative one-way function — exponentiation in modular arithmetic over a finite field.",
+    "Digital signatures (Diffie's public-key cryptosystem concept, first instantiated by RSA) are what GCHQ's claimed earlier invention lacked entirely; signatures are how iPhones verify Apple software updates with only a public key on the device.",
+    "Ralph Merkle independently invented public-key distribution as a Berkeley term project that his professor dismissed and CACM rejected for lacking references; Hellman recruited him to Stanford and helped rewrite the paper.",
+    "Stanford's patent was drafted by a law school intern and its claims failed to cover RSA — RSA sold for $250M while the Stanford inventors made virtually nothing; Hellman deliberately made peace with RSA because 'friends are better than enemies.'",
+    "Since cryptography he has worked on nuclear risk: he estimates a child born today has worse-than-even odds of living out a natural life due to nuclear weapons, and is pushing H.R. 3564 to require more than sole presidential authority to launch.",
+    "Advice to his younger self: get famous and rich first, then save the world — the apparent detour was the shortest distance, since reputation and money at 35 gave him leverage to work on what mattered."
+  ],
+  "notable_quotes": [
+    {"speaker": "Martin Hellman", "quote": "I'm from the Bronx... I'm a street fighter with my mouth and my mind. And they picked the wrong person, basically. I wasn't going to back down.", "t": "04:20"},
+    {"speaker": "Martin Hellman", "quote": "You cannot make strong encryption and give it only to the good guys and not to the bad guys.", "t": "25:23"},
+    {"speaker": "Martin Hellman", "quote": "All my colleagues, and it's not an exaggeration, told me I was crazy to work in cryptography... And the best ideas often seem crazy ahead of time.", "t": "31:52"},
+    {"speaker": "Martin Hellman", "quote": "We need to save humanity from an infant death. We've only been around about 100,000 years.", "t": "58:38"}
+  ],
+  "related": [
+    {"slug": "turing-award-winner-p-vs-np-zero", "reason": "Hellman grounds cryptography in P vs NP and one-way functions — Wigderson's field"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "Fellow Turing Award winner; shared themes of courage against opposition and long marriages"},
+    {"slug": "turing-award-winner-data-abstraction", "reason": "Ryan cites his Liskov interview when discussing simultaneous invention"},
+    {"slug": "mit-complexity-theorist-on-leetcode", "reason": "Complexity theory underpins the hardness assumptions cryptography rests on"}
+  ],
+  "transcript_complete": true
+}

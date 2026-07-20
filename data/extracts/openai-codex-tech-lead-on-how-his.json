@@ -1,0 +1,57 @@
+{
+  "slug": "openai-codex-tech-lead-on-how-his",
+  "n": 36,
+  "title": "OpenAI Codex Tech Lead On How His Career Grew And How He Uses Codex | Michael Bolin",
+  "date": "2026-03-09",
+  "url": "https://www.developing.dev/p/openai-codex-tech-lead-on-how-his",
+  "guest": "Michael Bolin",
+  "guest_role": "OpenAI Codex CLI tech lead, ex-Meta Distinguished Engineer (E9)",
+  "guest_slug": "michael-bolin",
+  "companies": ["openai", "meta", "google"],
+  "concepts": ["developer-tools", "career-growth", "promotions", "ai-coding-tools", "ai-era-engineering", "influence-and-leadership", "open-source", "big-tech-culture", "regrets-and-advice", "corporate-politics"],
+  "sections": [
+    {"t": "00:00:56", "title": "Chickenfoot"},
+    {"t": "00:02:45", "title": "Working at Google"},
+    {"t": "00:06:34", "title": "Overhauling Facebook's build system"},
+    {"t": "00:16:36", "title": "Rewriting Facebook's IDE"},
+    {"t": "00:26:01", "title": "Struggles after Principal Eng (E8) promo"},
+    {"t": "00:28:39", "title": "Building a virtual filesystem for Facebook"},
+    {"t": "00:35:47", "title": "Delayed Distinguished promo (E9) and learnings"},
+    {"t": "00:39:56", "title": "Joining OpenAI"},
+    {"t": "00:43:05", "title": "Research-led vs engineering-led cultures"},
+    {"t": "00:44:53", "title": "The story behind Codex"},
+    {"t": "00:51:00", "title": "How he uses Codex"},
+    {"t": "00:57:00", "title": "Why Codex's harness is open source"},
+    {"t": "00:59:50", "title": "Top technical book recommendations"},
+    {"t": "01:05:02", "title": "Why deep technical skills are still valuable (for now)"},
+    {"t": "01:11:07", "title": "How to start projects well"},
+    {"t": "01:14:27", "title": "Advice on writing better and career planning"},
+    {"t": "01:17:06", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Bolin's three-step career algorithm: figure out what you genuinely love doing, figure out what is invaluable to your employer, and lean hard into the intersection; he left Google after four years because his passion projects (Google Tasks, Closure tools, a book on Closure) weren't what Google valued.",
+    "He built the Buck build system as a hackathon project against near-universal advice, with an existing internal competitor and Google's Blaze looming; conviction came from an 'existence proof' (he'd seen Blaze work) plus first-principles insight that caching unchanged build steps and making modules cheap to add would yield multi-x speedups.",
+    "His influence tactic for starting disruptive projects without credibility: deliberately scope-couch them ('just an Android build system', 'just an iOS editor'), borrow credibility from a respected supporter, and let adoption come voluntarily — the iOS team asked for Buck a year later, and Uber and Airbnb adopted it externally.",
+    "After his E8 promo he failed at a 'hero quest' fixing facebook.com web speed; the lesson was that he succeeds on projects that involve writing lots of code from scratch, not data-analysis and alignment-heavy work, and that senior managers deserve more recognition for pairing senior ICs with the right projects.",
+    "His E9 Distinguished promo was delayed after he pushed too aggressively when Microsoft acquired GitHub, correctly predicting Nuclide's Atom foundation would lose to VS Code; the coaching lesson was about how he pushed (recognize triggers, don't act in the moment, go through managers), not what he argued.",
+    "The Eden virtual filesystem lazily materializes files in Meta's monorepo, and his Myles file-search service used parallel arrays and a 64-bit character bitmask for cache-friendly fuzzy search over a million-plus files in 10-20ms, running on about 30 servers globally by the time he left.",
+    "He joined OpenAI because building LLM dev tools at Meta on Llama 2 couldn't compete with GPT-4, and he wanted to co-develop product with the researchers building the best model; in a research-led culture, 'if the model weren't very good, it wouldn't really matter what we did on the harness.'",
+    "Codex CLI launched rushed in April 2025; Codex Web was ahead of its time because local agents had stronger product-market fit; the August 2025 confluence of GPT-5, a new TUI, open-weights model support, and the VS Code extension created the inflection to 1M+ users and 5x usage growth, though he believes most agent compute will ultimately move to the cloud.",
+    "80-90% of his code is now model-written; he still hand-writes the security-critical sandboxing code in the Rust harness, and the CLI is open source primarily so people can inspect an agent that runs on their machine.",
+    "Education advice: deep technical skills still matter because your questions bound the agent's output quality; he recommends reading an operating systems textbook cover to cover, the O'Reilly Rust books, and CTF competitions as a 'computer decathlon' that forces breadth; his advice to his younger self is to not cling to your first programming language."
+  ],
+  "notable_quotes": [
+    {"speaker": "Michael Bolin", "quote": "A lot of people told me what I was doing was a very bad idea. Almost everybody, except one person.", "t": "00:09:30"},
+    {"speaker": "Michael Bolin", "quote": "Facebook was always hitting the scaling limits of every mobile developer tool before everybody else... we got to solve problems that nobody had solved before, and not just as a science project, but because it was real business value.", "t": "00:18:30"},
+    {"speaker": "Michael Bolin", "quote": "If the model weren't very good, it wouldn't really matter what we did on the harness.", "t": "00:44:07"},
+    {"speaker": "Michael Bolin", "quote": "It's kind of amazing and sad or weird how far many of us can get in software engineering without really having a clue how computers work.", "t": "01:01:07"}
+  ],
+  "related": [
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "OpenAI engineer with dev-tools background on AI changing engineering"},
+    {"slug": "boris-cherny-creator-of-claude-code", "reason": "creator of the competing coding agent, similar career-story arc"},
+    {"slug": "openai-and-meta-distinguished-engineer", "reason": "same Meta Distinguished (IC9) to OpenAI path"},
+    {"slug": "meta-distinguished-eng-ic9-on-influencing", "reason": "influence and failure lessons at the same level at Meta"},
+    {"slug": "tech-lead-for-metas-most-used-programming", "reason": "Meta internal dev tooling and promotion mechanics"}
+  ],
+  "transcript_complete": true
+}

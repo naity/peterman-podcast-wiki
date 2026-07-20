@@ -1,0 +1,51 @@
+{
+  "slug": "turing-award-winner-postgres-disagreeing",
+  "n": 42,
+  "title": "Turing Award Winner: Postgres, Disagreeing with Google, Future Problems | Mike Stonebraker",
+  "date": "2026-04-20",
+  "url": "https://www.developing.dev/p/turing-award-winner-postgres-disagreeing",
+  "guest": "Mike Stonebraker",
+  "guest_role": "Turing Award winner, creator of Ingres and Postgres, MIT/Berkeley professor, serial founder",
+  "guest_slug": "mike-stonebraker",
+  "companies": ["uc-berkeley", "mit", "google", "amazon", "aws", "ibm"],
+  "concepts": ["databases", "distributed-systems", "startups-and-founding", "ai-era-engineering", "big-tech-culture", "regrets-and-advice", "mentorship-and-sponsorship", "hiring-and-interviews"],
+  "sections": [
+    {"t": "1:03", "title": "How he got into databases"},
+    {"t": "6:43", "title": "Competing with Oracle"},
+    {"t": "9:07", "title": "What made Postgres special"},
+    {"t": "15:55", "title": "One size fits none"},
+    {"t": "21:37", "title": "Why he disagreed with Google"},
+    {"t": "29:14", "title": "Why he chose academia over big tech"},
+    {"t": "30:58", "title": "Replacing state in an OS with a DB"},
+    {"t": "42:02", "title": "Future problems in databases"},
+    {"t": "51:36", "title": "Technical book recommendations to learn databases"},
+    {"t": "52:20", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Stonebraker began building Ingres at Berkeley in 1972, one year after Ted Codd's relational paper, knowing nothing about databases; it earned him tenure in 1976 and ~100 universities ran it because it was a free DBMS on Unix.",
+    "Ingres Corporation (1980) was founded because academic software couldn't be adopted commercially: Arizona State abandoned Ingres for its 40,000 student records partly because Unix had no COBOL.",
+    "Oracle competed by over-promising: Larry Ellison 'made present tense and future tense indistinguishable,' shipping broken software and documenting features like referential integrity as 'not yet implemented' while Ingres actually shipped them.",
+    "Postgres's core innovation was an extendable type system (motivated by GIS types and a bond trader wanting to overload date subtraction with 30-day 'bond time'), plus inheritance and a later-removed time-travel feature.",
+    "'One size fits none' still holds: stream engines, column stores (Vertica, ClickHouse), and vector stores (Pinecone) each beat general RDBMSs by ~10x in their domain; Postgres is the right default at the low end but lacks a column store and multi-node support for large warehouses.",
+    "He was vindicated in disagreeing with Google: the 2011 DeWitt/Stonebraker paper showed distributed databases beat Hadoop, and eventual consistency fails basic integrity constraints (stock > -1); Google abandoned both with Spanner's conventional transactions.",
+    "He told AWS that supporting ~15 database systems is 'about 12 too many' — graph databases are almost never performant and should be a UI layer over a relational engine; retire systems that aren't performant in a market big enough to justify maintenance.",
+    "He chose academia plus startups over big tech because big companies impose bosses, rules, and politicking; part-time work at 2000-person Informix felt bureaucratic and impact-free.",
+    "DBOS (2023, with Matei Zaharia) came from an academic project replacing the upper half of Linux with a database — a DBMS-backed file system beats the Linux file system — and now sells durable, transactional workflows in TypeScript/Java/Go/Python; ~2/3 of customers are doing agentic AI, which he predicts becomes a distributed-database problem once agents go read-write.",
+    "LLM text-to-SQL scores ~85% on academic benchmarks (Spider, Bird) but 0% on his real-world warehouse benchmark Beaver (~10% with RAG, ~35% even given FROM clauses and joins), because warehouse data isn't in the training pile, real queries are ~100 lines of SQL, and schemas are messy and non-mnemonic.",
+    "Career advice: he wouldn't necessarily recommend CS to 18-year-olds today (healthcare and building trades look safer); PhD grads should take the most prestigious job, find a mentor, and pick an against-the-flow area."
+  ],
+  "notable_quotes": [
+    {"speaker": "Mike Stonebraker", "quote": "Larry Ellison is a fabulous salesman and... he made present tense and future tense indistinguishable. And so he basically lied to customers.", "t": "6:43"},
+    {"speaker": "Mike Stonebraker", "quote": "All the database people said, you know, you're out of your friggin mind... And so Google completely abandoned eventual consistency and completely abandoned MapReduce.", "t": "21:37"},
+    {"speaker": "Mike Stonebraker", "quote": "I think Amazon's problem is that they are supporting, you know, 15 different database systems and that's about 12 too many.", "t": "27:30"},
+    {"speaker": "Mike Stonebraker", "quote": "On our benchmarks, large language models get 0% and if you enhance them with rag and all the tricks goes to 10%.", "t": "44:30"}
+  ],
+  "related": [
+    {"slug": "turing-award-winner-data-abstraction", "reason": "Fellow Turing laureate on abstraction and distributed systems"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "Fellow Berkeley Turing laureate; GPU/SIMD discussion overlaps computer architecture"},
+    {"slug": "aws-distinguished-eng-learnings-from", "reason": "AWS databases insider vs Stonebraker's critique of AWS's 15 database systems"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "Lamport on consistency/transactions theory behind the eventual-consistency debate"},
+    {"slug": "dropboxs-former-most-senior-eng-building", "reason": "Building large storage systems and AI-era engineering advice"}
+  ],
+  "transcript_complete": true
+}

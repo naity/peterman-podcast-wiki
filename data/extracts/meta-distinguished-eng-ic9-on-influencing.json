@@ -1,0 +1,55 @@
+{
+  "slug": "meta-distinguished-eng-ic9-on-influencing",
+  "n": 32,
+  "title": "Meta Distinguished Eng (IC9) On Influencing Engs, Failures, and Learnings",
+  "date": "2026-02-09",
+  "url": "https://www.developing.dev/p/meta-distinguished-eng-ic9-on-influencing",
+  "guest": "Adam Ernst",
+  "guest_role": "Distinguished Engineer (IC9) at Meta, iOS infrastructure",
+  "guest_slug": "adam-ernst",
+  "companies": ["meta", "apple"],
+  "concepts": ["influence-and-leadership", "promotions", "career-growth", "developer-tools", "calibrations-and-ratings", "management", "big-tech-culture", "teaching-and-communication", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:00:47", "title": "His middle school company"},
+    {"t": "00:03:50", "title": "His first project and promo at Meta"},
+    {"t": "00:10:03", "title": "Why code review is undervalued"},
+    {"t": "00:12:42", "title": "Senior Staff (IC7) promo story and project"},
+    {"t": "00:19:26", "title": "His major failed project"},
+    {"t": "00:26:35", "title": "How to handle a failed project"},
+    {"t": "00:29:04", "title": "Thoughts on management"},
+    {"t": "00:31:35", "title": "Technical depth vs breadth"},
+    {"t": "00:33:32", "title": "IC9 expectations"},
+    {"t": "00:34:46", "title": "Senior engineers he admires"},
+    {"t": "00:37:39", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Ernst ran a software company in middle school (Cosmic Soft), selling REALbasic online-testing software to teachers worldwide via a proto-Stripe and $19.95 mailed checks.",
+    "He joined Facebook weeks before the 2012 IPO as an E5, when all iOS engineers fit in one conference room, during the native rewrite away from HTML5.",
+    "His E6 promo came from replacing Apple's Core Data (which 'falls over completely' beyond a small team) with MemModels, an immutable model system, over pushback from engineers loyal to vanilla Apple frameworks that don't scale to Meta's size.",
+    "His influence-without-authority playbook: talk in person, open by sympathizing with the other side, do deep research (his team disassembled Core Data's closed source to prove why it couldn't work), and 'do the work for them' so teams only have to say yes.",
+    "Code review is undervalued: he reviewed 1,600+ diffs in a half (~14 per workday) as an organic, viral channel of influence; good comments explain why rather than dictating, stay flexible, and invite missing context.",
+    "ComponentKit (his IC7 promo project, 2014) brought React concepts to iOS before Swift, SwiftUI, or React Native existed, at the nudge of manager Lee Byron (GraphQL co-inventor); adoption required concrete code comparisons, performance data, heavyweight allies, senior mediators, and compromise with the rival Panels framework.",
+    "ComponentScript, his two-year cross-platform framework, was 'a total and complete failure' despite checking every technical box: it targeted no specific engineer persona, he refused to compromise on GraphQL data consistency while a server-driven rival skipped it and won, and he went wide instead of landing one committed anchor team. Lesson: technically excellent doesn't mean it will win.",
+    "A Meets Most rating and a fresh-eyed new manager forced the cancellation he had avoided for a year despite gut-level sleepless nights; his coding-machine reflex of 'just write more code' was the wrong response to a failing project.",
+    "He killed ComponentScript responsibly — migrating every feature off it, deleting the framework from the repo, and publishing a candid public postmortem — and believes he gained more goodwill than he lost.",
+    "He never wanted management: he loves writing code, is weaker at docs and alignment, and communicates best when anchored to concrete technical problems.",
+    "His depth-plus-breadth method: when blocked by another team's system, dive 'eight levels deep' into its guts and show up with the diagnosis instead of a ticket — impressing owners, saving their time, and organically accumulating cross-system expertise.",
+    "On IC9 expectations he has 'flipped the switch off': he checks with his manager that he's solving problems that matter to the org, then works without meta-anxiety, treating the worry itself as counterproductive.",
+    "The engineers he admires span archetypes: coding machine Dustin Shahidipour, fixer Wei Han, project-starter Michael Bolin (Buck, Miles), communicators Bob Baldwin and Oliver Ricard, and alignment-driver Nolan O'Brien who manages the Meta-Apple relationship.",
+    "His only career advice: do what you love — specifically, like solving problems — because enthusiasm can't be faked and output, curiosity, and deep digging are all downstream of it."
+  ],
+  "notable_quotes": [
+    {"speaker": "Adam Ernst", "quote": "It was a real learning experience because I learned that just because it was technically excellent, didn't mean it was going to win.", "t": "00:22:16"},
+    {"speaker": "Adam Ernst", "quote": "If you show up and you're like, hey, I did the work already for you. Here are the benefits. I just need you to sign off... Much easier conversation.", "t": "00:09:33"},
+    {"speaker": "Adam Ernst", "quote": "You might get more goodwill from killing it responsibly than just like dragging it out and constantly waiting until it's too late.", "t": "00:28:09"},
+    {"speaker": "Adam Ernst", "quote": "I've flipped the switch off. I just don't care... as long as I'm working on what's important for my org and I like what I'm doing, I'm just not going to worry about it.", "t": "00:33:56"}
+  ],
+  "related": [
+    {"slug": "openai-codex-tech-lead-on-how-his", "reason": "Michael Bolin is explicitly named by Ernst as an admired project-starter from their shared Meta years"},
+    {"slug": "meta-senior-staff-eng-ic7-on-zuck", "reason": "Ernst self-identifies as the code machine archetype that episode centers on"},
+    {"slug": "openai-and-meta-distinguished-engineer", "reason": "The podcast's other Meta IC9 perspective on distinguished-engineer level work"},
+    {"slug": "new-grad-to-principal-engineer-ic8", "reason": "Another long single-company climb up Meta's senior IC ladder"},
+    {"slug": "uber-distinguished-eng-on-unfair", "reason": "Parallel distinguished-engineer take on influence and engineering regrets"}
+  ],
+  "transcript_complete": true
+}

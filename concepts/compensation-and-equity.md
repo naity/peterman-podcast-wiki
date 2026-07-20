@@ -1,0 +1,45 @@
+---
+type: concept
+updated: 2026-07-19
+sources: [laid-off-from-big-tech-after-25-years.md, meta-senior-manager-m2-on-manager.md, quitting-robinhood-and-raising-35m.md, 26-year-old-meta-staff-eng-ic6-on.md, retired-netflix-engineering-director.md, meta-senior-staff-eng-ic7-on-zuck.md, msl-eng-director-promo-hacking-industry.md, intern-to-microsoft-distinguished.md, meta-hiring-lead-on-behind-the-scenes.md, airbnb-staff-eng-on-how-to-not-get.md, stanford-phd-ai-researcher-and-quant.md, industry-secrets-we-wish-we-knew.md, meta-senior-staff-ic7-engs-honest.md, distinguished-eng-on-stack-ranking.md, dropboxs-former-most-senior-eng-building.md, cloudkitchens-cto-on-intelligence.md, instagram-staff-ic6-promo-despite.md, instagram-principal-eng-ic8-on-building.md, ex-head-of-eng-at-instagram-career.md]
+---
+
+# Compensation and equity
+
+How engineers actually get paid — RSUs, ESPP, discretionary "secret" equity, golden handcuffs, negotiation — and the recurring question of what compensation is worth trading away.
+
+## What the guests say
+
+### The mechanics: what big tech pay is made of
+
+The anonymous chief architect gives the clearest before/after: moving from consulting to big tech nearly *tripled* his compensation via higher base, bonuses, RSUs vesting over 3–4 years, and a ~15% ESPP discount — and holding shares through the COVID boom multiplied them again. His rule: always take free money (ESPP, 401k match), though with spare cash he'd buy index funds ([episode](../sources/laid-off-from-big-tech-after-25-years.md)). Stefan Mai reveals the hidden top layer: both Amazon and Meta run a private VP/director process above public ratings — Meta's discretionary equity pays its top quintile dramatically more (some cleared 2x their peers), while "frugal Amazon pulls that back" ([episode](../sources/meta-senior-manager-m2-on-manager.md)). Simon Kindström received exactly these "secret bonuses" (discretionary equity) during his IC3→IC6 run, downstream of revenue-linked impact ([episode](../sources/26-year-old-meta-staff-eng-ic6-on.md)). Outside big tech the structures differ sharply: Nimit Sohani describes quant comp as opaque and unstandardized — heavily bonus-weighted, with paid garden-leave non-competes of six months to two years ([episode](../sources/stanford-phd-ai-researcher-and-quant.md)), and David Ronca explains how Netflix's flat "personal top of market" system (match any competing offer) worked for a small all-senior team but broke at scale because nobody could rationalize pay gaps without leveling ([episode](../sources/retired-netflix-engineering-director.md)).
+
+### Equity as handcuffs and as lottery ticket
+
+Jayendra Jog's Robinhood options would have cost $400,000 to exercise, locking him in 3.5 years until the IPO — after which the equity paid an order of magnitude more than an equivalent big-tech stint ([episode](../sources/quitting-robinhood-and-raising-35m.md)). Laurent Charignon's four-year Airbnb equity cliff drove his exit timing ([episode](../sources/airbnb-staff-eng-on-how-to-not-get.md)); Michael Novati's Meta departure was shaped by vesting logistics that meant an ~80% take-home drop ([episode](../sources/meta-senior-staff-eng-ic7-on-zuck.md)). Ricky's sober framing for the ambitious: "Big Tech won't make you crazy rich" — levels are a reliable path to financial stability, but exceptional wealth requires breakout startup equity ([episode](../sources/industry-secrets-we-wish-we-knew.md)), which Ryan Olson's founder ledger confirms from the other side: satisfaction and learning way up, compensation way down ([episode](../sources/instagram-principal-eng-ic8-on-building.md)).
+
+### Negotiate — everyone regrets not negotiating
+
+David Fowler's advice to his younger self: negotiate your salary and get multiple offers — he didn't know it was possible ([episode](../sources/intern-to-microsoft-distinguished.md)). Austen McDonald details the machinery: the recruiter call is an *evaluating* call ("recruiters are not your friend"), avoid early compensation anchoring, use CA/NY salary-band disclosure laws, and hold multiple simultaneous offers as the main lever ([episode](../sources/meta-hiring-lead-on-behind-the-scenes.md)). Even severance is technically negotiable, per the laid-off architect — though he wasn't in the mental state to try ([episode](../sources/laid-off-from-big-tech-after-25-years.md)). Brian Attwell adds a cynical structural note: Amazon-style companies underpay top performers "because they can get away with it" ([episode](../sources/cloudkitchens-cto-on-intelligence.md)), and John Myles White observes the labor-market flip since ~2022 means all of Silicon Valley now makes fewer retention sacrifices in comp and perks ([episode](../sources/msl-eng-director-promo-hacking-industry.md)).
+
+### Disagreement: what is money worth trading for?
+
+Several guests deliberately took less. John Myles White accepted ~20% less compensation to work on PyTorch, somewhere he was proud of ([episode](../sources/msl-eng-director-promo-hacking-industry.md)); James Cowling's rule is choose working with the best people over 20% more pay ([episode](../sources/dropboxs-former-most-senior-eng-building.md)); Igor negotiated a *lower* level and large comp cut to get work he enjoys — while candidly flagging that his financial security (no visa, no mortgage, kids through college) is what made it safe ([episode](../sources/meta-senior-staff-ic7-engs-honest.md)); Sash Zats calls leaving big tech for startups "financially irrational but a real test of what your ideas are worth" ([episode](../sources/instagram-staff-ic6-promo-despite.md)). Bryan Cantrill goes furthest: to engineers goaling on financial independence he prescribes finding meaning instead — dot-com winners who cashed out often floundered for a decade ([episode](../sources/distinguished-eng-on-stack-ranking.md)). The tension with the maximizers is real: Jayendra Jog frames employer choice as explicit optimization ("max compensation upside requires a very early-stage company that hits big") ([episode](../sources/quitting-robinhood-and-raising-35m.md)), and Fowler — who left millions on the table refusing pre-IPO Twitter — now tells mentees to take the hot offer ([episode](../sources/intern-to-microsoft-distinguished.md)). The common ground: build the financial base early (401k, ESPP, planning from day one — [Everingham](../sources/ex-head-of-eng-at-instagram-career.md), [Ronca](../sources/retired-netflix-engineering-director.md)) precisely so you can later afford to optimize for meaning.
+
+## Practical takeaways
+
+- Always collect the free money: ESPP discounts, 401k match, and financial planning from day one ([laid-off architect](../sources/laid-off-from-big-tech-after-25-years.md), [David Ronca](../sources/retired-netflix-engineering-director.md)).
+- Negotiate with multiple simultaneous offers and salary-band disclosure laws; never anchor early with the recruiter ([Austen McDonald](../sources/meta-hiring-lead-on-behind-the-scenes.md), [David Fowler](../sources/intern-to-microsoft-distinguished.md)).
+- Know your company's hidden comp layer: discretionary equity decisions happen in rooms above your rating — sustained, visible, business-linked impact is what reaches them ([Stefan Mai](../sources/meta-senior-manager-m2-on-manager.md), [Simon Kindström](../sources/26-year-old-meta-staff-eng-ic6-on.md)).
+- Model equity mechanics (exercise costs, cliffs, vesting) before joining and before quitting; they will dictate your timing more than your preferences do ([Jayendra Jog](../sources/quitting-robinhood-and-raising-35m.md), [Laurent Charignon](../sources/airbnb-staff-eng-on-how-to-not-get.md)).
+- Decide explicitly what you're optimizing for — stability, upside, or meaning — because the strategies diverge completely ([Jayendra Jog](../sources/quitting-robinhood-and-raising-35m.md), [Ricky](../sources/industry-secrets-we-wish-we-knew.md), [Bryan Cantrill](../sources/distinguished-eng-on-stack-ranking.md)).
+- Financial security is optionality: the guests who made bold moves (demotions, startups, transparency) could afford to ([Igor](../sources/meta-senior-staff-ic7-engs-honest.md), [Sash Zats](../sources/instagram-staff-ic6-promo-despite.md)).
+
+## Related
+
+- [calibrations-and-ratings](calibrations-and-ratings.md) — the process that gates the money
+- [promotions](promotions.md) — level as the main comp driver
+- [layoffs](layoffs.md) — severance and the labor-market flip
+- [startups-and-founding](startups-and-founding.md) — the equity-upside path
+- Key people: [Stefan Mai](../entities/stefan-mai.md), [Jayendra Jog](../entities/jayendra-jog.md), [Austen McDonald](../entities/austen-mcdonald.md), [David Fowler](../entities/david-fowler.md), [Asian Dad Energy (laid-off architect)](../entities/asian-dad-energy.md)
+- Most relevant episodes: [Honest big tech layoff story](../sources/laid-off-from-big-tech-after-25-years.md), [M2 on discretionary equity](../sources/meta-senior-manager-m2-on-manager.md), [Robinhood golden handcuffs](../sources/quitting-robinhood-and-raising-35m.md)

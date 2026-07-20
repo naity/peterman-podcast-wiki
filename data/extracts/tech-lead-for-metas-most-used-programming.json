@@ -1,0 +1,55 @@
+{
+  "slug": "tech-lead-for-metas-most-used-programming",
+  "n": 10,
+  "title": "Tech Lead for Meta's Most-Used Programming Language (Promotion Story)",
+  "date": "2025-07-25",
+  "url": "https://www.developing.dev/p/tech-lead-for-metas-most-used-programming",
+  "guest": "Dwayne Reeves",
+  "guest_role": "Meta Senior Staff Engineer (IC7), tech lead for the Hack programming language",
+  "guest_slug": "dwayne-reeves",
+  "companies": ["meta", "mit"],
+  "concepts": ["promotions", "career-growth", "programming-languages", "management", "calibrations-and-ratings", "working-with-legends", "imposter-syndrome", "hiring-and-interviews", "regrets-and-advice", "big-tech-culture"],
+  "sections": [
+    {"t": "00:39", "title": "Joining Facebook"},
+    {"t": "04:52", "title": "Did MIT help with career?"},
+    {"t": "07:13", "title": "His first team"},
+    {"t": "10:37", "title": "Why static typing is superior"},
+    {"t": "13:17", "title": "The uncanny valley of type systems"},
+    {"t": "16:11", "title": "Senior Eng (IC5) promotion story"},
+    {"t": "19:24", "title": "Staff Eng (IC6) promotion story"},
+    {"t": "23:38", "title": "Manager transition story"},
+    {"t": "28:57", "title": "Managing ICs vs EMs"},
+    {"t": "32:54", "title": "Senior staff Eng (IC7) promotion story"},
+    {"t": "35:42", "title": "Impressive ICs"},
+    {"t": "40:33", "title": "Why stay at Meta"},
+    {"t": "44:28", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Dwayne interviewed at pre-IPO Facebook only as practice for Google but was won over by real engineering problems (memcache scaling, custom PHP runtime) and care signals like an unsolicited offer increase and CTO Bret Taylor taking MIT new grads to lunch.",
+    "MIT's career value was opportunity access and name recognition rather than the education itself; equally capable colleagues without degrees reached Facebook only by chance.",
+    "His breakout project, typing an untyped core PHP API with Hack, was scoped at 1-2 weeks but took a quarter, and about 20% of migrated call sites revealed real bugs, which made Meta take Hack seriously.",
+    "Static typing wins at industry scale because large codebases are an information-communication problem: types communicate intent, power tooling, and provably eliminate classes of errors.",
+    "His 'uncanny valley of type systems' concept: as a codebase nears full static typing, remaining unreliable types feel increasingly off-putting, so things get worse just before 100%; it became the Hack team's rallying vision and justified removing unsound PHP behaviors.",
+    "IC5 promotion: the half where he wrote the least code of his career (raising Hack coverage from ~20-30% to ~60-70% by influencing others) earned his highest rating ever, teaching him the job is identifying and solving problems, not code output.",
+    "IC6 promotion: his manager's rocket-ship analogy ('I only cared about you getting us out of orbit') forced him to hand off his year-long collections redesign once aligned, and the handoff itself demonstrated next-level scope; both promos surprised him because his model of the next level was wrong.",
+    "He became a TLM reluctantly, scaled to ~13 reports including managers, but coached ICs well while giving org design 'vibe management'; he returned to IC because replacing a manager for 6-7 people was easier than replacing a tech lead for 35-40.",
+    "IC7 came while still a manager, credited to his technical vision: by then virtually the whole codebase was strict Hack, up from 5-10% of files in 2015.",
+    "Working with legends like type theorist Andrew Kennedy taught him not to fear pedigree and that accomplished seniors should stay humble and approachable to juniors.",
+    "He stayed ~14 years by refusing to make permanent decisions based on temporary circumstances: outside offers never fixed the actual (solvable) problem, and he consistently felt valued.",
+    "Advice to his younger self: when told to write code, ask how they knew it was the right code to write, and aim to be in the rooms deciding what to build."
+  ],
+  "notable_quotes": [
+    {"speaker": "Dwayne Reeves", "quote": "Writing code is just not what my job as a software engineer is. My job is to identify and solve problems.", "t": "18:30"},
+    {"speaker": "Dwayne Reeves", "quote": "You're a rocket ship... I only cared about you getting us out of orbit. Now that we've done that, you should pass this off to someone else.", "t": "21:00"},
+    {"speaker": "Dwayne Reeves", "quote": "I don't want to make permanent decisions based off of temporary circumstances.", "t": "42:20"},
+    {"speaker": "Dwayne Reeves", "quote": "You should stop and think: how do they know that's the right code to write? You should aim to be the person who's making those decisions around what's the right thing to do.", "t": "44:40"}
+  ],
+  "related": [
+    {"slug": "new-grad-to-principal-engineer-ic8", "reason": "Parallel long-tenure new-grad-to-senior-IC climb at Meta"},
+    {"slug": "meta-senior-staff-eng-ic7-on-zuck", "reason": "Another Meta IC7 journey and the code machine archetype"},
+    {"slug": "instagram-staff-ic6-promo-despite", "reason": "Contrasting Meta strategy: depth on one language vs 10 team switches"},
+    {"slug": "co-creator-of-haskell-functional", "reason": "Type systems and language design from the research side"},
+    {"slug": "googlex-chief-scientist-on-imposter", "reason": "Imposter syndrome and career growth themes"}
+  ],
+  "transcript_complete": true
+}

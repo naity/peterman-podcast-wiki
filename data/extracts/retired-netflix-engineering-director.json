@@ -1,0 +1,51 @@
+{
+  "slug": "retired-netflix-engineering-director",
+  "n": 33,
+  "title": "Retired Netflix Engineering Director On Regrets, Video Engineering, Hiring Stories",
+  "date": "2026-02-16",
+  "url": "https://www.developing.dev/p/retired-netflix-engineering-director",
+  "guest": "David Ronca",
+  "guest_role": "Retired Netflix engineering director, later Meta director and principal engineer (video infrastructure)",
+  "guest_slug": "david-ronca",
+  "companies": ["netflix", "meta", "microsoft"],
+  "concepts": ["big-tech-culture", "hiring-and-interviews", "compensation-and-equity", "influence-and-leadership", "management", "calibrations-and-ratings", "career-growth", "regrets-and-advice", "systems-design"],
+  "sections": [
+    {"t": "00:00:40", "title": "How Netflix was different"},
+    {"t": "00:08:01", "title": "The legendary Netflix culture memo"},
+    {"t": "00:18:54", "title": "How to hire engineers well"},
+    {"t": "00:30:52", "title": "The strongest engineer he's ever met"},
+    {"t": "00:33:02", "title": "Joining Meta"},
+    {"t": "00:50:52", "title": "Near death experience"},
+    {"t": "00:59:04", "title": "Where he learned the most"},
+    {"t": "01:04:09", "title": "Book that impacted his career most"},
+    {"t": "01:11:33", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Netflix's 'no brilliant jerks' rule was revolutionary in the early 2000s; companies survive the departure of 'indispensable' difficult heroes just fine, as Ronca saw when a hoarding hero engineer quit and everyone else simply moved in.",
+    "Patty McCord told him in his own Netflix interview that they don't value 24/7 work ('blow us away with what you can do in an eight hour day'); Ronca later forced a burned-out engineer to take vacation regardless of outages, and the team stabilized the system precisely because they stepped back.",
+    "Netflix's flat single-level system and 'personal top of market' compensation (match any competing offer) worked for a small all-senior team but broke at scale: without leveling nobody could rationalize pay gaps, and without individual credit the best engineers eventually leave.",
+    "Leetcode 'does not tell you anything about an engineer'; the innate foundation of all engineering is understanding complex systems, technical intuition, and making good decisions without enough data. He successfully hired a train-automation engineer and a wastewater-treatment civil engineer (whose plant was a complex finite state machine) into video software roles on that basis.",
+    "When in doubt take the lower level at big tech: come in as a 5 executing like a 6 and bonuses, multipliers and RSU refreshers follow; come in over-leveled and 'there's no way to fix that problem.'",
+    "The strongest engineer he ever worked with is Ioannis 'Giannis' Katsavounidis, ex signal-processing professor, whose work with Ronca birthed content-based encoding and later convex hull encoding, now the encoding model at both Netflix and Meta.",
+    "Joining Meta as an outside director over a well-functioning ~60-person video org, he was told two weeks in: 'you've been here two weeks, you're already telling us what we need to do.' Lesson: build trust first; if a team executes well, first don't break it, then help it move forward.",
+    "From April 2020, Facebook video ran at New Year's Eve peak load every day; his org fixed race conditions in systems never designed for that sustained load while 3.5B users (vs Netflix's ~300M) depended on the apps.",
+    "InterVideo's 24/7 startup culture (10am to 10pm-or-3am, seven days a week) ended in a stage-3 colon cancer diagnosis in 2004 with a 25% five-year prognosis; his advice is to bake work-life balance into your DNA early — crunch must be the exception, not the rule.",
+    "The most valuable thing Meta taught him was objective performance management: data-driven calibrations over who gets credit and PSC packets permanently recording individual achievement — exactly what Netflix's team-first culture lacked.",
+    "His formative book is '12 Secrets to Microsoft Success' (betting the company, good failure, dogfooding, hiring the top 5%, Bill Gates's deliberate hiring freeze); he argues its lessons predicted the 2021 FAANG overhiring and 2022 contraction.",
+    "Advice to his younger self: don't waste years coasting at large failing companies; work on hard problems ('if your job is not difficult, you're not growing'), work for visionary leaders who can execute, and start financial planning on day one."
+  ],
+  "notable_quotes": [
+    {"speaker": "David Ronca (quoting Patty McCord)", "quote": "We don't value 24/7 work here and if you just come in and work all the time, we're not going to be impressed... if you want to impress us, blow us away with what you can do in an eight hour day.", "t": "00:03:35"},
+    {"speaker": "David Ronca", "quote": "If this company cannot survive without you here on the clock, we got a problem. You need to take a vacation. And I don't care what happens, if things break, they break.", "t": "00:06:10"},
+    {"speaker": "David Ronca", "quote": "When you see a brilliant engineering mind, everything else doesn't matter... Because these things can all be learned. They can be learned in a very short time. But you can't teach that.", "t": "00:27:06"},
+    {"speaker": "David Ronca", "quote": "If it's a broken team, your job is to unbreak it. But if it's a team that's actually executing well, your job is to not break it first and then help it move forward second.", "t": "00:40:19"}
+  ],
+  "related": [
+    {"slug": "ex-head-of-eng-at-instagram-career", "reason": "Another senior Meta engineering leader reflecting on career regrets and leadership lessons"},
+    {"slug": "openai-and-meta-distinguished-engineer", "reason": "Industry veteran spanning Microsoft-era and Meta culture, individual impact themes"},
+    {"slug": "meta-hiring-lead-on-behind-the-scenes", "reason": "The systematized big-company hiring machine Ronca contrasts with hire-to-the-person"},
+    {"slug": "anthropic-eng-leader-and-ex-senior", "reason": "Senior Meta engineering leadership, trust-building and career advice"},
+    {"slug": "laid-off-from-big-tech-after-25-years", "reason": "Long big-tech career endgame; financial planning and overhiring/contraction themes"}
+  ],
+  "transcript_complete": true
+}

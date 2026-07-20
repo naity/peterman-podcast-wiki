@@ -1,0 +1,55 @@
+{
+  "slug": "meta-senior-staff-ic7-engs-honest",
+  "n": 28,
+  "title": "Meta Senior Staff (IC7) Eng's Honest Demotion Story",
+  "date": "2026-01-23",
+  "url": "https://www.developing.dev/p/meta-senior-staff-ic7-engs-honest",
+  "guest": "Igor",
+  "guest_role": "Senior staff engineer (IC7/L7) at Meta, Google, and Cruise; 14.5 years at Google",
+  "guest_slug": "meta-ic7-demotion-guest",
+  "companies": ["meta", "google", "intel"],
+  "concepts": ["promotions", "calibrations-and-ratings", "layoffs", "big-tech-culture", "compensation-and-equity", "imposter-syndrome", "mentorship-and-sponsorship", "career-growth", "regrets-and-advice", "hiring-and-interviews"],
+  "sections": [
+    {"t": "00:00:37", "title": "Why he wanted a demotion"},
+    {"t": "00:07:32", "title": "Why Senior Staff at Meta was different"},
+    {"t": "00:16:01", "title": "Meta vs Google culture"},
+    {"t": "00:19:09", "title": "Downleveling at Google"},
+    {"t": "00:23:17", "title": "Why he's willing to be transparent"},
+    {"t": "00:25:11", "title": "Best quality of life eng level"},
+    {"t": "00:30:42", "title": "Senior Staff promo at Google"},
+    {"t": "00:42:27", "title": "Mentorship stories"},
+    {"t": "00:43:11", "title": "Biggest career regret"},
+    {"t": "00:46:46", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Joining a big company at senior staff means racing a clock: PSC calibrates you against tenured E7s, and with Meta's bottom-10% layoff culture you have about a year to match old-timers; in 14 months Igor self-assessed he had only reached ~E6 performance.",
+    "The deeper reason he wanted a demotion: he loves E5/E6 work (coding, debugging, designing, mentoring) while senior staff is a meetings-and-design-docs leadership role that touches much less code.",
+    "Meta had no process for dropping a level within the same job category (title conversions like director-to-IC exist, but not E7-to-E6), so his demotion request was refused; instead he took the 'easy way out' via a Google recruiter who had kept pinging him.",
+    "His Meta ramp failed where Cruise succeeded because Cruise was smaller with uncrowded scope you could just claim, while Meta's senior IC space felt crowded; Meta also doesn't know how to onboard senior external hires since nearly all its senior people grew up internally.",
+    "Onboarding lesson: he spent too much time reading docs instead of building; get your hands dirty and learn in parallel. His final Meta project, estimated at two weeks, ballooned in complexity and even completed would never justify E7 scope.",
+    "Meta vs Google culture: Meta sets deliberately aggressive arbitrary deadlines with constant status updates to leadership; deadlines slip and everyone is fine with it, so people learn the pressure is artificial and disengage — 'like elementary school, where the teacher is yelling but kids are still playing.'",
+    "Google had no process for boomerang hires at a lower level but made it work; returning as L7 required no interview while returning as L6 nearly required a coding interview (he got an exception), and he rejoined after 3.5 years away with no re-interview, accepting a significant comp drop.",
+    "He can be transparent because he's privileged: no visa dependency, spouse's health insurance, kids through college, no mortgage, able to not work for years; he'd advise others not to post about work challenges unless equally secure.",
+    "Best quality-of-life level: senior engineer (E5/L5), shielded from upward reporting by TLs and managers; people below senior can't even see what principal-level work is like, so they chase promos blind. To peers urging him to try E7 elsewhere: 'I'm capable of running a marathon, but I don't like running.'",
+    "Imposter syndrome insight: comparing yourself to a group of peers is a mistake — each excels at one different thing, and you're measuring yourself against a composite no individual matches.",
+    "His Google L7 promo project: porting ads' 10-year-polished CPU-based online ML training infrastructure to first-generation TPUs, starting as a two-person prototype requiring cross-team credibility with TPU/compiler/TensorFlow teams and 18-month-ahead chip orders; testing trick was stripping model computation to simulate an infinitely fast TPU and find bottlenecks; spinning-disk throughput (not storage) became the scarce resource.",
+    "Ads under-ordered TPUs conservatively because a mature business must make money — unlike today's LLM players who 'just order more' gigawatts while unprofitable; TPU specialization made sparse embedding lookups a persistent pain.",
+    "Mentorship story: an intern he hosted at ~L4 later became the manager of the team he interned on — 'don't underestimate your interns.'",
+    "His disillusionment with Google came from the Atlanta office shutdown, where a few hundred people were cut because one senior VP sponsor pulled out — 'at the end of the day, I'm just a cell in the spreadsheet' — years before post-COVID layoffs normalized such cuts.",
+    "Advice to younger self: ask whether your company really benefits from what you're building — leadership later killed projects for the same pointlessness he'd sensed; if the answer is no, switch projects (fluid at Google/Meta, near-impossible at Intel and reputedly IBM)."
+  ],
+  "notable_quotes": [
+    {"speaker": "Igor", "quote": "I'm capable of running a marathon, but I don't like running a marathon. I don't like running. Why would I do that?", "t": "00:30"},
+    {"speaker": "Igor", "quote": "It almost feels like an elementary school, like where the teacher is yelling but kids are still playing... if you constantly put pressure on your people, it just doesn't work anymore.", "t": "00:18"},
+    {"speaker": "Igor", "quote": "You feel like, yeah, at the end of the day, I'm just a cell in the spreadsheet.", "t": "00:45"},
+    {"speaker": "Igor", "quote": "Don't underestimate your interns. They can be really, really good.", "t": "00:43"}
+  ],
+  "related": [
+    {"slug": "airbnb-staff-eng-on-how-to-not-get", "reason": "The calibration/ratings machinery Igor was judged by, from the promo-seeking direction"},
+    {"slug": "meta-hiring-lead-on-behind-the-scenes", "reason": "How Meta hires the senior external ICs whose onboarding Igor found broken"},
+    {"slug": "laid-off-from-big-tech-after-25-years", "reason": "Companion honest career-setback episode from the same early-2026 run"},
+    {"slug": "instagram-senior-staff-eng-ic7-on", "reason": "Contrasting IC7 story of thriving at the level Igor chose to leave"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "Patterson worked on the TPU itself; Igor built Google ads training infra on first-gen TPUs"}
+  ],
+  "transcript_complete": true
+}

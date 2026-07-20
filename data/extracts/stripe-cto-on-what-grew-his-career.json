@@ -1,0 +1,61 @@
+{
+  "slug": "stripe-cto-on-what-grew-his-career",
+  "n": 15,
+  "title": "Stripe CTO on What Grew His Career, Hiring Without Leetcode, Coding as a Leader (Career Story)",
+  "date": "2025-08-29",
+  "url": "https://www.developing.dev/p/stripe-cto-on-what-grew-his-career",
+  "guest": "David Singleton",
+  "guest_role": "Former Stripe CTO (7 years), ex-Google VP of Engineering, founder of /dev/agents",
+  "guest_slug": "david-singleton",
+  "companies": ["stripe", "google", "amazon"],
+  "concepts": ["management", "career-growth", "influence-and-leadership", "big-tech-culture", "teaching-and-communication", "hiring-and-interviews", "startups-and-founding", "incident-management"],
+  "sections": [
+    {"t": "00:56", "title": "Before Google"},
+    {"t": "06:49", "title": "Joining Google"},
+    {"t": "13:27", "title": "Deciding to try management"},
+    {"t": "25:28", "title": "How to decide on EM vs IC"},
+    {"t": "30:36", "title": "Biggest gap in managing managers"},
+    {"t": "36:14", "title": "The difference between VP and Senior EM"},
+    {"t": "39:36", "title": "How to communicate well"},
+    {"t": "48:42", "title": "How managers can scale themselves"},
+    {"t": "54:08", "title": "How to build a new engineering site"},
+    {"t": "01:04:47", "title": "What kept him at Google"},
+    {"t": "01:07:34", "title": "The story behind joining Stripe"},
+    {"t": "01:16:53", "title": "Comparing and constrasting cultures"},
+    {"t": "01:25:55", "title": "How to set culture"},
+    {"t": "01:34:59", "title": "Is Stripe too reliable?"},
+    {"t": "01:39:36", "title": "Hiring at scale without Leetcode"},
+    {"t": "01:44:15", "title": "Lessons learned working with Stripe's leadership"},
+    {"t": "01:46:45", "title": "Why leave Stripe"},
+    {"t": "01:51:26", "title": "How his AI startup plans to compete"},
+    {"t": "01:55:31", "title": "Career reflections: regrets, what went well"},
+    {"t": "02:01:05", "title": "Top book & habit that impacted his career"},
+    {"t": "02:04:55", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "Singleton's career engine at Google was agency: as a junior engineer he removed the google.com-to-google.com/m mobile redirect that nobody wanted to touch, saving ~70 years of user time per year, and he stayed nearly 12 years only because every 18-24 months he realized he was still learning.",
+    "Being a manager and being an IC are different jobs: if you try management, do it full time rather than alongside IC work, ideally somewhere that allows a trial-and-return; he first tries to talk people out of management, which only fits if you draw energy from getting more out of others.",
+    "Even the most senior leaders should experience the team's work at the 'one foot level': his quarterly 'engineer-acation' meant ~3 days embedded on a team shipping a small real project plus a detailed friction log, which fed his developer-productivity strategy as CTO.",
+    "His biggest managing-managers lesson: perfectly happy teams are rarely performing at their best potential; he won Google's team-voted Great Manager Award and later concluded he didn't deserve it, aiming instead for 'type two fun' and insisting low performers be managed.",
+    "The VP-vs-senior-EM jump was about leading functions beyond engineering (design, product, partnerships) and losing the confidence of being able to do every job in the org; other functions don't exist to 'feed the engineers'.",
+    "Communication: speaking improves only with deliberate reps (his manager booked him 1000-person keynotes); senior leaders are 'always on stage'; keep dynamic range so people believe you; circulate drafts of important writing to reviewers, a habit learned at Stripe.",
+    "Scaling as a senior leader means designing org systems like an operating system: Stripe's nested weekly ops reviews were modeled directly on Amazon's (Charlie Bell walked him through it); a process is only legitimate while clearly net positive for those inside it.",
+    "Far-timezone sites need complete missions and autonomy; splitting one team across Mountain View and London is the worst setup; site leads should spend time at HQ carrying context home; sites should have a clan identity rooted in company culture.",
+    "He joined Stripe by asking for advice on a startup idea ('anytime you want money, ask for advice; anytime you want advice, ask for money') and Patrick Collison converted it into recruiting; senior hires almost always begin as advice conversations with people happy elsewhere.",
+    "Culture must be invested in deliberately from day one: Stripe's operating principles (users first, meticulous in your craft) are concrete and distilled from the most effective employees' behaviors, enforced through exemplifying them and through systems like hiring and blameless incident review."
+  ],
+  "notable_quotes": [
+    {"speaker": "David Singleton", "quote": "That ultimately ended up saving something like 70 years of user time every year... You get a real bug for those things, like being able to just follow your nose to learn and take agency to do stuff that matters.", "t": "10:51"},
+    {"speaker": "David Singleton", "quote": "What I learned later, especially as I started managing managers, was that those teams that are perfectly happy are rarely performing at their very best potential.", "t": "31:38"},
+    {"speaker": "David Singleton", "quote": "When you're a leader, you have to continually step onto the balcony. You're on the dance floor doing stuff in the org, but you have to prompt yourself to step onto the balcony and look down at how everything is working.", "t": "17:28"},
+    {"speaker": "David Singleton", "quote": "Someone once told me, anytime you want money, ask for advice, and anytime you want advice, ask for money.", "t": "1:11:23"}
+  ],
+  "related": [
+    {"slug": "openai-and-meta-distinguished-engineer", "reason": "Philip Su was his Facebook London counterpart, near co-founder, and recommended him on building eng sites"},
+    {"slug": "amazon-vp-on-promotions-getting-fired", "reason": "Singleton modeled Stripe's ops review and org design on Amazon's deliberate culture"},
+    {"slug": "ex-head-of-eng-at-instagram-career", "reason": "parallel senior eng-leader career retrospective with management lessons"},
+    {"slug": "frontline-manager-at-meta-to-senior", "reason": "same frontline-manager to manager-of-managers to executive skill jumps"},
+    {"slug": "meta-senior-manager-m2-on-manager", "reason": "shared themes of EM career growth, managing managers, and Amazon culture comparisons"}
+  ],
+  "transcript_complete": false
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "turing-award-winner-data-abstraction",
+  "n": 43,
+  "title": "Turing Award Winner: Data Abstraction, Dijkstra, Distributed Systems | Barbara Liskov",
+  "date": "2026-04-27",
+  "url": "https://www.developing.dev/p/turing-award-winner-data-abstraction",
+  "guest": "Barbara Liskov",
+  "guest_role": "Turing Award winner, MIT professor",
+  "guest_slug": "barbara-liskov",
+  "companies": ["mit", "uc-berkeley", "google"],
+  "concepts": ["programming-languages", "distributed-systems", "systems-design", "databases", "non-linear-careers", "working-with-legends", "teaching-and-communication"],
+  "sections": [
+    {"t": "1:00", "title": "Getting rejected from Princeton"},
+    {"t": "2:53", "title": "The software crisis"},
+    {"t": "9:03", "title": "The drawbacks of Python"},
+    {"t": "10:17", "title": "Getting into distributed computing"},
+    {"t": "13:09", "title": "Paxos vs Viewstamped replication"},
+    {"t": "21:44", "title": "The significance of Dijkstra's letter"},
+    {"t": "25:04", "title": "Why she stayed in academia"},
+    {"t": "30:39", "title": "Why her award was questioned"}
+  ],
+  "key_takeaways": [
+    "Liskov entered computer science by accident: after her Berkeley math degree, Princeton rejected her grad application with a postcard saying 'we do not admit women,' and her best job offer happened to be as a programmer.",
+    "The 1970s software crisis meant companies spent millions of dollars and hundreds of person-years on systems they threw away because they didn't work; languages only offered procedures as a modularity mechanism, which can't model things like file systems or databases.",
+    "Her data abstraction insight reframed modules as hidden state accessible only through operations (a set, a sequence, etc.); the paper with Steve Zilles and the CLU language led to Ada being explicitly designed around data abstraction and eventually Java in the 90s. She deliberately kept CLU a research artifact rather than joining a company to productize it.",
+    "Python's flaw in her view: it has modules but no encapsulation, letting outside code muck with module internals — and encapsulation is the crucial part of making modularity work.",
+    "She entered distributed systems via Bob Kahn's vision of programs spanning networked computers; her language Argus (CLU-influenced, 'guardian' modules communicating via RPC) borrowed atomic transactions from databases so distributed computations complete entirely or not at all — which led directly to Viewstamped Replication, 'the beginning of cloud storage.'",
+    "Viewstamped Replication (with student Brian Oki) and Lamport's Paxos are essentially the same protocol invented independently; views are just incrementing numbers, not clocks. A former student consulting at Google recognized the Google File System's replication as Viewstamped Replication though Google thought it was Paxos. Paxos won mindshare because Lamport 'went around giving all the talks and she implemented it' — plus the catchier name.",
+    "The key advance over database commit protocols was handling leader failure by moving to a new leader; later PBFT with student Miguel Castro (spurred by a DARPA RFP) extended tolerance from crashes to Byzantine/malicious nodes.",
+    "The Liskov substitution principle emerged from a 1986 OOPSLA keynote: Smalltalk papers defined subclasses by implementation deltas and couldn't pin down 'type hierarchy'; her MIT specification-first approach (course with John Guttag) yielded the behavioral answer — a subclass must behave like its superclass wherever the superclass is expected. She only learned of the name via a random email in the 90s.",
+    "Dijkstra's 'Goto Statement Considered Harmful' was a letter to CACM, not a paper; its real point was that reasoning about code correctness is hard when science dismissed programming as trivial. It was controversial because assembler required gotos, languages lacked structured constructs, compilers couldn't optimize well, and skilled goto users were offended — 'Dijkstra was not the most diplomatic person,' but he won the day.",
+    "She stayed in academia for the freedom ('the gift is you can do whatever you want, the curse is you have to figure out what it is that you're doing'), disliked a brief late-90s startup stint, and tells grad students not to do incremental work — find a good problem that's solvable and matches your skill set.",
+    "Career resilience: with no faculty offers after her PhD she returned to MITRE for four years, using the time to switch from AI to systems without self-pity; when Title IX opened academia to women, 'I was ready.' Careers are doors opening and closing — you have to decide whether to step through.",
+    "When internet commenters questioned her Turing Award, she read it as a huge compliment: data abstraction is so fundamental that even her own graduate students didn't realize there was a 'before' — unlike a nameable protocol, her contribution was the entire mindset of how programs are developed."
+  ],
+  "notable_quotes": [
+    {"speaker": "Barbara Liskov", "quote": "I got this little card back. It was a postcard from Princeton saying, we do not admit women.", "t": "1:00"},
+    {"speaker": "Barbara Liskov", "quote": "So what Leslie says is, I went around giving all the talks and she implemented it.", "t": "18:57"},
+    {"speaker": "Barbara Liskov", "quote": "It's a gift and a curse. The gift is you can do whatever you want. The curse is you have to figure out what it is that you're doing.", "t": "25:48"},
+    {"speaker": "Barbara Liskov", "quote": "All that stuff was so fundamental that people thought there was no time when it hadn't already existed.", "t": "32:13"}
+  ],
+  "related": [
+    {"slug": "turing-award-winner-on-working-with", "reason": "Lamport independently invented the same consensus idea (Paxos); shared Dijkstra stories"},
+    {"slug": "turing-award-winner-postgres-disagreeing", "reason": "Fellow Turing laureate; Liskov borrowed transactions from Stonebraker's database field"},
+    {"slug": "dropboxs-former-most-senior-eng-building", "reason": "James Cowling did his MIT distributed-systems PhD in Liskov's group"},
+    {"slug": "aws-distinguished-eng-learnings-from", "reason": "Modern cloud practice of the replication/consensus techniques Liskov pioneered"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "Berkeley-connected Turing laureate peer on foundational abstractions"}
+  ],
+  "transcript_complete": true
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "turing-award-winner-p-vs-np-zero",
+  "n": 48,
+  "title": "Turing Award Winner: P vs NP, Zero-Knowledge Proofs, Quantum Computation | Avi Wigderson",
+  "date": "2026-06-01",
+  "url": "https://www.developing.dev/p/turing-award-winner-p-vs-np-zero",
+  "guest": "Avi Wigderson",
+  "guest_role": "Turing Award winner and Abel Prize winner, complexity theorist at the Institute for Advanced Study",
+  "guest_slug": "avi-wigderson",
+  "companies": [],
+  "concepts": ["complexity-theory", "security-and-cryptography", "teaching-and-communication"],
+  "sections": [
+    {"t": "01:08", "title": "P vs NP"},
+    {"t": "14:51", "title": "What if you relaxed correctness"},
+    {"t": "25:38", "title": "Why NP complete problems are equivalent"},
+    {"t": "30:33", "title": "Space vs time complexity"},
+    {"t": "43:06", "title": "Why people use SAT solvers"},
+    {"t": "45:53", "title": "Randomness is a resource"},
+    {"t": "55:48", "title": "Randomness depends on computational power"},
+    {"t": "01:21:20", "title": "Zero knowledge proofs and their significance"},
+    {"t": "01:38:30", "title": "Quantum computation and why it matters"},
+    {"t": "01:56:24", "title": "Math vs computer science"},
+    {"t": "02:08:16", "title": "Major breakthroughs and his experience"},
+    {"t": "02:12:31", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "P vs NP is framed as the question of whether we can know everything we want to know: NP is all problems whose solutions we could recognize if handed to us, P is what we can solve efficiently, so P = NP would mean anything checkable is findable.",
+    "The community's belief that P differs from NP rests on soft evidence — the lived intuition that finding is harder than checking, and decades of failed practical attacks on thousands of NP-hard optimization problems — and Wigderson admits it could be overturned by one new idea.",
+    "Real-world instances are usually not worst-case: protein folding is NP-hard yet bodies do it constantly, the Simplex method is worst-case exponential but practically linear, and structured SAT instances from verification are why SAT solvers work so well in practice.",
+    "The PCP theorem plus Hastad's strengthening shows approximation is hard too: for 3-variable Boolean constraints, random guessing satisfies 7/8 of them and doing epsilon better is already NP-hard.",
+    "NP-complete problems are all inter-reducible because computation is local: any computation can be encoded as a conjunction of local constraints, which is why satisfiability (Cook, Levin) was the first NP-complete problem and most reductions are simple.",
+    "Ryan Williams' 2025 result shows any time-T computation can be simulated in about sqrt(T) space, far beyond the T/log T bound of Valiant-Paul-Pippenger believed optimal for ~50 years; Barrington's constant-space majority counting via non-commutative permutations shows how counterintuitive small-space computation can be.",
+    "Randomness is a resource whose quality depends on the observer's computational power (Blum-Micali coin-toss thought experiment): pseudorandomness only needs to fool the specific tests applied to it, though cryptographic secrets require genuinely random bits regardless of compute.",
+    "Hardness versus randomness: if some sufficiently hard problem exists then P = BPP and all efficient probabilistic algorithms can be derandomized (Nisan-Wigderson generator), and conversely derandomization yields hard functions; extractors can purify weak physical sources into near-perfect randomness.",
+    "Zero-knowledge proofs are universal: assuming one-way functions, anything provable has a zero-knowledge interactive proof (Goldreich-Micali-Wigderson), built from bit commitments and randomly permuted 3-colorings plus NP-completeness reductions that translate witnesses as well as instances.",
+    "Shor's 1994 quantum factoring algorithm triggered both massive quantum hardware investment and post-quantum cryptography (lattice/learning-with-errors problems still resist quantum attack); the MIP* = RE result shows entangled quantum provers can convince efficient verifiers of uncomputable statements, and its techniques resolved long-standing math and physics conjectures."
+  ],
+  "notable_quotes": [
+    {"speaker": "Avi Wigderson", "quote": "The question of P versus NP is whether we can solve all the problems we want to solve, whether we can know everything we want to know. This is basically about the limits of our knowledge.", "t": "02:13"},
+    {"speaker": "Avi Wigderson", "quote": "The quality of randomness is in the eye of the beholder or in the computational power of the beholder.", "t": "55:08"},
+    {"speaker": "Avi Wigderson", "quote": "We showed that it's not only not ridiculous, it's universal. Namely, anything that has a mathematical proof also has a zero-knowledge interactive proof.", "t": "01:27:17"},
+    {"speaker": "Avi Wigderson", "quote": "Once you get weird enough, you get weird enough consequences.", "t": "01:50:51"}
+  ],
+  "related": [
+    {"slug": "mit-complexity-theorist-on-leetcode", "reason": "Wigderson explains Ryan Williams' own 2025 time-vs-space breakthrough; same complexity theory field"},
+    {"slug": "turing-award-winner-nsa-public-key", "reason": "One-way functions, public-key crypto and post-quantum security trace to Hellman's work"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "Fellow Turing laureate on theory, proofs and clear mathematical thinking"},
+    {"slug": "turing-award-winner-data-abstraction", "reason": "Another foundational-CS Turing laureate episode in the series"}
+  ],
+  "transcript_complete": false
+}

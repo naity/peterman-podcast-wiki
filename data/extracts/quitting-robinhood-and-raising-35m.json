@@ -1,0 +1,51 @@
+{
+  "slug": "quitting-robinhood-and-raising-35m",
+  "n": 21,
+  "title": "Robinhood SWE Turned $1B+ Founder on Non-Linear Careers, Being Jaded About Promos, Startup Learnings",
+  "date": "2025-11-29",
+  "url": "https://www.developing.dev/p/quitting-robinhood-and-raising-35m",
+  "guest": "Jayendra Jog",
+  "guest_role": "Co-founder of Sei Labs, ex-Robinhood SWE",
+  "guest_slug": "jayendra-jog",
+  "companies": ["robinhood", "meta", "ucla"],
+  "concepts": ["startups-and-founding", "non-linear-careers", "promotions", "career-growth", "compensation-and-equity", "big-tech-culture", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:00:54", "title": "Big tech internships"},
+    {"t": "00:04:51", "title": "Joining Robinhood"},
+    {"t": "00:07:58", "title": "Big tech vs startups discussion"},
+    {"t": "00:10:16", "title": "Getting jaded about Robinhood career growth"},
+    {"t": "00:16:04", "title": "Coasting and getting promoted"},
+    {"t": "00:18:54", "title": "Gamestop stories from the inside"},
+    {"t": "00:22:34", "title": "Leaving Robinhood"},
+    {"t": "00:30:25", "title": "Learnings from raising $35m"},
+    {"t": "00:34:07", "title": "What value does crypto provide?"},
+    {"t": "00:37:47", "title": "Learnings and when to leave"},
+    {"t": "00:40:41", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "A random 'LeetCode and Chill' study night covered the exact interview question (number of islands) Jay later got in his Facebook internship onsite; he credits that lucky break for his entire subsequent career, illustrating that careers move in step functions, not linearly.",
+    "Choose employers by what you're optimizing for: max compensation upside requires a very early-stage company that hits big, while learning is fastest at a small company growing quickly; the best controllable heuristic is surrounding yourself with really smart people.",
+    "About a third of Jay's 2018 Robinhood new grad class went on to found venture-backed companies, evidence of the caliber of people at fast-scaling startups.",
+    "He got jaded nine months into Robinhood after months of 2 AM nights and brutal overnight-batch on-call earned him a 5/5 performance rating with no promotion or compensation change attached; he then deliberately coasted at 'close to average' effort.",
+    "Coasting still produced promotions because in a 10x-growth company a competent engineer becomes load-bearing by default; Jay was the only person who knew ~10 different systems and got his first mentee 1.5 years in.",
+    "Golden handcuffs kept him 3.5 years: exercising his options would have cost $400,000, so he waited for the July 2021 IPO; his Robinhood equity ended up an order of magnitude more than an equivalent big tech stint would have paid.",
+    "Inside account of GameStop: on Jan 28, 2021 Robinhood turned off buys because T+2 settlement required billions in collateral overnight, not to manipulate prices, and Jay believes the company miscommunicated this 'potentially on purpose' while fundraising billions under regulatory hostility.",
+    "Engineers over-index on the risk of quitting: competent people always find work again, and a failed founding attempt makes you more valuable to early-stage startups (though not big companies) because you learn product validation, marketing, BD, and go-to-market.",
+    "Fundraising lesson from raising $35M three weeks after the Terra collapse: land a tier-one lead investor (Multicoin led their $5M seed) and everything else, including follow-on funding and BD, becomes dramatically easier as other funds herd behind the stamp.",
+    "Founding requires little engineering skill ('a competent L4 can do perfectly fine') since most businesses face mundane problems; his advice to his younger self is to be less scared, think decisions through, then pull the trigger quickly, and he wishes he'd left Robinhood earlier."
+  ],
+  "notable_quotes": [
+    {"speaker": "Jayendra Jog", "quote": "There was no promotion, no compensation change tied to that, and I was just like, why did I do this?", "t": "00:14:30"},
+    {"speaker": "Jayendra Jog", "quote": "Robinhood did not turn off the buys because they were trying to manipulate the price. They turned off the buys because they needed to put up more collateral, and I think they miscommunicated this potentially on purpose.", "t": "00:21:00"},
+    {"speaker": "Jayendra Jog", "quote": "If you get a tier one lead investor, everything else is super easy after that.", "t": "00:31:30"},
+    {"speaker": "Jayendra Jog", "quote": "You should think through any decision you make, but then afterwards, pull the trigger quickly.", "t": "00:40:41"}
+  ],
+  "related": [
+    {"slug": "cloudkitchens-cto-on-intelligence", "reason": "Another engineer-turned-startup-executive on regrets and leaving conventional paths"},
+    {"slug": "amazon-vp-on-promotions-getting-fired", "reason": "Complementary perspective on promotion systems and playing the game"},
+    {"slug": "laid-off-from-big-tech-after-25-years", "reason": "Contrasting view on career risk and loyalty to one employer"},
+    {"slug": "21x-hackathon-winner-turned-college", "reason": "Another non-linear, risk-taking career path outside big tech ladders"},
+    {"slug": "boris-cherny-creator-of-claude-code", "reason": "Contrasting high-leverage growth inside companies rather than founding"}
+  ],
+  "transcript_complete": true
+}

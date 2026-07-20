@@ -1,0 +1,58 @@
+{
+  "slug": "mozilla-firefox-cto-on-browser-war",
+  "n": 17,
+  "title": "Mozilla Firefox CTO on Browser War Stories and the Path to Distinguished Engineer",
+  "date": "2025-10-10",
+  "url": "https://www.developing.dev/p/mozilla-firefox-cto-on-browser-war",
+  "guest": "Bobby Holley",
+  "guest_role": "CTO of Mozilla Firefox, former Distinguished Engineer",
+  "guest_slug": "bobby-holley",
+  "companies": ["mozilla", "google", "nvidia", "microsoft"],
+  "concepts": ["open-source", "big-tech-culture", "security-and-cryptography", "incident-management", "programming-languages", "career-growth", "promotions", "calibrations-and-ratings", "influence-and-leadership", "teaching-and-communication", "ai-era-engineering", "corporate-politics"],
+  "sections": [
+    {"t": "00:00:57", "title": "Starting at Mozilla"},
+    {"t": "00:04:57", "title": "Browser wars history"},
+    {"t": "00:10:55", "title": "Google relationship changing"},
+    {"t": "00:16:11", "title": "Why work for free"},
+    {"t": "00:19:02", "title": "Projects that drove his career"},
+    {"t": "00:33:12", "title": "No performance reviews"},
+    {"t": "00:34:42", "title": "Rust adoption"},
+    {"t": "00:43:33", "title": "Career progression"},
+    {"t": "00:47:54", "title": "Should you focus on promos"},
+    {"t": "00:57:14", "title": "Distinguished promo rejection"},
+    {"t": "01:00:56", "title": "Examples of distinguished engs"},
+    {"t": "01:10:54", "title": "Advice for aspiring distinguished engs"},
+    {"t": "01:14:40", "title": "AI browser wars"},
+    {"t": "01:26:32", "title": "Biggest technical regret"},
+    {"t": "01:29:11", "title": "Book that impacted his career most"},
+    {"t": "01:32:09", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Early Mozilla had no onboarding guardrails ('get on IRC and Bugzilla and figure things out'), which selected for self-motivated engineers; code ownership worked by 'who owns this?' — 'you do now'.",
+    "Google was originally Firefox's biggest ally — the default-search deal made Mozilla financially sustainable — but after Chrome launched in 2008 the relationship decayed through organizational incentives, the 'year of a hundred oopses' of always-unintentional Download Chrome banners on google.com.",
+    "Firefox genuinely fell behind Chrome on multi-process architecture, plugin sandboxing, and JavaScript speed, while Mozilla's failed Firefox OS mobile bet drained resources exactly when the browser needed them most.",
+    "Bobby self-initiated 'Slaughterhouse', a year-plus effort to architecturally eliminate a class of JS/DOM-binding exploits; when Mozilla's Bugzilla was compromised by a threat actor, all but about 2 of roughly 45 exfiltrated security bugs were already fixed — proof you must get ahead of security before you lose the luxury of time.",
+    "He once accused a friendly security researcher of selling Mozilla out after recognizing his exploit-writing style in an in-the-wild zero-day; the researcher went off the grid and resurfaced via a bowling-alley phone call weeks later — the actual breach was Mozilla's own bug tracker.",
+    "Rust was Mozilla's answer to C++ memory-safety exploits and single-threaded engines on multi-core hardware; a dozen Servo engineers couldn't out-build hundreds of Chromium engineers, so Mozilla uplifted Servo's parallel CSS engine into Firefox Quantum (led by Bobby), improving Amazon.com rendering ~25%.",
+    "Quantum's launch made him one of fewer than five principal engineers at Mozilla; his manager then made him spend one day a week without opening a terminal to think about broader impact.",
+    "On promos: focus on impact, not titles — promo-hacking and box-checking is 'extremely annoying' to leadership, and 'you don't want the people in leadership to find you to be annoying'; frame updates as visibility and team credit, not self-promotion.",
+    "The CTO told him new Distinguished Engineers would be named for the first time in nearly a decade — and he wouldn't be one, because the bar had shifted from codebase mastery to industry-wide impact; he found it inspiring, like discovering an untrained muscle, and later made DE under a hybrid of both definitions.",
+    "Mozilla's DE archetypes are world-changing IC impact: Martin Thomson (HTTP/2, QUIC, WebRTC standards), Luke Wagner (asm.js to WebAssembly, forging cross-browser consensus), Timothy Terriberry (Opus/Daala to royalty-free AV1 video).",
+    "His top advice for aspiring DEs is to write: writing is the process of thinking, and you should not have an LLM write for you because you lose the thinking that drives growth; documents should be no longer than what you have to say.",
+    "On the AI browser wars: most 'AI browsers' are front ends on Chromium; Firefox is the last independent engine, which is a business cost center but buys a seat at the standards table. AI in consumer tech is 'water running downhill'; the risks are the web becoming a backend detail for agents and Chrome's unspecified proprietary browser-LLM APIs entrenching Gemini."
+  ],
+  "notable_quotes": [
+    {"speaker": "Bobby Holley", "quote": "He referred to it as the year of a hundred oopses, where every time Google would do something that would hurt Firefox, it would always be framed as unintentional.", "t": "12:05"},
+    {"speaker": "Bobby Holley", "quote": "Think about your ambition in terms of the impact that you want to have as opposed to the status you want to achieve.", "t": "55:20"},
+    {"speaker": "Bobby Holley", "quote": "The process of writing is the process of thinking... do not use an LLM to produce text for you... you are losing the opportunity to do the thinking yourself.", "t": "1:12:12"},
+    {"speaker": "Bobby Holley", "quote": "AI is coming to consumer technology like water running downhill, and this is not something that is going to be stopped or reversed.", "t": "1:16:22"}
+  ],
+  "related": [
+    {"slug": "distinguished-engineer-at-shopify", "reason": "Web performance/standards work and defining the Distinguished Engineer role"},
+    {"slug": "intern-to-microsoft-distinguished", "reason": "Intern-to-Distinguished career arc at a platform company"},
+    {"slug": "msl-eng-director-promo-hacking-industry", "reason": "Directly debates promo-hacking vs impact-first careers"},
+    {"slug": "distinguished-eng-on-stack-ranking", "reason": "Deep systems engineering, open source, competing with a dominant giant"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "Rust tooling and how AI is reshaping software engineering"}
+  ],
+  "transcript_complete": false
+}

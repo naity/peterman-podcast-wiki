@@ -1,0 +1,52 @@
+{
+  "slug": "anthropic-eng-leader-and-ex-senior",
+  "n": 25,
+  "title": "Anthropic Eng Leader and Ex-Senior Director at Meta on Advice That Changed Her Career",
+  "date": "2026-01-04",
+  "url": "https://www.developing.dev/p/anthropic-eng-leader-and-ex-senior",
+  "guest": "Fiona Fung",
+  "guest_role": "Engineering leader on Claude Code at Anthropic; ex-Senior Director at Meta; 11.5 years at Microsoft",
+  "guest_slug": "fiona-fung",
+  "companies": ["anthropic", "meta", "microsoft"],
+  "concepts": ["management", "mentorship-and-sponsorship", "career-growth", "big-tech-culture", "influence-and-leadership", "ai-coding-tools", "ai-era-engineering", "developer-tools", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:38", "title": "Impact vs team health"},
+    {"t": "03:04", "title": "Managing managers for the first time"},
+    {"t": "05:31", "title": "Advice on mentoring others"},
+    {"t": "06:55", "title": "What you should use 1 on 1s for"},
+    {"t": "07:56", "title": "Leaving Microsoft for Facebook"},
+    {"t": "10:59", "title": "Microsoft vs Facebook culture"},
+    {"t": "12:01", "title": "Why dogfooding is important"},
+    {"t": "21:25", "title": "Joining Anthropic"},
+    {"t": "27:23", "title": "Feedback that changed her career"},
+    {"t": "28:43", "title": "Advice for younger self"}
+  ],
+  "key_takeaways": [
+    "War rooms/lockdowns buy focus but tax morale: her Facebook Marketplace growth war room ('we won't exit until we hit the number', 75 experiments launched at once) dragged on 2+ months, and her regret is not being realistic and upfront with the team about how long it would take.",
+    "Manager-of-managers advice: treat it as an explicit partnership (divide and conquer by strengths) and build a 'trust but verify' muscle; her nightmare is the 'this is fine' dog meme, so she asks for fast, transparent two-way feedback.",
+    "Mentoring and coaching are different modes — mentoring is listening plus advice, coaching is acting as a mirror so the person discovers answers themselves; the best relationships have mentee-set goals and an explicit 'what does success look like in 3/6 months' conversation.",
+    "1:1 advice for ICs: push status reporting to async (Slack or a shared living doc) and use the live time for real conversations about learning, career, and digging deeper into the work.",
+    "She left Microsoft in 2015 only after shipping TypeScript 1.0, recruited by a former Visual Studio colleague to build what became Facebook Marketplace; the draws were mission (affordable used goods, reuse, small businesses) and escaping the 'safe cocoon' of the Microsoft stack after 11.5 years.",
+    "Culture contrast: Facebook Marketplace ran one-week sprints vs four weeks on Visual Studio, and 'nothing at Facebook is somebody else's problem' was the culture she loved.",
+    "Dogfooding is her signature leadership practice — using Visual Studio to build Visual Studio, selling household items to seed Marketplace inventory in the Seattle/Hawaii test launch, reproducing VR floor-height bugs at home — framed as a manager's 'maker time' and a trust-builder with engineers and PMs.",
+    "Dogfooding tips: integrate it with things that bring you joy (VR workouts, knitting while watching movies in-headset) and hold weekly leadership dogfooding sessions with PM and design partners for fast feedback on nearly-shipped features.",
+    "Kindness as an engineering value crystallized during COVID when a report let her cancel a 1:1 for a rare FaceTime slot with her grandmother in assisted living: 'in a world where you can be anything, be kind.'",
+    "She wasn't job hunting; using Claude (a Sonnet model) through Meta's internal DevMate tool convinced her AI is 'already here,' and Anthropic's genuine safety-first mission-orientation — evident from day-one onboarding, not just a tagline — pulled her away from a VR role she loved.",
+    "Claude Code's iteration loop (idea, build, internal launch, feedback, public launch) feels faster than even early Marketplace days; keeping that agility as the team grows is her top concern.",
+    "Career-changing feedback was feedback on receiving feedback: don't 'debug' the giver in the moment — stay in read-only mode, listen, hold questions until the next day, and never make someone justify constructive feedback."
+  ],
+  "notable_quotes": [
+    {"speaker": "Fiona Fung", "quote": "That meme of the dog holding the coffee cup in a room on fire, 'This is fine,' is my nightmare.", "t": "05:03"},
+    {"speaker": "Fiona Fung", "quote": "I'm super excited because I'm using Claude Code to build Claude Code. It's the first time I've been able to ship production software in a really long time.", "t": "15:42"},
+    {"speaker": "Fiona Fung", "quote": "When someone cares enough to come to you for constructive feedback, it's already uncomfortable enough. Make sure that that first session, you're just in read-only mode just to learn and listen.", "t": "27:36"},
+    {"speaker": "Fiona Fung", "quote": "Enjoy the ride and these are the good old days, because you'll look back and everything happened so fast.", "t": "28:52"}
+  ],
+  "related": [
+    {"slug": "boris-cherny-creator-of-claude-code", "reason": "she leads the team behind Claude Code, which Boris created; shared Anthropic context"},
+    {"slug": "frontline-manager-at-meta-to-senior", "reason": "parallel Meta engineering-management ladder to senior director"},
+    {"slug": "meta-senior-manager-m2-on-manager", "reason": "manager craft and career growth inside Meta's management track"},
+    {"slug": "ex-head-of-eng-at-instagram-career", "reason": "senior Meta engineering leadership reflecting on culture and regrets"},
+    {"slug": "intern-to-microsoft-distinguished", "reason": "contrasting long Microsoft career arc — she left the cocoon, he climbed within it"}
+  ],
+  "transcript_complete": true
+}

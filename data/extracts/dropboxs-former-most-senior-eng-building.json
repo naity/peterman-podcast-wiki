@@ -1,0 +1,57 @@
+{
+  "slug": "dropboxs-former-most-senior-eng-building",
+  "n": 47,
+  "title": "Dropbox's Former Most Senior Eng: Building Great Systems and Advice for the AI Era | James Cowling",
+  "date": "2026-05-25",
+  "url": "https://www.developing.dev/p/dropboxs-former-most-senior-eng-building",
+  "guest": "James Cowling",
+  "guest_role": "CTO and co-founder of Convex, former most senior engineer at Dropbox, MIT PhD in distributed systems",
+  "guest_slug": "james-cowling",
+  "companies": ["dropbox", "aws", "mit"],
+  "concepts": ["distributed-systems", "systems-design", "career-growth", "promotions", "influence-and-leadership", "management", "ai-era-engineering", "startups-and-founding"],
+  "sections": [
+    {"t": "0:53", "title": "Systems work during his PhD"},
+    {"t": "13:05", "title": "Dropbox technical deep dive"},
+    {"t": "21:57", "title": "Why Dropbox migrated from AWS"},
+    {"t": "36:40", "title": "How to do massive migrations"},
+    {"t": "44:31", "title": "Simplicity vs complexity in promos"},
+    {"t": "49:23", "title": "What technical teams should be focused on"},
+    {"t": "1:00:25", "title": "Doing the right thing vs promo hypothetical"},
+    {"t": "1:08:13", "title": "Why he dipped into management sometimes"},
+    {"t": "1:11:36", "title": "Why you shouldn't lead by example"},
+    {"t": "1:23:23", "title": "How to mentor Senior Staff+ engineers"},
+    {"t": "1:27:30", "title": "Career advice for the AI era"},
+    {"t": "1:37:21", "title": "Why he started his own company"},
+    {"t": "1:46:05", "title": "The most technically challenging work of his career"},
+    {"t": "1:48:10", "title": "How he got involved in Silicon Valley"},
+    {"t": "1:52:16", "title": "Career regrets"},
+    {"t": "1:55:54", "title": "Top technical book recommendation"},
+    {"t": "1:56:36", "title": "Younger self & permanent underclass advice"}
+  ],
+  "key_takeaways": [
+    "His MIT PhD work Granola (distributed transaction coordination via 'independent transactions' that avoid two-phase commit) predated and was cited by Google's Spanner; his Viewstamped Replication Revisited paper influenced companies like TigerBeetle. Core insight: performance at scale is about eliminating points of coordination, not faster hardware.",
+    "A PhD is training to be a researcher, not more college; its real value is learning to sit with uncertainty on problems nobody can answer for you — an experience he is glad predated LLMs as a crutch.",
+    "Dropbox's Magic Pocket achieved a modeled ~24 nines of durability via erasure coding (~27 fragments across racks, power feeds, drive vendors, regions); racing reads (e.g. need 6 of 9 fragments) make erasure-coded reads faster than unreplicated ones.",
+    "Dropbox left S3 for strategic control and massive pre-IPO cost savings, exploiting first-at-scale Shingled Magnetic Recording disks and a tight understanding of its own workload; peak migration bandwidth was 764 Gbps and it was then the largest data migration in history — yet he advises nearly everyone else to stay on the cloud.",
+    "The storage stack went Python to Go to Rust (both pre-GA): Go runtime OOMs looked like disk failures and could 7x load into congestion collapse, so storage nodes were rewritten in Rust addressing disks directly via draft ZBC specs with no filesystem.",
+    "Migration discipline: a dark launch double-writing to S3 and Magic Pocket with six months of required zero-incident operation before deleting from S3; when a bug slipped through, he voluntarily reset the clock at double-digit-million cost and leadership thanked him.",
+    "Simplicity is the hardest and most scalable property: the block index was 'just' 1,000 MySQL nodes that could be continuously walked for validation — design for validation and for what happens when the system doesn't work; he says AI/agentic development is bad at simplicity, which remains a human domain for now.",
+    "Promotion systems that reward complexity anger him and partly drove him to found Convex; orient teams around missions (Storage team) not systems (Magic Pocket team) so nobody's identity depends on defending an obsolete system, and be willing to shut down inertia-driven projects.",
+    "Career: choose working with the best people over 20% more pay; stay 3+ years to own the consequences of your decisions; don't enter management too early (ideally after reaching staff) or you'll lack technical depth to influence strategy; wanting management too much is a red flag.",
+    "Don't lead by example — it's passive; his team assumed on-call heroics were 'James's job.' Teach explicitly, delegate ownership, and fix organizational conflict at the level of 'why' (demand 100% alignment on why, then trust the team on how)."
+  ],
+  "notable_quotes": [
+    {"speaker": "James Cowling", "quote": "Simple systems are way harder to design than complex systems. Simplicity is so hard... If after the fact people think it's obvious, then you really nailed it.", "t": "42:49"},
+    {"speaker": "James Cowling", "quote": "It's not about getting a system to work. It's what do you do when it doesn't work.", "t": "42:19"},
+    {"speaker": "James Cowling", "quote": "If you have two choices — making 20% more money now or working with the best people in the world — just be around the best people because that's going to set you on the ship to success.", "t": "1:02:20"},
+    {"speaker": "James Cowling", "quote": "The luxury is you don't get up and have to do a terrible job. You get up and go to a place where you like your coworkers, and you solve cool problems, and you go home and feel proud of yourself.", "t": "1:07:49"}
+  ],
+  "related": [
+    {"slug": "aws-distinguished-eng-learnings-from", "reason": "AWS-scale systems and incidents; the other side of the S3 migration story"},
+    {"slug": "turing-award-winner-data-abstraction", "reason": "Cowling's PhD field; Viewstamped Replication Revisited revisits Liskov's protocol"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "Paxos/Raft/Viewstamped Replication equivalence; Lamport invented Paxos"},
+    {"slug": "distinguished-eng-on-stack-ranking", "reason": "Kindred strong opinions on engineering culture and incentives vs promo games"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "Fellow infra-minded founder on how AI is changing software engineering"}
+  ],
+  "transcript_complete": false
+}
