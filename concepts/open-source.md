@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-07-19
-sources: [the-creator-of-kubernetes-on-building.md, ex-head-of-eng-at-instagram-career.md, mozilla-firefox-cto-on-browser-war.md, openai-eng-and-dev-tools-founder.md, openai-codex-tech-lead-on-how-his.md, intern-to-microsoft-distinguished.md, co-creator-of-haskell-functional.md, google-deepmind-pre-training-lead.md, instagram-principal-eng-ic8-on-building.md, msl-eng-director-promo-hacking-industry.md]
+updated: 2026-07-27
+sources: [the-creator-of-kubernetes-on-building.md, ex-head-of-eng-at-instagram-career.md, mozilla-firefox-cto-on-browser-war.md, openai-eng-and-dev-tools-founder.md, openai-codex-tech-lead-on-how-his.md, intern-to-microsoft-distinguished.md, co-creator-of-haskell-functional.md, google-deepmind-pre-training-lead.md, instagram-principal-eng-ic8-on-building.md, msl-eng-director-promo-hacking-industry.md, creator-of-ocaml-functional-programming.md]
 ---
 
 # Open source
@@ -22,7 +22,7 @@ Bobby Holley is blunt that Firefox — the last independent browser engine — i
 
 Early Mozilla had no onboarding guardrails — "get on IRC and Bugzilla and figure things out" — which selected for self-motivated engineers, and ownership transferred by "who owns this?" / "you do now" ([episode](../sources/mozilla-firefox-cto-on-browser-war.md)). Simon Peyton Jones has maintained GHC for 35 years and credits static types with making the codebase fearlessly refactorable across generations of contributors ([episode](../sources/co-creator-of-haskell-functional.md)). Burns says Kubernetes' loosely-coupled ~15-process architecture and its learnability were shaped by the writing and teaching skills of its academic founders ([episode](../sources/the-creator-of-kubernetes-on-building.md)).
 
-The AI era is straining these mechanics. Marsh: the cost of a plausible PR has gone to zero while review cost stays high — a two-minute agent PR to Ty can take maintainers an hour to vet — so Astral's policy requires contributors to understand what they submit; he warns the compounding mentorship loop between maintainers and contributors is breaking down ([episode](../sources/openai-eng-and-dev-tools-founder.md)). Peyton Jones' line is the same: he will not merge unreviewed AI-generated code into GHC ([episode](../sources/co-creator-of-haskell-functional.md)).
+The AI era is straining these mechanics. Marsh: the cost of a plausible PR has gone to zero while review cost stays high — a two-minute agent PR to Ty can take maintainers an hour to vet — so Astral's policy requires contributors to understand what they submit; he warns the compounding mentorship loop between maintainers and contributors is breaking down ([episode](../sources/openai-eng-and-dev-tools-founder.md)). Peyton Jones' line is the same: he will not merge unreviewed AI-generated code into GHC ([episode](../sources/co-creator-of-haskell-functional.md)). Xavier Leroy (2026-07-20) reports the incoming-issues side: OCaml and especially CompCert now receive AI-generated bug reports — maybe one good issue in ten, each several pages long with repro cases that reproduce nothing or something else — and it takes real maintainer time to triage; he notes some projects already refuse generated contributions and says "maybe at some point I will say no to AI-generated contributions" ([episode](../sources/creator-of-ocaml-functional-programming.md)).
 
 ### Open source as career leverage
 
@@ -32,7 +32,7 @@ Guests disagree on romantic framings but agree on the mechanism: public artifact
 
 - Open-source when you'd rather own the playing field than the code; then formalize governance so partners trust it (Burns [episode](../sources/the-creator-of-kubernetes-on-building.md)).
 - If your open source is a cost center, know exactly what it buys (standards influence, trust, distribution) and fund it deliberately (Holley [episode](../sources/mozilla-firefox-cto-on-browser-war.md); Marsh [episode](../sources/openai-eng-and-dev-tools-founder.md)).
-- As a maintainer, set an explicit AI-contribution policy: submitters must understand their patch, and unreviewed generated code doesn't merge (Marsh [episode](../sources/openai-eng-and-dev-tools-founder.md); Peyton Jones [episode](../sources/co-creator-of-haskell-functional.md)).
+- As a maintainer, set an explicit AI-contribution policy: submitters must understand their patch, and unreviewed generated code doesn't merge (Marsh [episode](../sources/openai-eng-and-dev-tools-founder.md); Peyton Jones [episode](../sources/co-creator-of-haskell-functional.md); Leroy weighing an outright ban [episode](../sources/creator-of-ocaml-functional-programming.md)).
 - Ship public artifacts even if most die — one project can open a career door years later (Fowler [episode](../sources/intern-to-microsoft-distinguished.md); Olson [episode](../sources/instagram-principal-eng-ic8-on-building.md)).
 - Open-sourcing an agent that runs on user machines is a security feature, not just marketing (Bolin [episode](../sources/openai-codex-tech-lead-on-how-his.md)).
 

@@ -1,9 +1,10 @@
 # Index
 
-Knowledge base for The Peterman Post podcast (developing.dev) — 54 episodes ingested, 53 guests, 20 organizations, 31 concepts. Last updated 2026-07-19.
+Knowledge base for The Peterman Post podcast (developing.dev) — 55 episodes ingested, 54 guests, 20 organizations, 32 concepts. Last updated 2026-07-19.
 
 ## Sources (episodes, newest first)
 
+- [#55: Creator of OCaml: Functional Programming, Formal Verification, Programming Languages | Xavier Leroy](sources/creator-of-ocaml-functional-programming.md) — Xavier Leroy created OCaml at Inria and later led CompCert, the formally verified C compiler proved correct in the Coq/Rocq proof assistant. The conversation is a language-designer
 - [#54: Turing Award Winner: TPUs vs GPUs vs CPUs, Computer Architecture, RISC vs CISC | David Patterson](sources/turing-award-winner-tpu-vs-gpu-vs.md) — David Patterson is a Turing Award winner, UC Berkeley professor, co-author (with John Hennessy) of the standard computer architecture textbooks, coiner of "RISC," and now works at 
 - [#53: Turing Award Winner: NSA, Public Key Cryptography, Crypto Wars | Martin Hellman](sources/turing-award-winner-nsa-public-key.md) — Martin Hellman co-invented public-key cryptography and the Diffie-Hellman key exchange at Stanford, work that won him the Turing Award and put him in direct conflict with the NSA. 
 - [#52: MIT Complexity Theorist: Why You Can Do Better Than 'Optimal' On Leetcode & SAT | Ryan Williams](sources/mit-complexity-theorist-on-leetcode.md) — Ryan Williams is a complexity-theory professor at MIT and Gödel Prize winner, best known recently for a shocking 2025 result that time-T computation can be simulated in about squar
@@ -116,6 +117,7 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 54 episodes in
 - [Stefan Mai](entities/stefan-mai.md) — Former Senior Manager (M2) at Meta and Software Development Manager at Amazon; co-founder of interview-prep company Hello Interview with Evan King (episode)
 - [Steve Huynh](entities/steve-huynh.md) — Ex-Amazon Principal Engineer (~19 years at the company) and creator of the A Life Engineered YouTube channel on engineering careers (episode)
 - [Vlad Feinberg](entities/vlad-feinberg.md) — Pre-training area lead at Google DeepMind for Gemini Flash and Flash-Lite (Google) (episode)
+- [Xavier Leroy](entities/xavier-leroy.md) — Creator of the OCaml programming language and lead of CompCert, the formally verified C compiler; French researcher hired at Inria in the 1990s, now a professor (Collège de France)
 
 ## Entities — organizations
 
@@ -160,7 +162,8 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 54 episodes in
 - [Databases](concepts/databases.md) — Database systems as told by the field's founder (Mike Stonebraker, creator of Ingres and Postgres), one of its biggest industrial builders (Marc Brooker, AWS databases), and the pe
 - [Developer tools](concepts/developer-tools.md) — Building tools for other engineers — build systems, editors, notebooks, linters — recurs as both a product category and a career engine: several guests earned their highest promoti
 - [Distributed systems](concepts/distributed-systems.md) — How the podcast's guests — spanning the people who invented consensus protocols to the people who operate hundreds of thousands of machines — think about building computer systems 
-- [Functional programming](concepts/functional-programming.md) — Programming with values instead of mutation — covered definitively by Haskell co-creator Simon Peyton Jones and echoed from industry by Boris Cherny, who credits type-driven functi
+- [Formal verification](concepts/formal-verification.md) — Proving programs correct with mathematics instead of (only) testing — anchored by Xavier Leroy, who spent years proving the CompCert C compiler correct, and Leslie Lamport, for who
+- [Functional programming](concepts/functional-programming.md) — Programming with values instead of mutation — covered definitively by the creators of both major ML-family survivors, Haskell's Simon Peyton Jones and OCaml's Xavier Leroy, and ech
 - [Hiring and interviews](concepts/hiring-and-interviews.md) — How tech companies actually decide who to hire and at what level — the coding/behavioral interview machinery, hiring committees, referrals, and leveling — told from both sides of t
 - [Imposter syndrome](concepts/imposter-syndrome.md) — Self-doubt among engineers at every level — from new hires at big tech to the creator of C++ arriving at Bell Labs and a Turing Award winner starting as a Berkeley professor — and 
 - [Incident management](concepts/incident-management.md) — On-call, postmortems, and outages — dominated by Marc Brooker's learnings from 3,000+ AWS incident reviews, with contrasting views from other guests on heroics, preparation, and wh
@@ -170,7 +173,7 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 54 episodes in
 - [Mentorship and sponsorship](concepts/mentorship-and-sponsorship.md) — Two related but distinct relationships: mentors teach and advise; sponsors stake their own credibility on your advancement. The episodes cover how to get both, how to be both, and 
 - [Non-linear careers](concepts/non-linear-careers.md) — Careers that refuse the ladder: voluntary demotions, lateral and downward moves, dropouts, boomerangs, blocked doors, and detours — and the podcast's recurring claim that careers m
 - [Open source](concepts/open-source.md) — Open source appears in the podcast as corporate strategy (Kubernetes, Mozilla), as a business model problem (Astral, Firefox), as a career accelerant, and — most recently — as an e
-- [Programming languages](concepts/programming-languages.md) — The podcast has interviewed an unusual density of language creators — CLU (Barbara Liskov), C++ (Bjarne Stroustrup), Haskell (Simon Peyton Jones), Hack's tech lead (Dwayne Reeves),
+- [Programming languages](concepts/programming-languages.md) — The podcast has interviewed an unusual density of language creators — CLU (Barbara Liskov), C++ (Bjarne Stroustrup), Haskell (Simon Peyton Jones), OCaml (Xavier Leroy), Hack's tech
 - [Promotions](concepts/promotions.md) — How engineers actually get promoted at big tech companies — the hidden mechanics of promo committees, sponsorship, scope, and business need — and the podcast's liveliest running ar
 - [Regrets and advice](concepts/regrets-and-advice.md) — Nearly every episode ends with "what would you tell your younger self?" — producing the podcast's densest vein of distilled experience, from Turing Award winners to anonymous laid-
 - [Security and cryptography](concepts/security-and-cryptography.md) — Two intertwined threads across the episodes: the invention and politics of cryptography (told by the people who fought the crypto wars), and the practice of security engineering in

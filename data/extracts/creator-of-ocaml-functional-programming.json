@@ -1,0 +1,54 @@
+{
+  "slug": "creator-of-ocaml-functional-programming",
+  "n": 55,
+  "title": "Creator of OCaml: Functional Programming, Formal Verification, Programming Languages | Xavier Leroy",
+  "date": "2026-07-20",
+  "url": "https://www.developing.dev/p/creator-of-ocaml-functional-programming",
+  "guest": "Xavier Leroy",
+  "guest_role": "Creator of OCaml; CompCert verified-compiler lead; professor at Collège de France (ex-Inria)",
+  "guest_slug": "xavier-leroy",
+  "companies": ["inria", "jane-street"],
+  "concepts": ["programming-languages", "functional-programming", "formal-verification", "ai-coding-tools", "ai-era-engineering", "open-source", "hiring-and-interviews", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:43", "title": "What sets OCaml apart"},
+    {"t": "04:39", "title": "OCaml vs Rust"},
+    {"t": "07:57", "title": "Why is manual memory management more performant"},
+    {"t": "11:21", "title": "Javascript vs OCaml"},
+    {"t": "14:00", "title": "Famous Rob Pike quote"},
+    {"t": "16:05", "title": "Type inference and how it works"},
+    {"t": "22:12", "title": "What is formal verification and how does it work"},
+    {"t": "40:07", "title": "What made multicore support difficult for OCaml"},
+    {"t": "50:17", "title": "How programming languages interface and call each other"},
+    {"t": "57:41", "title": "The danger of almost-correct LLM code"},
+    {"t": "01:05:39", "title": "How LLMs will change programming languages"},
+    {"t": "01:10:26", "title": "Industry vs academia"},
+    {"t": "01:15:05", "title": "Most interesting unsolved problems"},
+    {"t": "01:18:30", "title": "Top book recommendations for engineers"},
+    {"t": "01:21:17", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "OCaml pairs a fine functional language with a decent systems language: predictable cost model, low-latency GC (Cornell's Ensemble ran GC while packets were in flight), which led Yaron Minsky to build Jane Street's trading infrastructure on it.",
+    "The OCaml/Rust dividing line is memory management, and manual isn't automatically faster: GC costs 10-30% at runtime, but manual-memory code that defensively copies (or unshares to satisfy ownership) can lose to a GC; OxCaml-style stack allocation wins less than expected because short-lived objects are already nearly free for a generational GC.",
+    "Type inference is constraint solving ('a little bit like Sudoku'), and Milner's insight is that leftover unconstrained types are polymorphism for free; the costs are confusing error messages and poor interaction with subtyping.",
+    "Formal verification, per Dijkstra's 'testing can only show the presence of bugs': proof assistants (Lean, Coq/Rocq, Isabelle) record machine-recheckable proofs; CompCert proves the compiler's assembly is faithful to the C source, and seL4 proved all 8,000 lines of a microkernel; mechanized proofs are what makes verified software evolvable.",
+    "Multicore OCaml took until 2022 because of concurrent GC engineering plus the memory-model design problem (Java needed five iterations; type safety under data races is very hard); Leroy always preferred Erlang-style message passing over shared memory ('breaking into your neighbor's house and moving the furniture').",
+    "On LLM code: 'every new line of code is a liability' - writing cost drops to zero but checking cost doesn't, humans will not review the volume, and CompCert/OCaml already get mostly-noise AI bug reports he may ban; the way out is AI emitting machine-checkable proofs, which moves the hard problem to writing trustworthy specifications (an unsatisfiable precondition vacuously verifies anything).",
+    "Type systems measurably help LLM code generation, and LLMs write OCaml about as well as popular languages despite less training data; he hopes the safer languages win the LLM era, and expects C/C++-to-Rust translations plus functional-code-to-proof-assistant migrations.",
+    "PL innovation inverted: early greats (ALGOL, Lisp, Smalltalk) were academic while industry built Fortran/COBOL; now industry ships research fast - Java mainstreamed GC in two years, Rust industrialized 2000s academic safe-low-level-programming results academia couldn't have shipped. He was told at Inria hiring time 'industry has decided it will be C forever'; Java disproved it.",
+    "Books: Programming Pearls (Bentley) and How to Design Programs (Felleisen et al.); advice to younger self: he specialized too early - build broad CS foundations (computability, complexity), which quantum computing is now forcing him to relearn at almost 60."
+  ],
+  "notable_quotes": [
+    {"speaker": "Xavier Leroy (quoting Dijkstra)", "quote": "Testing can only show the presence of bugs, but not their complete absence.", "t": "22:25"},
+    {"speaker": "Xavier Leroy", "quote": "It's a bit like if you want to communicate with your neighbor, then you break into their house and move the furniture around, and then when they are back they say, 'Oh, something was moved.'", "t": "42:19"},
+    {"speaker": "Xavier Leroy", "quote": "Well, the cost of writing code maybe, but what about checking it, making sure it is correct? ... For me, every new line of code is a liability... I want 50 lines of code that have been thought through.", "t": "59:35"},
+    {"speaker": "Xavier Leroy", "quote": "Maybe this will be the decade of formal verification of software. We've been waiting for that for 50 years. Maybe it will finally take off.", "t": "01:18:09"}
+  ],
+  "related": [
+    {"slug": "co-creator-of-haskell-functional", "reason": "sibling ML-family language creator; both argue types help LLM codegen"},
+    {"slug": "creator-of-c-bell-labs-negative-overhead", "reason": "language-creator counterpoint; shared LLM-code skepticism; CompCert verifies C"},
+    {"slug": "turing-award-winner-on-working-with", "reason": "formal methods and proofs-as-understanding (Lamport)"},
+    {"slug": "openai-eng-and-dev-tools-founder", "reason": "AI slop burden on maintainers; Rust adoption enthusiasm Leroy tempers"},
+    {"slug": "turing-award-winner-p-vs-np-zero", "reason": "computability/complexity foundations and proofs from the theory side"}
+  ],
+  "transcript_complete": true
+}

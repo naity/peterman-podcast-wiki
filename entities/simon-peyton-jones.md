@@ -27,6 +27,7 @@ Peyton Jones describes his research life as one long experiment in [functional p
 
 - [Episode: Co-Creator of Haskell: Functional Programming, Thinking in Types, Useless Languages](../sources/co-creator-of-haskell-functional.md) — his interview
 - [Bjarne Stroustrup](bjarne-stroustrup.md) — fellow language creator; C++ is the "useful but dangerous" counterpoint on his safety-vs-usefulness graph
+- [Xavier Leroy](xavier-leroy.md) — creator of OCaml, the strict/impure sibling in SPJ's Haskell-vs-OCaml story; independently confirms SPJ's bet that type systems help LLM code generation
 - [Charlie Marsh](charlie-marsh.md) — builds the type checkers and tooling that operationalize these ideas for Python
 - [David Patterson](david-patterson.md) — the hardware-architecture view of why specialized machines win or lose
 - [functional-programming](../concepts/functional-programming.md), [programming-languages](../concepts/programming-languages.md), [teaching-and-communication](../concepts/teaching-and-communication.md)

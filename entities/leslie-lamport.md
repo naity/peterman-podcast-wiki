@@ -27,4 +27,5 @@ The Bakery algorithm was born of spite: his first submitted mutual-exclusion alg
 - [Barbara Liskov](barbara-liskov.md) — invented the same consensus protocol independently (Viewstamped Replication); fellow Dijkstra colleague
 - [Marc Brooker](marc-brooker.md) — cites Lamport on writing and formal thinking; industrializes Paxos-style consensus
 - [Brendan Burns](brendan-burns.md) — Kubernetes delegates leader election to Raft-based etcd
+- [Xavier Leroy](xavier-leroy.md) — mechanized Lamport's proofs-are-understanding worldview at compiler scale (CompCert); see [formal-verification](../concepts/formal-verification.md)
 - [working with legends](../concepts/working-with-legends.md), [security and cryptography](../concepts/security-and-cryptography.md)

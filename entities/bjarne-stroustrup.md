@@ -26,6 +26,7 @@ His Cambridge PhD ordeal — rewriting a Simula simulator in BCPL (~50x faster, 
 
 - [Episode: Creator of C++: Bell Labs, Negative Overhead Abstraction, Mistakes](../sources/creator-of-c-bell-labs-negative-overhead.md) — his interview
 - [Simon Peyton Jones](simon-peyton-jones.md) — fellow language creator; Stroustrup recommends learning ML/Haskell
+- [Xavier Leroy](xavier-leroy.md) — creator of OCaml and of CompCert, the formally verified C compiler; shares his skepticism of unvalidated LLM code from the [formal-verification](../concepts/formal-verification.md) side
 - [David Patterson](david-patterson.md) — the hardware side of the compiler/register story C++ grew up in
 - [Charlie Marsh](charlie-marsh.md) — the optimistic counterpoint on AI-era developer tooling
 - [programming-languages](../concepts/programming-languages.md), [working-with-legends](../concepts/working-with-legends.md), [teaching-and-communication](../concepts/teaching-and-communication.md)
