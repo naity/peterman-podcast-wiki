@@ -28,5 +28,6 @@ Started building Ingres at Berkeley in 1972 — one year after Ted Codd's relati
 - [Barbara Liskov](barbara-liskov.md) — fellow Turing laureate; borrowed transactions from his field
 - [Leslie Lamport](leslie-lamport.md) — the consistency/transactions theory behind the eventual-consistency debate
 - [Marc Brooker](marc-brooker.md) — AWS databases insider on the other side of his "12 too many" critique
+- [Judea Pearl](judea-pearl.md) — supplies the mechanism behind Stonebraker's text-to-SQL benchmark collapse: models summarize interpretation humans already published
 - [Bryan Cantrill](bryan-cantrill.md) — fellow systems contrarian building companies in Oracle's shadow
 - [distributed systems](../concepts/distributed-systems.md), [regrets and advice](../concepts/regrets-and-advice.md)

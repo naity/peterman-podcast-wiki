@@ -1,0 +1,51 @@
+{
+  "slug": "turing-award-winner-early-ai-llm",
+  "n": 56,
+  "title": "Turing Award Winner: Early AI, LLM Predictions, Causality | Judea Pearl",
+  "date": "2026-07-27",
+  "url": "https://www.developing.dev/p/turing-award-winner-early-ai-llm",
+  "guest": "Judea Pearl",
+  "guest_role": "Turing Award winner (2011); professor of computer science at UCLA; inventor of Bayesian networks and the do-calculus",
+  "guest_slug": "judea-pearl",
+  "companies": ["ucla"],
+  "concepts": ["causality", "ai-era-engineering", "academia-vs-industry", "teaching-and-communication", "regrets-and-advice", "non-linear-careers"],
+  "sections": [
+    {"t": "00:54", "title": "How he got into AI"},
+    {"t": "11:17", "title": "Greatest scientist of all time"},
+    {"t": "20:15", "title": "What people thought of AI in the 80s"},
+    {"t": "26:23", "title": "Entering academia and researching AI"},
+    {"t": "34:52", "title": "The invention of Bayesian networks"},
+    {"t": "46:28", "title": "Pioneering work in causality"},
+    {"t": "55:38", "title": "The causal hierarchy"},
+    {"t": "59:34", "title": "LLMs and predictions"},
+    {"t": "01:20:12", "title": "A restless mind pays"},
+    {"t": "01:24:36", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "The ladder of causation has three rungs - association (seeing), intervention (doing, the do-operator), and counterfactual explanation - and the load-bearing theorem is that you cannot answer a question at rung n+1 using only rung-n data plus no assumptions.",
+    "Probability alone cannot express causation because it is symmetric; the missing property is invariance (causal relations survive interventions and transplants), and the fix was layering computer science's directional assignment operator on top of algebra. Without it a machine concludes that fiddling with the barometer changes the weather.",
+    "LLMs do not violate the causal hierarchy because they never see raw environmental data - they consume text already interpreted causally by humans, so they summarize assumption-laden world models built at rungs 2 and 3 while operating at rung 1. 'How it summarizes is a mystery that no one has yet been able to decode.'",
+    "On AGI: 'I don't think so, but not without the element. They need to have some understanding of causality.' He wants a hybrid he calls causal AI - LLMs' finite-sample-to-distribution ability plus rung-2/3 reasoning - is confident AGI is eventually achievable, and cites Hinton's 'we are on a dead end' against labs promising AGI in three to five years.",
+    "He lived through the previous overshoot: in the 1960s the field predicted human-level machine intelligence within twenty years and debated only how and when, never whether. He applies the same rigor demand to consciousness claims - 'What is the Turing Test for consciousness?' - and says of anthropomorphic AI marketing, 'I don't buy this, and I don't read them even.'",
+    "Bayesian networks came from asking why humans handle uncertainty well when textbook probability is exponential: most facts are irrelevant to most queries ('the color of the eye of my uncle is irrelevant when I'm trying to find a diagnosis'), so encode conditional independence in a graph. With Azaria Paz he showed the axioms of conditional independence in probability are the same axioms as graph separation.",
+    "'The scientific community and academic community is the most dogmatic, conservative, anti-progress that we have invented' - aimed at how slowly causal science penetrates statistics and economics, where 'these people are still thinking like 100 years ago.' He tells students to rebel against their professors, including him, and says students who told him he knew nothing about AI turned out to be right.",
+    "Career path: refugee German professors in Mandate Palestine taught science historically, as the work of human actors rather than a recipe of algorithms; EE and physics at the Technion (third or fourth in his class); superconducting memory at RCA's David Sarnoff lab, where he discovered the thin-film vortices now called the Pearl vortex, before semiconductors killed the technology; UCLA from ~1969-70 teaching memory hardware, then pattern recognition, then AI.",
+    "He proved alpha-beta pruning mathematically optimal, a result that surprised Donald Knuth, then 'got sick and tired of search' and moved to reasoning under uncertainty.",
+    "Advice to his younger self: more chemistry, which he avoided because it required memorization rather than derivation - while defending specialization as a real tradeoff. The closing principle doubles as his theory of intelligence: 'You don't store the questions and the answers explicitly. You derive them when you need them from a very parsimonious code.'"
+  ],
+  "notable_quotes": [
+    {"speaker": "Judea Pearl", "quote": "You cannot go from level I to level I plus 1 unless you have assumptions here.", "t": "59:36"},
+    {"speaker": "Judea Pearl", "quote": "They are not looking directly at the data in the environment. They're looking at interpreted data, data interpreted already by physicians and interpreters.", "t": "01:01:04"},
+    {"speaker": "Judea Pearl", "quote": "I don't think so, but not without the element. They need to have some understanding of causality.", "t": "01:02:54"},
+    {"speaker": "Judea Pearl", "quote": "The scientific community and academic community is the most dogmatic, conservative, anti-progress that we have invented.", "t": "01:20:23"},
+    {"speaker": "Judea Pearl", "quote": "You don't store the questions and the answers explicitly. You derive them when you need them from a very parsimonious code.", "t": "01:26:21"}
+  ],
+  "related": [
+    {"slug": "turing-award-winner-p-vs-np-zero", "reason": "impossibility results as a mode of argument; what is knowable in principle"},
+    {"slug": "turing-award-winner-postgres-disagreeing", "reason": "Stonebraker's text-to-SQL benchmark collapse is Pearl's 'models summarize human interpretation, not your data' in production"},
+    {"slug": "creator-of-ocaml-functional-programming", "reason": "both demand an external correctness apparatus for LLM output, and both judge academia from inside it"},
+    {"slug": "google-deepmind-pre-training-lead", "reason": "the frontier-lab scaling view Pearl is betting against"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "the compute curve that made scaling work, against Pearl's claim that compute isn't the missing ingredient"}
+  ],
+  "transcript_complete": false
+}

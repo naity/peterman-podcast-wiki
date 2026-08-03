@@ -26,5 +26,6 @@ Williams built his career on [complexity theory](../concepts/complexity-theory.m
 
 - [Episode: MIT Complexity Theorist: Why You Can Do Better Than 'Optimal' On Leetcode & SAT](../sources/mit-complexity-theorist-on-leetcode.md) — his interview
 - [Avi Wigderson](avi-wigderson.md) — same field; Wigderson explains Williams' sqrt(T) result in his own episode
+- [Judea Pearl](judea-pearl.md) — proved alpha-beta pruning optimal, surprising Knuth; a fellow believer that 'optimal' requires a theorem
 - [Martin Hellman](martin-hellman.md) — cryptography rests on the hardness assumptions Williams studies
 - [complexity-theory](../concepts/complexity-theory.md), [regrets-and-advice](../concepts/regrets-and-advice.md), [teaching-and-communication](../concepts/teaching-and-communication.md)

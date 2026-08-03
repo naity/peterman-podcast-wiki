@@ -27,5 +27,6 @@ Wigderson's episode is less biography than a guided tour of [complexity theory](
 
 - [Episode: Turing Award Winner: P vs NP, Zero-Knowledge Proofs, Quantum Computation](../sources/turing-award-winner-p-vs-np-zero.md) — his interview
 - [Ryan Williams](ryan-williams.md) — same field; gives contrarian probabilities on Wigderson's core questions
+- [Judea Pearl](judea-pearl.md) — a Turing laureate whose central result is also an impossibility statement, in causal inference rather than complexity
 - [Martin Hellman](martin-hellman.md) — public-key cryptography rests on the one-way functions Wigderson's results assume
 - [complexity-theory](../concepts/complexity-theory.md), [security-and-cryptography](../concepts/security-and-cryptography.md), [teaching-and-communication](../concepts/teaching-and-communication.md)

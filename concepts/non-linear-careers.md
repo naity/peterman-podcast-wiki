@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-07-19
-sources: [openai-and-meta-distinguished-engineer.md, meta-senior-staff-ic7-engs-honest.md, distinguished-engineer-at-shopify.md, ex-head-of-eng-at-instagram-career.md, turing-award-winner-data-abstraction.md, turing-award-winner-nsa-public-key.md, quitting-robinhood-and-raising-35m.md, laid-off-from-big-tech-after-25-years.md, 21x-hackathon-winner-turned-college.md, frontline-manager-at-meta-to-senior.md, intern-to-microsoft-distinguished.md, new-grad-to-principal-engineer-ic8.md, instagram-staff-ic6-promo-despite.md, tech-lead-for-metas-most-used-programming.md, airbnb-staff-eng-on-how-to-not-get.md, 26-year-old-meta-staff-eng-ic6-on.md, amazon-vp-on-promotions-getting-fired.md]
+updated: 2026-08-03
+sources: [turing-award-winner-early-ai-llm.md, openai-and-meta-distinguished-engineer.md, meta-senior-staff-ic7-engs-honest.md, distinguished-engineer-at-shopify.md, ex-head-of-eng-at-instagram-career.md, turing-award-winner-data-abstraction.md, turing-award-winner-nsa-public-key.md, quitting-robinhood-and-raising-35m.md, laid-off-from-big-tech-after-25-years.md, 21x-hackathon-winner-turned-college.md, frontline-manager-at-meta-to-senior.md, intern-to-microsoft-distinguished.md, new-grad-to-principal-engineer-ic8.md, instagram-staff-ic6-promo-despite.md, tech-lead-for-metas-most-used-programming.md, airbnb-staff-eng-on-how-to-not-get.md, 26-year-old-meta-staff-eng-ic6-on.md, amazon-vp-on-promotions-getting-fired.md]
 ---
 
 # Non-linear careers
@@ -21,6 +21,10 @@ Barbara Liskov's career is the canonical case: Princeton rejected her graduate a
 ### Dropouts, firings, and layoffs as inflection points
 
 James Everingham was kicked out of Penn State at 18 with a 0.0 GPA while the university simultaneously hired him full-time because they were already using his shareware; the failed startup that sold to Yahoo later positioned him perfectly for the Instagram head-of-engineering job ([episode](../sources/ex-head-of-eng-at-instagram-career.md)). Jia Chen dropped out to found a company but warns against doing it on a whim — set preconditions first ([episode](../sources/21x-hackathon-winner-turned-college.md)). The anonymous chief architect, laid off after 25 years, did a "switcheroo" to put himself on the list in place of junior engineers and is now exploring semi-retirement and YouTube — an unplanned exit reframed as an opening ([episode](../sources/laid-off-from-big-tech-after-25-years.md)). Ethan Evans's entire arc runs through being fired twice ([episode](../sources/amazon-vp-on-promotions-getting-fired.md)).
+
+### Changing fields, not just employers
+
+The academic careers in the corpus are non-linear in a different dimension: the discipline changes, not the ladder. [Judea Pearl](../entities/judea-pearl.md) trained as an electrical engineer and physicist at the Technion, spent his early career on superconducting memory at RCA's David Sarnoff lab — leaving his name on a physical phenomenon, the Pearl vortex — and watched the entire technology lose to semiconductors for a reason he now calls obvious in advance. He then joined [UCLA](../entities/ucla.md) around 1969–70 to teach memory hardware, drifted into pattern recognition, then game-playing AI, then reasoning under uncertainty, and only after that into [causality](causality.md) — four fields, one of which he invented ([episode](../sources/turing-award-winner-early-ai-llm.md)). His stated method for each jump is the same as Liskov's for hers: he "got sick and tired of search" and moved, rather than defending accumulated expertise. Liskov's own AI-to-systems retooling at MITRE is the structural twin ([episode](../sources/turing-award-winner-data-abstraction.md)).
 
 ### Step functions, boomerangs, and side doors
 
@@ -46,5 +50,6 @@ David Fowler is the corpus's most linear career — intern to Distinguished Engi
 - [regrets-and-advice](regrets-and-advice.md) — "leave sooner" as the most common regret
 - [startups-and-founding](startups-and-founding.md) — the most common off-ramp
 - [layoffs](layoffs.md) — involuntary non-linearity
-- Key people: [Philip Su](../entities/philip-su.md), [Igor (Meta IC7 demotion story)](../entities/meta-ic7-demotion-guest.md), [Barbara Liskov](../entities/barbara-liskov.md), [Ilya Grigorik](../entities/ilya-grigorik.md), [James Everingham](../entities/james-everingham.md), [Jayendra Jog](../entities/jayendra-jog.md)
+- [academia-vs-industry](academia-vs-industry.md) — the researcher's version of switching tracks
+- Key people: [Philip Su](../entities/philip-su.md), [Igor (Meta IC7 demotion story)](../entities/meta-ic7-demotion-guest.md), [Barbara Liskov](../entities/barbara-liskov.md), [Ilya Grigorik](../entities/ilya-grigorik.md), [James Everingham](../entities/james-everingham.md), [Jayendra Jog](../entities/jayendra-jog.md), [Judea Pearl](../entities/judea-pearl.md)
 - Most relevant episodes: [Honest demotion story](../sources/meta-senior-staff-ic7-engs-honest.md), [IC9 who asked to be IC7](../sources/openai-and-meta-distinguished-engineer.md), [Robinhood SWE turned founder on non-linear careers](../sources/quitting-robinhood-and-raising-35m.md), [Barbara Liskov](../sources/turing-award-winner-data-abstraction.md)
