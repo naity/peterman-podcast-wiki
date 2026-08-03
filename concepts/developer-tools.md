@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-07-19
-sources: [openai-codex-tech-lead-on-how-his.md, new-grad-to-principal-engineer-ic8.md, boris-cherny-creator-of-claude-code.md, meta-distinguished-eng-ic9-on-influencing.md, airbnb-staff-eng-on-how-to-not-get.md, openai-eng-and-dev-tools-founder.md, anthropic-eng-leader-and-ex-senior.md, ex-head-of-eng-at-instagram-career.md, msl-eng-director-promo-hacking-industry.md, instagram-principal-eng-ic8-on-building.md]
+updated: 2026-08-03
+sources: [creator-of-lua-scripting-programming.md, openai-codex-tech-lead-on-how-his.md, new-grad-to-principal-engineer-ic8.md, boris-cherny-creator-of-claude-code.md, meta-distinguished-eng-ic9-on-influencing.md, airbnb-staff-eng-on-how-to-not-get.md, openai-eng-and-dev-tools-founder.md, anthropic-eng-leader-and-ex-senior.md, ex-head-of-eng-at-instagram-career.md, msl-eng-director-promo-hacking-industry.md, instagram-principal-eng-ic8-on-building.md]
 ---
 
 # Developer tools
@@ -26,6 +26,12 @@ Charlie Marsh founded Astral on comparative perspective rather than big-tech inf
 
 Laurent Charignon refused to rank engineers by lines of code or PR counts; at Stripe he instead instrumented the full journey of a code change (think, write, CI, review, merge), turning an unfair individual ranking into actionable org-level friction data. His companion practice: "channel your inner frustration" — Stripe's friction logs screenshot each step of a flow and interrogate every friction point; he could find 50-60 improvements in a single code-change flow ([episode](../sources/airbnb-staff-eng-on-how-to-not-get.md)). The stakes of neglect are Ryan Olson's exit condition: by the time he left Instagram he was spending 4+ hours a day waiting for builds — "the tooling just had not kept up with the velocity at which people were writing code" ([episode](../sources/instagram-principal-eng-ic8-on-building.md)).
 
+### Tools that are libraries first
+
+[Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md)'s Lua is the corpus's clearest case of adoption arriving through a distribution decision made before the first user existed: it was written as an embeddable C library, with the standalone interpreter as merely a client of that library, which is why it ends up inside other people's products rather than competing with them ([episode](../sources/creator-of-lua-scripting-programming.md)). The design consequences are all about being a good guest — independent states rather than shared global state, so a host process can run many at once, and a minimal standard library on the expectation that the host supplies the domain-specific functions.
+
+That posture also produces a security property most tool builders would have to bolt on: because a Lua state can only reach the C functions the host explicitly registered, the registration list *is* the sandbox. His example is a financial firm that embedded Lua inside Python so users could write their own scripts against a whitelist of authorized functions without being able to corrupt program state ([episode](../sources/creator-of-lua-scripting-programming.md)). Where Bolin, Friggeri and Cherny won adoption socially after building, Lua won it structurally by being the thing another team could take responsibility for.
+
 ### Dev tools as career engine
 
 Almost every tool story above doubled as a promotion story: Bento earned Friggeri's IC7 ([episode](../sources/new-grad-to-principal-engineer-ic8.md)); Buck anchored Bolin's rise toward E9 ([episode](../sources/openai-codex-tech-lead-on-how-his.md)); Undux and side projects seeded Cherny's reputation ([episode](../sources/boris-cherny-creator-of-claude-code.md)); Fiona Fung's Claude Code role let a former Senior Director ship production software again ([episode](../sources/anthropic-eng-leader-and-ex-senior.md)); and Astral's tools got Marsh acquired by OpenAI ([episode](../sources/openai-eng-and-dev-tools-founder.md)).
@@ -37,6 +43,7 @@ Almost every tool story above doubled as a promotion story: Bento earned Frigger
 - In fast-growing orgs, win newcomers at onboarding and let network effects do the rest; support legacy systems before migrating their users (Friggeri [episode](../sources/new-grad-to-principal-engineer-ic8.md)).
 - Do the tedious demand research — scrape support posts, tally pain by team, then evangelize team by team (Cherny [episode](../sources/boris-cherny-creator-of-claude-code.md)).
 - Measure the pipeline, not the people: instrument the code-change journey and keep friction logs (Charignon [episode](../sources/airbnb-staff-eng-on-how-to-not-get.md)).
+- If you want your tool inside other people's software, design it as a library with no global state from day one, not as a program with an API bolted on (Ierusalimschy [episode](../sources/creator-of-lua-scripting-programming.md)).
 - Being right about a tool bet isn't enough — how you argue it determines whether you (and it) survive (Bolin [episode](../sources/openai-codex-tech-lead-on-how-his.md)).
 
 ## Related

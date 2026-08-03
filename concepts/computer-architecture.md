@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-07-19
-sources: [turing-award-winner-tpu-vs-gpu-vs.md, co-creator-of-haskell-functional.md, google-deepmind-pre-training-lead.md, aws-distinguished-eng-learnings-from.md]
+updated: 2026-08-03
+sources: [creator-of-lua-scripting-programming.md, turing-award-winner-tpu-vs-gpu-vs.md, co-creator-of-haskell-functional.md, google-deepmind-pre-training-lead.md, aws-distinguished-eng-learnings-from.md]
 ---
 
 # Computer architecture
@@ -24,6 +24,8 @@ Patterson's periodization: Dennard scaling quietly ended ~2005, forcing multicor
 
 [Vlad Feinberg](../entities/vlad-feinberg.md) reports "voracious demand" at frontier labs for kernel development and low-level engineering, and points to programming-language abstractions for kernels (ThunderKittens, CuTe DSL) as a high-leverage study area — the TPU/GPU efficiency problems Patterson describes are now everyday AI-infrastructure work ([episode](../sources/google-deepmind-pre-training-lead.md)). [Marc Brooker](../entities/marc-brooker.md) recommends Hennessy & Patterson's architecture textbook as core reading for systems engineers and treats hardware trends (faster networks, storage, GPUs) as a primary input for finding problems worth solving ([episode](../sources/aws-distinguished-eng-learnings-from.md)).
 
+[Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md) makes the pedagogical version of the same argument with an important caveat: assembly is on his three-language list for becoming a better engineer, but he specifies a *historical* architecture such as the Intel 8080, because modern ISAs are too complex to learn anything clean from ([episode](../sources/creator-of-lua-scripting-programming.md)). The complexity Patterson describes as the CISC side losing an argument is, from a teaching standpoint, complexity that has made the machine unreadable — so the way to see what a computer actually does is to look at an old one. His implementer's view of why type information matters (types known at compile time let you emit the integer add directly, instead of a runtime check and possible coercion on every operation) is the same hardware-software boundary seen from the language side ([programming-languages](programming-languages.md)).
+
 ## Practical takeaways
 
 - Settle architecture arguments with measurements, not philosophy — the RISC war ended when the numbers arrived ([Patterson](../sources/turing-award-winner-tpu-vs-gpu-vs.md)).
@@ -31,6 +33,7 @@ Patterson's periodization: Dennard scaling quietly ended ~2005, forcing multicor
 - Before betting on specialized hardware, check whether a compiler could do the same work at compile time on commodity silicon ([Peyton Jones](../sources/co-creator-of-haskell-functional.md)).
 - Moats in hardware are software: libraries and toolchains, sustained over generations ([Patterson](../sources/turing-award-winner-tpu-vs-gpu-vs.md)).
 - Low-level and kernel skills are a seller's market at AI labs ([Feinberg](../sources/google-deepmind-pre-training-lead.md)).
+- To learn what a machine does, read a historical assembly (8080-era), not a modern ISA ([Ierusalimschy](../sources/creator-of-lua-scripting-programming.md)).
 
 ## Related
 

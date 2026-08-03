@@ -27,6 +27,8 @@ Hired at Inria on a research position in the '90s having built the predecessor o
 - [Episode: Creator of OCaml: Functional Programming, Formal Verification, Programming Languages](../sources/creator-of-ocaml-functional-programming.md) — his interview
 - [Simon Peyton Jones](simon-peyton-jones.md) — creator of Haskell, OCaml's lazy/pure sibling; convergent view that type systems help LLM codegen
 - [Bjarne Stroustrup](bjarne-stroustrup.md) — fellow language creator and fellow LLM-code skeptic; C++ is CompCert's source-language world
+- [Roberto Ierusalimschy](roberto-ierusalimschy.md) — creator of Lua; convergent on small design teams and predictable cost models, divergent on whether types or plain readability is what saves LLM-era code
+- [Judea Pearl](judea-pearl.md) — the following week's guest; the same argument shape from AI rather than PL (LLM output needs an external correctness apparatus), plus the same academia-from-the-inside verdict
 - [Leslie Lamport](leslie-lamport.md) — the podcast's other proofs-first thinker ("understanding means you can write a proof")
 - [Edsger Dijkstra](edsger-dijkstra.md) — Leroy builds his verification argument on Dijkstra's testing aphorism
 - [formal-verification](../concepts/formal-verification.md), [programming-languages](../concepts/programming-languages.md), [functional-programming](../concepts/functional-programming.md)

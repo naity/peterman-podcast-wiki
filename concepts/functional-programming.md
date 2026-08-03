@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-07-27
-sources: [co-creator-of-haskell-functional.md, boris-cherny-creator-of-claude-code.md, creator-of-c-bell-labs-negative-overhead.md, creator-of-ocaml-functional-programming.md]
+updated: 2026-08-03
+sources: [creator-of-lua-scripting-programming.md, co-creator-of-haskell-functional.md, boris-cherny-creator-of-claude-code.md, creator-of-c-bell-labs-negative-overhead.md, creator-of-ocaml-functional-programming.md]
 ---
 
 # Functional programming
@@ -31,6 +31,8 @@ Cherny — creator of Claude Code, formerly Meta/Instagram IC8 — recommends ex
 ### Where FP is heading
 
 Two of Peyton Jones's forward bets ([episode](../sources/co-creator-of-haskell-functional.md)): LLMs "may be the best thing that's happened to statically typed languages," since the compiler prunes the model's generation space — pure, typed code is unusually machine-checkable (Leroy independently reports the confirming evidence: LLMs write OCaml about as well as popular languages despite less training data, and types measurably help — [episode](../sources/creator-of-ocaml-functional-programming.md)); and the frontier moves outward — his day job is Verse at Epic Games, a functional *logic* language "way out" beyond FP in the design space, the same kind of weird-but-worth-exploring bet FP was in 1980. Meanwhile the most-used functional language is a spreadsheet: Excel's pure formula language outnumbers everything else by three orders of magnitude, and his LAMBDA addition made it Turing complete.
+
+The outside endorsement is worth more than the insiders' because of who gives it: [Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md), whose own language is dynamically typed, minimal and imperative, names Haskell as the first of three languages to learn to become a better engineer, and gives the sharpest one-line case for it in the corpus — "in C you really spend one week to make it efficient, and then you spend one year to make it correct. In Haskell, you spend one week to make it correct" ([episode](../sources/creator-of-lua-scripting-programming.md)). His third pick, Scheme, is recommended for a different property entirely — "economy of ideas," doing a great deal with very few concepts — which is the design value his own work optimizes for rather than an FP argument.
 
 No real disagreement exists among the FP guests on FP itself; the live tension is with the wider [programming-languages](programming-languages.md) debate — [Bjarne Stroustrup](../entities/bjarne-stroustrup.md) recommends learning ML/Haskell to escape monoglot thinking while building the archetypal imperative language ([episode](../sources/creator-of-c-bell-labs-negative-overhead.md)).
 

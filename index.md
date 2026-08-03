@@ -1,9 +1,11 @@
 # Index
 
-Knowledge base for The Peterman Post podcast (developing.dev) — 55 episodes ingested, 54 guests, 20 organizations, 32 concepts. Last updated 2026-07-19.
+Knowledge base for The Peterman Post podcast (developing.dev) — 57 episodes ingested, 56 guests, 20 organizations, 34 concepts. Last updated 2026-07-19.
 
 ## Sources (episodes, newest first)
 
+- [#57: Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy](sources/creator-of-lua-scripting-programming.md) — Roberto Ierusalimschy designed Lua, the small embedded scripting language that ended up inside World of Warcraft, Roblox, Redis, nginx and an enormous amount of unglamorous industr
+- [#56: Turing Award Winner: Early AI, LLM Predictions, Causality | Judea Pearl](sources/turing-award-winner-early-ai-llm.md) — Judea Pearl won the 2011 Turing Award for two separate revolutions: Bayesian networks, which made probabilistic reasoning tractable and gave 1980s AI its statistical foundation, an
 - [#55: Creator of OCaml: Functional Programming, Formal Verification, Programming Languages | Xavier Leroy](sources/creator-of-ocaml-functional-programming.md) — Xavier Leroy created OCaml at Inria and later led CompCert, the formally verified C compiler proved correct in the Coq/Rocq proof assistant. The conversation is a language-designer
 - [#54: Turing Award Winner: TPUs vs GPUs vs CPUs, Computer Architecture, RISC vs CISC | David Patterson](sources/turing-award-winner-tpu-vs-gpu-vs.md) — David Patterson is a Turing Award winner, UC Berkeley professor, co-author (with John Hennessy) of the standard computer architecture textbooks, coiner of "RISC," and now works at 
 - [#53: Turing Award Winner: NSA, Public Key Cryptography, Crypto Wars | Martin Hellman](sources/turing-award-winner-nsa-public-key.md) — Martin Hellman co-invented public-key cryptography and the Diffie-Hellman key exchange at Stanford, work that won him the Turing Award and put him in direct conflict with the NSA. 
@@ -94,6 +96,7 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 55 episodes in
 - [Jia Chen](entities/jia-chen.md) — 21-time hackathon winner, college dropout, co-founder of Sprint.dev, and content creator — the podcast's main example of a non-traditional early-career path (episode)
 - [Joakim Recht](entities/joakim-recht.md) — Former Distinguished Engineer at Uber, based in Denmark; now an engineer at an AI enterprise-automation startup (episode)
 - [John Myles White](entities/john-myles-white.md) — Former Director of Engineering at Meta Superintelligence Labs (PyTorch) and a core contributor to the Julia programming language (episode)
+- [Judea Pearl](entities/judea-pearl.md) — Turing Award winner (2011) and longtime UCLA computer science professor, responsible for two distinct revolutions in AI: Bayesian networks, which made probabilistic reasoning tract
 - [Laurent Charignon](entities/laurent-charignon.md) — Developer-productivity specialist who was a Staff engineer at Stripe, Airbnb, and Instagram (Meta), with earlier time at Apple and a spell as an Airbnb engineering manager — the po
 - [Leslie Lamport](entities/leslie-lamport.md) — Turing Award winner; inventor of Paxos, logical clocks, the Bakery algorithm, the Byzantine Generals framing, and LaTeX. Spent his whole career in industry (SRI, DEC) rather than a
 - [Marc Brooker](entities/marc-brooker.md) — Distinguished Engineer at AWS working on databases and serverless (Aurora Serverless, DSQL); rose from new grad to DE inside Amazon (episode)
@@ -107,6 +110,7 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 55 episodes in
 - [Nimit Sohani](entities/nimit-sohani.md) — AI researcher at voice-AI startup Cartesia, ex-quantitative researcher at Citadel Securities, with a Stanford PhD from Chris Ré's lab — a rare guest who has worked both of the most
 - [Philip Su](entities/philip-su.md) — Distinguished Engineer (IC9) at Meta, later at OpenAI, and ex-Microsoft; founded and scaled Facebook's London office and later voluntarily requested a demotion from IC9 to IC7 (epi
 - [Ricky (Staff @ Google by 28)](entities/ricky-staff-google.md) — Staff Engineer at Google by age 28; appeared as co-speaker with host Ryan Peterman at a UCLA UPE talk on what they wish they'd known before graduating (episode)
+- [Roberto Ierusalimschy](entities/roberto-ierusalimschy.md) — Creator and lead designer of Lua, the small embeddable scripting language that ended up inside World of Warcraft, Roblox, Redis, nginx and a large amount of unglamorous industrial 
 - [Rong Yan](entities/rong-yan.md) — CTO of AI video startup HeyGen; previously Senior Director at Snapchat, Director at Square, frontline manager at Meta, and IBM Research scientist with a CMU machine learning PhD. H
 - [Ryan Olson](entities/ryan-olson.md) — Principal engineer (IC8) at Instagram who led iOS for Instagram Stories, IGTV, and IG Labs; now co-founder of the friends-only social app Retro (episode)
 - [Ryan Peterman](entities/ryan-peterman.md) — Host of The Peterman Post, the podcast this wiki covers; a Meta engineer and author of The Developing Dev newsletter. In the podcast's one behind-the-scenes episode he is interview
@@ -146,15 +150,17 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 55 episodes in
 - [Stripe](entities/stripe.md) — Stripe, the payments company, appears in two episodes — from the top (David Singleton, CTO for 7 years) and from the senior-IC trenches (Laurent Charignon, "uber TL" of its develop
 - [Uber](entities/uber.md) — Uber appears in two episodes through senior ICs who grew up in its hypergrowth era: Brian Attwell (Senior Staff by 25, later CloudKitchens CTO under Travis Kalanick) and Joakim Rec
 - [UC Berkeley](entities/uc-berkeley.md) — UC Berkeley threads through all four systems-oriented Turing-laureate episodes: it is where Ingres and Postgres were built, where RISC was named, and part of the origin stories of 
-- [UCLA](entities/ucla.md) — University with a personal thread through the podcast: host Ryan Peterman was a student there, and Carey Nachenberg — GoogleX Chief Scientist and Symantec Fellow — has lectured CS 
+- [UCLA](entities/ucla.md) — The podcast's most-visited university, and the only one that appears as both a research institution and a personal biography: Judea Pearl has been on the CS faculty since the depar
 
 ## Concepts
 
+- [Academia vs industry](concepts/academia-vs-industry.md) — Where computer science actually advances, which path a researcher-minded engineer should take, and what each side gets wrong about the other. The podcast is unusually well-position
 - [AI coding tools](concepts/ai-coding-tools.md) — Claude Code, Codex, Cursor and their kin — told largely from inside: the podcast has interviewed the creator of Claude Code (Boris Cherny), an engineering leader on the same team (
 - [AI-era engineering](concepts/ai-era-engineering.md) — What LLMs and agents mean for the software engineering profession — which skills survive, whose jobs change, and how careers should adapt. This is the podcast's most contested them
 - [Big Tech culture](concepts/big-tech-culture.md) — How life inside Meta, Google, Amazon, Microsoft and their peers actually works: the incentive systems, the intensity, the surprising degree of permissionless freedom, and the ways 
 - [Calibrations and ratings](concepts/calibrations-and-ratings.md) — The performance-review machinery of big tech — calibration rooms, rating scales ("redefines expectations", "top tier"), low-performer quotas, stack ranking, and PIPs — described fr
 - [Career growth](concepts/career-growth.md) — The podcast's central theme: how software engineers actually grow from junior to staff, principal, distinguished, and executive levels — what drives the growth, what merely correla
+- [Causality](concepts/causality.md) — The distinction between seeing and doing — between correlation, intervention, and counterfactual explanation — and why Judea Pearl argues it is the thing missing from statistics, f
 - [Compensation and equity](concepts/compensation-and-equity.md) — How engineers actually get paid — RSUs, ESPP, discretionary "secret" equity, golden handcuffs, negotiation — and the recurring question of what compensation is worth trading away
 - [Complexity theory](concepts/complexity-theory.md) — The limits of computation — P vs NP, hardness, randomness, and proofs — via Turing/Abel laureate Avi Wigderson, Gödel Prize winner Ryan Williams, and Martin Hellman, whose cryptogr
 - [Computer architecture](concepts/computer-architecture.md) — Hardware design and the hardware-software boundary — anchored by David Patterson's Turing-laureate episode on RISC vs CISC and the shift to domain-specific accelerators, with corro

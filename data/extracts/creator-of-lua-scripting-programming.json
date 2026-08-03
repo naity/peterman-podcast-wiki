@@ -1,0 +1,52 @@
+{
+  "slug": "creator-of-lua-scripting-programming",
+  "n": 57,
+  "title": "Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy",
+  "date": "2026-08-03",
+  "url": "https://www.developing.dev/p/creator-of-lua-scripting-programming",
+  "guest": "Roberto Ierusalimschy",
+  "guest_role": "Creator and lead designer of Lua; professor of computer science, PUC-Rio",
+  "guest_slug": "roberto-ierusalimschy",
+  "companies": [],
+  "concepts": ["programming-languages", "developer-tools", "ai-era-engineering", "systems-design", "computer-architecture", "functional-programming", "regrets-and-advice", "academia-vs-industry"],
+  "sections": [
+    {"t": "00:43", "title": "What sets Lua apart"},
+    {"t": "08:35", "title": "Comparing Lua with Python"},
+    {"t": "13:04", "title": "Top book recommendation on language design"},
+    {"t": "14:20", "title": "How JIT works and why it is hard"},
+    {"t": "23:21", "title": "Compiling Python and interpreting C"},
+    {"t": "30:31", "title": "How cross language calls work"},
+    {"t": "36:58", "title": "Lua unique design decisions"},
+    {"t": "51:17", "title": "Predictions for AIs impact on languages"},
+    {"t": "01:00:10", "title": "Top 3 languages to learn to become a better engineer"},
+    {"t": "01:03:21", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Lua was written as an embeddable C library from the start and the standalone interpreter is just a client of it; that forces design choices most scripting languages avoid - independent states with no shared global state, and load() rather than eval() to separate compilation from execution. He distinguishes embedding (host calls into the language) from extending (language calls out to native code); most scripting languages do one well, Lua targets both.",
+    "Lua vs Python is a philosophy split: Python optimizes developer convenience with a large standard library, Lua stays minimal and expects the host application to supply domain functions. Lua 'doesn't want to compete with C or C++', and its benchmark edge over Python is architectural - 'most of the virtual machine fits in your cache'.",
+    "Cross-language calls are function pointers in both directions: the C host registers named C function pointers into a Lua state and the interpreter invokes them on a call instruction; a Lua function is a bytecode array that C can hand back to the interpreter. Calls nest arbitrarily. The security consequence is a sandbox by construction - a Lua state reaches only what the host registered. His example: a financial firm embedded Lua inside Python so users could script against a whitelist without touching program state.",
+    "LuaJIT (Mike Pall) is a trace compiler: it records a hot path through inlined calls until the loop closes, then emits code specialized to the observed types. The hard parts are machine dependence and deoptimization - reconstructing interpreter state from compiled registers when assumptions break, where 'you don't even have a call stack because you didn't do the calls'. Pall's answer was a pseudo-assembler retargeted across architectures; standard Lua instead gets portability from compiling to bytecode and interpreting in C.",
+    "'Compiled' and 'interpreted' describe toolchains, not languages - you could compile Python or interpret C. What forces a compiler into the runtime is eval-style dynamic code generation, and the real performance lever is type information at compile time versus a type check and possible coercion on every operation.",
+    "Conceptual integrity is his governing principle and he argues committees structurally cannot achieve it: 'a camel is a horse designed by a committee', because people fight far harder to get their feature in than anyone fights to keep features out. Small teams work because everyone knows what everyone else is thinking, and the default is refusal - 'when in doubt, the rule is always don't put it... we can always add that later.'",
+    "Lua originally had no booleans (C's 0/non-zero convention); false was added only so tables could distinguish an absent key (nil) from a key whose value is false, and true followed for symmetry ('true is almost useless'). On 1-based indexing: 'only in programming language there is this idea of zero' - Fortran and Pascal allowed arbitrary bases, 0-indexing won because C won, and in C indexing is 'just an illusion' over pointer arithmetic, so 0 is an implementation requirement rather than a conceptual one.",
+    "On AI he refuses to forecast ('it's completely feasible that we won't have programming languages') but commits to the counterintuitive conclusion that AI makes language simplicity MORE important, because the human's remaining job is reading and verifying: the language must let you 'really understand that the code that you are seeing does what you think it should do'. He also splits the cost structure - 'implementation is the part that AI can really help you, it's not a really important cost' - leaving learning burden and cognitive load, which is exactly what language design controls.",
+    "Career advice under that uncertainty: 'nobody has any idea what the world, your profession, will be like in four years from now', so choose by genuine interest rather than employability, since the employability forecast is worthless. 'I program because I like that.'",
+    "Three languages to become a better engineer: Haskell ('in C you really spend one week to make it efficient, and then you spend one year to make it correct. In Haskell, you spend one week to make it correct'), a historical assembly such as the Intel 8080 because modern assembly is too complex to learn from, and Scheme for its 'economy of ideas'. He adds SNOBOL as a pattern-matching pioneer and argues for reading old languages because modern ones 'tend to be too uniform'.",
+    "Advice to his younger self: there is no shortcut for time - 'to know a lot of stuff, you really have to study a lot of stuff. And it takes time' - with a jab at the 'Learn Lua in 30 minutes' genre, where you get the syntax fast and the language years later."
+  ],
+  "notable_quotes": [
+    {"speaker": "Roberto Ierusalimschy", "quote": "When in doubt, the rule is always don't put it. If you're not very sure, don't put it. We can always add that later.", "t": "39:53"},
+    {"speaker": "Roberto Ierusalimschy", "quote": "Only in programming language there is this idea of zero.", "t": "46:03"},
+    {"speaker": "Roberto Ierusalimschy", "quote": "It's even more important for the language to be simple, to be understandable, for you to be able to really understand that the code that you are seeing does what you think it should do.", "t": "54:14"},
+    {"speaker": "Roberto Ierusalimschy", "quote": "In C you really spend one week to make it efficient, and then you spend one year to make it correct. In Haskell, you spend one week to make it correct.", "t": "01:00:28"},
+    {"speaker": "Roberto Ierusalimschy", "quote": "To know a lot of stuff, you really have to study a lot of stuff. And it takes time.", "t": "01:03:34"}
+  ],
+  "related": [
+    {"slug": "creator-of-ocaml-functional-programming", "reason": "adjacent language designer; both defend small teams and argue LLM-era code needs something the model doesn't supply"},
+    {"slug": "creator-of-c-bell-labs-negative-overhead", "reason": "direct disagreement on language governance: Stroustrup credits ISO standardization, Ierusalimschy says committees destroy conceptual integrity"},
+    {"slug": "co-creator-of-haskell-functional", "reason": "Haskell is his first recommendation for becoming a better engineer"},
+    {"slug": "turing-award-winner-early-ai-llm", "reason": "the preceding episode; two academics refusing to forecast AI from opposite temperaments"},
+    {"slug": "turing-award-winner-tpu-vs-gpu-vs", "reason": "learning assembly, and why modern architectures pushed him to recommend an 8-bit one"}
+  ],
+  "transcript_complete": false
+}
