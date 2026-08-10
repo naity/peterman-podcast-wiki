@@ -1,6 +1,6 @@
 ---
 type: source
-updated: 2026-08-03
+updated: 2026-08-10
 raw: ../raw/creator-of-lua-scripting-programming.md
 guest: "Roberto Ierusalimschy"
 guest_role: "Creator and lead designer of Lua; professor of computer science, PUC-Rio"
@@ -42,3 +42,4 @@ Roberto Ierusalimschy designed Lua, the small embedded scripting language that e
 - [Turing Award Winner: Early AI, LLM Predictions, Causality | Judea Pearl](turing-award-winner-early-ai-llm.md) — the preceding episode; both are academics refusing to forecast AI capability, from opposite temperaments — Pearl names a missing mechanism, Ierusalimschy declines to name anything at all.
 - [Turing Award Winner: TPUs vs GPUs vs CPUs, Computer Architecture, RISC vs CISC | David Patterson](turing-award-winner-tpu-vs-gpu-vs.md) — the case for learning assembly, and what modern architectures did to make Ierusalimschy recommend an 8-bit one instead.
 - [OpenAI Eng & Dev Tools Founder: How Software Engineering Is Changing | Charlie Marsh](openai-eng-and-dev-tools-founder.md) — the modern version of "language runtime as embeddable infrastructure," and the counterpoint on how much AI changes the tooling layer.
+- [Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](creator-of-lean-the-end-of-handwritten.md) — the following week's episode and a direct contradiction: Ierusalimschy argues AI makes simplicity and readability matter *more* because the human's remaining job is reading, while de Moura argues that once a machine-checked proof carries the code, "it doesn't really matter how the code has been written."

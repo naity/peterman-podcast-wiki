@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-07-19
-sources: [turing-award-winner-p-vs-np-zero.md, mit-complexity-theorist-on-leetcode.md, turing-award-winner-nsa-public-key.md]
+updated: 2026-08-10
+sources: [turing-award-winner-p-vs-np-zero.md, mit-complexity-theorist-on-leetcode.md, turing-award-winner-nsa-public-key.md, creator-of-lean-the-end-of-handwritten.md]
 ---
 
 # Complexity theory
@@ -20,6 +20,8 @@ Wigderson frames P vs NP as "whether we can know everything we want to know": NP
 
 Williams's signature move, staged around the most popular LeetCode question: the "optimal" n² 3SUM solution can be beaten (roughly n²/polylog) via block decomposition and decision-tree preprocessing. Fine-grained complexity asks whether canonical algorithms are optimal in exact exponent, with reductions that transfer "a little improvement here to a little improvement there" — even relating NP-complete problems to problems in P, as when Subset Sum's 2ⁿ brute force reduces via meet-in-the-middle to a giant 2SUM, importing sorting's n log n "magic" into an NP-complete problem ([episode](../sources/mit-complexity-theorist-on-leetcode.md)). Wigderson's complementary theme: worst-case hardness says little about practice — protein folding is NP-hard yet bodies do it constantly, Simplex is exponential in the worst case but effectively linear in practice, and structured SAT instances are why SAT solvers work ([episode](../sources/turing-award-winner-p-vs-np-zero.md)). Though he also notes the PCP-theorem limit: for 3-variable constraints, beating the trivial 7/8 approximation by any epsilon is already NP-hard.
 
+[Leonardo de Moura](../entities/leonardo-de-moura.md) is the guest who has had to ship against these limits commercially, and he confirms the shape of Wigderson's claim with a mechanism ([episode](../sources/creator-of-lean-the-end-of-handwritten.md)). Z3, his SMT solver, "goes the whole complexity ladder" — SAT, NP-complete, PSPACE-complete, EXPTIME-complete, all the way to undecidable — and he agrees tiny adversarial SAT instances exist that no solver will crack. Yet bounded real problems, especially hardware verification where you ask only about the first N steps, yield easily. His explanation for why: "programs and hardware, they are not correct for esoteric reasons... they are correct for very simple reasons." Where the wheels come off is exactly where the theory says they should — quantified properties about unbounded program behaviour, which are undecidable, and where hand-coded heuristics produced what an Amazon colleague named *proof instability*: write `B and A` instead of `A and B` and a working proof starts timing out. That instability is the practical reason he built an interactive assistant (Lean) on top of a fully automatic one ([formal-verification](formal-verification.md)).
+
 ### The 2025 space-time breakthrough, from both sides
 
 The series captures a rare double view of the same result. Williams tells the inside story of showing time-T computation simulable in ~√T space (versus the T/log T bound standing since 1975): building on Cook–Mertz tree evaluation (XOR onto existing memory so contents can be recovered without storing them), assuming for months his proof had a bug, sending it to colleagues asking them to "find the mistake," and submitting to STOC still unsure ([episode](../sources/mit-complexity-theorist-on-leetcode.md)). Wigderson independently narrates the result's significance, calling it a smashing of a ~50-year-old bound and citing Barrington's theorem as precedent for how counterintuitive space savings can be ([episode](../sources/turing-award-winner-p-vs-np-zero.md)).
@@ -35,13 +37,14 @@ Williams's research strategy: seek win-win hypotheses where either outcome yield
 ## Practical takeaways
 
 - Don't treat textbook "optimal" as final — even LeetCode chestnuts have been beaten; exponent-level improvements are an open frontier ([Williams](../sources/mit-complexity-theorist-on-leetcode.md)).
-- Worst-case hardness rarely blocks practice: reach for SAT solvers and heuristics on structured real-world instances ([Wigderson](../sources/turing-award-winner-p-vs-np-zero.md)).
+- Worst-case hardness rarely blocks practice: reach for SAT/SMT solvers and heuristics on structured real-world instances ([Wigderson](../sources/turing-award-winner-p-vs-np-zero.md)), and bound the question — "look for a bug in the first 10 steps" — because real systems are correct for simple reasons ([de Moura](../sources/creator-of-lean-the-end-of-handwritten.md)).
+- Know which side of the decidability line your question sits on: automatic solvers are excellent at finding counterexamples and unreliable at proving universally quantified properties, where you want an interactive assistant instead ([de Moura](../sources/creator-of-lean-the-end-of-handwritten.md)).
 - Frame research bets as win-win hypotheses so any outcome is progress ([Williams](../sources/mit-complexity-theorist-on-leetcode.md)).
 - Hold calibrated, not tribal, beliefs about open problems — algorithms deliver surprises constantly, lower bounds almost never ([Williams](../sources/mit-complexity-theorist-on-leetcode.md)).
 - Remember what's downstream: modern cryptography and derandomization both rent their foundations from unproven hardness assumptions ([Hellman](../sources/turing-award-winner-nsa-public-key.md), [Wigderson](../sources/turing-award-winner-p-vs-np-zero.md)).
 
 ## Related
 
-- [security-and-cryptography](security-and-cryptography.md) — cryptography as applied hardness; [hiring-and-interviews](hiring-and-interviews.md) — the LeetCode frame Williams subverts; [teaching-and-communication](teaching-and-communication.md) — Wigderson's accessible framings.
-- Key people: [Avi Wigderson](../entities/avi-wigderson.md), [Ryan Williams](../entities/ryan-williams.md), [Martin Hellman](../entities/martin-hellman.md).
+- [security-and-cryptography](security-and-cryptography.md) — cryptography as applied hardness; [formal-verification](formal-verification.md) — where these limits are hit in production; [hiring-and-interviews](hiring-and-interviews.md) — the LeetCode frame Williams subverts; [teaching-and-communication](teaching-and-communication.md) — Wigderson's accessible framings.
+- Key people: [Avi Wigderson](../entities/avi-wigderson.md), [Ryan Williams](../entities/ryan-williams.md), [Martin Hellman](../entities/martin-hellman.md), [Leonardo de Moura](../entities/leonardo-de-moura.md).
 - Most relevant episodes: [Wigderson](../sources/turing-award-winner-p-vs-np-zero.md), [Williams](../sources/mit-complexity-theorist-on-leetcode.md).

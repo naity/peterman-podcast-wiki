@@ -1,6 +1,6 @@
 ---
 type: source
-updated: 2026-07-19
+updated: 2026-08-10
 raw: ../raw/co-creator-of-haskell-functional.md
 guest: "Simon Peyton Jones"
 guest_role: "Co-creator of Haskell, GHC lead; now designing Verse at Epic Games"
@@ -42,3 +42,4 @@ Simon Peyton Jones co-created Haskell and has spent his research life exploring 
 - [OpenAI Eng & Dev Tools Founder: How Software Engineering Is Changing | Charlie Marsh](openai-eng-and-dev-tools-founder.md) — contrasting practitioner's view of type checkers, compilers, and AI-generated code (Ty type checker; review burden of LLM code).
 - [Creator of OCaml: Functional Programming, Formal Verification, Programming Languages | Xavier Leroy](creator-of-ocaml-functional-programming.md) — the other side of the Haskell-vs-OCaml sibling story, told by OCaml's creator; independently confirms that type systems help LLM code generation.
 - [Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy](creator-of-lua-scripting-programming.md) — names Haskell first among three languages to learn to become a better engineer, from outside the FP camp entirely; also the counterpoint to SPJ's static-types bet on the LLM era.
+- [Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](creator-of-lean-the-end-of-handwritten.md) — Lean is "close to Haskell, but with the support for proofs," and dependent types are the escalation of SPJ's static-typing case; de Moura's twist is that the ergonomic objection to functional programming stops mattering when a human isn't writing the code.

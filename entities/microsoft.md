@@ -1,8 +1,8 @@
 ---
 type: entity
 entity_kind: org
-updated: 2026-07-19
-sources: [anthropic-eng-leader-and-ex-senior.md, co-creator-of-haskell-functional.md, distinguished-eng-on-stack-ranking.md, ex-head-of-eng-at-instagram-career.md, intern-to-microsoft-distinguished.md, mozilla-firefox-cto-on-browser-war.md, openai-and-meta-distinguished-engineer.md, retired-netflix-engineering-director.md, the-creator-of-kubernetes-on-building.md]
+updated: 2026-08-10
+sources: [anthropic-eng-leader-and-ex-senior.md, co-creator-of-haskell-functional.md, creator-of-lean-the-end-of-handwritten.md, distinguished-eng-on-stack-ranking.md, ex-head-of-eng-at-instagram-career.md, intern-to-microsoft-distinguished.md, mozilla-firefox-cto-on-browser-war.md, openai-and-meta-distinguished-engineer.md, retired-netflix-engineering-director.md, the-creator-of-kubernetes-on-building.md]
 ---
 
 # Microsoft
@@ -16,6 +16,7 @@ Microsoft appears in nine episodes in two guises: as a career home for very seni
 - **Culture change under Satya Nadella.** Fowler describes the shift from the XKCD org-chart-guns era (competing teams building the same thing) to incentivized collaboration — reviews dinged you for cloning another team's work, leaders modeled pulling quiet people into discussions, and shouting disappeared ([David Fowler](../sources/intern-to-microsoft-distinguished.md)). Fiona Fung's 11.5 years (Visual Studio, TypeScript) were a "safe cocoon" she left only after shipping TypeScript 1.0 — at Facebook she found one-week sprints versus four weeks on Visual Studio ([Anthropic eng leader](../sources/anthropic-eng-leader-and-ex-senior.md)). Philip Su rose to roughly IC7-equivalent at Microsoft before joining Facebook ([Philip Su](../sources/openai-and-meta-distinguished-engineer.md)); David Ronca credits the book *12 Secrets to Microsoft Success* (betting the company, dogfooding, hiring the top 5%, Gates's deliberate hiring freeze) as the one that most shaped his leadership — arguing FAANG leaders who'd absorbed it would have seen the 2021 overhiring coming ([Retired Netflix director](../sources/retired-netflix-engineering-director.md)).
 - **The dark side, from outside.** Bryan Cantrill refused to interview at Microsoft on principle — DOS/Windows ignored existing memory protection, and its bundling was anti-competitive, "not an opinion... a judicial finding of fact" ([Bryan Cantrill](../sources/distinguished-eng-on-stack-ranking.md)). James Everingham lived the receiving end: Microsoft bundled IE free with Windows and instantly killed Netscape's $35-per-browser revenue — "it's not a technology war, it's a distribution war"; the IE4 team even planted a giant "E" logo on Netscape's lawn ([Ex-Head of Eng at Instagram](../sources/ex-head-of-eng-at-instagram-career.md)). Bobby Holley picks up the story: after winning, Microsoft parked IE in maintenance mode, creating the vacuum Firefox filled ([Mozilla CTO](../sources/mozilla-firefox-cto-on-browser-war.md)). A modern echo: Microsoft's acquisition of GitHub doomed Atom — Michael Bolin correctly predicted his Nuclide IDE's foundation would die in favor of VS Code, and pushing too hard on that prediction delayed his E9 promo at Meta ([OpenAI Codex tech lead](../sources/openai-codex-tech-lead-on-how-his.md)).
 - **Today.** Brendan Burns, Kubernetes co-creator, is a Technical Fellow/CVP on Azure infrastructure ([Kubernetes creator](../sources/the-creator-of-kubernetes-on-building.md)); Simon Peyton Jones spent much of his Haskell/GHC research career at Microsoft Research before moving to Epic Games (the episode focuses on the language work rather than the company) ([Haskell co-creator](../sources/co-creator-of-haskell-functional.md)).
+- **Microsoft Research as an infrastructure incubator.** MSR is where [Leonardo de Moura](leonardo-de-moura.md) started Z3 around 2006 — the SMT solver that became the backend of a generation of program-analysis and test-generation tools, and whose limits (great at finding bugs, "never super successful" at proving their absence) are why he later built Lean elsewhere ([episode](../sources/creator-of-lean-the-end-of-handwritten.md)). With Peyton Jones's GHC work, MSR accounts for two of the corpus's most widely deployed research artifacts, neither of which was a Microsoft product ([formal-verification](../concepts/formal-verification.md)).
 
 ## People
 
@@ -24,6 +25,7 @@ Microsoft appears in nine episodes in two guises: as a career home for very seni
 - [Fiona Fung](fiona-fung.md) — 11.5 years on Visual Studio/TypeScript; later [Meta](meta.md) and [Anthropic](anthropic.md)
 - [Philip Su](philip-su.md) — early career through ~IC7-equivalent; later Meta IC9
 - [Simon Peyton Jones](simon-peyton-jones.md) — Haskell/GHC at Microsoft Research
+- [Leonardo de Moura](leonardo-de-moura.md) — started Z3 at Microsoft Research; later Lean, at [AWS](aws.md)
 - [James Everingham](james-everingham.md) — Netscape veteran on the receiving end of the browser war
 
 ## Related

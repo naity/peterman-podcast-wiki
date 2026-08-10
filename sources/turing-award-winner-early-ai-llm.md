@@ -1,6 +1,6 @@
 ---
 type: source
-updated: 2026-08-03
+updated: 2026-08-10
 raw: ../raw/turing-award-winner-early-ai-llm.md
 guest: "Judea Pearl"
 guest_role: "Turing Award winner (2011); professor of computer science at UCLA; inventor of Bayesian networks and the do-calculus"
@@ -42,3 +42,4 @@ Judea Pearl won the 2011 Turing Award for two separate revolutions: Bayesian net
 - [Turing Award Winner: TPUs vs GPUs vs CPUs, Computer Architecture, RISC vs CISC | David Patterson](turing-award-winner-tpu-vs-gpu-vs.md) — the hardware half of the same story: Patterson supplies the compute curve that made scaling work, Pearl argues compute isn't the missing ingredient.
 - [MIT Complexity Theorist: Why You Can Do Better Than 'Optimal' On Leetcode & SAT | Ryan Williams](mit-complexity-theorist-on-leetcode.md) — a fellow proof-of-optimality result (Pearl on alpha-beta pruning) and a shared insistence that "optimal" is a claim requiring a theorem.
 - [Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy](creator-of-lua-scripting-programming.md) — the following week's episode; two academics declining to forecast AI, one by naming a missing mechanism and one by refusing to name anything.
+- [Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](creator-of-lean-the-end-of-handwritten.md) — the other episode drawing a boundary around AI capability, and drawing it differently: Pearl argues a capability class is missing by construction, de Moura reports the empirical state (proofs yes, novel mathematical concepts not yet) while refusing to bet against the machine.

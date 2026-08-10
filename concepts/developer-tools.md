@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-08-03
-sources: [creator-of-lua-scripting-programming.md, openai-codex-tech-lead-on-how-his.md, new-grad-to-principal-engineer-ic8.md, boris-cherny-creator-of-claude-code.md, meta-distinguished-eng-ic9-on-influencing.md, airbnb-staff-eng-on-how-to-not-get.md, openai-eng-and-dev-tools-founder.md, anthropic-eng-leader-and-ex-senior.md, ex-head-of-eng-at-instagram-career.md, msl-eng-director-promo-hacking-industry.md, instagram-principal-eng-ic8-on-building.md]
+updated: 2026-08-10
+sources: [creator-of-lean-the-end-of-handwritten.md, creator-of-lua-scripting-programming.md, openai-codex-tech-lead-on-how-his.md, new-grad-to-principal-engineer-ic8.md, boris-cherny-creator-of-claude-code.md, meta-distinguished-eng-ic9-on-influencing.md, airbnb-staff-eng-on-how-to-not-get.md, openai-eng-and-dev-tools-founder.md, anthropic-eng-leader-and-ex-senior.md, ex-head-of-eng-at-instagram-career.md, msl-eng-director-promo-hacking-industry.md, instagram-principal-eng-ic8-on-building.md]
 ---
 
 # Developer tools
@@ -32,6 +32,12 @@ Laurent Charignon refused to rank engineers by lines of code or PR counts; at St
 
 That posture also produces a security property most tool builders would have to bolt on: because a Lua state can only reach the C functions the host explicitly registered, the registration list *is* the sandbox. His example is a financial firm that embedded Lua inside Python so users could write their own scripts against a whitelist of authorized functions without being able to corrupt program state ([episode](../sources/creator-of-lua-scripting-programming.md)). Where Bolin, Friggeri and Cherny won adoption socially after building, Lua won it structurally by being the thing another team could take responsibility for.
 
+### Extensibility as a distribution strategy
+
+[Leonardo de Moura](../entities/leonardo-de-moura.md) gives the third variant: not adoption-by-embedding but adoption-by-self-modification ([episode](../sources/creator-of-lean-the-end-of-handwritten.md)). Because Lean is implemented in Lean, a user who wants automation mid-proof can write the extension in the same file. The evidence he offers is that his most impressive users never talked to him. Patrick Massot, a French mathematician with no computer-science degree, built Lean Verbose — a layer that renders proofs as structured English (or French) textbook prose, with clickable Infoview suggestions for the next move — "without asking me any questions." The Veil protocol-verification DSL feels like a separate system but is just a Lean file with extensions; "these folks wrote the whole thing without ever talking to us," and the only contact was a later request to make one part faster. The AI-era consequence he flags is that models exploit the same property unprompted: hand an agent a broken Lean file and it starts writing Lean metaprograms to test its own conjecture about why.
+
+The complementary piece of Lean's tooling story is that the *feedback surface* is the product. Beyond the ordinary VS Code/LSP/build-system stack ("Lake is our Cargo"), the distinguishing component is the Infoview — a split pane showing the live state of your proof, which is what makes the whole thing feel like a game ("you built my favorite computer game") and which is also the thing an AI is watching when it plays. It let Johan Commelin's team simplify a Fields Medalist's proof they did not fully understand, step by step. And his current recommendation for learning the tool is a *third* pane: code, Infoview, and an agent narrating in natural language ([teaching-and-communication](teaching-and-communication.md)).
+
 ### Dev tools as career engine
 
 Almost every tool story above doubled as a promotion story: Bento earned Friggeri's IC7 ([episode](../sources/new-grad-to-principal-engineer-ic8.md)); Buck anchored Bolin's rise toward E9 ([episode](../sources/openai-codex-tech-lead-on-how-his.md)); Undux and side projects seeded Cherny's reputation ([episode](../sources/boris-cherny-creator-of-claude-code.md)); Fiona Fung's Claude Code role let a former Senior Director ship production software again ([episode](../sources/anthropic-eng-leader-and-ex-senior.md)); and Astral's tools got Marsh acquired by OpenAI ([episode](../sources/openai-eng-and-dev-tools-founder.md)).
@@ -44,6 +50,8 @@ Almost every tool story above doubled as a promotion story: Bento earned Frigger
 - Do the tedious demand research — scrape support posts, tally pain by team, then evangelize team by team (Cherny [episode](../sources/boris-cherny-creator-of-claude-code.md)).
 - Measure the pipeline, not the people: instrument the code-change journey and keep friction logs (Charignon [episode](../sources/airbnb-staff-eng-on-how-to-not-get.md)).
 - If you want your tool inside other people's software, design it as a library with no global state from day one, not as a program with an API bolted on (Ierusalimschy [episode](../sources/creator-of-lua-scripting-programming.md)).
+- Make the tool extensible in its own language, so your most ambitious users can ship whole subsystems without your involvement — and so agents can too (de Moura [episode](../sources/creator-of-lean-the-end-of-handwritten.md)).
+- Invest in the live feedback surface, not just the compiler: Lean's Infoview is what makes the work addictive to humans and legible to AI (de Moura [episode](../sources/creator-of-lean-the-end-of-handwritten.md)).
 - Being right about a tool bet isn't enough — how you argue it determines whether you (and it) survive (Bolin [episode](../sources/openai-codex-tech-lead-on-how-his.md)).
 
 ## Related

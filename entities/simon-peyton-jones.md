@@ -1,7 +1,7 @@
 ---
 type: entity
 entity_kind: person
-updated: 2026-07-19
+updated: 2026-08-10
 sources: [co-creator-of-haskell-functional.md]
 ---
 
@@ -29,6 +29,7 @@ Peyton Jones describes his research life as one long experiment in [functional p
 - [Bjarne Stroustrup](bjarne-stroustrup.md) — fellow language creator; C++ is the "useful but dangerous" counterpoint on his safety-vs-usefulness graph
 - [Xavier Leroy](xavier-leroy.md) — creator of OCaml, the strict/impure sibling in SPJ's Haskell-vs-OCaml story; independently confirms SPJ's bet that type systems help LLM code generation
 - [Roberto Ierusalimschy](roberto-ierusalimschy.md) — names Haskell first among three languages to learn to become a better engineer, from outside the FP world; also the dissent from SPJ's static-types-win-the-LLM-era bet
+- [Leonardo de Moura](leonardo-de-moura.md) — Lean is "close to Haskell, but with the support for proofs"; dependent types push SPJ's static-typing case to its limit ([his episode](../sources/creator-of-lean-the-end-of-handwritten.md))
 - [Charlie Marsh](charlie-marsh.md) — builds the type checkers and tooling that operationalize these ideas for Python
 - [David Patterson](david-patterson.md) — the hardware-architecture view of why specialized machines win or lose
 - [functional-programming](../concepts/functional-programming.md), [programming-languages](../concepts/programming-languages.md), [teaching-and-communication](../concepts/teaching-and-communication.md)

@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-08-03
-sources: [creator-of-lua-scripting-programming.md, turing-award-winner-early-ai-llm.md, creator-of-ocaml-functional-programming.md, turing-award-winner-postgres-disagreeing.md, turing-award-winner-data-abstraction.md, harvard-professor-cs50-what-matters.md, stanford-phd-ai-researcher-and-quant.md, mit-complexity-theorist-on-leetcode.md, creator-of-c-bell-labs-negative-overhead.md, dropboxs-former-most-senior-eng-building.md]
+updated: 2026-08-10
+sources: [creator-of-lean-the-end-of-handwritten.md, creator-of-lua-scripting-programming.md, turing-award-winner-early-ai-llm.md, creator-of-ocaml-functional-programming.md, turing-award-winner-postgres-disagreeing.md, turing-award-winner-data-abstraction.md, harvard-professor-cs50-what-matters.md, stanford-phd-ai-researcher-and-quant.md, mit-complexity-theorist-on-leetcode.md, creator-of-c-bell-labs-negative-overhead.md, dropboxs-former-most-senior-eng-building.md]
 ---
 
 # Academia vs industry
@@ -17,6 +17,10 @@ Xavier Leroy gives the sharpest historical account, and it is an inversion story
 [Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md) is the counterexample that complicates Leroy's inversion: a PUC-Rio professor whose language escaped academia entirely on its own terms, ending up inside games, databases and web servers without a corporate sponsor, a standards body, or a marketing budget ([episode](../sources/creator-of-lua-scripting-programming.md)). His explanation is not institutional but architectural — Lua was built as an embeddable library, so adopting it never required anyone to adopt *him*. That is a third transfer mechanism alongside Leroy's "industry ships what academia can't" and Liskov's "the ideas win through other languages."
 
 Bjarne Stroustrup supplies the mirror-image warning from inside industry: without ISO standardization, forced on him in 1989 by IBM and HP representatives who could not depend on a corporate-owned language, he believes C++ would have "faded into an academic cube language" ([episode](../sources/creator-of-c-bell-labs-negative-overhead.md)). Neither side ships alone.
+
+[Leonardo de Moura](../entities/leonardo-de-moura.md) (2026-08-10) adds a fourth transfer mechanism that is neither institutional nor architectural but *organizational*: the research-nonprofit ([episode](../sources/creator-of-lean-the-end-of-handwritten.md)). Lean is thirteen years old and spent the first ten as "a research project"; it became "a product" only in 2023 when he and Sebastian Ullrich founded the nonprofit behind it and could hire an engineering team. His framing of the difference is unusually concrete about what academic research cannot buy — not ideas but sustained engineering staff. It is also a case where the funding follows one constituency and pays for another: the nonprofit is fundable because of Lean's impact in mathematics, and the money is being spent on software and hardware verification, the path where "we do not really have funding to push seriously." [AWS](../entities/aws.md)/[Amazon](../entities/amazon.md), the largest donors, are heavy internal users rather than distribution partners — they run a half-million-line Lean compiler for AI accelerators ([open-source](open-source.md)).
+
+His career shape also inverts the usual direction of travel: he built Z3 at Microsoft Research and Lean partly at Amazon, so the entire body of work is industrial-lab research that the *academic* community (mathematicians) adopted, rather than academic research industry picked up. The user he optimized for was a Fields Medalist, and the design concession he made for that — dependent type theory over the far easier higher-order logic — is the sort of choice a product organization would normally refuse.
 
 ### The critique from inside academia
 
@@ -52,4 +56,4 @@ Long time horizons and tolerance for problems that don't resolve. Ryan Williams 
 - [programming-languages](programming-languages.md) — where the research-to-industry transfer story is most concrete
 - [teaching-and-communication](teaching-and-communication.md) — the part of academia everyone agrees is valuable
 - [regrets-and-advice](regrets-and-advice.md), [startups-and-founding](startups-and-founding.md)
-- Key people: [Judea Pearl](../entities/judea-pearl.md), [Xavier Leroy](../entities/xavier-leroy.md), [Mike Stonebraker](../entities/mike-stonebraker.md), [Barbara Liskov](../entities/barbara-liskov.md), [David Malan](../entities/david-malan.md), [Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md)
+- Key people: [Judea Pearl](../entities/judea-pearl.md), [Xavier Leroy](../entities/xavier-leroy.md), [Mike Stonebraker](../entities/mike-stonebraker.md), [Barbara Liskov](../entities/barbara-liskov.md), [David Malan](../entities/david-malan.md), [Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md), [Leonardo de Moura](../entities/leonardo-de-moura.md)

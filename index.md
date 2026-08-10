@@ -1,9 +1,10 @@
 # Index
 
-Knowledge base for The Peterman Post podcast (developing.dev) — 57 episodes ingested, 56 guests, 20 organizations, 34 concepts. Last updated 2026-07-19.
+Knowledge base for The Peterman Post podcast (developing.dev) — 58 episodes ingested, 57 guests, 21 organizations, 34 concepts. Last updated 2026-07-19.
 
 ## Sources (episodes, newest first)
 
+- [#58: Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](sources/creator-of-lean-the-end-of-handwritten.md) — Leonardo de Moura built Z3, the SMT solver that has quietly sat under a generation of program-analysis tools, and then built Lean to fix what Z3 could not do — prove the *absence* 
 - [#57: Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy](sources/creator-of-lua-scripting-programming.md) — Roberto Ierusalimschy designed Lua, the small embedded scripting language that ended up inside World of Warcraft, Roblox, Redis, nginx and an enormous amount of unglamorous industr
 - [#56: Turing Award Winner: Early AI, LLM Predictions, Causality | Judea Pearl](sources/turing-award-winner-early-ai-llm.md) — Judea Pearl won the 2011 Turing Award for two separate revolutions: Bayesian networks, which made probabilistic reasoning tractable and gave 1980s AI its statistical foundation, an
 - [#55: Creator of OCaml: Functional Programming, Formal Verification, Programming Languages | Xavier Leroy](sources/creator-of-ocaml-functional-programming.md) — Xavier Leroy created OCaml at Inria and later led CompCert, the formally verified C compiler proved correct in the Coq/Rocq proof assistant. The conversation is a language-designer
@@ -98,6 +99,7 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 57 episodes in
 - [John Myles White](entities/john-myles-white.md) — Former Director of Engineering at Meta Superintelligence Labs (PyTorch) and a core contributor to the Julia programming language (episode)
 - [Judea Pearl](entities/judea-pearl.md) — Turing Award winner (2011) and longtime UCLA computer science professor, responsible for two distinct revolutions in AI: Bayesian networks, which made probabilistic reasoning tract
 - [Laurent Charignon](entities/laurent-charignon.md) — Developer-productivity specialist who was a Staff engineer at Stripe, Airbnb, and Instagram (Meta), with earlier time at Apple and a spell as an Airbnb engineering manager — the po
+- [Leonardo de Moura](entities/leonardo-de-moura.md) — Creator of the Lean proof assistant and, twenty years earlier, of the Z3 SMT solver — two of the most widely deployed pieces of automated-reasoning infrastructure in existence. Sen
 - [Leslie Lamport](entities/leslie-lamport.md) — Turing Award winner; inventor of Paxos, logical clocks, the Bakery algorithm, the Byzantine Generals framing, and LaTeX. Spent his whole career in industry (SRI, DEC) rather than a
 - [Marc Brooker](entities/marc-brooker.md) — Distinguished Engineer at AWS working on databases and serverless (Aurora Serverless, DSQL); rose from new grad to DE inside Amazon (episode)
 - [Marius Schulz](entities/marius-schulz.md) — Senior Staff Engineer (IC7) at Instagram/Meta, first engineer on Threads Web — a front-end specialist with a "burning passion for the web" who earned a "redefines expectations" rat
@@ -168,7 +170,7 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 57 episodes in
 - [Databases](concepts/databases.md) — Database systems as told by the field's founder (Mike Stonebraker, creator of Ingres and Postgres), one of its biggest industrial builders (Marc Brooker, AWS databases), and the pe
 - [Developer tools](concepts/developer-tools.md) — Building tools for other engineers — build systems, editors, notebooks, linters — recurs as both a product category and a career engine: several guests earned their highest promoti
 - [Distributed systems](concepts/distributed-systems.md) — How the podcast's guests — spanning the people who invented consensus protocols to the people who operate hundreds of thousands of machines — think about building computer systems 
-- [Formal verification](concepts/formal-verification.md) — Proving programs correct with mathematics instead of (only) testing — anchored by Xavier Leroy, who spent years proving the CompCert C compiler correct, and Leslie Lamport, for who
+- [Formal verification](concepts/formal-verification.md) — Proving programs correct with mathematics instead of (only) testing — anchored by Leonardo de Moura, who built the Lean proof assistant most of this work now runs on, Xavier Leroy,
 - [Functional programming](concepts/functional-programming.md) — Programming with values instead of mutation — covered definitively by the creators of both major ML-family survivors, Haskell's Simon Peyton Jones and OCaml's Xavier Leroy, and ech
 - [Hiring and interviews](concepts/hiring-and-interviews.md) — How tech companies actually decide who to hire and at what level — the coding/behavioral interview machinery, hiring committees, referrals, and leveling — told from both sides of t
 - [Imposter syndrome](concepts/imposter-syndrome.md) — Self-doubt among engineers at every level — from new hires at big tech to the creator of C++ arriving at Bell Labs and a Turing Award winner starting as a Berkeley professor — and 

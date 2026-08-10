@@ -1,7 +1,7 @@
 ---
 type: entity
 entity_kind: person
-updated: 2026-07-19
+updated: 2026-08-10
 sources: [turing-award-winner-on-working-with.md]
 ---
 
@@ -28,4 +28,5 @@ The Bakery algorithm was born of spite: his first submitted mutual-exclusion alg
 - [Marc Brooker](marc-brooker.md) — cites Lamport on writing and formal thinking; industrializes Paxos-style consensus
 - [Brendan Burns](brendan-burns.md) — Kubernetes delegates leader election to Raft-based etcd
 - [Xavier Leroy](xavier-leroy.md) — mechanized Lamport's proofs-are-understanding worldview at compiler scale (CompCert); see [formal-verification](../concepts/formal-verification.md)
+- [Leonardo de Moura](leonardo-de-moura.md) — reports Lamport's thesis as an observed effect: "anybody that went through the process of formalizing something understands the subject way better after that" ([his episode](../sources/creator-of-lean-the-end-of-handwritten.md))
 - [working with legends](../concepts/working-with-legends.md), [security and cryptography](../concepts/security-and-cryptography.md)

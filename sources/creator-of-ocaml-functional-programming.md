@@ -1,6 +1,6 @@
 ---
 type: source
-updated: 2026-07-27
+updated: 2026-08-10
 raw: ../raw/creator-of-ocaml-functional-programming.md
 guest: "Xavier Leroy"
 guest_role: "Creator of OCaml; CompCert verified-compiler lead; professor at Collège de France (ex-Inria)"
@@ -43,3 +43,4 @@ Xavier Leroy created OCaml at Inria and later led CompCert, the formally verifie
 - [Turing Award Winner: P vs NP, Zero-Knowledge Proofs, Quantum Computation | Avi Wigderson](turing-award-winner-p-vs-np-zero.md) — computability/complexity foundations Leroy says he wishes he'd learned more deeply, and machine-checkable proofs from the theory side.
 - [Turing Award Winner: Early AI, LLM Predictions, Causality | Judea Pearl](turing-award-winner-early-ai-llm.md) — the following week's episode and the closest structural parallel: both argue LLM output needs an external correctness apparatus (proofs for Leroy, causal models for Pearl), and both indict academia from inside it.
 - [Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy](creator-of-lua-scripting-programming.md) — the adjacent language-designer episode: convergent on small design teams and predictable cost models, divergent on what saves LLM-era code (Leroy: machine-checkable proofs; Ierusalimschy: plain readability, from a dynamically typed language).
+- [Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](creator-of-lean-the-end-of-handwritten.md) — the direct sequel and the corpus's most consequential disagreement about verification: de Moura (2026-08-10) endorses Leroy's "decade of formal verification" call but reverses the diagnosis, arguing specifications are the easy half ("an inefficient program can be viewed as a specification") and that proof *maintenance* was the real cost — which AI has now largely absorbed, with an AI-produced, proof-carrying Lean translation of zlib as the evidence.

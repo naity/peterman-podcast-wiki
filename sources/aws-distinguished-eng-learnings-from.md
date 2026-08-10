@@ -1,6 +1,6 @@
 ---
 type: source
-updated: 2026-07-19
+updated: 2026-08-10
 raw: ../raw/aws-distinguished-eng-learnings-from.md
 guest: "Marc Brooker"
 guest_role: "Distinguished Engineer at AWS (databases/serverless), new grad to DE at Amazon"
@@ -43,3 +43,4 @@ url: https://www.developing.dev/p/aws-distinguished-eng-learnings-from
 - [Dropbox's Former Most Senior Eng: Building Great Systems and Advice for the AI Era | James Cowling](dropboxs-former-most-senior-eng-building.md) — same pairing of large-scale systems craft with advice for the AI era.
 - [Distinguished Eng On Stack Ranking, Competing with Bezos, Regrets | Bryan Cantrill](distinguished-eng-on-stack-ranking.md) — fellow distinguished-engineer-level systems veteran reflecting on cloud infrastructure careers and Amazon.
 - [OpenAI Eng & Dev Tools Founder: How Software Engineering Is Changing | Charlie Marsh](openai-eng-and-dev-tools-founder.md) — shared theme of how AI tooling is reshaping the practice of software engineering.
+- [Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](creator-of-lean-the-end-of-handwritten.md) — an AWS colleague supplying the verification layer Brooker's specification-driven-development forecast leaves open; both independently reach for handmade craft (joinery, furniture) as the metaphor for what survives.

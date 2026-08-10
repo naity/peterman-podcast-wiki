@@ -112,6 +112,130 @@ main { flex:1; display:flex; min-height:0; }
  "generated": "2026-07-19",
  "nodes": [
   {
+   "id": "ep:creator-of-lean-the-end-of-handwritten",
+   "type": "episode",
+   "label": "Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura",
+   "n": 58,
+   "date": "2026-08-10",
+   "url": "https://www.developing.dev/p/creator-of-lean-the-end-of-handwritten",
+   "guest": "Leonardo de Moura",
+   "guest_role": "Creator of the Lean proof assistant and of the Z3 SMT solver; Senior Principal Applied Scientist at AWS; co-founder of the Lean FRO",
+   "takeaways": [
+    "Lean is a programming language in which you can also state and machine-check properties of your programs. Code not written in Lean is handled two ways: shallow embedding (the Aeneas tool maps Rust into Lean and you verify the translation) or deep embedding (you write the semantics of C inside Lean so C programs become Lean objects you can state theorems about). His compression of the discipline: 'if you can express in math what you care about in your program, you can verify using Lean.'",
+    "Only the kernel must be trusted, and proof checking in Lean is type checking - you export a development as a blob and a checker verifies each term's type matches the type claimed. A high-performance kernel is about 5,000 lines: 'the goal of the kernel should be something you can write yourself.' Multiple independent kernels exist (Mario Carneiro's Lean-for-Lean, verified against Lean's semantics; others in Rust), plus pretty-printers so you can confirm the exported theorem really is what it claims. Lean itself is not verified, and cannot be, because nobody can write a stable specification for something like the simplifier while users keep asking to change its behaviour.",
+    "The cost structure of verification just inverted, and the specification was never the bottleneck. Verification historically cost around 10x the program, and the recurring pain was that every code change broke proofs you then had to repair without remembering why they existed. AI is 'extremely good at proving, writing formal proofs, maintaining formal proofs' - he describes asking it to rewrite proofs he did not himself understand so he could remove a feature. On specs he is far less worried than the skeptics: 'properties are usually vaguely in your mind', and 'an inefficient program can be viewed as a specification' - write the naive version, then ask for the fast one plus a proof of equivalence.",
+    "The concrete demonstration: Kim Morrison prompted an AI to translate the zlib C compression library into Lean, pass zlib's own test suites, and prove that compressing then decompressing returns the original data. It succeeded in about a week, and the current phase is requesting optimizations under the constraint that the proofs still go through. 'It feels like science fiction. Six months ago, I would say this is science fiction.'",
+    "His headline argument for formalizing is optimization courage, not safety. People routinely refuse to optimize code because they don't understand why it currently works; a proof removes the fear, and formalizing anything leaves you understanding it far better than implementing it did. Applied to agents: 'if the AI is telling you, look, I optimized it, it still computes the same thing. Here's the proof' - versus today's manual inspection of an agent's diff. His own practice has moved: 'I'm not writing unit tests anymore. I'm writing properties and proving them. The AI is proving most of them.'",
+    "Handwritten math changes 'dramatically' but does not end. Frontier labs only recently started training seriously on Lean with real RL pipelines, so costs keep falling and he expects Lean and Rocq to go mainstream. Handwritten proofs survive as communication artifacts, the way handmade furniture survives machine production - 'there will always be people polishing, making them super easy to understand for another human.' Humans stay structurally in the loop because specifications are the interface between AI-generated math and anything we want; without it 'this is some alien thing that's going by itself.'",
+    "He dissents from the readability camp: once a proof carries the code, how the code reads stops mattering. 'In the past, people say, Oh, functional programming, I don't like it. But if I'm not the one that's writing most of the code anyway, it doesn't really matter. What matters? The specification level. It doesn't really matter how the code has been written.' This directly contradicts Ierusalimschy one week earlier, who argued simplicity matters MORE under AI because the human's remaining job is reading.",
+    "AI finds proofs but does not yet invent mathematics: 'we see no evidence it can find novel proofs' of the concept-inventing kind, and the million-line refutation of the unit distance conjecture is a formal proof, not a new theory - 'they did not come up with a new theory or anything like that.' Lean Eval now includes challenges where the AI must construct the mathematical objects itself, and his hedge is explicit: 'I would not bet against AI here.'",
+    "Lean won mathematicians through mathlib (started 2017) and the Liquid Tensor Experiment (2020), which formalized an unpublished result Fields Medalist Peter Scholze was himself unsure of. Johan Commelin's team formalized AND simplified the proof without fully understanding it, guided by the Infoview - 'how can you simplify a proof from one of the greatest living mathematicians without fully understanding it?' The lesson he draws is social: formalization is 'not about verifying, but enabling people to work together in large numbers', because you no longer need to trust a stranger's proof to let them fill a hole in yours. Terence Tao followed and 'got addicted'.",
+    "Proof is a single-player game, which is exactly why AI can play it. Users tell him 'you built my favorite computer game'; he compares it to 'solving millions of really hard Sudoku problems'. The AI plays the identical game - open a `by` block, apply tactics while watching the Infoview state change, win when there are no goals left, with RL optimizing toward that terminal state. DeepMind's 2024 IMO silver shocked him; there are now golds from Harmonic and from ByteDance, which he was surprised to learn runs a 400-person math team.",
+    "Z3 versus Lean is automatic versus interactive, and Lean exists because automatic ran out of steam. He started Z3 twenty years ago at Microsoft Research: a push-button SMT solver with background theories (arithmetic, arrays) chosen for test-case generation and software verification. It excels at finding bugs - encode a suspicious path as constraints and get 'unsatisfiable' or a concrete triggering input - and at bounded hardware verification, but was 'never super successful' at proving absence of bugs, because heuristics for quantified properties were hand-coded and failed, leaving users saying 'come on, I know the proof, why can't Z3 find it?' 'That's why Lean started.' A colleague at Amazon named the failure mode proof instability: write 'B and A' instead of 'A and B' and the proof flips to failing. In Lean you control the proof step by step, which is what lets a human - or now an AI - supply the reasoning the solver could not guess.",
+    "Why undecidable tools work in practice: Z3 spans the whole ladder (NP-complete, PSPACE, EXPTIME, undecidable) and tiny SAT instances exist that no solver cracks, yet bounded real-world problems yield easily. His explanation is that 'programs and hardware, they are not correct for esoteric reasons... they are correct for very simple reasons.'",
+    "Lean was an order of magnitude harder than Z3, and the reason was the humans. Z3's interface is SMT-LIB, a machine-facing language, and its users are 'very sophisticated software developers, people that speak the same language I speak.' Lean has libraries, interactivity, an LSP, a build system, GitHub, and a first user base of mathematicians with wholly different expectations, plus a second constituency wanting a general-purpose language - when 'I'm not a programming language person. My background is automated reasoning.' The hardest single artifact was the C++ to Lean self-hosting rewrite for Lean 4: about 100,000 lines, all human-written, bootstrapped with deliberately bare-bones features, failing file by file down a 1,000-file pipeline, with required proofs constructed with no interactivity at all - 'almost like programming in assembly.' 'I literally wanted to cry when I managed to compile Lean 4.' Many expected him and Sebastian Ullrich to fail.",
+    "What users cite as Lean's edge over rivals: extensibility, mathlib, community and responsiveness. Because Lean is implemented in Lean you can write automation mid-proof, and AIs now do it unprompted, writing Lean metaprograms to test their own conjectures about why something fails. Patrick Massot - a French mathematician with no CS degree - built Lean Verbose, rendering proofs as structured English or French textbook prose with clickable next-move suggestions; Veil is a protocol-verification DSL that feels like a separate system but is just a Lean file. Both were built without ever contacting the core team. mathlib matters because you need the concepts to even state a conjecture. Pre-AI, Zulip answers arrived in five minutes - 'people would say human beats AI' - and Jeremy Avigad, the first user, could request a feature and get it the same day.",
+    "Dependent type theory was a user-driven choice, not an aesthetic one. Higher-order logic is far easier to implement and was his instinct; Jeremy Avigad convinced him he would never attract Fields-Medal-level mathematicians without dependent types, because abstract math needs structures as first-class citizens (a function taking a group and returning a group) where higher-order logic forces 'encoding tricks. It's a mess.' He reports unanimity among serious users - Tao, Alex Kontorovich, Avigad, Kevin Buzzard, Massot. The payoff is invariants for free: a struct field whose type is a proof that x > y, or a function you cannot call without supplying evidence that y is not zero - 'you don't have to invent invariants.' The historic objection was that supplying those proofs is annoying, which is exactly what AI removes.",
+    "Lean is 13 years old and was a research project for the first ten; it became 'a product' only when he and Sebastian Ullrich founded the nonprofit in 2023 and could hire engineers, funded on the strength of Lean's impact in math, with AWS/Amazon the largest donors so far. The money is being pushed at the underfunded half: Lean as a general programming language for software and hardware verification. At AWS formal verification has been used 'for decades, but only for the super-safe, critical components because it's expensive', and there is now a half-million-line Lean compiler for AI accelerators where the proofs are a bonus rather than the point.",
+    "Math and software verification scale in opposite directions: in math the statements are tiny (Fermat's Last Theorem) and the proofs deep; in software the statements are big and the proofs shallow but forced to manipulate enormous objects. Scalability, not expressiveness, is the open problem.",
+    "How to learn Lean now: the books are at lean-lang.org (Functional Programming in Lean, Theorem Proving in Lean, Mathematics in Lean, The Mechanics of Proof), but his actual recommendation is a three-pane setup - code, Infoview, and an AI agent writing and narrating. Terence Tao learned pre-agents by copy-pasting between ChatGPT and VS Code. Tell the agent your background ('if you tell, oh, I know Haskell, it's so much easier') and it adapts.",
+    "Advice to his younger self is social, not technical: 'I'm super introverted. And I would tell, look, you should work on your people skills because it helps a lot... when you have to interact with a community, with people. For me, it was hard to learn that.' He declines to warn himself about the difficulty - 'eagerness is bliss. I mean, you don't know how hard things are, and when you start the adventure.'"
+   ],
+   "quotes": [
+    {
+     "speaker": "Leonardo de Moura",
+     "quote": "It feels like science fiction. Six months ago, I would say this is science fiction.",
+     "t": "05:55"
+    },
+    {
+     "speaker": "Leonardo de Moura",
+     "quote": "At AWS, we have been using formal verification for decades, but only for the super-safe, critical components because it's expensive. Until now, right? With AI, it changes the game.",
+     "t": "10:48"
+    },
+    {
+     "speaker": "Leonardo de Moura",
+     "quote": "An inefficient program can be viewed as a specification.",
+     "t": "09:35"
+    },
+    {
+     "speaker": "Leonardo de Moura",
+     "quote": "If I'm not the one that's writing most of the code anyway, it doesn't really matter. What matters? The specification level. It doesn't really matter how the code has been written.",
+     "t": "34:23"
+    },
+    {
+     "speaker": "Leonardo de Moura",
+     "quote": "I literally wanted to cry when I managed to compile Lean 4.",
+     "t": "48:18"
+    },
+    {
+     "speaker": "Leonardo de Moura",
+     "quote": "I'm not writing unit tests anymore. I'm writing properties and proving them. The AI is proving most of them.",
+     "t": "01:02:01"
+    },
+    {
+     "speaker": "Leonardo de Moura",
+     "quote": "If the AI is telling you, look, I optimized it, it still computes the same thing. Here's the proof. Game changer in my point of view.",
+     "t": "01:02:37"
+    },
+    {
+     "speaker": "Leonardo de Moura",
+     "quote": "I'm super introverted. And I would tell, look, you should work on your people skills because it helps a lot.",
+     "t": "01:06:28"
+    }
+   ],
+   "sections": [
+    {
+     "t": "00:28",
+     "title": "How formal verification works"
+    },
+    {
+     "t": "05:21",
+     "title": "A new way of writing software"
+    },
+    {
+     "t": "13:15",
+     "title": "Proof assistants vs programming languages"
+    },
+    {
+     "t": "21:06",
+     "title": "How Lean has assisted in mathematical breakthroughs"
+    },
+    {
+     "t": "32:03",
+     "title": "When is it worth formalizing software"
+    },
+    {
+     "t": "33:29",
+     "title": "How Lean will impact handwritten math"
+    },
+    {
+     "t": "38:55",
+     "title": "The Z3 theorem prover project he started"
+    },
+    {
+     "t": "45:44",
+     "title": "The most technically challenging work of his career"
+    },
+    {
+     "t": "51:10",
+     "title": "Lean vs its competitors"
+    },
+    {
+     "t": "01:00:37",
+     "title": "The future of Lean"
+    },
+    {
+     "t": "01:04:10",
+     "title": "Technical book recommendations"
+    },
+    {
+     "t": "01:06:15",
+     "title": "Advice for his younger self"
+    }
+   ],
+   "complete": true
+  },
+  {
    "id": "ep:creator-of-lua-scripting-programming",
    "type": "episode",
    "label": "Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy",
@@ -5269,6 +5393,12 @@ main { flex:1; display:flex; min-height:0; }
    "complete": false
   },
   {
+   "id": "p:leonardo-de-moura",
+   "type": "person",
+   "label": "Leonardo de Moura",
+   "role": "Creator of the Lean proof assistant and of the Z3 SMT solver; Senior Principal Applied Scientist at AWS; co-founder of the Lean FRO"
+  },
+  {
    "id": "p:roberto-ierusalimschy",
    "type": "person",
    "label": "Roberto Ierusalimschy",
@@ -5608,7 +5738,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "o:amazon",
    "type": "org",
    "label": "Amazon",
-   "count": 9
+   "count": 10
   },
   {
    "id": "o:anthropic",
@@ -5626,13 +5756,19 @@ main { flex:1; display:flex; min-height:0; }
    "id": "o:aws",
    "type": "org",
    "label": "AWS",
-   "count": 4
+   "count": 5
   },
   {
    "id": "o:google",
    "type": "org",
    "label": "Google",
    "count": 15
+  },
+  {
+   "id": "o:google-deepmind",
+   "type": "org",
+   "label": "Google Deepmind",
+   "count": 2
   },
   {
    "id": "o:ibm",
@@ -5662,7 +5798,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "o:microsoft",
    "type": "org",
    "label": "Microsoft",
-   "count": 9
+   "count": 10
   },
   {
    "id": "o:mit",
@@ -5686,7 +5822,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "o:openai",
    "type": "org",
    "label": "OpenAI",
-   "count": 7
+   "count": 8
   },
   {
    "id": "o:snapchat",
@@ -5728,7 +5864,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "c:academia-vs-industry",
    "type": "concept",
    "label": "Academia Vs Industry",
-   "count": 2
+   "count": 3
   },
   {
    "id": "c:ai-coding-tools",
@@ -5740,7 +5876,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "c:ai-era-engineering",
    "type": "concept",
    "label": "AI Era Engineering",
-   "count": 25
+   "count": 26
   },
   {
    "id": "c:big-tech-culture",
@@ -5776,7 +5912,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "c:complexity-theory",
    "type": "concept",
    "label": "Complexity Theory",
-   "count": 3
+   "count": 4
   },
   {
    "id": "c:computer-architecture",
@@ -5800,7 +5936,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "c:developer-tools",
    "type": "concept",
    "label": "Developer Tools",
-   "count": 8
+   "count": 9
   },
   {
    "id": "c:distributed-systems",
@@ -5812,13 +5948,13 @@ main { flex:1; display:flex; min-height:0; }
    "id": "c:formal-verification",
    "type": "concept",
    "label": "Formal Verification",
-   "count": 1
+   "count": 2
   },
   {
    "id": "c:functional-programming",
    "type": "concept",
    "label": "Functional Programming",
-   "count": 4
+   "count": 5
   },
   {
    "id": "c:hiring-and-interviews",
@@ -5872,13 +6008,13 @@ main { flex:1; display:flex; min-height:0; }
    "id": "c:open-source",
    "type": "concept",
    "label": "Open Source",
-   "count": 8
+   "count": 9
   },
   {
    "id": "c:programming-languages",
    "type": "concept",
    "label": "Programming Languages",
-   "count": 11
+   "count": 12
   },
   {
    "id": "c:promotions",
@@ -5890,7 +6026,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "c:regrets-and-advice",
    "type": "concept",
    "label": "Regrets And Advice",
-   "count": 45
+   "count": 46
   },
   {
    "id": "c:security-and-cryptography",
@@ -5920,7 +6056,7 @@ main { flex:1; display:flex; min-height:0; }
    "id": "c:teaching-and-communication",
    "type": "concept",
    "label": "Teaching And Communication",
-   "count": 22
+   "count": 23
   },
   {
    "id": "c:working-with-legends",
@@ -5930,6 +6066,11 @@ main { flex:1; display:flex; min-height:0; }
   }
  ],
  "links": [
+  {
+   "source": "p:leonardo-de-moura",
+   "target": "ep:creator-of-lean-the-end-of-handwritten",
+   "kind": "guest_of"
+  },
   {
    "source": "p:roberto-ierusalimschy",
    "target": "ep:creator-of-lua-scripting-programming",
@@ -6217,7 +6358,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:21x-hackathon-winner-turned-college",
-   "target": "c:regrets-and-advice",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -6227,17 +6368,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:21x-hackathon-winner-turned-college",
-   "target": "c:startups-and-founding",
+   "target": "c:non-linear-careers",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:21x-hackathon-winner-turned-college",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:21x-hackathon-winner-turned-college",
    "target": "c:career-growth",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:21x-hackathon-winner-turned-college",
-   "target": "c:non-linear-careers",
    "kind": "discusses"
   },
   {
@@ -6277,22 +6418,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:26-year-old-meta-staff-eng-ic6-on",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:26-year-old-meta-staff-eng-ic6-on",
-   "target": "c:teaching-and-communication",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:26-year-old-meta-staff-eng-ic6-on",
    "target": "c:compensation-and-equity",
    "kind": "discusses"
   },
   {
    "source": "ep:26-year-old-meta-staff-eng-ic6-on",
-   "target": "c:mentorship-and-sponsorship",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -6302,12 +6433,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:26-year-old-meta-staff-eng-ic6-on",
+   "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:26-year-old-meta-staff-eng-ic6-on",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:26-year-old-meta-staff-eng-ic6-on",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:26-year-old-meta-staff-eng-ic6-on",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -6342,12 +6483,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "o:stripe",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "o:apple",
+   "target": "o:meta",
    "kind": "features_org"
   },
   {
@@ -6357,38 +6493,13 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "o:meta",
+   "target": "o:apple",
    "kind": "features_org"
   },
   {
    "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "c:corporate-politics",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "c:developer-tools",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
+   "target": "o:stripe",
+   "kind": "features_org"
   },
   {
    "source": "ep:airbnb-staff-eng-on-how-to-not-get",
@@ -6397,7 +6508,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "c:mentorship-and-sponsorship",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -6407,7 +6518,37 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:airbnb-staff-eng-on-how-to-not-get",
+   "target": "c:developer-tools",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
    "target": "c:incident-management",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
+   "target": "c:corporate-politics",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:airbnb-staff-eng-on-how-to-not-get",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -6417,7 +6558,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:airbnb-staff-eng-on-how-to-not-get",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -6457,17 +6598,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:amazon-principal-engineer-on-layoffs",
-   "target": "c:management",
+   "target": "c:hiring-and-interviews",
    "kind": "discusses"
   },
   {
    "source": "ep:amazon-principal-engineer-on-layoffs",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:amazon-principal-engineer-on-layoffs",
-   "target": "c:layoffs",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -6477,7 +6613,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:amazon-principal-engineer-on-layoffs",
-   "target": "c:hiring-and-interviews",
+   "target": "c:layoffs",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:amazon-principal-engineer-on-layoffs",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -6487,7 +6628,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:amazon-principal-engineer-on-layoffs",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -6527,12 +6668,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:amazon-vp-on-promotions-getting-fired",
-   "target": "c:management",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
    "source": "ep:amazon-vp-on-promotions-getting-fired",
-   "target": "c:regrets-and-advice",
+   "target": "c:calibrations-and-ratings",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:amazon-vp-on-promotions-getting-fired",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:amazon-vp-on-promotions-getting-fired",
+   "target": "c:big-tech-culture",
    "kind": "discusses"
   },
   {
@@ -6552,17 +6703,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:amazon-vp-on-promotions-getting-fired",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:amazon-vp-on-promotions-getting-fired",
-   "target": "c:mentorship-and-sponsorship",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:amazon-vp-on-promotions-getting-fired",
-   "target": "c:calibrations-and-ratings",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -6572,7 +6713,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:amazon-vp-on-promotions-getting-fired",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -6601,17 +6742,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:amazon-vp-reveals-everything-hes",
-   "target": "o:google",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:amazon-vp-reveals-everything-hes",
    "target": "o:amazon",
    "kind": "features_org"
   },
   {
    "source": "ep:amazon-vp-reveals-everything-hes",
-   "target": "c:management",
+   "target": "o:google",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:amazon-vp-reveals-everything-hes",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:amazon-vp-reveals-everything-hes",
+   "target": "c:calibrations-and-ratings",
    "kind": "discusses"
   },
   {
@@ -6626,17 +6772,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:amazon-vp-reveals-everything-hes",
-   "target": "c:calibrations-and-ratings",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:amazon-vp-reveals-everything-hes",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:amazon-vp-reveals-everything-hes",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -6665,12 +6806,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "o:anthropic",
+   "target": "o:microsoft",
    "kind": "features_org"
   },
   {
    "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "o:microsoft",
+   "target": "o:anthropic",
    "kind": "features_org"
   },
   {
@@ -6680,32 +6821,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "c:developer-tools",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "c:mentorship-and-sponsorship",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -6715,12 +6831,37 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:anthropic-eng-leader-and-ex-senior",
+   "target": "c:developer-tools",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:anthropic-eng-leader-and-ex-senior",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:anthropic-eng-leader-and-ex-senior",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:anthropic-eng-leader-and-ex-senior",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:anthropic-eng-leader-and-ex-senior",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:anthropic-eng-leader-and-ex-senior",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:anthropic-eng-leader-and-ex-senior",
-   "target": "c:ai-era-engineering",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -6765,12 +6906,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:aws-distinguished-eng-learnings-from",
-   "target": "c:systems-design",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:aws-distinguished-eng-learnings-from",
-   "target": "c:regrets-and-advice",
+   "target": "c:ai-coding-tools",
    "kind": "discusses"
   },
   {
@@ -6780,12 +6916,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:aws-distinguished-eng-learnings-from",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:aws-distinguished-eng-learnings-from",
-   "target": "c:ai-coding-tools",
+   "target": "c:databases",
    "kind": "discusses"
   },
   {
@@ -6795,22 +6926,32 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:aws-distinguished-eng-learnings-from",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:aws-distinguished-eng-learnings-from",
+   "target": "c:systems-design",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:aws-distinguished-eng-learnings-from",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:aws-distinguished-eng-learnings-from",
-   "target": "c:distributed-systems",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:aws-distinguished-eng-learnings-from",
-   "target": "c:databases",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:aws-distinguished-eng-learnings-from",
    "target": "c:ai-era-engineering",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:aws-distinguished-eng-learnings-from",
+   "target": "c:distributed-systems",
    "kind": "discusses"
   },
   {
@@ -6850,12 +6991,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:behind-the-scenes-of-this-podcast",
-   "target": "c:career-growth",
+   "target": "c:teaching-and-communication",
    "kind": "discusses"
   },
   {
    "source": "ep:behind-the-scenes-of-this-podcast",
-   "target": "c:teaching-and-communication",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
@@ -6884,6 +7025,11 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:boris-cherny-creator-of-claude-code",
+   "target": "o:instagram",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:boris-cherny-creator-of-claude-code",
    "target": "o:anthropic",
    "kind": "features_org"
   },
@@ -6894,17 +7040,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:boris-cherny-creator-of-claude-code",
-   "target": "o:instagram",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:boris-cherny-creator-of-claude-code",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:boris-cherny-creator-of-claude-code",
-   "target": "c:influence-and-leadership",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -6914,7 +7050,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:boris-cherny-creator-of-claude-code",
-   "target": "c:big-tech-culture",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:boris-cherny-creator-of-claude-code",
+   "target": "c:ai-coding-tools",
    "kind": "discusses"
   },
   {
@@ -6929,17 +7070,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:boris-cherny-creator-of-claude-code",
-   "target": "c:ai-coding-tools",
+   "target": "c:influence-and-leadership",
    "kind": "discusses"
   },
   {
    "source": "ep:boris-cherny-creator-of-claude-code",
-   "target": "c:imposter-syndrome",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:boris-cherny-creator-of-claude-code",
-   "target": "c:startups-and-founding",
+   "target": "c:big-tech-culture",
    "kind": "discusses"
   },
   {
@@ -6949,12 +7085,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:boris-cherny-creator-of-claude-code",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:boris-cherny-creator-of-claude-code",
    "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
    "source": "ep:boris-cherny-creator-of-claude-code",
-   "target": "c:promotions",
+   "target": "c:imposter-syndrome",
    "kind": "discusses"
   },
   {
@@ -6983,16 +7124,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:cloudkitchens-cto-on-intelligence",
-   "target": "o:uber",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:cloudkitchens-cto-on-intelligence",
-   "target": "o:apple",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:cloudkitchens-cto-on-intelligence",
    "target": "o:amazon",
    "kind": "features_org"
   },
@@ -7003,17 +7134,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:cloudkitchens-cto-on-intelligence",
-   "target": "c:management",
-   "kind": "discusses"
+   "target": "o:apple",
+   "kind": "features_org"
   },
   {
    "source": "ep:cloudkitchens-cto-on-intelligence",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
+   "target": "o:uber",
+   "kind": "features_org"
   },
   {
    "source": "ep:cloudkitchens-cto-on-intelligence",
-   "target": "c:big-tech-culture",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -7023,12 +7154,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:cloudkitchens-cto-on-intelligence",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:cloudkitchens-cto-on-intelligence",
    "target": "c:calibrations-and-ratings",
    "kind": "discusses"
   },
   {
    "source": "ep:cloudkitchens-cto-on-intelligence",
-   "target": "c:startups-and-founding",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:cloudkitchens-cto-on-intelligence",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -7038,7 +7179,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:cloudkitchens-cto-on-intelligence",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -7078,17 +7219,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:co-creator-of-haskell-functional",
-   "target": "c:open-source",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:co-creator-of-haskell-functional",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:co-creator-of-haskell-functional",
-   "target": "c:teaching-and-communication",
+   "target": "c:security-and-cryptography",
    "kind": "discusses"
   },
   {
@@ -7098,12 +7229,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:co-creator-of-haskell-functional",
+   "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:co-creator-of-haskell-functional",
+   "target": "c:open-source",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:co-creator-of-haskell-functional",
    "target": "c:functional-programming",
    "kind": "discusses"
   },
   {
    "source": "ep:co-creator-of-haskell-functional",
-   "target": "c:security-and-cryptography",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -7153,7 +7294,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:creator-of-c-bell-labs-negative-overhead",
-   "target": "c:regrets-and-advice",
+   "target": "c:programming-languages",
    "kind": "discusses"
   },
   {
@@ -7163,22 +7304,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:creator-of-c-bell-labs-negative-overhead",
-   "target": "c:working-with-legends",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:creator-of-c-bell-labs-negative-overhead",
-   "target": "c:programming-languages",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:creator-of-c-bell-labs-negative-overhead",
-   "target": "c:imposter-syndrome",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:creator-of-c-bell-labs-negative-overhead",
    "target": "c:ai-era-engineering",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-c-bell-labs-negative-overhead",
+   "target": "c:working-with-legends",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-c-bell-labs-negative-overhead",
+   "target": "c:imposter-syndrome",
    "kind": "discusses"
   },
   {
@@ -7200,18 +7341,113 @@ main { flex:1; display:flex; min-height:0; }
    "reason": "Contrasting optimistic view of AI-era developer tooling vs Stroustrup's skepticism"
   },
   {
-   "source": "ep:creator-of-lua-scripting-programming",
-   "target": "c:systems-design",
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "o:google-deepmind",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "o:aws",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "o:openai",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "o:microsoft",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "o:amazon",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:academia-vs-industry",
    "kind": "discusses"
   },
   {
-   "source": "ep:creator-of-lua-scripting-programming",
-   "target": "c:computer-architecture",
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:developer-tools",
    "kind": "discusses"
   },
   {
-   "source": "ep:creator-of-lua-scripting-programming",
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:programming-languages",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:open-source",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:functional-programming",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:formal-verification",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
    "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:ai-era-engineering",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "c:complexity-theory",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "ep:creator-of-ocaml-functional-programming",
+   "kind": "related",
+   "reason": "same Dijkstra opening and the same 'decade of formal verification' bet, but Leroy locates the hard problem in specifications while de Moura says specs were the easy half and proof maintenance was the real cost AI just absorbed"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "ep:creator-of-lua-scripting-programming",
+   "kind": "related",
+   "reason": "direct contradiction one week apart: Ierusalimschy says AI makes readability matter more, de Moura says a proof makes how the code reads irrelevant"
+  },
+  {
+   "source": "ep:aws-distinguished-eng-learnings-from",
+   "target": "ep:creator-of-lean-the-end-of-handwritten",
+   "kind": "related",
+   "reason": "Brooker predicted specification-driven agentic development with hand-coding surviving as craft; de Moura supplies the verification layer and the same craft metaphor, from the same employer"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "ep:turing-award-winner-on-working-with",
+   "kind": "related",
+   "reason": "Lamport's 'understanding means you can write a proof of it', restated by de Moura as the empirical claim that formalizing something makes you understand it far better"
+  },
+  {
+   "source": "ep:creator-of-lean-the-end-of-handwritten",
+   "target": "ep:turing-award-winner-early-ai-llm",
+   "kind": "related",
+   "reason": "both draw a line around what AI cannot do and place it differently: Pearl structurally, de Moura empirically (proofs yes, new concepts not yet) while refusing to bet against the machine"
+  },
+  {
+   "source": "ep:creator-of-lua-scripting-programming",
+   "target": "c:academia-vs-industry",
    "kind": "discusses"
   },
   {
@@ -7226,12 +7462,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:creator-of-lua-scripting-programming",
+   "target": "c:computer-architecture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lua-scripting-programming",
    "target": "c:functional-programming",
    "kind": "discusses"
   },
   {
    "source": "ep:creator-of-lua-scripting-programming",
-   "target": "c:academia-vs-industry",
+   "target": "c:systems-design",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-lua-scripting-programming",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -7271,27 +7517,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:creator-of-ocaml-functional-programming",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:creator-of-ocaml-functional-programming",
-   "target": "c:programming-languages",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:creator-of-ocaml-functional-programming",
-   "target": "c:functional-programming",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:creator-of-ocaml-functional-programming",
    "target": "c:hiring-and-interviews",
    "kind": "discusses"
   },
   {
    "source": "ep:creator-of-ocaml-functional-programming",
-   "target": "c:formal-verification",
+   "target": "c:programming-languages",
    "kind": "discusses"
   },
   {
@@ -7302,6 +7533,21 @@ main { flex:1; display:flex; min-height:0; }
   {
    "source": "ep:creator-of-ocaml-functional-programming",
    "target": "c:open-source",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-ocaml-functional-programming",
+   "target": "c:functional-programming",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-ocaml-functional-programming",
+   "target": "c:formal-verification",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:creator-of-ocaml-functional-programming",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -7341,11 +7587,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:distinguished-eng-on-stack-ranking",
-   "target": "o:microsoft",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:distinguished-eng-on-stack-ranking",
    "target": "o:aws",
    "kind": "features_org"
   },
@@ -7356,12 +7597,42 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:distinguished-eng-on-stack-ranking",
+   "target": "o:microsoft",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:distinguished-eng-on-stack-ranking",
    "target": "o:amazon",
    "kind": "features_org"
   },
   {
    "source": "ep:distinguished-eng-on-stack-ranking",
-   "target": "c:regrets-and-advice",
+   "target": "c:startups-and-founding",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:distinguished-eng-on-stack-ranking",
+   "target": "c:compensation-and-equity",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:distinguished-eng-on-stack-ranking",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:distinguished-eng-on-stack-ranking",
+   "target": "c:calibrations-and-ratings",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:distinguished-eng-on-stack-ranking",
+   "target": "c:ai-era-engineering",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:distinguished-eng-on-stack-ranking",
+   "target": "c:big-tech-culture",
    "kind": "discusses"
   },
   {
@@ -7376,37 +7647,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:distinguished-eng-on-stack-ranking",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:distinguished-eng-on-stack-ranking",
-   "target": "c:compensation-and-equity",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:distinguished-eng-on-stack-ranking",
-   "target": "c:calibrations-and-ratings",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:distinguished-eng-on-stack-ranking",
-   "target": "c:startups-and-founding",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:distinguished-eng-on-stack-ranking",
    "target": "c:career-growth",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:distinguished-eng-on-stack-ranking",
-   "target": "c:ai-era-engineering",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:distinguished-eng-on-stack-ranking",
-   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -7440,22 +7686,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:distinguished-engineer-at-shopify",
-   "target": "c:management",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
    "source": "ep:distinguished-engineer-at-shopify",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:distinguished-engineer-at-shopify",
-   "target": "c:systems-design",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:distinguished-engineer-at-shopify",
-   "target": "c:influence-and-leadership",
+   "target": "c:hiring-and-interviews",
    "kind": "discusses"
   },
   {
@@ -7470,12 +7706,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:distinguished-engineer-at-shopify",
-   "target": "c:hiring-and-interviews",
+   "target": "c:non-linear-careers",
    "kind": "discusses"
   },
   {
    "source": "ep:distinguished-engineer-at-shopify",
-   "target": "c:startups-and-founding",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:distinguished-engineer-at-shopify",
+   "target": "c:systems-design",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:distinguished-engineer-at-shopify",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -7485,7 +7731,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:distinguished-engineer-at-shopify",
-   "target": "c:non-linear-careers",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -7520,32 +7766,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:dropboxs-former-most-senior-eng-building",
-   "target": "o:aws",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:dropboxs-former-most-senior-eng-building",
    "target": "o:mit",
    "kind": "features_org"
   },
   {
    "source": "ep:dropboxs-former-most-senior-eng-building",
-   "target": "c:systems-design",
-   "kind": "discusses"
+   "target": "o:aws",
+   "kind": "features_org"
   },
   {
    "source": "ep:dropboxs-former-most-senior-eng-building",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:dropboxs-former-most-senior-eng-building",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:dropboxs-former-most-senior-eng-building",
-   "target": "c:career-growth",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -7555,17 +7786,32 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:dropboxs-former-most-senior-eng-building",
-   "target": "c:distributed-systems",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:dropboxs-former-most-senior-eng-building",
-   "target": "c:ai-era-engineering",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:dropboxs-former-most-senior-eng-building",
    "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:dropboxs-former-most-senior-eng-building",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:dropboxs-former-most-senior-eng-building",
+   "target": "c:management",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:dropboxs-former-most-senior-eng-building",
+   "target": "c:systems-design",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:dropboxs-former-most-senior-eng-building",
+   "target": "c:career-growth",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:dropboxs-former-most-senior-eng-building",
+   "target": "c:distributed-systems",
    "kind": "discusses"
   },
   {
@@ -7599,7 +7845,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "o:microsoft",
+   "target": "o:meta",
    "kind": "features_org"
   },
   {
@@ -7609,52 +7855,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "o:meta",
+   "target": "o:microsoft",
    "kind": "features_org"
   },
   {
    "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "c:mentorship-and-sponsorship",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "c:security-and-cryptography",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "c:open-source",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:ex-head-of-eng-at-instagram-career",
    "target": "c:startups-and-founding",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:ex-head-of-eng-at-instagram-career",
-   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
@@ -7664,7 +7870,47 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:ex-head-of-eng-at-instagram-career",
+   "target": "c:security-and-cryptography",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:ex-head-of-eng-at-instagram-career",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:ex-head-of-eng-at-instagram-career",
+   "target": "c:open-source",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:ex-head-of-eng-at-instagram-career",
    "target": "c:non-linear-careers",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:ex-head-of-eng-at-instagram-career",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:ex-head-of-eng-at-instagram-career",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:ex-head-of-eng-at-instagram-career",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:ex-head-of-eng-at-instagram-career",
+   "target": "c:career-growth",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:ex-head-of-eng-at-instagram-career",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -7714,22 +7960,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:frontline-manager-at-meta-to-senior",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:frontline-manager-at-meta-to-senior",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:frontline-manager-at-meta-to-senior",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:frontline-manager-at-meta-to-senior",
-   "target": "c:non-linear-careers",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -7739,12 +7970,27 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:frontline-manager-at-meta-to-senior",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:frontline-manager-at-meta-to-senior",
    "target": "c:mentorship-and-sponsorship",
    "kind": "discusses"
   },
   {
    "source": "ep:frontline-manager-at-meta-to-senior",
-   "target": "c:startups-and-founding",
+   "target": "c:non-linear-careers",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:frontline-manager-at-meta-to-senior",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:frontline-manager-at-meta-to-senior",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -7754,7 +8000,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:frontline-manager-at-meta-to-senior",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -7782,17 +8028,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:google-deepmind-pre-training-lead",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
+   "target": "o:google-deepmind",
+   "kind": "features_org"
   },
   {
    "source": "ep:google-deepmind-pre-training-lead",
-   "target": "c:working-with-legends",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:google-deepmind-pre-training-lead",
-   "target": "c:distributed-systems",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -7807,12 +8048,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:google-deepmind-pre-training-lead",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:google-deepmind-pre-training-lead",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:google-deepmind-pre-training-lead",
-   "target": "c:ai-era-engineering",
+   "target": "c:working-with-legends",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:google-deepmind-pre-training-lead",
+   "target": "c:distributed-systems",
    "kind": "discusses"
   },
   {
@@ -7847,47 +8098,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "o:google",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:googlex-chief-scientist-on-imposter",
    "target": "o:ucla",
    "kind": "features_org"
   },
   {
    "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
+   "target": "o:google",
+   "kind": "features_org"
   },
   {
    "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:teaching-and-communication",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:corporate-politics",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:hiring-and-interviews",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:imposter-syndrome",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -7897,17 +8118,47 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:career-growth",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:googlex-chief-scientist-on-imposter",
-   "target": "c:ai-era-engineering",
+   "target": "c:hiring-and-interviews",
    "kind": "discusses"
   },
   {
    "source": "ep:googlex-chief-scientist-on-imposter",
    "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:googlex-chief-scientist-on-imposter",
+   "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:googlex-chief-scientist-on-imposter",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:googlex-chief-scientist-on-imposter",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:googlex-chief-scientist-on-imposter",
+   "target": "c:corporate-politics",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:googlex-chief-scientist-on-imposter",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:googlex-chief-scientist-on-imposter",
+   "target": "c:career-growth",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:googlex-chief-scientist-on-imposter",
+   "target": "c:imposter-syndrome",
    "kind": "discusses"
   },
   {
@@ -7952,12 +8203,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:harvard-professor-cs50-what-matters",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:harvard-professor-cs50-what-matters",
-   "target": "c:teaching-and-communication",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -7967,12 +8213,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:harvard-professor-cs50-what-matters",
-   "target": "c:career-growth",
+   "target": "c:teaching-and-communication",
    "kind": "discusses"
   },
   {
    "source": "ep:harvard-professor-cs50-what-matters",
-   "target": "c:ai-era-engineering",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:harvard-professor-cs50-what-matters",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
@@ -8007,27 +8258,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:industry-secrets-we-wish-we-knew",
-   "target": "o:google",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:industry-secrets-we-wish-we-knew",
    "target": "o:ucla",
    "kind": "features_org"
   },
   {
    "source": "ep:industry-secrets-we-wish-we-knew",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
+   "target": "o:google",
+   "kind": "features_org"
   },
   {
    "source": "ep:industry-secrets-we-wish-we-knew",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:industry-secrets-we-wish-we-knew",
-   "target": "c:compensation-and-equity",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -8037,12 +8278,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:industry-secrets-we-wish-we-knew",
-   "target": "c:startups-and-founding",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:industry-secrets-we-wish-we-knew",
-   "target": "c:career-growth",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -8052,7 +8288,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:industry-secrets-we-wish-we-knew",
-   "target": "c:promotions",
+   "target": "c:compensation-and-equity",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:industry-secrets-we-wish-we-knew",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:industry-secrets-we-wish-we-knew",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:industry-secrets-we-wish-we-knew",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
@@ -8086,22 +8337,32 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:instagram-principal-eng-ic8-on-building",
-   "target": "o:instagram",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:instagram-principal-eng-ic8-on-building",
    "target": "o:meta",
    "kind": "features_org"
   },
   {
    "source": "ep:instagram-principal-eng-ic8-on-building",
-   "target": "c:management",
+   "target": "o:instagram",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:instagram-principal-eng-ic8-on-building",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
    "source": "ep:instagram-principal-eng-ic8-on-building",
-   "target": "c:regrets-and-advice",
+   "target": "c:hiring-and-interviews",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:instagram-principal-eng-ic8-on-building",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:instagram-principal-eng-ic8-on-building",
+   "target": "c:big-tech-culture",
    "kind": "discusses"
   },
   {
@@ -8116,17 +8377,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:instagram-principal-eng-ic8-on-building",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:instagram-principal-eng-ic8-on-building",
-   "target": "c:hiring-and-interviews",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:instagram-principal-eng-ic8-on-building",
-   "target": "c:startups-and-founding",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -8141,7 +8392,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:instagram-principal-eng-ic8-on-building",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -8170,18 +8421,13 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:instagram-principal-engineer-ic8",
-   "target": "o:meta",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:instagram-principal-engineer-ic8",
    "target": "o:instagram",
    "kind": "features_org"
   },
   {
    "source": "ep:instagram-principal-engineer-ic8",
-   "target": "c:career-growth",
-   "kind": "discusses"
+   "target": "o:meta",
+   "kind": "features_org"
   },
   {
    "source": "ep:instagram-principal-engineer-ic8",
@@ -8191,6 +8437,11 @@ main { flex:1; display:flex; min-height:0; }
   {
    "source": "ep:instagram-principal-engineer-ic8",
    "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:instagram-principal-engineer-ic8",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
@@ -8213,32 +8464,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:instagram-senior-staff-eng-ic7-on",
-   "target": "o:meta",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:instagram-senior-staff-eng-ic7-on",
    "target": "o:instagram",
    "kind": "features_org"
   },
   {
    "source": "ep:instagram-senior-staff-eng-ic7-on",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
+   "target": "o:meta",
+   "kind": "features_org"
   },
   {
    "source": "ep:instagram-senior-staff-eng-ic7-on",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:instagram-senior-staff-eng-ic7-on",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:instagram-senior-staff-eng-ic7-on",
-   "target": "c:mentorship-and-sponsorship",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -8248,12 +8484,27 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:instagram-senior-staff-eng-ic7-on",
-   "target": "c:career-growth",
+   "target": "c:mentorship-and-sponsorship",
    "kind": "discusses"
   },
   {
    "source": "ep:instagram-senior-staff-eng-ic7-on",
-   "target": "c:promotions",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:instagram-senior-staff-eng-ic7-on",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:instagram-senior-staff-eng-ic7-on",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:instagram-senior-staff-eng-ic7-on",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
@@ -8270,27 +8521,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:instagram-staff-ic6-promo-despite",
-   "target": "o:meta",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:instagram-staff-ic6-promo-despite",
    "target": "o:instagram",
    "kind": "features_org"
   },
   {
    "source": "ep:instagram-staff-ic6-promo-despite",
-   "target": "c:regrets-and-advice",
+   "target": "o:meta",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:instagram-staff-ic6-promo-despite",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
    "source": "ep:instagram-staff-ic6-promo-despite",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:instagram-staff-ic6-promo-despite",
-   "target": "c:big-tech-culture",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -8300,17 +8546,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:instagram-staff-ic6-promo-despite",
-   "target": "c:startups-and-founding",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:instagram-staff-ic6-promo-despite",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:instagram-staff-ic6-promo-despite",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:instagram-staff-ic6-promo-despite",
    "target": "c:career-growth",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:instagram-staff-ic6-promo-despite",
-   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -8338,41 +8589,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:teaching-and-communication",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:corporate-politics",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:non-linear-careers",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:intern-to-microsoft-distinguished",
    "target": "c:compensation-and-equity",
    "kind": "discusses"
   },
@@ -8383,7 +8599,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:mentorship-and-sponsorship",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -8393,7 +8609,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:incident-management",
+   "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:intern-to-microsoft-distinguished",
+   "target": "c:mentorship-and-sponsorship",
    "kind": "discusses"
   },
   {
@@ -8403,12 +8624,42 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:intern-to-microsoft-distinguished",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:intern-to-microsoft-distinguished",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:intern-to-microsoft-distinguished",
+   "target": "c:non-linear-careers",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:intern-to-microsoft-distinguished",
+   "target": "c:incident-management",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:intern-to-microsoft-distinguished",
+   "target": "c:corporate-politics",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:intern-to-microsoft-distinguished",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:intern-to-microsoft-distinguished",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:intern-to-microsoft-distinguished",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -8437,7 +8688,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:laid-off-from-big-tech-after-25-years",
-   "target": "c:regrets-and-advice",
+   "target": "c:compensation-and-equity",
    "kind": "discusses"
   },
   {
@@ -8447,22 +8698,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:laid-off-from-big-tech-after-25-years",
-   "target": "c:layoffs",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:laid-off-from-big-tech-after-25-years",
-   "target": "c:corporate-politics",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:laid-off-from-big-tech-after-25-years",
-   "target": "c:compensation-and-equity",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:laid-off-from-big-tech-after-25-years",
    "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:laid-off-from-big-tech-after-25-years",
+   "target": "c:non-linear-careers",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:laid-off-from-big-tech-after-25-years",
+   "target": "c:layoffs",
    "kind": "discusses"
   },
   {
@@ -8472,12 +8718,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:laid-off-from-big-tech-after-25-years",
-   "target": "c:ai-era-engineering",
+   "target": "c:corporate-politics",
    "kind": "discusses"
   },
   {
    "source": "ep:laid-off-from-big-tech-after-25-years",
-   "target": "c:non-linear-careers",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:laid-off-from-big-tech-after-25-years",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -8516,32 +8767,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-distinguished-eng-ic9-on-influencing",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
-   "target": "c:teaching-and-communication",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
    "target": "c:developer-tools",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
-   "target": "c:big-tech-culture",
    "kind": "discusses"
   },
   {
@@ -8551,12 +8777,37 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-distinguished-eng-ic9-on-influencing",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
+   "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-distinguished-eng-ic9-on-influencing",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:meta-distinguished-eng-ic9-on-influencing",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -8591,6 +8842,11 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-hiring-lead-on-behind-the-scenes",
+   "target": "o:openai",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:meta-hiring-lead-on-behind-the-scenes",
    "target": "o:anthropic",
    "kind": "features_org"
   },
@@ -8601,27 +8857,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-hiring-lead-on-behind-the-scenes",
-   "target": "o:openai",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:meta-hiring-lead-on-behind-the-scenes",
    "target": "o:google",
    "kind": "features_org"
   },
   {
    "source": "ep:meta-hiring-lead-on-behind-the-scenes",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-hiring-lead-on-behind-the-scenes",
    "target": "c:compensation-and-equity",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-hiring-lead-on-behind-the-scenes",
-   "target": "c:mentorship-and-sponsorship",
    "kind": "discusses"
   },
   {
@@ -8631,7 +8872,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-hiring-lead-on-behind-the-scenes",
-   "target": "c:ai-coding-tools",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -8641,12 +8882,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-hiring-lead-on-behind-the-scenes",
-   "target": "c:career-growth",
+   "target": "c:ai-coding-tools",
    "kind": "discusses"
   },
   {
    "source": "ep:meta-hiring-lead-on-behind-the-scenes",
-   "target": "c:ai-era-engineering",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-hiring-lead-on-behind-the-scenes",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-hiring-lead-on-behind-the-scenes",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
@@ -8675,11 +8926,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-senior-manager-m2-on-manager",
-   "target": "o:meta",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:meta-senior-manager-m2-on-manager",
    "target": "o:openai",
    "kind": "features_org"
   },
@@ -8690,17 +8936,37 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-senior-manager-m2-on-manager",
-   "target": "c:management",
+   "target": "o:meta",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:meta-senior-manager-m2-on-manager",
+   "target": "c:compensation-and-equity",
    "kind": "discusses"
   },
   {
    "source": "ep:meta-senior-manager-m2-on-manager",
-   "target": "c:regrets-and-advice",
+   "target": "c:hiring-and-interviews",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-manager-m2-on-manager",
+   "target": "c:calibrations-and-ratings",
    "kind": "discusses"
   },
   {
    "source": "ep:meta-senior-manager-m2-on-manager",
    "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-manager-m2-on-manager",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-manager-m2-on-manager",
+   "target": "c:big-tech-culture",
    "kind": "discusses"
   },
   {
@@ -8715,32 +8981,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-senior-manager-m2-on-manager",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-manager-m2-on-manager",
-   "target": "c:compensation-and-equity",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-manager-m2-on-manager",
-   "target": "c:hiring-and-interviews",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-manager-m2-on-manager",
-   "target": "c:mentorship-and-sponsorship",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-manager-m2-on-manager",
-   "target": "c:calibrations-and-ratings",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:meta-senior-manager-m2-on-manager",
    "target": "c:career-growth",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-manager-m2-on-manager",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -8762,31 +9013,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
-   "target": "c:corporate-politics",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
-   "target": "c:working-with-legends",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
    "target": "c:compensation-and-equity",
    "kind": "discusses"
   },
@@ -8797,12 +9023,37 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
+   "target": "c:corporate-politics",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
    "target": "c:ai-era-engineering",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-eng-ic7-on-zuck",
+   "target": "c:working-with-legends",
    "kind": "discusses"
   },
   {
@@ -8840,27 +9091,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-senior-staff-ic7-engs-honest",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-ic7-engs-honest",
-   "target": "c:layoffs",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-ic7-engs-honest",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-ic7-engs-honest",
    "target": "c:compensation-and-equity",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:meta-senior-staff-ic7-engs-honest",
-   "target": "c:mentorship-and-sponsorship",
    "kind": "discusses"
   },
   {
@@ -8870,7 +9101,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-senior-staff-ic7-engs-honest",
-   "target": "c:imposter-syndrome",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -8880,12 +9111,32 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:meta-senior-staff-ic7-engs-honest",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-ic7-engs-honest",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-ic7-engs-honest",
+   "target": "c:layoffs",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-ic7-engs-honest",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:meta-senior-staff-ic7-engs-honest",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:meta-senior-staff-ic7-engs-honest",
-   "target": "c:promotions",
+   "target": "c:imposter-syndrome",
    "kind": "discusses"
   },
   {
@@ -8908,23 +9159,13 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:mit-complexity-theorist-on-leetcode",
-   "target": "o:stanford",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:mit-complexity-theorist-on-leetcode",
    "target": "o:mit",
    "kind": "features_org"
   },
   {
    "source": "ep:mit-complexity-theorist-on-leetcode",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:mit-complexity-theorist-on-leetcode",
-   "target": "c:teaching-and-communication",
-   "kind": "discusses"
+   "target": "o:stanford",
+   "kind": "features_org"
   },
   {
    "source": "ep:mit-complexity-theorist-on-leetcode",
@@ -8934,6 +9175,16 @@ main { flex:1; display:flex; min-height:0; }
   {
    "source": "ep:mit-complexity-theorist-on-leetcode",
    "target": "c:security-and-cryptography",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:mit-complexity-theorist-on-leetcode",
+   "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:mit-complexity-theorist-on-leetcode",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -8967,7 +9218,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "o:microsoft",
+   "target": "o:mozilla",
    "kind": "features_org"
   },
   {
@@ -8977,7 +9228,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "o:mozilla",
+   "target": "o:microsoft",
    "kind": "features_org"
   },
   {
@@ -8987,27 +9238,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "c:teaching-and-communication",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "c:corporate-politics",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "c:programming-languages",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -9017,12 +9248,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:mozilla-firefox-cto-on-browser-war",
+   "target": "c:programming-languages",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:mozilla-firefox-cto-on-browser-war",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:mozilla-firefox-cto-on-browser-war",
    "target": "c:calibrations-and-ratings",
    "kind": "discusses"
   },
   {
    "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "c:incident-management",
+   "target": "c:teaching-and-communication",
    "kind": "discusses"
   },
   {
@@ -9032,17 +9273,27 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:mozilla-firefox-cto-on-browser-war",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:mozilla-firefox-cto-on-browser-war",
+   "target": "c:incident-management",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:mozilla-firefox-cto-on-browser-war",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:mozilla-firefox-cto-on-browser-war",
+   "target": "c:corporate-politics",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:mozilla-firefox-cto-on-browser-war",
    "target": "c:career-growth",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "c:ai-era-engineering",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:mozilla-firefox-cto-on-browser-war",
-   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9070,37 +9321,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:msl-eng-director-promo-hacking-industry",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:msl-eng-director-promo-hacking-industry",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:msl-eng-director-promo-hacking-industry",
-   "target": "c:layoffs",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:msl-eng-director-promo-hacking-industry",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:msl-eng-director-promo-hacking-industry",
-   "target": "c:programming-languages",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:msl-eng-director-promo-hacking-industry",
    "target": "c:compensation-and-equity",
    "kind": "discusses"
   },
   {
    "source": "ep:msl-eng-director-promo-hacking-industry",
-   "target": "c:mentorship-and-sponsorship",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9110,12 +9336,37 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:msl-eng-director-promo-hacking-industry",
+   "target": "c:programming-languages",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:msl-eng-director-promo-hacking-industry",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:msl-eng-director-promo-hacking-industry",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:msl-eng-director-promo-hacking-industry",
+   "target": "c:layoffs",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:msl-eng-director-promo-hacking-industry",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:msl-eng-director-promo-hacking-industry",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:msl-eng-director-promo-hacking-industry",
-   "target": "c:promotions",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -9150,22 +9401,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:new-grad-to-principal-engineer-ic8",
-   "target": "o:meta",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:new-grad-to-principal-engineer-ic8",
    "target": "o:instagram",
    "kind": "features_org"
   },
   {
    "source": "ep:new-grad-to-principal-engineer-ic8",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
+   "target": "o:meta",
+   "kind": "features_org"
   },
   {
    "source": "ep:new-grad-to-principal-engineer-ic8",
-   "target": "c:influence-and-leadership",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -9175,12 +9421,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:new-grad-to-principal-engineer-ic8",
-   "target": "c:non-linear-careers",
+   "target": "c:calibrations-and-ratings",
    "kind": "discusses"
   },
   {
    "source": "ep:new-grad-to-principal-engineer-ic8",
-   "target": "c:big-tech-culture",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9190,22 +9436,27 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:new-grad-to-principal-engineer-ic8",
-   "target": "c:calibrations-and-ratings",
+   "target": "c:non-linear-careers",
    "kind": "discusses"
   },
   {
    "source": "ep:new-grad-to-principal-engineer-ic8",
-   "target": "c:startups-and-founding",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:new-grad-to-principal-engineer-ic8",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:new-grad-to-principal-engineer-ic8",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:new-grad-to-principal-engineer-ic8",
    "target": "c:career-growth",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:new-grad-to-principal-engineer-ic8",
-   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9239,17 +9490,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-and-meta-distinguished-engineer",
-   "target": "o:meta",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:openai-and-meta-distinguished-engineer",
    "target": "o:openai",
    "kind": "features_org"
   },
   {
    "source": "ep:openai-and-meta-distinguished-engineer",
-   "target": "c:management",
+   "target": "o:meta",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:openai-and-meta-distinguished-engineer",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9259,12 +9510,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-and-meta-distinguished-engineer",
-   "target": "c:working-with-legends",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:openai-and-meta-distinguished-engineer",
-   "target": "c:promotions",
+   "target": "c:non-linear-careers",
    "kind": "discusses"
   },
   {
@@ -9274,7 +9520,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-and-meta-distinguished-engineer",
-   "target": "c:non-linear-careers",
+   "target": "c:working-with-legends",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:openai-and-meta-distinguished-engineer",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -9291,12 +9542,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-codex-tech-lead-on-how-his",
-   "target": "o:meta",
+   "target": "o:openai",
    "kind": "features_org"
   },
   {
    "source": "ep:openai-codex-tech-lead-on-how-his",
-   "target": "o:openai",
+   "target": "o:meta",
    "kind": "features_org"
   },
   {
@@ -9306,27 +9557,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-codex-tech-lead-on-how-his",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:openai-codex-tech-lead-on-how-his",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:openai-codex-tech-lead-on-how-his",
-   "target": "c:corporate-politics",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:openai-codex-tech-lead-on-how-his",
    "target": "c:developer-tools",
    "kind": "discusses"
   },
   {
    "source": "ep:openai-codex-tech-lead-on-how-his",
-   "target": "c:big-tech-culture",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9341,17 +9577,32 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-codex-tech-lead-on-how-his",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:openai-codex-tech-lead-on-how-his",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:openai-codex-tech-lead-on-how-his",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:openai-codex-tech-lead-on-how-his",
-   "target": "c:ai-era-engineering",
+   "target": "c:corporate-politics",
    "kind": "discusses"
   },
   {
    "source": "ep:openai-codex-tech-lead-on-how-his",
-   "target": "c:promotions",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:openai-codex-tech-lead-on-how-his",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -9373,7 +9624,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-eng-and-dev-tools-founder",
-   "target": "c:regrets-and-advice",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -9383,12 +9634,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-eng-and-dev-tools-founder",
-   "target": "c:programming-languages",
+   "target": "c:ai-coding-tools",
    "kind": "discusses"
   },
   {
    "source": "ep:openai-eng-and-dev-tools-founder",
-   "target": "c:ai-coding-tools",
+   "target": "c:programming-languages",
    "kind": "discusses"
   },
   {
@@ -9398,12 +9649,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:openai-eng-and-dev-tools-founder",
-   "target": "c:startups-and-founding",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:openai-eng-and-dev-tools-founder",
-   "target": "c:career-growth",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -9429,12 +9680,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:quitting-robinhood-and-raising-35m",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:quitting-robinhood-and-raising-35m",
-   "target": "c:non-linear-careers",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -9444,22 +9690,27 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:quitting-robinhood-and-raising-35m",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:quitting-robinhood-and-raising-35m",
+   "target": "c:non-linear-careers",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:quitting-robinhood-and-raising-35m",
    "target": "c:big-tech-culture",
    "kind": "discusses"
   },
   {
    "source": "ep:quitting-robinhood-and-raising-35m",
-   "target": "c:startups-and-founding",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:quitting-robinhood-and-raising-35m",
    "target": "c:career-growth",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:quitting-robinhood-and-raising-35m",
-   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9486,31 +9737,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:retired-netflix-engineering-director",
-   "target": "c:management",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:retired-netflix-engineering-director",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:retired-netflix-engineering-director",
-   "target": "c:systems-design",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:retired-netflix-engineering-director",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:retired-netflix-engineering-director",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:retired-netflix-engineering-director",
    "target": "c:compensation-and-equity",
    "kind": "discusses"
   },
@@ -9526,7 +9752,32 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:retired-netflix-engineering-director",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:retired-netflix-engineering-director",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:retired-netflix-engineering-director",
+   "target": "c:systems-design",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:retired-netflix-engineering-director",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:retired-netflix-engineering-director",
    "target": "c:career-growth",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:retired-netflix-engineering-director",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -9560,17 +9811,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:staff-engineer-meta-by-age-25-evan",
-   "target": "c:regrets-and-advice",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
    "source": "ep:staff-engineer-meta-by-age-25-evan",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:staff-engineer-meta-by-age-25-evan",
-   "target": "c:big-tech-culture",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9580,22 +9826,27 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:staff-engineer-meta-by-age-25-evan",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:staff-engineer-meta-by-age-25-evan",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:staff-engineer-meta-by-age-25-evan",
    "target": "c:incident-management",
    "kind": "discusses"
   },
   {
    "source": "ep:staff-engineer-meta-by-age-25-evan",
-   "target": "c:startups-and-founding",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:staff-engineer-meta-by-age-25-evan",
    "target": "c:career-growth",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:staff-engineer-meta-by-age-25-evan",
-   "target": "c:promotions",
    "kind": "discusses"
   },
   {
@@ -9623,11 +9874,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:stanford-phd-ai-researcher-and-quant",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:stanford-phd-ai-researcher-and-quant",
    "target": "c:compensation-and-equity",
    "kind": "discusses"
   },
@@ -9643,12 +9889,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:stanford-phd-ai-researcher-and-quant",
-   "target": "c:career-growth",
+   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
    "source": "ep:stanford-phd-ai-researcher-and-quant",
-   "target": "c:ai-era-engineering",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:stanford-phd-ai-researcher-and-quant",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
@@ -9682,22 +9933,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:stripe-cto-on-what-grew-his-career",
-   "target": "o:google",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:stripe-cto-on-what-grew-his-career",
    "target": "o:amazon",
    "kind": "features_org"
   },
   {
    "source": "ep:stripe-cto-on-what-grew-his-career",
-   "target": "c:management",
+   "target": "o:google",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:stripe-cto-on-what-grew-his-career",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
    "source": "ep:stripe-cto-on-what-grew-his-career",
-   "target": "c:influence-and-leadership",
+   "target": "c:hiring-and-interviews",
    "kind": "discusses"
   },
   {
@@ -9712,7 +9963,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:stripe-cto-on-what-grew-his-career",
-   "target": "c:hiring-and-interviews",
+   "target": "c:influence-and-leadership",
    "kind": "discusses"
   },
   {
@@ -9722,12 +9973,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:stripe-cto-on-what-grew-his-career",
-   "target": "c:startups-and-founding",
+   "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:stripe-cto-on-what-grew-his-career",
-   "target": "c:career-growth",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -9762,32 +10013,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:tech-lead-for-metas-most-used-programming",
-   "target": "o:meta",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:tech-lead-for-metas-most-used-programming",
    "target": "o:mit",
    "kind": "features_org"
   },
   {
    "source": "ep:tech-lead-for-metas-most-used-programming",
-   "target": "c:management",
-   "kind": "discusses"
+   "target": "o:meta",
+   "kind": "features_org"
   },
   {
    "source": "ep:tech-lead-for-metas-most-used-programming",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:tech-lead-for-metas-most-used-programming",
-   "target": "c:working-with-legends",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:tech-lead-for-metas-most-used-programming",
-   "target": "c:big-tech-culture",
+   "target": "c:hiring-and-interviews",
    "kind": "discusses"
   },
   {
@@ -9797,17 +10033,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:tech-lead-for-metas-most-used-programming",
-   "target": "c:hiring-and-interviews",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:tech-lead-for-metas-most-used-programming",
-   "target": "c:imposter-syndrome",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:tech-lead-for-metas-most-used-programming",
    "target": "c:calibrations-and-ratings",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:tech-lead-for-metas-most-used-programming",
+   "target": "c:promotions",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:tech-lead-for-metas-most-used-programming",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:tech-lead-for-metas-most-used-programming",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -9817,7 +10058,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:tech-lead-for-metas-most-used-programming",
-   "target": "c:promotions",
+   "target": "c:working-with-legends",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:tech-lead-for-metas-most-used-programming",
+   "target": "c:imposter-syndrome",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:tech-lead-for-metas-most-used-programming",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -9834,18 +10085,43 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:the-creator-of-kubernetes-on-building",
-   "target": "o:openai",
+   "target": "o:microsoft",
    "kind": "features_org"
   },
   {
    "source": "ep:the-creator-of-kubernetes-on-building",
-   "target": "o:microsoft",
+   "target": "o:openai",
    "kind": "features_org"
   },
   {
    "source": "ep:the-creator-of-kubernetes-on-building",
    "target": "o:google",
    "kind": "features_org"
+  },
+  {
+   "source": "ep:the-creator-of-kubernetes-on-building",
+   "target": "c:ai-era-engineering",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:the-creator-of-kubernetes-on-building",
+   "target": "c:teaching-and-communication",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:the-creator-of-kubernetes-on-building",
+   "target": "c:open-source",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:the-creator-of-kubernetes-on-building",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:the-creator-of-kubernetes-on-building",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
   },
   {
    "source": "ep:the-creator-of-kubernetes-on-building",
@@ -9859,37 +10135,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:the-creator-of-kubernetes-on-building",
-   "target": "c:influence-and-leadership",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:the-creator-of-kubernetes-on-building",
-   "target": "c:teaching-and-communication",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:the-creator-of-kubernetes-on-building",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:the-creator-of-kubernetes-on-building",
    "target": "c:career-growth",
    "kind": "discusses"
   },
   {
    "source": "ep:the-creator-of-kubernetes-on-building",
-   "target": "c:open-source",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:the-creator-of-kubernetes-on-building",
    "target": "c:distributed-systems",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:the-creator-of-kubernetes-on-building",
-   "target": "c:ai-era-engineering",
    "kind": "discusses"
   },
   {
@@ -9924,11 +10175,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-data-abstraction",
-   "target": "o:google",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:turing-award-winner-data-abstraction",
    "target": "o:uc-berkeley",
    "kind": "features_org"
   },
@@ -9939,18 +10185,8 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-data-abstraction",
-   "target": "c:systems-design",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-data-abstraction",
-   "target": "c:teaching-and-communication",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-data-abstraction",
-   "target": "c:working-with-legends",
-   "kind": "discusses"
+   "target": "o:google",
+   "kind": "features_org"
   },
   {
    "source": "ep:turing-award-winner-data-abstraction",
@@ -9959,7 +10195,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-data-abstraction",
-   "target": "c:distributed-systems",
+   "target": "c:teaching-and-communication",
    "kind": "discusses"
   },
   {
@@ -9970,6 +10206,21 @@ main { flex:1; display:flex; min-height:0; }
   {
    "source": "ep:turing-award-winner-data-abstraction",
    "target": "c:non-linear-careers",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-data-abstraction",
+   "target": "c:systems-design",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-data-abstraction",
+   "target": "c:working-with-legends",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-data-abstraction",
+   "target": "c:distributed-systems",
    "kind": "discusses"
   },
   {
@@ -10003,7 +10254,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-early-ai-llm",
-   "target": "c:regrets-and-advice",
+   "target": "c:academia-vs-industry",
    "kind": "discusses"
   },
   {
@@ -10013,22 +10264,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-early-ai-llm",
+   "target": "c:non-linear-careers",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-early-ai-llm",
    "target": "c:causality",
    "kind": "discusses"
   },
   {
    "source": "ep:turing-award-winner-early-ai-llm",
-   "target": "c:academia-vs-industry",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:turing-award-winner-early-ai-llm",
    "target": "c:ai-era-engineering",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-early-ai-llm",
-   "target": "c:non-linear-careers",
    "kind": "discusses"
   },
   {
@@ -10063,21 +10314,6 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-nsa-public-key",
-   "target": "o:stanford",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:turing-award-winner-nsa-public-key",
-   "target": "o:uc-berkeley",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:turing-award-winner-nsa-public-key",
-   "target": "o:apple",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:turing-award-winner-nsa-public-key",
    "target": "o:mit",
    "kind": "features_org"
   },
@@ -10088,7 +10324,27 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-nsa-public-key",
-   "target": "c:regrets-and-advice",
+   "target": "o:uc-berkeley",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:turing-award-winner-nsa-public-key",
+   "target": "o:stanford",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:turing-award-winner-nsa-public-key",
+   "target": "o:apple",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:turing-award-winner-nsa-public-key",
+   "target": "c:security-and-cryptography",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-nsa-public-key",
+   "target": "c:non-linear-careers",
    "kind": "discusses"
   },
   {
@@ -10098,22 +10354,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-nsa-public-key",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-nsa-public-key",
    "target": "c:working-with-legends",
    "kind": "discusses"
   },
   {
    "source": "ep:turing-award-winner-nsa-public-key",
-   "target": "c:security-and-cryptography",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-nsa-public-key",
    "target": "c:complexity-theory",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-nsa-public-key",
-   "target": "c:non-linear-careers",
    "kind": "discusses"
   },
   {
@@ -10136,7 +10387,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-on-working-with",
-   "target": "c:regrets-and-advice",
+   "target": "c:security-and-cryptography",
    "kind": "discusses"
   },
   {
@@ -10146,12 +10397,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-on-working-with",
-   "target": "c:working-with-legends",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
    "source": "ep:turing-award-winner-on-working-with",
-   "target": "c:security-and-cryptography",
+   "target": "c:working-with-legends",
    "kind": "discusses"
   },
   {
@@ -10194,7 +10445,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "o:uc-berkeley",
+   "target": "o:aws",
    "kind": "features_org"
   },
   {
@@ -10204,12 +10455,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "o:aws",
+   "target": "o:ibm",
    "kind": "features_org"
   },
   {
    "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "o:google",
+   "target": "o:uc-berkeley",
    "kind": "features_org"
   },
   {
@@ -10219,22 +10470,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "o:ibm",
+   "target": "o:google",
    "kind": "features_org"
   },
   {
    "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "c:mentorship-and-sponsorship",
+   "target": "c:startups-and-founding",
    "kind": "discusses"
   },
   {
@@ -10244,22 +10485,32 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "c:startups-and-founding",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-postgres-disagreeing",
-   "target": "c:distributed-systems",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-postgres-disagreeing",
    "target": "c:databases",
    "kind": "discusses"
   },
   {
    "source": "ep:turing-award-winner-postgres-disagreeing",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-postgres-disagreeing",
+   "target": "c:big-tech-culture",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-postgres-disagreeing",
+   "target": "c:regrets-and-advice",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-postgres-disagreeing",
    "target": "c:ai-era-engineering",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-postgres-disagreeing",
+   "target": "c:distributed-systems",
    "kind": "discusses"
   },
   {
@@ -10282,7 +10533,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
+   "target": "o:nvidia",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
+   "target": "o:ibm",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
    "target": "o:uc-berkeley",
+   "kind": "features_org"
+  },
+  {
+   "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
+   "target": "o:google",
    "kind": "features_org"
   },
   {
@@ -10297,32 +10563,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
-   "target": "o:nvidia",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
-   "target": "o:google",
-   "kind": "features_org"
-  },
-  {
-   "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
-   "target": "o:ibm",
-   "kind": "features_org"
+   "target": "c:ai-era-engineering",
+   "kind": "discusses"
   },
   {
    "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
    "target": "c:computer-architecture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
-   "target": "c:regrets-and-advice",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
-   "target": "c:influence-and-leadership",
    "kind": "discusses"
   },
   {
@@ -10332,7 +10578,12 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
-   "target": "c:imposter-syndrome",
+   "target": "c:influence-and-leadership",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -10342,7 +10593,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:turing-award-winner-tpu-vs-gpu-vs",
-   "target": "c:ai-era-engineering",
+   "target": "c:imposter-syndrome",
    "kind": "discusses"
   },
   {
@@ -10364,12 +10615,22 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:uber-distinguished-eng-on-unfair",
-   "target": "c:management",
+   "target": "c:promotions",
    "kind": "discusses"
   },
   {
    "source": "ep:uber-distinguished-eng-on-unfair",
-   "target": "c:regrets-and-advice",
+   "target": "c:calibrations-and-ratings",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:uber-distinguished-eng-on-unfair",
+   "target": "c:mentorship-and-sponsorship",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:uber-distinguished-eng-on-unfair",
+   "target": "c:big-tech-culture",
    "kind": "discusses"
   },
   {
@@ -10384,27 +10645,7 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:uber-distinguished-eng-on-unfair",
-   "target": "c:big-tech-culture",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:uber-distinguished-eng-on-unfair",
-   "target": "c:distributed-systems",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:uber-distinguished-eng-on-unfair",
-   "target": "c:mentorship-and-sponsorship",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:uber-distinguished-eng-on-unfair",
-   "target": "c:imposter-syndrome",
-   "kind": "discusses"
-  },
-  {
-   "source": "ep:uber-distinguished-eng-on-unfair",
-   "target": "c:calibrations-and-ratings",
+   "target": "c:regrets-and-advice",
    "kind": "discusses"
   },
   {
@@ -10414,7 +10655,17 @@ main { flex:1; display:flex; min-height:0; }
   },
   {
    "source": "ep:uber-distinguished-eng-on-unfair",
-   "target": "c:promotions",
+   "target": "c:imposter-syndrome",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:uber-distinguished-eng-on-unfair",
+   "target": "c:distributed-systems",
+   "kind": "discusses"
+  },
+  {
+   "source": "ep:uber-distinguished-eng-on-unfair",
+   "target": "c:management",
    "kind": "discusses"
   },
   {
@@ -10431,11 +10682,11 @@ main { flex:1; display:flex; min-height:0; }
   }
  ],
  "stats": {
-  "episodes": 57,
-  "people": 56,
-  "orgs": 20,
+  "episodes": 58,
+  "people": 57,
+  "orgs": 21,
   "concepts": 34,
-  "links": 857
+  "links": 879
  }
 }</script>
 <script>

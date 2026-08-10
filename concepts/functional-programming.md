@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-08-03
-sources: [creator-of-lua-scripting-programming.md, co-creator-of-haskell-functional.md, boris-cherny-creator-of-claude-code.md, creator-of-c-bell-labs-negative-overhead.md, creator-of-ocaml-functional-programming.md]
+updated: 2026-08-10
+sources: [creator-of-lean-the-end-of-handwritten.md, creator-of-lua-scripting-programming.md, co-creator-of-haskell-functional.md, boris-cherny-creator-of-claude-code.md, creator-of-c-bell-labs-negative-overhead.md, creator-of-ocaml-functional-programming.md]
 ---
 
 # Functional programming
@@ -34,6 +34,12 @@ Two of Peyton Jones's forward bets ([episode](../sources/co-creator-of-haskell-f
 
 The outside endorsement is worth more than the insiders' because of who gives it: [Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md), whose own language is dynamically typed, minimal and imperative, names Haskell as the first of three languages to learn to become a better engineer, and gives the sharpest one-line case for it in the corpus — "in C you really spend one week to make it efficient, and then you spend one year to make it correct. In Haskell, you spend one week to make it correct" ([episode](../sources/creator-of-lua-scripting-programming.md)). His third pick, Scheme, is recommended for a different property entirely — "economy of ideas," doing a great deal with very few concepts — which is the design value his own work optimizes for rather than an FP argument.
 
+### The strangest argument for FP: nobody has to like it any more
+
+[Leonardo de Moura](../entities/leonardo-de-moura.md) designed Lean as a member of the family — "Lean is close to Haskell, but with the support for proofs" — and it is now used as a plain programming language at real scale, including a half-million-line compiler for AI accelerators at [AWS](../entities/aws.md) where the proofs are a bonus, plus Lean's own build system (Lake) and documentation tool (Verso), both written in Lean ([episode](../sources/creator-of-lean-the-end-of-handwritten.md)).
+
+His argument for why FP now wins is the one nobody in the FP camp would have made, because it concedes the ergonomics fight entirely: "in the past, people say, 'Oh, functional programming, I don't like it.' But if I'm not the one that's writing most of the code anyway, it doesn't really matter. What matters? The specification level. It doesn't really matter how the code has been written" (2026-08-10). Peyton Jones and Leroy argue FP wins because *types help the model generate*; de Moura argues the paradigm's adoption barrier was always human taste, and human taste has been routed around. It is worth noting what this costs: it also concedes [Ierusalimschy](../entities/roberto-ierusalimschy.md)'s premise that people find FP unpleasant, and it puts de Moura directly against Ierusalimschy's conclusion that readability matters *more* under AI ([ai-era-engineering](ai-era-engineering.md)). The corresponding technical claim is that dependent types finally become usable: a function that cannot be called without a proof that y ≠ 0 was "always cool, but in the past people would say, wow, providing these proofs is really annoying" — and that is exactly the labour AI now performs ([formal-verification](formal-verification.md)).
+
 No real disagreement exists among the FP guests on FP itself; the live tension is with the wider [programming-languages](programming-languages.md) debate — [Bjarne Stroustrup](../entities/bjarne-stroustrup.md) recommends learning ML/Haskell to escape monoglot thinking while building the archetypal imperative language ([episode](../sources/creator-of-c-bell-labs-negative-overhead.md)).
 
 ## Practical takeaways
@@ -49,5 +55,5 @@ No real disagreement exists among the FP guests on FP itself; the live tension i
 ## Related
 
 - [programming-languages](programming-languages.md) — the broader typing and safety debates; [formal-verification](formal-verification.md) — where purity pays off in proofs; [ai-coding-tools](ai-coding-tools.md) — LLMs plus type systems.
-- Key people: [Simon Peyton Jones](../entities/simon-peyton-jones.md), [Xavier Leroy](../entities/xavier-leroy.md), [Boris Cherny](../entities/boris-cherny.md).
-- Most relevant episodes: [Peyton Jones](../sources/co-creator-of-haskell-functional.md), [Leroy](../sources/creator-of-ocaml-functional-programming.md).
+- Key people: [Simon Peyton Jones](../entities/simon-peyton-jones.md), [Xavier Leroy](../entities/xavier-leroy.md), [Boris Cherny](../entities/boris-cherny.md), [Leonardo de Moura](../entities/leonardo-de-moura.md).
+- Most relevant episodes: [Peyton Jones](../sources/co-creator-of-haskell-functional.md), [Leroy](../sources/creator-of-ocaml-functional-programming.md), [de Moura](../sources/creator-of-lean-the-end-of-handwritten.md).

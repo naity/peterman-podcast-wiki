@@ -1,7 +1,7 @@
 ---
 type: entity
 entity_kind: person
-updated: 2026-07-19
+updated: 2026-08-10
 sources: [aws-distinguished-eng-learnings-from.md]
 ---
 
@@ -29,4 +29,5 @@ Spent his career at AWS, staying on call for 15 years because most of his practi
 - [Leslie Lamport](leslie-lamport.md) — Brooker cites his writing/formal-thinking views and has debated Paxos edge cases
 - [Barbara Liskov](barbara-liskov.md) — pioneered the replication techniques Brooker's systems industrialize
 - [Brendan Burns](brendan-burns.md) — large-scale cloud infrastructure and AI-era engineering
+- [Leonardo de Moura](leonardo-de-moura.md) — AWS colleague who supplies the verification layer Brooker's specification-driven-development forecast leaves open, and independently reaches for the same handmade-craft metaphor ([his episode](../sources/creator-of-lean-the-end-of-handwritten.md))
 - [databases](../concepts/databases.md), [career growth](../concepts/career-growth.md)

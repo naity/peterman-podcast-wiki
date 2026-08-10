@@ -1,7 +1,7 @@
 ---
 type: entity
 entity_kind: person
-updated: 2026-08-03
+updated: 2026-08-10
 sources: [creator-of-lua-scripting-programming.md]
 ---
 
@@ -31,4 +31,5 @@ The interview is a design-philosophy conversation rather than a biography, and L
 - [Bjarne Stroustrup](bjarne-stroustrup.md) — the corpus's sharpest counterparty on committee governance of a language
 - [Simon Peyton Jones](simon-peyton-jones.md) — creator of the language Ierusalimschy names first for becoming a better engineer
 - [Judea Pearl](judea-pearl.md) — the preceding week's guest; the other academic refusing to forecast AI capability
+- [Leonardo de Moura](leonardo-de-moura.md) — the following week's guest and the direct rebuttal: where Ierusalimschy says AI makes readability matter *more*, de Moura says a machine-checked proof makes how the code reads irrelevant ([his episode](../sources/creator-of-lean-the-end-of-handwritten.md))
 - [programming-languages](../concepts/programming-languages.md), [developer-tools](../concepts/developer-tools.md), [ai-era-engineering](../concepts/ai-era-engineering.md), [academia-vs-industry](../concepts/academia-vs-industry.md)

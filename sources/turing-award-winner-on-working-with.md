@@ -1,6 +1,6 @@
 ---
 type: source
-updated: 2026-07-19
+updated: 2026-08-10
 raw: ../raw/turing-award-winner-on-working-with.md
 guest: "Leslie Lamport"
 guest_role: "Turing Award winner, inventor of Paxos, LaTeX, and logical clocks"
@@ -43,3 +43,4 @@ Leslie Lamport won the Turing Award for foundational work in [distributed system
 - [Turing Award Winner: P vs NP, Zero-Knowledge Proofs, Quantum Computation | Avi Wigderson](turing-award-winner-p-vs-np-zero.md) — theory-side Turing laureate; contrasting view of what computation's foundational abstractions are.
 - [Dropbox's Former Most Senior Eng: Building Great Systems and Advice for the AI Era | James Cowling](dropboxs-former-most-senior-eng-building.md) — building correct large-scale systems; the practitioner's descendant of Lamport's methods.
 - [Creator of OCaml: Functional Programming, Formal Verification, Programming Languages | Xavier Leroy](creator-of-ocaml-functional-programming.md) — Lamport's proofs-are-understanding worldview mechanized at compiler scale: CompCert, seL4, and proof assistants ([formal-verification](../concepts/formal-verification.md)).
+- [Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](creator-of-lean-the-end-of-handwritten.md) — Lamport's "understanding means you can write a proof of it" reported as an observed effect by the creator of Lean, along with its strangest counterexample: a team that simplified a Fields Medalist's proof without fully understanding it.

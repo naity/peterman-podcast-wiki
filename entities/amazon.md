@@ -1,8 +1,8 @@
 ---
 type: entity
 entity_kind: org
-updated: 2026-07-19
-sources: [amazon-principal-engineer-on-layoffs.md, amazon-vp-on-promotions-getting-fired.md, amazon-vp-reveals-everything-hes.md, aws-distinguished-eng-learnings-from.md, cloudkitchens-cto-on-intelligence.md, distinguished-eng-on-stack-ranking.md, meta-senior-manager-m2-on-manager.md, stripe-cto-on-what-grew-his-career.md, tech-lead-for-metas-most-used-programming.md, turing-award-winner-postgres-disagreeing.md]
+updated: 2026-08-10
+sources: [amazon-principal-engineer-on-layoffs.md, amazon-vp-on-promotions-getting-fired.md, amazon-vp-reveals-everything-hes.md, aws-distinguished-eng-learnings-from.md, cloudkitchens-cto-on-intelligence.md, creator-of-lean-the-end-of-handwritten.md, distinguished-eng-on-stack-ranking.md, meta-senior-manager-m2-on-manager.md, stripe-cto-on-what-grew-his-career.md, tech-lead-for-metas-most-used-programming.md, turing-award-winner-postgres-disagreeing.md]
 ---
 
 # Amazon
@@ -16,12 +16,14 @@ Amazon recurs as the podcast's exhibit for deliberate, hard-edged big-tech cultu
 - **Promotions and politics at the top.** Evans's director promo came from an outsized event (the TiVo bet — "without Ethan, we wouldn't have had TiVo"), his VP promo from a 2.5–3 year explicit "magic loop" partnership with his manager; he's frank that headcount is the one promo metric nobody can debate — some orgs required ~80–90 reports for director, "a several hundred thousand dollars a year bonus quite literally for accumulating 90 people" ([promotions episode](../sources/amazon-vp-on-promotions-getting-fired.md), [politics episode](../sources/amazon-vp-reveals-everything-hes.md)). VP reviews reward ticking goals, not achieving visions — he was rated well every year while Prime Gaming never approached its Tencent-scale vision ([promotions episode](../sources/amazon-vp-on-promotions-getting-fired.md)).
 - **Bezos and Jassy.** As founder, Bezos could "take the whole company to Vegas and bet it on black" (to his CFO: "how much is that? because I might want to spend it") and felt emotionally supportive; Jassy, the hired classic business leader, probed and left Evans feeling watched ([promotions episode](../sources/amazon-vp-on-promotions-getting-fired.md)). Cantrill, who competed with AWS at Joyent, calls Bezos "the apex predator of capitalism" — hiding AWS margins and relentlessly cutting prices to convince everyone cloud was a terrible business ([Bryan Cantrill](../sources/distinguished-eng-on-stack-ranking.md)).
 - **The operational culture others copy.** David Singleton modeled Stripe's nested weekly ops reviews directly on Amazon's — Charlie Bell personally walked him through Amazon's version ([Stripe CTO](../sources/stripe-cto-on-what-grew-his-career.md)). Marc Brooker, who went new grad to Distinguished Engineer, credits the weekly COE/postmortem meeting as "a core, almost causal factor" behind [AWS](aws.md)'s success ([Marc Brooker](../sources/aws-distinguished-eng-learnings-from.md)). Mike Stonebraker's needle: he told Amazon directly that supporting ~15 database systems is "about 12 too many" ([Stonebraker](../sources/turing-award-winner-postgres-disagreeing.md)).
+- **The quiet research arm.** The company that shows up elsewhere as frugal and up-or-out also employs the creator of Lean and Z3 and is the largest donor to the Lean nonprofit, having used [formal verification](../concepts/formal-verification.md) internally "for decades" on safety-critical components ([Leonardo de Moura](leonardo-de-moura.md), [episode](../sources/creator-of-lean-the-end-of-handwritten.md)). It is a useful corrective to the Amazon portrait the rest of the corpus paints: alongside the death-march and stack-ranking stories sits multi-year funding of a proof assistant whose primary user base is research mathematicians.
 
 ## People
 
 - [Ethan Evans](ethan-evans.md) — VP (Prime Video, App Store, Twitch integration, Prime Gaming); two episodes
 - [Steve Huynh](steve-huynh.md) — Principal Engineer, ~19 years, A Life Engineered
 - [Marc Brooker](marc-brooker.md) — new grad to Distinguished Engineer ([AWS](aws.md))
+- [Leonardo de Moura](leonardo-de-moura.md) — Senior Principal Applied Scientist ([AWS](aws.md)); creator of Lean and Z3
 - [Stefan Mai](stefan-mai.md) — SDM (ads, supply-chain ML) before Meta
 - [Bryan Cantrill](bryan-cantrill.md) — competed with AWS as Joyent CTO
 

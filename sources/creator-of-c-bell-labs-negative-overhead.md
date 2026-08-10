@@ -1,6 +1,6 @@
 ---
 type: source
-updated: 2026-07-19
+updated: 2026-08-10
 raw: ../raw/creator-of-c-bell-labs-negative-overhead.md
 guest: "Bjarne Stroustrup"
 guest_role: "Creator of C++, former Bell Labs researcher"
@@ -42,3 +42,4 @@ url: https://www.developing.dev/p/creator-of-c-bell-labs-negative-overhead
 - [OpenAI Eng & Dev Tools Founder: How Software Engineering Is Changing | Charlie Marsh](openai-eng-and-dev-tools-founder.md) — contrasting, more optimistic view of AI-era tooling versus Stroustrup's skepticism about LLM code in critical systems.
 - [Creator of OCaml: Functional Programming, Formal Verification, Programming Languages | Xavier Leroy](creator-of-ocaml-functional-programming.md) — fellow language creator and fellow LLM-code skeptic; Leroy's CompCert formally verifies a compiler for Stroustrup's source-language world.
 - [Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy](creator-of-lua-scripting-programming.md) — the corpus's sharpest disagreement on language governance: Stroustrup credits ISO standardization with saving C++ from becoming "an academic cube language," while Ierusalimschy argues committees structurally destroy conceptual integrity.
+- [Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](creator-of-lean-the-end-of-handwritten.md) — Stroustrup's objection to LLM code is the regulator's unsolvable validation burden; a machine-checked proof shipped with every change is the only answer anyone in the corpus proposes to it.
