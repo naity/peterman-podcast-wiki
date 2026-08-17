@@ -38,6 +38,7 @@ He describes the C++ → Lean self-hosting rewrite for Lean 4 as the hardest thi
 - [Simon Peyton Jones](simon-peyton-jones.md) — Lean is "close to Haskell, but with the support for proofs"; dependent types are the escalation of his static-typing case
 - [Judea Pearl](judea-pearl.md) — the other guest drawing a boundary around AI capability, structurally where de Moura draws it empirically
 - [Edsger Dijkstra](edsger-dijkstra.md) — the testing aphorism the whole episode is built on
+- [Anders Hejlsberg](anders-hejlsberg.md) — the direct objection from outside formal methods: a proof discharges correctness, not accountability, and you cannot fix or answer for code you don't understand ([his episode](../sources/creator-of-typescript-10x-faster.md))
 - [Marc Brooker](marc-brooker.md) — AWS colleague whose specification-driven-development prediction this episode supplies the missing verification layer for
 - [AWS](aws.md), [Amazon](amazon.md), [Microsoft](microsoft.md) — Lean's largest funder, and Z3's birthplace
 - [formal-verification](../concepts/formal-verification.md), [ai-era-engineering](../concepts/ai-era-engineering.md), [programming-languages](../concepts/programming-languages.md)

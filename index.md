@@ -1,9 +1,10 @@
 # Index
 
-Knowledge base for The Peterman Post podcast (developing.dev) — 58 episodes ingested, 57 guests, 21 organizations, 34 concepts. Last updated 2026-07-19.
+Knowledge base for The Peterman Post podcast (developing.dev) — 59 episodes ingested, 58 guests, 21 organizations, 34 concepts. Last updated 2026-07-19.
 
 ## Sources (episodes, newest first)
 
+- [#59: Creator of TypeScript: 10x Faster Typescript, Why AI Won't Replace SWEs | Anders Hejlsberg](sources/creator-of-typescript-10x-faster.md) — Anders Hejlsberg has shipped four widely-used languages across four decades — Turbo Pascal at Borland (written entirely in Z80 assembly), Delphi, C# at Microsoft, and TypeScript, w
 - [#58: Creator of Lean: Handwritten Math Will Change Dramatically | Leonardo de Moura](sources/creator-of-lean-the-end-of-handwritten.md) — Leonardo de Moura built Z3, the SMT solver that has quietly sat under a generation of program-analysis tools, and then built Lean to fix what Z3 could not do — prove the *absence* 
 - [#57: Creator of Lua: Scripting, Programming Languages, Predictions | Roberto Ierusalimschy](sources/creator-of-lua-scripting-programming.md) — Roberto Ierusalimschy designed Lua, the small embedded scripting language that ended up inside World of Warcraft, Roblox, Redis, nginx and an enormous amount of unglamorous industr
 - [#56: Turing Award Winner: Early AI, LLM Predictions, Causality | Judea Pearl](sources/turing-award-winner-early-ai-llm.md) — Judea Pearl won the 2011 Turing Award for two separate revolutions: Bayesian networks, which made probabilistic reasoning tractable and gave 1980s AI its statistical foundation, an
@@ -67,6 +68,7 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 58 episodes in
 
 - [Adam Ernst](entities/adam-ernst.md) — Distinguished Engineer (IC9) at Meta working on iOS infrastructure — a self-described "coding machine" whose frameworks (MemModels, ComponentKit) shaped how the whole company build
 - [Adrien Friggeri](entities/adrien-friggeri.md) — Principal engineer (IC8) at Meta, original tech lead of Bento (Meta's company-wide Jupyter notebook platform), who joined Facebook straight from a PhD in social network analysis an
+- [Anders Hejlsberg](entities/anders-hejlsberg.md) — Creator of TypeScript and C#, and before them Turbo Pascal and Delphi at Borland — four widely-adopted languages across four decades. He is a Technical Fellow at Microsoft and, unu
 - [Asian Dad Energy (anonymous chief architect)](entities/asian-dad-energy.md) — Anonymous guest known by his YouTube pseudonym "Asian Dad Energy": a big tech chief architect laid off after ~25 years in the industry, previously a group technical director in dig
 - [Austen McDonald](entities/austen-mcdonald.md) — Former Meta hiring committee lead for mobile, now an interview coach; the podcast's inside view of how senior+ engineering hiring actually gets decided (episode)
 - [Avi Wigderson](entities/avi-wigderson.md) — Turing Award and Abel Prize winner, complexity theorist at the Institute for Advanced Study; co-inventor of zero-knowledge proof universality and the hardness-versus-randomness par
@@ -140,7 +142,7 @@ Knowledge base for The Peterman Post podcast (developing.dev) — 58 episodes in
 - [Instagram](entities/instagram.md) — Instagram is Meta's photo/video subsidiary and, in this podcast, the canonical case study in small-team product engineering: eight episodes feature engineers or leaders who built S
 - [Intel](entities/intel.md) — Intel appears in three episodes as the x86 incumbent of computer-architecture history — the company whose survival trick, standards-committee weight, and internal rigidity all get 
 - [Meta](entities/meta.md) — Meta (formerly Facebook) is the podcast's center of gravity: host Ryan Peterman is a Meta engineer, the show's format was inspired by internal Facebook career-story posts by very s
-- [Microsoft](entities/microsoft.md) — Microsoft appears in nine episodes in two guises: as a career home for very senior ICs (David Fowler's 11 promotions to Distinguished Engineer, Brendan Burns as Technical Fellow) a
+- [Microsoft](entities/microsoft.md) — Microsoft appears in ten episodes in three guises: as a career home for very senior ICs (David Fowler's 11 promotions to Distinguished Engineer, Brendan Burns as Technical Fellow, 
 - [MIT](entities/mit.md) — MIT recurs in seven episodes as both a faculty home for the show's Turing-laureate and theory guests (Liskov, Stonebraker, Ryan Williams) and as the alma mater whose real value alu
 - [Mozilla](entities/mozilla.md) — Mozilla — the open-source organization behind Firefox — appears in two episodes that together tell its whole arc: James Everingham was at Netscape when the Mozilla codebase was ope
 - [Netflix](entities/netflix.md) — Streaming company famous for its culture memo; appears in the podcast through David Ronca, who joined in 2007, built the encoding technology team from one person (himself) to ~55, 

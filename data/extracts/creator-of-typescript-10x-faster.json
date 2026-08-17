@@ -1,0 +1,56 @@
+{
+  "slug": "creator-of-typescript-10x-faster",
+  "n": 59,
+  "title": "Creator of TypeScript: 10x Faster Typescript, Why AI Won't Replace SWEs | Anders Hejlsberg",
+  "date": "2026-08-17",
+  "url": "https://www.developing.dev/p/creator-of-typescript-10x-faster",
+  "guest": "Anders Hejlsberg",
+  "guest_role": "Creator of TypeScript, C#, Turbo Pascal and Delphi; Technical Fellow at Microsoft, still an IC on the TypeScript compiler",
+  "guest_slug": "anders-hejlsberg",
+  "companies": ["microsoft"],
+  "concepts": ["programming-languages", "ai-era-engineering", "ai-coding-tools", "developer-tools", "computer-architecture", "functional-programming", "systems-design", "regrets-and-advice"],
+  "sections": [
+    {"t": "00:48", "title": "Why write a compiler in JavaScript"},
+    {"t": "07:29", "title": "Why rewrite the compiler in Go"},
+    {"t": "14:49", "title": "LLMs for large migrations"},
+    {"t": "20:12", "title": "Why Javascript is so popular"},
+    {"t": "26:32", "title": "Why ever use Javascript on the backend"},
+    {"t": "32:59", "title": "What it takes to build a programming language"},
+    {"t": "37:06", "title": "Will there be fewer languages in 10 years"},
+    {"t": "42:57", "title": "Hands on engineering vs delegation"},
+    {"t": "49:14", "title": "Why fast tooling matters more now"},
+    {"t": "51:16", "title": "AI software engineering predictions"},
+    {"t": "58:52", "title": "The most technically challenging work"},
+    {"t": "01:02:04", "title": "Top book recommendation"},
+    {"t": "01:03:50", "title": "Advice for his younger self"}
+  ],
+  "key_takeaways": [
+    "Writing the TypeScript compiler in JavaScript was a distribution decision, not a performance one. Early prototypes were in C, adapting an Internet Explorer JavaScript parser; JavaScript bought self-hosting (the team became daily users of their own product) and ubiquity (the compiler ran in the browser, impossible for native code before WebAssembly). His rule: if you can self-host in the ecosystem you want to be part of, that beats targeting it from outside. V8 having closed the gap to 2-3x of native made it affordable.",
+    "The rewrite was forced by concurrency rather than by that 2-3x. JavaScript is single-threaded and web workers cannot share data structures, so the compiler could not use multiple cores - 'Moore's Law has stopped giving us faster CPUs, it's giving us more CPUs.' Scale supplied the rest: VS Code is ~2.3 million lines, a magnitude nobody anticipated in 2012, and TypeScript 6 runs at ~50% the speed of TypeScript 1.5 despite better algorithms because projects grew and checking got more sophisticated.",
+    "Why Go over Rust: they chose to port rather than rewrite, to preserve semantics and backward compatibility, and the codebase assumes garbage collection and first-class functions. Rust has no GC and its borrow checker cannot express the circular structures that permeate a compiler - parent pointers, recursive types, symbol references. 'We tried, and it just wasn't feasible.' Go supplied native codegen across platforms, GC, and shared-memory concurrency.",
+    "For large migrations he recommends AI-writes-the-tool over AI-does-the-migration. They hand-wrote a syntactic TypeScript-to-Go translator whose output needed type-system refactoring; pointing a model at half a million to a million lines leaves you verifying all of it against hallucination. Having AI generate a deterministic tool shrinks the validation surface to the tool itself. His analogy: asking an AI to settle trip expenses failed, asking it to write the spreadsheet program worked.",
+    "AI entrenches incumbent languages, because models are best at whatever they saw most in training and teaching a niche language costs prompt tokens. The bar for a new language was already high - compiler, tooling, language services, debugger, profiler, frameworks, multiple targets - and this raises it. He also rejects LLMs skipping languages to emit machine code: source text is the most compressed representation and closest to the meaning, while machine code carries noise (addresses, register choices) irrelevant to the logic, so like humans, models work better at higher abstraction.",
+    "Fast tooling matters MORE under AI, inverting the usual assumption. Agents write code in the background and make human-like mistakes at multiplied volume, so 'if type checking takes two minutes every time the LLM writes something, that's horrible.' Agents also need semantic operations: renaming a property called `version` cannot be done by grep without hitting unrelated interfaces, and 'the only thing that can do semantic search is a compiler', reached via LSP or a CLI. Compiler speed becomes load-bearing infrastructure for agents rather than a developer nicety.",
+    "His pushback on AI-writes-everything claims is about quality, not volume. AI already writes 100% of some categories of application, and the 90% figure is partly self-fulfilling because AI's sheer output skews the statistic - but 'high quality code that no one has ever written before, it's not clear AI will write 90% of that.' His example of code models cannot write well is the TypeScript compiler itself: novel algorithms and architecture outside the training distribution.",
+    "On IDEs disappearing: 'good luck to you.' The argument is accountability rather than capability - someone has to take responsibility when an AI-built system causes harm, and without understanding the code you cannot fix a bug or respond to a breach. On juniors being replaced: 'if it does, then how do we ever get senior software engineers?' He expects the pyramid to narrow at the base and the job to shift from typing to reviewing agent output; the craft changes rather than disappears.",
+    "He stayed an individual contributor deliberately, after finding out he disliked the alternative. He worked alone on Turbo Pascal, learned to delegate as machines outgrew one person, then spent the C# years mostly on design while others coded - a prestigious role in which he drifted into being an 'architecture astronaut' and lost fulfillment. TypeScript put him back in the compiler. His generalized advice is to fit the role to the person rather than to the expected trajectory, and his case for architects staying in some corner of the code is credibility: you cannot propose a real refactoring you do not understand.",
+    "The two hardest technical problems of his career, forty years apart, were both about constraint. Recently: shared-memory concurrency in the Go port - many CPUs over shared data structures without anyone modifying anyone else's, plus synchronization, deadlocks and races. Originally: Turbo Pascal's compiler, editor and runtime library all in Z80 assembly on a 64k machine, counting single bytes ('I'm 20 bytes over budget here') by converting a long jump into a short jump to an adjacent jump. He compares it to woodworking, and notes bottomless capacity has replaced the constraint.",
+    "Book recommendation: Niklaus Wirth's 'Algorithms + Data Structures = Programs' - light on mathematics, rich in instructive examples. He learned hash tables from it; Turbo Pascal's symbol tables had been linked lists whose search cost blew up as variable counts grew, and switching to hash tables made the compiler twice as fast. Out of print for 30 years, available free as a PDF.",
+    "Advice to his younger self: learn teamwork earlier, because his early solo-contributor perfectionism later had to be deliberately unlearned; and do not accept other people's proclamations that something is impossible - when people said Turbo Pascal could not be built, that described the limits of their understanding rather than reality."
+  ],
+  "notable_quotes": [
+    {"speaker": "Anders Hejlsberg", "quote": "If you can self-host in the ecosystem that you want to be a part of, that is dramatically better than targeting from outside.", "t": "03:00"},
+    {"speaker": "Anders Hejlsberg", "quote": "Moore's Law has stopped giving us faster CPUs, it's giving us more CPUs.", "t": "09:00"},
+    {"speaker": "Anders Hejlsberg", "quote": "If type checking takes two minutes every time the LLM writes something, that's horrible.", "t": "50:00"},
+    {"speaker": "Anders Hejlsberg", "quote": "High quality code that no one has ever written before, it's not clear AI will write 90% of that.", "t": "53:00"},
+    {"speaker": "Anders Hejlsberg", "quote": "If it does, then how do we ever get senior software engineers?", "t": "57:00"}
+  ],
+  "related": [
+    {"slug": "creator-of-c-bell-labs-negative-overhead", "reason": "closest match in the corpus: mainstream-language creator who stayed hands-on, AI-skeptical on quality rather than capability, and independently raises the same junior-engineer pipeline question"},
+    {"slug": "creator-of-lua-scripting-programming", "reason": "both say AI entrenches incumbent languages and that the human's remaining job is verification; TypeScript is the counterexample to Ierusalimschy's dynamic-typing and small-team-governance positions"},
+    {"slug": "creator-of-lean-the-end-of-handwritten", "reason": "direct opposition on whether understanding the code stays necessary - de Moura's proof-carrying answer versus Hejlsberg's accountability answer"},
+    {"slug": "co-creator-of-haskell-functional", "reason": "the static-types-help-LLMs bet, of which TypeScript is the largest industrial instance; 'copilots need pilots' is Hejlsberg's IDE argument compressed"},
+    {"slug": "intern-to-microsoft-distinguished", "reason": "the Microsoft ladder episode that names Hejlsberg as sitting above level 70; this episode is the view from that seat"}
+  ],
+  "transcript_complete": false
+}

@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-08-03
-sources: [creator-of-lua-scripting-programming.md, turing-award-winner-tpu-vs-gpu-vs.md, co-creator-of-haskell-functional.md, google-deepmind-pre-training-lead.md, aws-distinguished-eng-learnings-from.md]
+updated: 2026-08-17
+sources: [creator-of-typescript-10x-faster.md, creator-of-lua-scripting-programming.md, turing-award-winner-tpu-vs-gpu-vs.md, co-creator-of-haskell-functional.md, google-deepmind-pre-training-lead.md, aws-distinguished-eng-learnings-from.md]
 ---
 
 # Computer architecture
@@ -20,6 +20,10 @@ Patterson's periodization: Dennard scaling quietly ended ~2005, forcing multicor
 
 **Counterpoint from history — specialization can also be a trap.** [Simon Peyton Jones](../entities/simon-peyton-jones.md) calls the 1980s attempts to build hardware for functional languages (Lisp machines, dataflow machines, the SKIM combinator machine) an "inspiring mistake": those machines were interpreters in hardware, doing at runtime what a compiler does better at compile time, and no niche architecture could outrun Intel's man-years on x86 ([episode](../sources/co-creator-of-haskell-functional.md)). Read against Patterson, the lesson is that domain-specific hardware wins only when (a) general-purpose scaling has actually stalled and (b) the domain is a huge, regular computation (matrix multiply) rather than a language runtime. Patterson's own account of NVIDIA's moat makes the same point from the winner's side: it is not CUDA per se but the hand-tailored libraries a huge engineering staff rewrites for each architecture generation — man-years again ([episode](../sources/turing-award-winner-tpu-vs-gpu-vs.md)).
 
+**What the shift costs a language runtime.** [Anders Hejlsberg](../entities/anders-hejlsberg.md) (2026-08-17) supplies the software-side casualty report for Patterson's periodization, in one line: "Moore's Law has stopped giving us faster CPUs, it's giving us more CPUs" ([episode](../sources/creator-of-typescript-10x-faster.md)). The TypeScript compiler was written in JavaScript, which is single-threaded and whose web workers cannot share data structures — so it could not follow the hardware onto multiple cores, and every year of core-count growth was a year of unclaimed performance. That, not JavaScript's 2–3x penalty against native, is what eventually forced the port to Go, whose selection criteria were native codegen, garbage collection and shared-memory concurrency ([programming-languages](programming-languages.md)). It is the cleanest example in the corpus of a hardware trend invalidating an implementation-language decision roughly a decade after it was correctly made.
+
+**The other end: what a 64k machine taught.** Hejlsberg's Turbo Pascal — compiler, editor and runtime library, all in Z80 assembly on 8-bit hardware — was written under the opposite constraint, where the team counted individual bytes to fit into ROM ("I'm 20 bytes over budget here") and would convert a long jump into a short jump to an adjacent jump to reclaim one. He describes it as craftsmanship, "woodworking almost," and is explicit that the constraint has been replaced by effectively bottomless capacity and correspondingly higher user expectations ([episode](../sources/creator-of-typescript-10x-faster.md)). Read against Ierusalimschy's recommendation to learn an 8080-era assembly, it is the same claim from the practitioner rather than the teacher: the machines that could be held in one head are gone, which is exactly why they are what you learn from.
+
 ### Why software engineers should still care
 
 [Vlad Feinberg](../entities/vlad-feinberg.md) reports "voracious demand" at frontier labs for kernel development and low-level engineering, and points to programming-language abstractions for kernels (ThunderKittens, CuTe DSL) as a high-leverage study area — the TPU/GPU efficiency problems Patterson describes are now everyday AI-infrastructure work ([episode](../sources/google-deepmind-pre-training-lead.md)). [Marc Brooker](../entities/marc-brooker.md) recommends Hennessy & Patterson's architecture textbook as core reading for systems engineers and treats hardware trends (faster networks, storage, GPUs) as a primary input for finding problems worth solving ([episode](../sources/aws-distinguished-eng-learnings-from.md)).
@@ -34,6 +38,7 @@ Patterson's periodization: Dennard scaling quietly ended ~2005, forcing multicor
 - Moats in hardware are software: libraries and toolchains, sustained over generations ([Patterson](../sources/turing-award-winner-tpu-vs-gpu-vs.md)).
 - Low-level and kernel skills are a seller's market at AI labs ([Feinberg](../sources/google-deepmind-pre-training-lead.md)).
 - To learn what a machine does, read a historical assembly (8080-era), not a modern ISA ([Ierusalimschy](../sources/creator-of-lua-scripting-programming.md)).
+- Re-audit implementation-language choices against core count, not clock speed; a runtime that can't share memory across threads is now leaving the hardware's only remaining growth axis on the table ([Hejlsberg](../sources/creator-of-typescript-10x-faster.md)).
 
 ## Related
 

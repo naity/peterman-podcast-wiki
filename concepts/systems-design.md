@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-08-03
-sources: [creator-of-lua-scripting-programming.md, aws-distinguished-eng-learnings-from.md, distinguished-engineer-at-shopify.md, dropboxs-former-most-senior-eng-building.md, retired-netflix-engineering-director.md, the-creator-of-kubernetes-on-building.md, turing-award-winner-data-abstraction.md]
+updated: 2026-08-17
+sources: [creator-of-typescript-10x-faster.md, creator-of-lua-scripting-programming.md, aws-distinguished-eng-learnings-from.md, distinguished-engineer-at-shopify.md, dropboxs-former-most-senior-eng-building.md, retired-netflix-engineering-director.md, the-creator-of-kubernetes-on-building.md, turing-award-winner-data-abstraction.md]
 ---
 
 # Systems design
@@ -19,6 +19,12 @@ The judgment layer of engineering: how the podcast's most senior builders decide
 [Barbara Liskov](../entities/barbara-liskov.md) gives the field's origin story: the 1970s software crisis (millions of dollars and hundreds of person-years thrown away on systems that didn't work) happened because the only modularity mechanism was the procedure. Her data-abstraction insight — modules as hidden state accessible only through operations — is what made modularity designable, and her enduring critique of Python is that it has modules but no encapsulation: "encapsulation is a crucial part of making modularity work" ([episode](../sources/turing-award-winner-data-abstraction.md)).
 
 [Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md) supplies the extreme version of Liskov's point, applied to a whole language runtime: Lua has no shared global state at all, only independent states, precisely so that a host application can embed several without them interfering ([episode](../sources/creator-of-lua-scripting-programming.md)). The security payoff is the same hiding argument at the process boundary — a Lua state can reach only the C functions its host registered, so the host's registration list defines the entire attack surface, and a financial firm was able to embed Lua inside Python to let users script against a whitelist without touching program state. He also notes the mechanism underneath cross-language integration generally: function pointers in both directions, with calls nesting arbitrarily ([programming-languages](programming-languages.md)).
+
+### Knowing when a foundational decision has expired
+
+[Anders Hejlsberg](../entities/anders-hejlsberg.md) (2026-08-17) gives the corpus's most detailed account of an architectural decision that was right for a decade and then wasn't, and most of the account is an argument for patience ([episode](../sources/creator-of-typescript-10x-faster.md)). Writing the TypeScript compiler in JavaScript was chosen for reach and self-hosting rather than speed, and he defends the choice on Cowling's own grounds — "often performance of your code isn't the bottleneck," measure before optimizing, and the 2–3x penalty against native bought a decade of ecosystem fit. What expired was not the performance trade but a *capability* one: JavaScript's single-threaded model, where web workers cannot share data structures, meant the compiler could not use the only axis hardware was still growing on ([computer-architecture](computer-architecture.md)). Two slow pressures accumulated underneath — codebase scale nobody forecast (VS Code is ~2.3 million lines) and the compiler's own drift, TypeScript 6 running at ~50% the speed of TypeScript 1.5 as checking grew more sophisticated.
+
+The migration discipline is the transferable part. They chose to **port rather than rewrite**, on the grounds that semantics and backward compatibility were the product — which then constrained the target language to one with garbage collection and first-class functions, ruling out Rust. Against Burns's "the inevitable trajectory of software is death," this is the case where you deliberately refuse the rewrite because the accumulated semantics *are* the asset; the two positions reconcile as: let the implementation die, not the behaviour. He also names the resulting hardest problem honestly — shared-memory concurrency across many CPUs without anyone clobbering another's data structures, plus synchronization, deadlocks and races — which is the complexity Burns would say you buy only for a named property, here parallel type checking.
 
 ### Where good problems come from
 
@@ -45,9 +51,10 @@ Burns: "the inevitable trajectory of software is death" — don't cling to dying
 - Boring, walkable technology you can validate continuously beats impressive technology you can't ([Cowling](../sources/dropboxs-former-most-senior-eng-building.md)).
 - Record which decisions were reasoned and which were arbitrary — future maintainers can't tell the difference ([Brooker](../sources/aws-distinguished-eng-learnings-from.md)).
 - Plan for your system's death: mission-named teams, willingness to shut things down ([Burns](../sources/the-creator-of-kubernetes-on-building.md), [Cowling](../sources/dropboxs-former-most-senior-eng-building.md)).
+- Re-examine foundational choices when a *capability* expires (concurrency, reach), not when a constant factor annoys you — and if compatibility is the product, port rather than rewrite ([Hejlsberg](../sources/creator-of-typescript-10x-faster.md)).
 
 ## Related
 
 - [distributed-systems](distributed-systems.md) — where these principles get stress-tested; [databases](databases.md); [incident-management](incident-management.md) — postmortems as design feedback; [programming-languages](programming-languages.md) — Liskov's abstraction lineage.
-- Key people: [James Cowling](../entities/james-cowling.md), [Marc Brooker](../entities/marc-brooker.md), [Brendan Burns](../entities/brendan-burns.md), [Barbara Liskov](../entities/barbara-liskov.md), [Ilya Grigorik](../entities/ilya-grigorik.md).
+- Key people: [James Cowling](../entities/james-cowling.md), [Marc Brooker](../entities/marc-brooker.md), [Brendan Burns](../entities/brendan-burns.md), [Barbara Liskov](../entities/barbara-liskov.md), [Ilya Grigorik](../entities/ilya-grigorik.md), [Anders Hejlsberg](../entities/anders-hejlsberg.md).
 - Most relevant episodes: [Cowling](../sources/dropboxs-former-most-senior-eng-building.md), [Brooker](../sources/aws-distinguished-eng-learnings-from.md), [Burns](../sources/the-creator-of-kubernetes-on-building.md), [Liskov](../sources/turing-award-winner-data-abstraction.md).

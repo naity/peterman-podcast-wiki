@@ -29,4 +29,5 @@ Marsh worked across Python, Go, and Rust at a computational-biology startup, and
 - [Simon Peyton Jones](simon-peyton-jones.md) — type systems and the "compiler prunes LLM generation space" thesis Marsh builds tools for
 - [James Cowling](james-cowling.md) — fellow infra founder on engineering rigor in the AI era
 - [Bjarne Stroustrup](bjarne-stroustrup.md) — the skeptical counterpoint on AI-generated code
+- [Anders Hejlsberg](anders-hejlsberg.md) — the same native-rewrite-for-speed bet from the language implementer's side, plus the reason it now matters more: agents, not humans, are the tool's main caller ([his episode](../sources/creator-of-typescript-10x-faster.md))
 - [developer-tools](../concepts/developer-tools.md), [ai-era-engineering](../concepts/ai-era-engineering.md), [open-source](../concepts/open-source.md), [programming-languages](../concepts/programming-languages.md)

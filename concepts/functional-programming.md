@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-08-10
-sources: [creator-of-lean-the-end-of-handwritten.md, creator-of-lua-scripting-programming.md, co-creator-of-haskell-functional.md, boris-cherny-creator-of-claude-code.md, creator-of-c-bell-labs-negative-overhead.md, creator-of-ocaml-functional-programming.md]
+updated: 2026-08-17
+sources: [creator-of-typescript-10x-faster.md, creator-of-lean-the-end-of-handwritten.md, creator-of-lua-scripting-programming.md, co-creator-of-haskell-functional.md, boris-cherny-creator-of-claude-code.md, creator-of-c-bell-labs-negative-overhead.md, creator-of-ocaml-functional-programming.md]
 ---
 
 # Functional programming
@@ -34,6 +34,10 @@ Two of Peyton Jones's forward bets ([episode](../sources/co-creator-of-haskell-f
 
 The outside endorsement is worth more than the insiders' because of who gives it: [Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md), whose own language is dynamically typed, minimal and imperative, names Haskell as the first of three languages to learn to become a better engineer, and gives the sharpest one-line case for it in the corpus — "in C you really spend one week to make it efficient, and then you spend one year to make it correct. In Haskell, you spend one week to make it correct" ([episode](../sources/creator-of-lua-scripting-programming.md)). His third pick, Scheme, is recommended for a different property entirely — "economy of ideas," doing a great deal with very few concepts — which is the design value his own work optimizes for rather than an FP argument.
 
+### The imperative camp's borrowing: immutability as a concurrency tool
+
+[Anders Hejlsberg](../entities/anders-hejlsberg.md) (2026-08-17) is the second outside endorsement, and like Ierusalimschy's it is worth more for its source — the creator of C# and TypeScript, neither of them functional languages ([episode](../sources/creator-of-typescript-10x-faster.md)). He credits functional programming's mathematical grounding and its influence across the field, and names the specific thing he took: immutable data structures, which let many threads read shared state without mutation races or deadlocks. The context makes it concrete rather than decorative — the TypeScript compiler's port to Go was undertaken *for* shared-memory concurrency, and he names that concurrency work as the hardest technical problem of his recent career. This is Peyton Jones's limestone/granite claim playing out on schedule: an FP idea arriving in a mainstream imperative codebase because the hardware made it load-bearing, not because anyone was persuaded of the paradigm ([programming-languages](programming-languages.md)).
+
 ### The strangest argument for FP: nobody has to like it any more
 
 [Leonardo de Moura](../entities/leonardo-de-moura.md) designed Lean as a member of the family — "Lean is close to Haskell, but with the support for proofs" — and it is now used as a plain programming language at real scale, including a half-million-line compiler for AI accelerators at [AWS](../entities/aws.md) where the proofs are a bonus, plus Lean's own build system (Lake) and documentation tool (Verso), both written in Lean ([episode](../sources/creator-of-lean-the-end-of-handwritten.md)).
@@ -51,9 +55,10 @@ No real disagreement exists among the FP guests on FP itself; the live tension i
 - In the LLM era, purity and static types make generated code easier to constrain and verify ([Peyton Jones](../sources/co-creator-of-haskell-functional.md), [Leroy](../sources/creator-of-ocaml-functional-programming.md)).
 - Write code you must reason hard about (compilers, protocols) in a pure functional style — it is the style closest to mathematics ([Leroy](../sources/creator-of-ocaml-functional-programming.md)).
 - Don't treat FP as an elite skill: anyone comfortable with Python comprehensions is halfway there ([Leroy](../sources/creator-of-ocaml-functional-programming.md)).
+- Reach for immutable data structures when you go multi-threaded — it's the cheapest FP idea to adopt in an imperative codebase and it removes a whole class of races ([Hejlsberg](../sources/creator-of-typescript-10x-faster.md)).
 
 ## Related
 
 - [programming-languages](programming-languages.md) — the broader typing and safety debates; [formal-verification](formal-verification.md) — where purity pays off in proofs; [ai-coding-tools](ai-coding-tools.md) — LLMs plus type systems.
-- Key people: [Simon Peyton Jones](../entities/simon-peyton-jones.md), [Xavier Leroy](../entities/xavier-leroy.md), [Boris Cherny](../entities/boris-cherny.md), [Leonardo de Moura](../entities/leonardo-de-moura.md).
+- Key people: [Simon Peyton Jones](../entities/simon-peyton-jones.md), [Xavier Leroy](../entities/xavier-leroy.md), [Boris Cherny](../entities/boris-cherny.md), [Leonardo de Moura](../entities/leonardo-de-moura.md); outside endorsements from [Roberto Ierusalimschy](../entities/roberto-ierusalimschy.md) and [Anders Hejlsberg](../entities/anders-hejlsberg.md).
 - Most relevant episodes: [Peyton Jones](../sources/co-creator-of-haskell-functional.md), [Leroy](../sources/creator-of-ocaml-functional-programming.md), [de Moura](../sources/creator-of-lean-the-end-of-handwritten.md).

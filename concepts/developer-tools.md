@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-08-10
-sources: [creator-of-lean-the-end-of-handwritten.md, creator-of-lua-scripting-programming.md, openai-codex-tech-lead-on-how-his.md, new-grad-to-principal-engineer-ic8.md, boris-cherny-creator-of-claude-code.md, meta-distinguished-eng-ic9-on-influencing.md, airbnb-staff-eng-on-how-to-not-get.md, openai-eng-and-dev-tools-founder.md, anthropic-eng-leader-and-ex-senior.md, ex-head-of-eng-at-instagram-career.md, msl-eng-director-promo-hacking-industry.md, instagram-principal-eng-ic8-on-building.md]
+updated: 2026-08-17
+sources: [creator-of-typescript-10x-faster.md, creator-of-lean-the-end-of-handwritten.md, creator-of-lua-scripting-programming.md, openai-codex-tech-lead-on-how-his.md, new-grad-to-principal-engineer-ic8.md, boris-cherny-creator-of-claude-code.md, meta-distinguished-eng-ic9-on-influencing.md, airbnb-staff-eng-on-how-to-not-get.md, openai-eng-and-dev-tools-founder.md, anthropic-eng-leader-and-ex-senior.md, ex-head-of-eng-at-instagram-career.md, msl-eng-director-promo-hacking-industry.md, instagram-principal-eng-ic8-on-building.md]
 ---
 
 # Developer tools
@@ -38,6 +38,14 @@ That posture also produces a security property most tool builders would have to 
 
 The complementary piece of Lean's tooling story is that the *feedback surface* is the product. Beyond the ordinary VS Code/LSP/build-system stack ("Lake is our Cargo"), the distinguishing component is the Infoview — a split pane showing the live state of your proof, which is what makes the whole thing feel like a game ("you built my favorite computer game") and which is also the thing an AI is watching when it plays. It let Johan Commelin's team simplify a Fields Medalist's proof they did not fully understand, step by step. And his current recommendation for learning the tool is a *third* pane: code, Infoview, and an agent narrating in natural language ([teaching-and-communication](teaching-and-communication.md)).
 
+### When the tool's main user stops being a human
+
+[Anders Hejlsberg](../entities/anders-hejlsberg.md) (2026-08-17) gives the corpus's clearest statement of a change every tool builder above is about to live through: the caller is now an agent, and that changes what "fast enough" means ([episode](../sources/creator-of-typescript-10x-faster.md)). Agents write code in the background at multiplied volume, so latency that a human absorbed as a coffee break lands in a loop — "if type checking takes two minutes every time the LLM writes something, that's horrible." And agents attempt operations that are semantic rather than textual: renaming a property called `version` cannot be done by grep without breaking unrelated interfaces, so the agent has to reach a compiler through a language service or a CLI. His conclusion — "the only thing that can do semantic search is a compiler" — makes compiler throughput a piece of agent infrastructure rather than a developer convenience, and is the reason a compiler that was deliberately written in JavaScript for a decade was finally ported to Go.
+
+That reframes [Ryan Olson](../entities/ryan-olson.md)'s exit condition (4+ hours a day waiting for builds at Instagram) as the mild version of the problem: a human waiting on a build gets frustrated, an agent waiting on a type check multiplies the wait by its own iteration count. It also gives [Charlie Marsh](../entities/charlie-marsh.md)'s native-rewrite thesis a second justification — Ruff and uv were built for human latency, and the agent-latency case arrived afterward ([ai-coding-tools](ai-coding-tools.md)).
+
+Worth noting for the adoption-strategy question above: Hejlsberg's tool won distribution the way Lua did, structurally rather than socially, but by a different mechanism — self-hosting. Writing the TypeScript compiler in JavaScript made the team its own daily users and let the compiler run everywhere JavaScript ran, including in a browser, which native code could not do before WebAssembly: "if you can self-host in the ecosystem that you want to be a part of, that is dramatically better than targeting from outside."
+
 ### Dev tools as career engine
 
 Almost every tool story above doubled as a promotion story: Bento earned Friggeri's IC7 ([episode](../sources/new-grad-to-principal-engineer-ic8.md)); Buck anchored Bolin's rise toward E9 ([episode](../sources/openai-codex-tech-lead-on-how-his.md)); Undux and side projects seeded Cherny's reputation ([episode](../sources/boris-cherny-creator-of-claude-code.md)); Fiona Fung's Claude Code role let a former Senior Director ship production software again ([episode](../sources/anthropic-eng-leader-and-ex-senior.md)); and Astral's tools got Marsh acquired by OpenAI ([episode](../sources/openai-eng-and-dev-tools-founder.md)).
@@ -52,6 +60,8 @@ Almost every tool story above doubled as a promotion story: Bento earned Frigger
 - If you want your tool inside other people's software, design it as a library with no global state from day one, not as a program with an API bolted on (Ierusalimschy [episode](../sources/creator-of-lua-scripting-programming.md)).
 - Make the tool extensible in its own language, so your most ambitious users can ship whole subsystems without your involvement — and so agents can too (de Moura [episode](../sources/creator-of-lean-the-end-of-handwritten.md)).
 - Invest in the live feedback surface, not just the compiler: Lean's Infoview is what makes the work addictive to humans and legible to AI (de Moura [episode](../sources/creator-of-lean-the-end-of-handwritten.md)).
+- Budget tool latency against the agent's loop, not a human's patience — background agents call your tool far more often than a person did (Hejlsberg [episode](../sources/creator-of-typescript-10x-faster.md)).
+- Expose semantic operations (rename, find-references, type queries) via a language service or CLI; agents can't get them any other way (Hejlsberg [episode](../sources/creator-of-typescript-10x-faster.md)).
 - Being right about a tool bet isn't enough — how you argue it determines whether you (and it) survive (Bolin [episode](../sources/openai-codex-tech-lead-on-how-his.md)).
 
 ## Related

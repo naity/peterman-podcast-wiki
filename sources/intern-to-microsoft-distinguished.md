@@ -44,3 +44,5 @@ David Fowler went from a Barbados-born Florida Tech student and 2006 [Microsoft]
 - [OpenAI & Meta Distinguished Engineer (IC9) On Working With Zuck, Carmack & Career Growth | Philip Su](openai-and-meta-distinguished-engineer.md) — Microsoft-rooted Distinguished Engineer career and big-company growth stories.
 - [Meta Senior Staff Eng (IC7) On Zuck Stories, Rapid Career Growth, Code Machine Archetype](meta-senior-staff-eng-ic7-on-zuck.md) — the super-coder/"code machine" archetype Fowler describes on his own team.
 - [Boris Cherny (Creator of Claude Code) On How His Career Grew](boris-cherny-creator-of-claude-code.md) — building a breakout developer tool as the engine of career growth.
+
+- [Creator of TypeScript: 10x Faster Typescript, Why AI Won't Replace SWEs | Anders Hejlsberg](creator-of-typescript-10x-faster.md) — Fowler names Hejlsberg as sitting above his level 70 on the Microsoft ladder; that episode is the view from the seat, including why its occupant is still writing compiler code rather than managing.

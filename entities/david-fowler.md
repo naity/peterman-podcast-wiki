@@ -31,5 +31,6 @@ He stood out at a college career fair by demoing a self-built game on a laptop, 
 - [Episode: Intern to Microsoft Distinguished Engineer in 11 Promotions](../sources/intern-to-microsoft-distinguished.md) — his interview
 - [Bobby Holley](bobby-holley.md) — parallel intern-to-Distinguished arc; both preach impact over promo-chasing and staying hands-on
 - [Ilya Grigorik](ilya-grigorik.md) — contrasting DE philosophy: Fowler's superhuman-strengths vs Grigorik's be-the-only generalist
+- [Anders Hejlsberg](anders-hejlsberg.md) — named in this episode as sitting above level 70 on the ladder Fowler describes; his own episode is the view from that seat ([his episode](../sources/creator-of-typescript-10x-faster.md))
 - [Microsoft](microsoft.md) — his entire ~two-decade career
 - [promotions](../concepts/promotions.md), [mentorship and sponsorship](../concepts/mentorship-and-sponsorship.md), [open source](../concepts/open-source.md)

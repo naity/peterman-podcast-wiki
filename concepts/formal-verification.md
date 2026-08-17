@@ -1,7 +1,7 @@
 ---
 type: concept
-updated: 2026-08-10
-sources: [creator-of-lean-the-end-of-handwritten.md, creator-of-ocaml-functional-programming.md, turing-award-winner-on-working-with.md, turing-award-winner-p-vs-np-zero.md, creator-of-c-bell-labs-negative-overhead.md, co-creator-of-haskell-functional.md, aws-distinguished-eng-learnings-from.md, creator-of-lua-scripting-programming.md]
+updated: 2026-08-17
+sources: [creator-of-typescript-10x-faster.md, creator-of-lean-the-end-of-handwritten.md, creator-of-ocaml-functional-programming.md, turing-award-winner-on-working-with.md, turing-award-winner-p-vs-np-zero.md, creator-of-c-bell-labs-negative-overhead.md, co-creator-of-haskell-functional.md, aws-distinguished-eng-learnings-from.md, creator-of-lua-scripting-programming.md]
 ---
 
 # Formal verification
@@ -49,6 +49,12 @@ Leroy (2026-07-20) framed generative AI as both the crisis and the opportunity (
 He is also blunt about the ceiling: AI finds proofs, not mathematics. "We see no evidence it can find novel proofs" of the concept-inventing kind, and the million-line refutation of the unit distance conjecture is a formal proof, not a new theory — though "I would not bet against AI here."
 
 [Bjarne Stroustrup](../entities/bjarne-stroustrup.md) frames the validation burden from the regulator's side — safety-critical industries must validate every change, which unreviewed LLM output makes unsolvable ([episode](../sources/creator-of-c-bell-labs-negative-overhead.md)); a machine-checked proof attached to each change is the only answer anyone in this corpus has proposed to that. [Marc Brooker](../entities/marc-brooker.md)'s prediction that the mainstream moves to specification-driven agentic development ([episode](../sources/aws-distinguished-eng-learnings-from.md)) is the same forecast without the verification layer, from the same employer. And the tension with the AI-tools optimists ([ai-coding-tools](ai-coding-tools.md)) remains real: where Bolin and Novati celebrate 80–90% model-written code, Leroy answers that checking, not writing, is the binding cost — and de Moura's answer to Leroy is that the checking can now be mechanized too.
+
+### Contradiction filed 2026-08-17: is a proof enough to stop understanding the code?
+
+[Anders Hejlsberg](../entities/anders-hejlsberg.md) (2026-08-17) does not discuss formal verification, but his answer to the same underlying question is the strongest objection in the corpus to de Moura's, and it comes from outside the field entirely ([episode](../sources/creator-of-typescript-10x-faster.md)). Asked whether IDEs and human understanding of code become unnecessary, he refuses on accountability grounds: someone has to take responsibility when a system causes harm, and without understanding the code you cannot fix the bug or respond to a security breach. "Good luck to you."
+
+The objection bites at a specific seam in de Moura's argument. A machine-checked proof discharges *correctness relative to a specification*; it does not discharge the other things a maintainer is accountable for — modifying the system, diagnosing a failure whose cause lies outside the specification, or explaining the system to a regulator or a court. De Moura would likely answer that the specification is exactly where that attention should go, which is his stated position; the unresolved part is whether the median engineer is ever in a position to formalize enough of the system for that trade to be available. Note the corpus asymmetry: de Moura's is a report from a verified-codebase world (Lean, [AWS](../entities/aws.md) accelerator compilers), while Hejlsberg's is a report from the largest unverified codebase any guest maintains.
 
 ### Contradiction filed 2026-08-10: does AI make readability matter more, or not at all?
 

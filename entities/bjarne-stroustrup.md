@@ -28,6 +28,7 @@ His Cambridge PhD ordeal — rewriting a Simula simulator in BCPL (~50x faster, 
 - [Simon Peyton Jones](simon-peyton-jones.md) — fellow language creator; Stroustrup recommends learning ML/Haskell
 - [Roberto Ierusalimschy](roberto-ierusalimschy.md) — creator of Lua and Stroustrup's sharpest counterparty on language governance: committees destroy conceptual integrity vs. standardization is what saved C++
 - [Xavier Leroy](xavier-leroy.md) — creator of OCaml and of CompCert, the formally verified C compiler; shares his skepticism of unvalidated LLM code from the [formal-verification](../concepts/formal-verification.md) side
+- [Anders Hejlsberg](anders-hejlsberg.md) — his closest analogue in the corpus: mainstream-language creator still writing the compiler himself, AI-skeptical on quality rather than capability, and the other guest to ask independently where senior engineers will come from ([his episode](../sources/creator-of-typescript-10x-faster.md))
 - [David Patterson](david-patterson.md) — the hardware side of the compiler/register story C++ grew up in
 - [Charlie Marsh](charlie-marsh.md) — the optimistic counterpoint on AI-era developer tooling
 - [programming-languages](../concepts/programming-languages.md), [working-with-legends](../concepts/working-with-legends.md), [teaching-and-communication](../concepts/teaching-and-communication.md)
