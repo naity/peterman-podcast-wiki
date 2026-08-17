@@ -317,7 +317,7 @@ function renderHome() {
     <div class="small">Interviews with Turing Award winners, distinguished engineers, CTOs and founders about software careers and computer science — compiled into a browsable knowledge graph.</div>
     <h3>In the graph</h3>
     <ul>
-      <li><b style="color:var(--ink-1)">${s.episodes}</b> episodes (Jan 2025 – Jul 2026)</li>
+      <li><b style="color:var(--ink-1)">${s.episodes}</b> episodes${DATA.span ? ` (${esc(DATA.span)})` : ''}</li>
       <li><b style="color:var(--ink-1)">${s.people}</b> guests</li>
       <li><b style="color:var(--ink-1)">${s.orgs}</b> organizations</li>
       <li><b style="color:var(--ink-1)">${s.concepts}</b> concepts / themes</li>

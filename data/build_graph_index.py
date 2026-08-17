@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build data/graph.json and index.md from extracts + pages. Also lint links."""
-import json, glob, os, re, collections
+import json, glob, os, re, collections, datetime as _dt
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
@@ -96,7 +96,13 @@ for l in links:
     seen.add(key); deduped.append(l)
 links = deduped
 
-graph = {'generated': '2026-07-19', 'nodes': nodes, 'links': links,
+_ep_dates = sorted(e['date'] for e in episodes.values() if e.get('date'))
+def _month(d):
+    y, m, _ = d.split('-')
+    return f"{('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())[int(m) - 1]} {y}"
+_span = f'{_month(_ep_dates[0])} – {_month(_ep_dates[-1])}' if _ep_dates else ''
+
+graph = {'generated': _dt.date.today().isoformat(), 'span': _span, 'nodes': nodes, 'links': links,
          'stats': {'episodes': len(extracts), 'people': len(persons), 'orgs': len(orgs), 'concepts': len(concepts), 'links': len(links)}}
 json.dump(graph, open('data/graph.json', 'w'), indent=1)
 print('graph:', graph['stats'])
