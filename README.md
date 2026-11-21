@@ -1,5 +1,7 @@
 # The Peterman Post — Podcast Knowledge Base
 
+> **This repository is archived.** The wiki moved, with its full git history, into the `peterman/` folder of the private monorepo `naity/wikis` on 2026-11-20. This repository is no longer updated; the site below remains online as a snapshot of 59 episodes (through August 2026).
+
 An interlinked knowledge base built from the episodes of [The Peterman Post](https://www.developing.dev/podcast), Ryan Peterman's podcast of interviews with Turing Award winners, distinguished engineers, CTOs, and founders about software careers and computer science.
 
 **Explore the knowledge graph:** https://naity.github.io/peterman-podcast-wiki/
